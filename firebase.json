@@ -1,0 +1,91 @@
+{
+  "hosting": [
+    {
+      "site": "sc-sistarcompany",
+      "public": "apps/project1-core/landing/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/headquarter/**",
+          "destination": "/headquarter/index.html"
+        },
+        {
+          "source": "/qubit-algorithm/**",
+          "destination": "/qubit-algorithm/index.html"
+        },
+        {
+          "source": "/intelligence/**",
+          "destination": "/intelligence/index.html"
+        },
+        {
+          "source": "/commandcenters/**",
+          "destination": "/commandcenters/index.html"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "sc-scarletai",
+      "public": "apps/project2-scarlet/scarlet-ai/dist",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "sc-qubitbiz",
+      "public": "apps/project3-qubitbiz/qubit-biz/dist",
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "sc-bizhub",
+      "public": "apps/project4-bizhub/biz-hub/dist",
+      "rewrites": [
+        {
+          "source": "/bizcampaign/**",
+          "destination": "/bizcampaign/index.html"
+        },
+        {
+          "source": "/partners/**",
+          "destination": "/partners/index.html"
+        },
+        {
+          "source": "/brands/**",
+          "destination": "/brands/index.html"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "site": "sc-bizgalaxy",
+      "public": "apps/project5-bizgalaxy/biz-galaxy/dist",
+      "rewrites": [
+        {
+          "source": "/sispet/**",
+          "destination": "/sispet/index.html"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
