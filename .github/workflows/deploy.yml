@@ -1,68 +1,85 @@
-name: Deploy Multi-Project Monorepo to Firebase
+name: Deploy to Firebase Hosting on PR or Push
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    types: [closed]
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
+          node-policy: 'latest'
 
       # -------------------------------------------------------------
-      # Project 1: sc-sistarcompany
+      # Project 1: sc-bizmodel
       # -------------------------------------------------------------
-      - name: Deploy Project 1 (sc-sistarcompany)
+      - name: Deploy Project 1 (sc-bizmodel)
         run: |
+          cp -r common apps/project1-core/landing/ 2>/dev/null || true
+          cp -r data apps/project1-core/landing/ 2>/dev/null || true
           cd apps/project1-core/landing
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-sistarcompany --only hosting
+          npx firebase-tools deploy --project sc-bizmodel --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       # -------------------------------------------------------------
-      # Project 2: sc-scarletai
+      # Project 2: sc-bizplanner
       # -------------------------------------------------------------
-      - name: Deploy Project 2 (sc-scarletai)
+      - name: Deploy Project 2 (sc-bizplanner)
         run: |
-          cd apps/project2-scarlet/scarlet-ai
+          cp -r common apps/project2-planner/biz-planner/ 2>/dev/null || true
+          cp -r data apps/project2-planner/biz-planner/ 2>/dev/null || true
+          cd apps/project2-planner/biz-planner
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-scarletai --only hosting
+          npx firebase-tools deploy --project sc-bizplanner --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       # -------------------------------------------------------------
-      # Project 3: sc-qubitbiz
+      # Project 3: sc-bizitem
       # -------------------------------------------------------------
-      - name: Deploy Project 3 (sc-qubitbiz)
+      - name: Deploy Project 3 (sc-bizitem)
         run: |
-          cd apps/project3-qubitbiz/qubit-biz
+          cp -r common apps/project3-item/biz-item/ 2>/dev/null || true
+          cp -r data apps/project3-item/biz-item/ 2>/dev/null || true
+          cd apps/project3-item/biz-item
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-qubitbiz --only hosting
+          npx firebase-tools deploy --project sc-bizitem --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       # -------------------------------------------------------------
-      # Project 4: sc-bizhub
+      # Project 4: sc-bizmaker
       # -------------------------------------------------------------
-      - name: Deploy Project 4 (sc-bizhub)
+      - name: Deploy Project 4 (sc-bizmaker)
         run: |
-          cd apps/project4-bizhub/biz-hub
+          cp -r common apps/project4-maker/biz-maker/ 2>/dev/null || true
+          cp -r data apps/project4-maker/biz-maker/ 2>/dev/null || true
+          cd apps/project4-maker/biz-maker
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizhub --only hosting
+          npx firebase-tools deploy --project sc-bizmaker --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
       # -------------------------------------------------------------
       # Project 5: sc-bizgalaxy
       # -------------------------------------------------------------
       - name: Deploy Project 5 (sc-bizgalaxy)
         run: |
+          cp -r common apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
+          cp -r data apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
           cd apps/project5-bizgalaxy/biz-galaxy
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-bizgalaxy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
