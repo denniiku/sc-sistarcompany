@@ -1,4 +1,4 @@
-name: Deploy to Firebase Hosting
+name: Deploy Multi-Project Monorepo to Firebase
 
 on:
   push:
@@ -8,22 +8,38 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+
     steps:
+      # 1. 깃허브 코드 체크아웃
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # 2. Node.js 환경 세팅
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
 
+      # 3. pnpm 패키지 매니저 설치
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      # 4. 의존성 패키지 설치
       - name: Install Dependencies
-        run: npm ci || npm install
+        run: pnpm install --no-frozen-lockfile
 
-      - name: Build All Applications
+      # 5. [신규 추가] site-map.json 자동 탐색 및 생성 스크립트 실행
+      - name: Auto Generate site-map.json
+        run: node scripts/generate-sitemap.js
+
+      # 6. 모노레포 하위 모든 React/웹 앱 빌드
+      - name: Build All Apps
         run: npm run build --if-present
 
-      - name: Deploy to Firebase
+      # 7. Firebase 멀티 프로젝트 자동 배포
+      - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
