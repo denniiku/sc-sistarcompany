@@ -30,20 +30,29 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      # 5. 빈 폴더 배포 오류 방지용 기본 구조 보장
+      # 5. 빈 폴더 배포 오류 방지용 기본 파일 생성
       - name: Ensure public directories exist
         run: |
-          mkdir -p project1-core/landing && echo "<h1>Project 1</h1>" > project1-core/landing/index.html
-          mkdir -p project2-scarlet/scarlet-ai && echo "<h1>Project 2</h1>" > project2-scarlet/scarlet-ai/index.html
-          mkdir -p project3-qubitbiz/qubit-biz && echo "<h1>Project 3</h1>" > project3-qubitbiz/qubit-biz/index.html
-          mkdir -p project4-bizhub/biz-hub && echo "<h1>Project 4</h1>" > project4-bizhub/biz-hub/index.html
-          mkdir -p project5-bizgalaxy/biz-galaxy
+          mkdir -p project1-core/landing && touch project1-core/landing/index.html
+          mkdir -p project2-scarlet/scarlet-ai && touch project2-scarlet/scarlet-ai/index.html
+          mkdir -p project3-qubitbiz/qubit-biz && touch project3-qubitbiz/qubit-biz/index.html
+          mkdir -p project4-bizhub/biz-hub && touch project4-bizhub/biz-hub/index.html
+          mkdir -p project5-bizgalaxy/biz-galaxy && touch project5-bizgalaxy/biz-galaxy/index.html
 
-      # 6. 각 프로젝트별 Firebase 배포
+      # 6. 타겟 지정 후 각각의 프로젝트로 배포
       - name: Deploy All Projects to Firebase
         run: |
-          firebase deploy --project sc-sistarcompany --only hosting:sc-sistarcompany
-          firebase deploy --project sc-scarletai --only hosting:sc-scarletai
-          firebase deploy --project sc-qubitbiz --only hosting:sc-qubitbiz
-          firebase deploy --project sc-bizhub --only hosting:sc-bizhub
-          firebase deploy --project sc-sispet --only hosting:sc-sispet
+          firebase target:apply hosting p1 sc-sistarcompany --project sc-sistarcompany
+          firebase deploy --project sc-sistarcompany --only hosting:p1
+
+          firebase target:apply hosting p2 sc-scarletai --project sc-scarletai
+          firebase deploy --project sc-scarletai --only hosting:p2
+
+          firebase target:apply hosting p3 sc-qubitbiz --project sc-qubitbiz
+          firebase deploy --project sc-qubitbiz --only hosting:p3
+
+          firebase target:apply hosting p4 sc-bizhub --project sc-bizhub
+          firebase deploy --project sc-bizhub --only hosting:p4
+
+          firebase target:apply hosting p5 sc-sispet --project sc-sispet
+          firebase deploy --project sc-sispet --only hosting:p5
