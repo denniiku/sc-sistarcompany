@@ -1,31 +1,35 @@
 (function () {
-  // 1. 현재 HTML 위치에 기반한 상대 경로(prefix) 자동 계산 함수
-  function getRelativePrefix() {
-    const depth = window.location.pathname.split('/').filter(Boolean).length;
-    const isFile = window.location.pathname.includes('.');
-    const steps = Math.max(0, depth - (isFile ? 1 : 0));
-    return steps > 0 ? '../'.repeat(steps) : './';
-  }
+  // 📌 네비게이션 데이터 (JSON을 외부에서 불러오지 않고 내장하여 404 에러 완전 차단)
+  const NAV_DATA = [
+    {
+      "category": "Core Platform",
+      "items": [
+        { "name": "Sistar Company", "url": "https://sc-sistarcompany.web.app/" },
+        { "name": "Scarlet AI", "url": "https://sc-scarletai.web.app/" }
+      ]
+    },
+    {
+      "category": "Biz Solutions",
+      "items": [
+        { "name": "Qubit Biz", "url": "https://sc-qubitbiz.web.app/" },
+        { "name": "Biz Hub", "url": "https://sc-bizhub.web.app/" }
+      ]
+    },
+    {
+      "category": "Biz Galaxy Services",
+      "items": [
+        { "name": "Sispet Test App", "url": "https://sc-bizgalaxy.web.app/sispet/index.html" },
+        { "name": "Test 2 App", "url": "https://sc-bizgalaxy.web.app/test2/index.html" }
+      ]
+    }
+  ];
 
-  // 2. Navigation Bar 동적 생성
-  async function renderHeader() {
+  // 1. Navigation Bar 동적 생성
+  function renderHeader() {
     const headerContainer = document.getElementById('common-header');
     if (!headerContainer) return;
 
-    const prefix = getRelativePrefix();
-
     try {
-      // 1차 시도: 동적 계산된 상대 경로로 호출 (예: ../data/nav-data.json)
-      let response = await fetch(prefix + 'data/nav-data.json');
-
-      // 2차 시도: 상대 경로 호출 실패(404) 시 루트 절대 경로(/data/nav-data.json)로 재시도
-      if (!response.ok) {
-        response = await fetch('/data/nav-data.json');
-      }
-
-      if (!response.ok) throw new Error('Failed to load nav-data.json');
-      const categories = await response.json();
-
       let navHtml = `
         <div class="nav-container">
           <div class="nav-logo">
@@ -34,7 +38,7 @@
           <ul class="nav-menu">
       `;
 
-      categories.forEach(cat => {
+      NAV_DATA.forEach(cat => {
         navHtml += `
           <li class="nav-item">
             <a href="#" class="nav-link" onclick="return false;">${cat.category} ▾</a>
@@ -65,7 +69,7 @@
     }
   }
 
-  // 3. Footer 동적 생성
+  // 2. Footer 동적 생성
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
