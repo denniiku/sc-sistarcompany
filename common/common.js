@@ -15,9 +15,15 @@
     const prefix = getRelativePrefix();
 
     try {
-      // nav-data.json 가져오기
-      const response = await fetch(prefix + 'data/nav-data.json');
-      if (!response.ok) throw new Error('Failed to load nav data');
+      // 1차 시도: 동적 계산된 상대 경로로 호출 (예: ../data/nav-data.json)
+      let response = await fetch(prefix + 'data/nav-data.json');
+
+      // 2차 시도: 상대 경로 호출 실패(404) 시 루트 절대 경로(/data/nav-data.json)로 재시도
+      if (!response.ok) {
+        response = await fetch('/data/nav-data.json');
+      }
+
+      if (!response.ok) throw new Error('Failed to load nav-data.json');
       const categories = await response.json();
 
       let navHtml = `
