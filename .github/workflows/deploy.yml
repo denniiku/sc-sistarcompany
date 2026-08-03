@@ -17,69 +17,59 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-policy: 'latest'
+          node-version: '20'
 
       # -------------------------------------------------------------
       # Project 1: sc-bizmodel
       # -------------------------------------------------------------
       - name: Deploy Project 1 (sc-bizmodel)
-        run: |
-          cp -r common apps/project1-core/landing/ 2>/dev/null || true
-          cp -r data apps/project1-core/landing/ 2>/dev/null || true
-          cd apps/project1-core/landing
-          echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizmodel --only hosting --token "$FIREBASE_TOKEN"
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
+          projectId: sc-bizmodel
+          entryPoint: apps/project1-core/landing
 
       # -------------------------------------------------------------
       # Project 2: sc-bizplanner
       # -------------------------------------------------------------
       - name: Deploy Project 2 (sc-bizplanner)
-        run: |
-          cp -r common apps/project2-planner/biz-planner/ 2>/dev/null || true
-          cp -r data apps/project2-planner/biz-planner/ 2>/dev/null || true
-          cd apps/project2-planner/biz-planner
-          echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizplanner --only hosting --token "$FIREBASE_TOKEN"
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
+          projectId: sc-bizplanner
+          entryPoint: apps/project2-planner/biz-planner
 
       # -------------------------------------------------------------
       # Project 3: sc-bizitem
       # -------------------------------------------------------------
       - name: Deploy Project 3 (sc-bizitem)
-        run: |
-          cp -r common apps/project3-item/biz-item/ 2>/dev/null || true
-          cp -r data apps/project3-item/biz-item/ 2>/dev/null || true
-          cd apps/project3-item/biz-item
-          echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizitem --only hosting --token "$FIREBASE_TOKEN"
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
+          projectId: sc-bizitem
+          entryPoint: apps/project3-item/biz-item
 
       # -------------------------------------------------------------
       # Project 4: sc-bizmaker
       # -------------------------------------------------------------
       - name: Deploy Project 4 (sc-bizmaker)
-        run: |
-          cp -r common apps/project4-maker/biz-maker/ 2>/dev/null || true
-          cp -r data apps/project4-maker/biz-maker/ 2>/dev/null || true
-          cd apps/project4-maker/biz-maker
-          echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizmaker --only hosting --token "$FIREBASE_TOKEN"
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
+          projectId: sc-bizmaker
+          entryPoint: apps/project4-maker/biz-maker
 
       # -------------------------------------------------------------
       # Project 5: sc-bizgalaxy
       # -------------------------------------------------------------
       - name: Deploy Project 5 (sc-bizgalaxy)
-        run: |
-          cp -r common apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
-          cp -r data apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
-          cd apps/project5-bizgalaxy/biz-galaxy
-          echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizgalaxy --only hosting --token "$FIREBASE_TOKEN"
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
+          projectId: sc-bizgalaxy
+          entryPoint: apps/project5-bizgalaxy/biz-galaxy
