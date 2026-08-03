@@ -30,7 +30,7 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      # 5. 빈 폴더 배포 에러 방지용 index.html 생성 (비어있지 않다면 생략 가능)
+      # 5. 빈 폴더 배포 오류 방지용 파일 준비
       - name: Ensure public directories exist
         run: |
           mkdir -p project1-core/landing && touch project1-core/landing/index.html
@@ -39,18 +39,33 @@ jobs:
           mkdir -p project4-bizhub/biz-hub && touch project4-bizhub/biz-hub/index.html
           mkdir -p project5-bizgalaxy/biz-galaxy && touch project5-bizgalaxy/biz-galaxy/index.html
 
-      # 6. 각 폴더별 1:1 파이어베이스 직접 배포
+      # 6. 각 프로젝트별 타겟 바인딩 및 순차 배포 (개별 isolation 배포)
       - name: Deploy Project 1 (sc-sistarcompany)
-        run: npx firebase-tools deploy --project sc-sistarcompany --only hosting --public project1-core/landing
+        run: |
+          firebase use sc-sistarcompany
+          firebase target:apply hosting p1 sc-sistarcompany
+          firebase deploy --project sc-sistarcompany --only hosting:p1
 
       - name: Deploy Project 2 (sc-scarletai)
-        run: npx firebase-tools deploy --project sc-scarletai --only hosting --public project2-scarlet/scarlet-ai
+        run: |
+          firebase use sc-scarletai
+          firebase target:apply hosting p2 sc-scarletai
+          firebase deploy --project sc-scarletai --only hosting:p2
 
       - name: Deploy Project 3 (sc-qubitbiz)
-        run: npx firebase-tools deploy --project sc-qubitbiz --only hosting --public project3-qubitbiz/qubit-biz
+        run: |
+          firebase use sc-qubitbiz
+          firebase target:apply hosting p3 sc-qubitbiz
+          firebase deploy --project sc-qubitbiz --only hosting:p3
 
       - name: Deploy Project 4 (sc-bizhub)
-        run: npx firebase-tools deploy --project sc-bizhub --only hosting --public project4-bizhub/biz-hub
+        run: |
+          firebase use sc-bizhub
+          firebase target:apply hosting p4 sc-bizhub
+          firebase deploy --project sc-bizhub --only hosting:p4
 
       - name: Deploy Project 5 (sc-sispet)
-        run: npx firebase-tools deploy --project sc-sispet --only hosting --public project5-bizgalaxy/biz-galaxy
+        run: |
+          firebase use sc-sispet
+          firebase target:apply hosting p5 sc-sispet
+          firebase deploy --project sc-sispet --only hosting:p5
