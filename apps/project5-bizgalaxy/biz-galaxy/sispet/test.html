@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test at sispet folder</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 1. 이 앱의 영문 타이틀 (자동으로 menu.json 및 Navigation Bar 메뉴명으로 쓰입니다) -->
+  <title>Sispet Test App</title>
+  
+  <!-- 2. 공통 CSS 연결 -->
+  <link rel="stylesheet" href="/common/common.css">
+  
+  <style>
+    /* 테스트용 본문 스타일 (실제 앱에서는 자유롭게 구현) */
+    .app-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: center;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #22c55e;
+      color: white;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
-    <h1>CI/CD 배포 테스트 성공! 🎉</h1>
-    <p>이 페이지가 보인다면 GitHub Actions와 Firebase 멀티 프로젝트 연동이 완벽하게 작동하는 것입니다.</p>
+
+  <!-- 3. 공통 Navigation Bar가 동적으로 주입될 컨테이너 -->
+  <div id="common-header"></div>
+
+  <!-- 4. 앱 메인 본문 콘텐츠 -->
+  <main class="app-container">
+    <span class="status-badge">System Active</span>
+    <h1>Sispet Test Project</h1>
+    <p>이 페이지는 공통 Header / Footer 및 Navigation Bar 연동 테스트 페이지입니다.</p>
+    <p>상단 네비게이션 바가 정상적으로 노출되고 있다면 시스템 세팅이 성공한 것입니다!</p>
+  </main>
+
+  <!-- 5. 공통 Footer가 주입될 컨테이너 및 공통 스크립트 연결 -->
+  <div id="common-footer"></div>
+  <script src="/common/common.js"></script>
+
 </body>
 </html>
