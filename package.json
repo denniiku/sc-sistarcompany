@@ -1,0 +1,25 @@
+{
+  "name": "sc-sistarcompany-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sistar Company 150+ Multi-App Ecosystem Monorepo",
+  "main": "index.js",
+  "scripts": {
+    "build:sitemap": "node scripts/generate-sitemap.js",
+    "deploy": "pnpm build:sitemap && firebase deploy"
+  },
+  "keywords": [
+    "monorepo",
+    "firebase",
+    "multi-site",
+    "sistar"
+  ],
+  "author": "Sistar Company",
+  "license": "ISC",
+  "devDependencies": {
+    "firebase-tools": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
