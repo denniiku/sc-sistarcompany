@@ -28,7 +28,7 @@ jobs:
           cp -r data apps/project1-core/landing/ 2>/dev/null || true
           cd apps/project1-core/landing
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizmodel --only hosting
+          npx firebase-tools deploy --project sc-bizmodel --only hosting --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
@@ -41,7 +41,7 @@ jobs:
           cp -r data apps/project2-planner/biz-planner/ 2>/dev/null || true
           cd apps/project2-planner/biz-planner
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizplanner --only hosting
+          npx firebase-tools deploy --project sc-bizplanner --only hosting --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
@@ -54,7 +54,7 @@ jobs:
           cp -r data apps/project3-item/biz-item/ 2>/dev/null || true
           cd apps/project3-item/biz-item
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizitem --only hosting
+          npx firebase-tools deploy --project sc-bizitem --only hosting --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
@@ -67,7 +67,7 @@ jobs:
           cp -r data apps/project4-maker/biz-maker/ 2>/dev/null || true
           cd apps/project4-maker/biz-maker
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizmaker --only hosting
+          npx firebase-tools deploy --project sc-bizmaker --only hosting --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
@@ -80,6 +80,6 @@ jobs:
           cp -r data apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
           cd apps/project5-bizgalaxy/biz-galaxy
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizgalaxy --only hosting
+          npx firebase-tools deploy --project sc-bizgalaxy --only hosting --token "$FIREBASE_TOKEN"
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
