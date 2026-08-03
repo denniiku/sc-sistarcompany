@@ -1,14 +1,6 @@
 [
   {
-    "title": "Home",
-    "url": "/index.html"
-  },
-  {
-    "title": "AI Image Generator",
-    "url": "/app-image-gen/index.html"
-  },
-  {
-    "title": "Expense Tracker",
-    "url": "/app-expense/index.html"
+    "title": "Sispet Test App",
+    "url": "/apps/project5-bizgalaxy/biz-galaxy/sispet/index.html"
   }
 ]
