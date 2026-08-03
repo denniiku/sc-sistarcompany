@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 20
 
-      # 3. GCP 마스터 서비스 계정으로 인증
+      # 3. GCP 마스터 서비스 계정 인증
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
@@ -30,7 +30,16 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      # 5. 각 파이어베이스 프로젝트별 호스팅 직접 지정 배포
+      # 5. 빈 폴더 배포 오류 방지용 기본 구조 보장
+      - name: Ensure public directories exist
+        run: |
+          mkdir -p project1-core/landing && echo "<h1>Project 1</h1>" > project1-core/landing/index.html
+          mkdir -p project2-scarlet/scarlet-ai && echo "<h1>Project 2</h1>" > project2-scarlet/scarlet-ai/index.html
+          mkdir -p project3-qubitbiz/qubit-biz && echo "<h1>Project 3</h1>" > project3-qubitbiz/qubit-biz/index.html
+          mkdir -p project4-bizhub/biz-hub && echo "<h1>Project 4</h1>" > project4-bizhub/biz-hub/index.html
+          mkdir -p project5-bizgalaxy/biz-galaxy
+
+      # 6. 각 프로젝트별 Firebase 배포
       - name: Deploy All Projects to Firebase
         run: |
           firebase deploy --project sc-sistarcompany --only hosting:sc-sistarcompany
