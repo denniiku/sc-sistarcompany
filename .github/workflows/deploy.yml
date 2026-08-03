@@ -30,14 +30,11 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      # 5. Active 프로젝트 지정 후 타겟 매칭 및 전체 배포
-      - name: Deploy All Hosting Projects
+      # 5. 각 파이어베이스 프로젝트별 호스팅 순차 배포
+      - name: Deploy All Projects to Firebase
         run: |
-          firebase use project1
-          firebase target:apply hosting project1 sc-sistarcompany
-          firebase target:apply hosting project2 sc-scarletai
-          firebase target:apply hosting project3 sc-qubitbiz
-          firebase target:apply hosting project4 sc-bizhub
-          firebase target:apply hosting project5 sc-sispet
-          
-          firebase deploy --only hosting
+          firebase deploy --project sc-sistarcompany --only hosting:project1
+          firebase deploy --project sc-scarletai --only hosting:project2
+          firebase deploy --project sc-qubitbiz --only hosting:project3
+          firebase deploy --project sc-bizhub --only hosting:project4
+          firebase deploy --project sc-sispet --only hosting:project5
