@@ -1,75 +1,70 @@
-name: Deploy to Firebase Hosting on PR or Push
+name: Deploy Multi-Project Monorepo to Firebase
 
 on:
   push:
     branches:
       - main
-  pull_request:
-    types: [closed]
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: 20
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}'
 
       # -------------------------------------------------------------
-      # Project 1: sc-bizmodel
+      # Project 1: sc-sistarcompany
       # -------------------------------------------------------------
-      - name: Deploy Project 1 (sc-bizmodel)
+      - name: Deploy Project 1 (sc-sistarcompany)
         run: |
           cp -r common apps/project1-core/landing/ 2>/dev/null || true
           cp -r data apps/project1-core/landing/ 2>/dev/null || true
           cd apps/project1-core/landing
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizmodel --only hosting
-        env:
-          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}
+          npx firebase-tools deploy --project sc-sistarcompany --only hosting
 
       # -------------------------------------------------------------
-      # Project 2: sc-bizplanner
+      # Project 2: sc-scarletai
       # -------------------------------------------------------------
-      - name: Deploy Project 2 (sc-bizplanner)
+      - name: Deploy Project 2 (sc-scarletai)
         run: |
-          cp -r common apps/project2-planner/biz-planner/ 2>/dev/null || true
-          cp -r data apps/project2-planner/biz-planner/ 2>/dev/null || true
-          cd apps/project2-planner/biz-planner
+          cp -r common apps/project2-scarlet/scarlet-ai/ 2>/dev/null || true
+          cp -r data apps/project2-scarlet/scarlet-ai/ 2>/dev/null || true
+          cd apps/project2-scarlet/scarlet-ai
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizplanner --only hosting
-        env:
-          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}
+          npx firebase-tools deploy --project sc-scarletai --only hosting
 
       # -------------------------------------------------------------
-      # Project 3: sc-bizitem
+      # Project 3: sc-qubitbiz
       # -------------------------------------------------------------
-      - name: Deploy Project 3 (sc-bizitem)
+      - name: Deploy Project 3 (sc-qubitbiz)
         run: |
-          cp -r common apps/project3-item/biz-item/ 2>/dev/null || true
-          cp -r data apps/project3-item/biz-item/ 2>/dev/null || true
-          cd apps/project3-item/biz-item
+          cp -r common apps/project3-qubitbiz/qubit-biz/ 2>/dev/null || true
+          cp -r data apps/project3-qubitbiz/qubit-biz/ 2>/dev/null || true
+          cd apps/project3-qubitbiz/qubit-biz
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizitem --only hosting
-        env:
-          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}
+          npx firebase-tools deploy --project sc-qubitbiz --only hosting
 
       # -------------------------------------------------------------
-      # Project 4: sc-bizmaker
+      # Project 4: sc-bizhub
       # -------------------------------------------------------------
-      - name: Deploy Project 4 (sc-bizmaker)
+      - name: Deploy Project 4 (sc-bizhub)
         run: |
-          cp -r common apps/project4-maker/biz-maker/ 2>/dev/null || true
-          cp -r data apps/project4-maker/biz-maker/ 2>/dev/null || true
-          cd apps/project4-maker/biz-maker
+          cp -r common apps/project4-bizhub/biz-hub/ 2>/dev/null || true
+          cp -r data apps/project4-bizhub/biz-hub/ 2>/dev/null || true
+          cd apps/project4-bizhub/biz-hub
           echo '{"hosting":{"public":"."}}' > firebase.json
-          npx firebase-tools deploy --project sc-bizmaker --only hosting
-        env:
-          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}
+          npx firebase-tools deploy --project sc-bizhub --only hosting
 
       # -------------------------------------------------------------
       # Project 5: sc-bizgalaxy
@@ -81,5 +76,3 @@ jobs:
           cd apps/project5-bizgalaxy/biz-galaxy
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-bizgalaxy --only hosting
-        env:
-          GCP_SA_KEY: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SC_MASTER }}
