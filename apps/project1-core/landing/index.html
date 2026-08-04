@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/common/common.css">
     <script src="/common/common.js" defer></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
@@ -47,7 +46,7 @@
 
         /* 🚀 Hero Section: The Launchpad */
         .hero {
-            height: 100vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -55,21 +54,12 @@
             text-align: center;
             background: radial-gradient(circle at center, rgba(0, 243, 255, 0.08) 0%, transparent 60%);
             position: relative;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 150px;
-            background: linear-gradient(to top, var(--space-black), transparent);
+            padding: 60px 20px;
         }
 
         .engine-core-ui {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border: 2px solid var(--cyber-cyan);
             border-radius: 50%;
             display: flex;
@@ -78,6 +68,10 @@
             box-shadow: var(--neon-glow);
             margin-bottom: 30px;
             animation: pulse-core 3s infinite alternate;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--cyber-cyan);
+            font-weight: 900;
         }
 
         @keyframes pulse-core {
@@ -86,8 +80,297 @@
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 15px;
-            background: linear-gradient(to right, #
+            letter-spacing: 12px;
+            background: linear-gradient(to right, #fff, var(--cyber-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .hero .subtitle {
+            color: var(--scarlet-red);
+            font-size: 1.3rem;
+            letter-spacing: 6px;
+            font-weight: 700;
+            text-shadow: var(--scarlet-glow);
+            margin-bottom: 30px;
+        }
+
+        .hero .description {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .btn-cyber {
+            padding: 16px 40px;
+            background: transparent;
+            border: 1px solid var(--cyber-cyan);
+            color: var(--cyber-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-cyber:hover {
+            background: var(--cyber-cyan);
+            color: var(--space-black);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* 🌌 Section: The Qubit Engine (Core Tech) */
+        .tech-section {
+            border-top: 1px solid rgba(0, 243, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 4px;
+        }
+
+        .section-title span {
+            color: var(--cyber-cyan);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-card {
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            padding: 35px 25px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--cyber-cyan);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+        }
+
+        .tech-card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+
+        /* 🪐 Section: 100 Matrix Scale (Biz Portfolio) */
+        .matrix-section {
+            background: linear-gradient(180deg, transparent, rgba(255, 42, 42, 0.03), transparent);
+        }
+
+        .matrix-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--scarlet-red);
+            text-shadow: var(--scarlet-glow);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            border-left: 2px solid var(--cyber-cyan);
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-item h4 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 📡 Section: Command Centers & Crew */
+        .command-section {
+            text-align: center;
+        }
+
+        .map-container {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 30px;
+            border: 1px dashed rgba(0, 243, 255, 0.3);
+            background: rgba(5, 8, 15, 0.5);
+        }
+
+        .crew-role {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-muted);
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .crew-role.commander {
+            border-color: var(--scarlet-red);
+            color: var(--scarlet-red);
+            box-shadow: inset 0 0 10px rgba(255, 42, 42, 0.2);
+        }
+
+        /* 🌠 CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 243, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="common-header"></div>
+
+    <section class="hero">
+        <div class="engine-core-ui">*SC</div>
+        <h1>*SC SISTAR</h1>
+        <div class="subtitle">COSMO SEED™ BIZ GALAXY</div>
+        <p class="description">
+            Originating from Seoul, South Korea, we navigate the global business galaxy.<br>
+            Powered by the computational force of the Qubit Algorithm, we open an era of <b>'One Spark, Infinite Galaxifying'</b>.
+        </p>
+        <a href="#matrix" class="btn-cyber">Explore the Matrix</a>
+    </section>
+
+    <section class="section-container tech-section">
+        <h2 class="section-title">The <span>Intelligence</span> Core</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 50px; max-width: 800px; margin-inline: auto;">
+            Shattering linear growth limits. Powered by the 'Qubit Algorithm' for 24/7 fully automated problem solving with zero risk, zero inventory, and zero capital constraints.
+        </p>
+        
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h3>Superposition @ Biz</h3>
+                <p>When an Idea is modeled, multi-dimensional projects stand by in a superposed state for immediate execution.</p>
+            </div>
+            <div class="tech-card">
+                <h3>Entanglement</h3>
+                <p>A single data ingestion triggers regulatory approvals and automated logistics in a light-speed chain reaction.</p>
+            </div>
+            <div class="tech-card">
+                <h3>Tunneling</h3>
+                <p>Piercing through capital and inventory barriers to allow immediate, massive global market entry.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container matrix-section" id="matrix">
+        <h2 class="section-title">100 <span>Matrix</span> Scale</h2>
+
+        <div class="matrix-stats">
+            <div class="stat-item">
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">Pipeline Ideas</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100</div>
+                <div class="stat-label">Commercial Platforms</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">AI Automation</div>
+            </div>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h4>SISTAR Studio & AI</h4>
+                <p>Qubit Star, Qubit Ads, AI Mkt Agency (MA), and AI Web/App Building (Vibe Coding).</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>SISTAR Commerce & Hub</h4>
+                <p>B2B, Siscart, Nearbuy, PetFood Bank, and sis-Proteins global trade pipelines.</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>SISTAR Data Factory (DF)</h4>
+                <p>"Data For All". Overnight (10 PM - 8 AM) AI data ingestion & automated Daily Briefs.</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>SISTAR Physical & Bio</h4>
+                <p>Robotics (s-Robot), Pet Healthcare (MedIX), and Ayurvedic Therapy solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container command-section">
+        <h2 class="section-title">Global <span>Command</span> Network</h2>
+        
+        <div class="map-container">
+            <h3 style="color: var(--cyber-cyan); letter-spacing: 5px; margin-bottom: 15px;">TRIPLE CONTROL TOWERS</h3>
+            <p style="color: var(--text-muted);">
+                Anchored by <b>*SC Head Quarter</b> in Seoul, South Korea,<br>
+                our <b>Command Center</b> and <b>Analysis Center</b> form an operational triad.
+            </p>
+        </div>
+
+        <div>
+            <div class="crew-role commander">Commander SCARLET</div>
+            <div class="crew-role">SISTAR Astronauts</div>
+            <div class="crew-role">SISTAR Vibe Works</div>
+            <div class="crew-role">IoT Freelancers</div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 style="font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">Ready to OnBoard?</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
+            Board the *SC Spaceship. It's time to Play, Make Money, and explore the Business Galaxy.
+        </p>
+        <button class="btn-cyber" onclick="window.copyToCyberClipboard('denniiku@sistarcompany.com', 'Command Center comms (email) copied to clipboard!\\ndenniiku@sistarcompany.com')">
+            Contact Command Center
+        </button>
+    </section>
+
+    <div id="common-footer"></div>
+
+</body>
+</html>
