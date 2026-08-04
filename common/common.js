@@ -24,9 +24,7 @@
     {
       "category": "Biz Galaxy",
       "baseUrl": "https://sc-bizgalaxy.web.app",
-      "items": [
-        { "name": "SISPet App", "url": "https://sc-bizgalaxy.web.app/sispet/index.html" }
-      ]
+      "items": [{ "name": "SISPet App", "url": "https://sc-bizgalaxy.web.app/sispet/index.html" }]
     }
   ];
 
@@ -37,7 +35,7 @@
 
     let navData = DEFAULT_NAV_DATA;
 
-    // 동적으로 생성된 nav-data.json 불러오기 시도
+    // 동적으로 생성된 nav-data.json 불러오기 시도 (루트의 절대 경로 사용)
     try {
       const response = await fetch('/common/nav-data.json');
       if (response.ok) {
@@ -113,7 +111,7 @@
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 📌 4. Footer 동적 생성 (요청사항 100% 반영)
+  // 📌 4. Footer 동적 생성
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
