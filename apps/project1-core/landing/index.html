@@ -3,374 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>*SC- SISTAR Company</title>
     
-    <title>*SC - SISTAR Company</title>
-
+    <!-- Mandatory Common Assets -->
     <link rel="stylesheet" href="/common/common.css">
     <script src="/common/common.js" defer></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
+        /* 
+         * PERFORMANCE OPTIMIZATION: 
+         * No external font CDN used to prevent render blocking. 
+         * Using system-ui for ultra-fast, modern typography.
+         */
         :root {
             --space-black: #050508;
+            --scarlet-red: #ff2400;
             --cyber-cyan: #00f3ff;
-            --scarlet-red: #ff2a2a;
-            --text-main: #e2e8f0;
-            --text-muted: #94a3b8;
-            --neon-glow: 0 0 15px rgba(0, 243, 255, 0.4);
-            --scarlet-glow: 0 0 20px rgba(255, 42, 42, 0.4);
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f0f0f0;
+            --text-muted: #8892b0;
         }
 
-        /* Base & Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--space-black);
             color: var(--text-main);
-            font-family: 'Rajdhani', sans-serif;
-            overflow-x: hidden;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, h4 {
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 1rem;
+        /* High-performance canvas background */
+        #space-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            pointer-events: none;
         }
 
-        /* Layout Utility */
-        .section-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 100px 40px;
-            position: relative;
-        }
-
-        /* 🚀 Hero Section: The Launchpad */
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.08) 0%, transparent 60%);
-            position: relative;
-            padding: 60px 20px;
-        }
-
-        .engine-core-ui {
-            width: 100px;
-            height: 100px;
-            border: 2px solid var(--cyber-cyan);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--neon-glow);
-            margin-bottom: 30px;
-            animation: pulse-core 3s infinite alternate;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
+        /* Typography & Neon Utilities */
+        .neon-text-cyan {
             color: var(--cyber-cyan);
-            font-weight: 900;
+            text-shadow: 0 0 8px rgba(0, 243, 255, 0.6), 0 0 20px rgba(0, 243, 255, 0.2);
         }
 
-        @keyframes pulse-core {
-            0% { transform: scale(0.95); box-shadow: 0 0 10px rgba(0, 243, 255, 0.2); }
-            100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 243, 255, 0.6); }
-        }
-
-        .hero h1 {
-            font-size: clamp(2.5rem, 7vw, 5.5rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 12px;
-            background: linear-gradient(to right, #fff, var(--cyber-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        .hero .subtitle {
+        .neon-text-red {
             color: var(--scarlet-red);
-            font-size: 1.3rem;
-            letter-spacing: 6px;
-            font-weight: 700;
-            text-shadow: var(--scarlet-glow);
-            margin-bottom: 30px;
-        }
-
-        .hero .description {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin-bottom: 40px;
-        }
-
-        .btn-cyber {
-            padding: 16px 40px;
-            background: transparent;
-            border: 1px solid var(--cyber-cyan);
-            color: var(--cyber-cyan);
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-cyber:hover {
-            background: var(--cyber-cyan);
-            color: var(--space-black);
-            box-shadow: var(--neon-glow);
-        }
-
-        /* 🌌 Section: The Qubit Engine (Core Tech) */
-        .tech-section {
-            border-top: 1px solid rgba(0, 243, 255, 0.1);
+            text-shadow: 0 0 8px rgba(255, 36, 0, 0.6), 0 0 20px rgba(255, 36, 0, 0.2);
         }
 
         .section-title {
-            font-size: 2.2rem;
-            color: #fff;
-            text-align: center;
-            margin-bottom: 40px;
-            letter-spacing: 4px;
-        }
-
-        .section-title span {
-            color: var(--cyber-cyan);
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .tech-card {
-            background: rgba(10, 15, 25, 0.6);
-            border: 1px solid rgba(0, 243, 255, 0.15);
-            padding: 35px 25px;
-            border-radius: 8px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .tech-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--cyber-cyan);
-            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
-        }
-
-        .tech-card h3 {
-            color: #fff;
-            font-size: 1.3rem;
-            letter-spacing: 2px;
-        }
-
-        /* 🪐 Section: 100 Matrix Scale (Biz Portfolio) */
-        .matrix-section {
-            background: linear-gradient(180deg, transparent, rgba(255, 42, 42, 0.03), transparent);
-        }
-
-        .matrix-stats {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: var(--scarlet-red);
-            text-shadow: var(--scarlet-glow);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: var(--text-muted);
-            letter-spacing: 2px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
             text-transform: uppercase;
         }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .portfolio-item {
-            border-left: 2px solid var(--cyber-cyan);
-            padding-left: 20px;
-            margin-bottom: 20px;
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 10rem;
+            padding-bottom: 8rem;
         }
 
-        .portfolio-item h4 {
-            color: #fff;
-            font-size: 1.15rem;
-            margin-bottom: 5px;
+        section {
+            position: relative;
+            z-index: 10;
         }
 
-        .portfolio-item p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 3rem;
+            transition: transform 0.4s ease, border-color 0.4s ease;
         }
 
-        /* 📡 Section: Command Centers & Crew */
-        .command-section {
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 243, 255, 0.3);
+            box-shadow: 0 10px 30px -15px rgba(0, 243, 255, 0.1);
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            padding-top: 4rem; /* Buffer for potential common header */
         }
 
-        .map-container {
-            margin: 40px auto;
-            max-width: 800px;
-            padding: 30px;
-            border: 1px dashed rgba(0, 243, 255, 0.3);
-            background: rgba(5, 8, 15, 0.5);
+        .hero-content h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.05em;
         }
 
-        .crew-role {
+        .hero-content p {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .btn {
             display: inline-block;
-            margin: 8px;
-            padding: 8px 18px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: var(--text-muted);
-            border-radius: 20px;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
         }
 
-        .crew-role.commander {
-            border-color: var(--scarlet-red);
+        .btn-primary {
+            background-color: var(--cyber-cyan);
+            color: var(--space-black);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.8);
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
             color: var(--scarlet-red);
-            box-shadow: inset 0 0 10px rgba(255, 42, 42, 0.2);
+            border: 2px solid var(--scarlet-red);
+            box-shadow: 0 0 10px rgba(255, 36, 0, 0.2);
+            margin-left: 1rem;
         }
 
-        /* 🌠 CTA Section */
-        .cta-section {
-            padding: 80px 20px;
-            text-align: center;
-            border-top: 1px solid rgba(0, 243, 255, 0.1);
+        .btn-secondary:hover {
+            background-color: rgba(255, 36, 0, 0.1);
+            box-shadow: 0 0 20px rgba(255, 36, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Specific Sections */
+        .subtitle {
+            color: var(--scarlet-red);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Scroll Animations (Handled by Intersection Observer) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            main {
+                gap: 6rem;
+            }
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+            .hero-btns {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 0 2rem;
+            }
         }
     </style>
 </head>
 <body>
-
+    <!-- Mandatory Common Header Placeholder -->
     <div id="common-header"></div>
 
-    <section class="hero">
-        <div class="engine-core-ui">*SC</div>
-        <h1>*SC SISTAR</h1>
-        <div class="subtitle">COSMO SEED™ BIZ GALAXY</div>
-        <p class="description">
-            Originating from Seoul, South Korea, we navigate the global business galaxy.<br>
-            Powered by the computational force of the Qubit Algorithm, we open an era of <b>'One Spark, Infinite Galaxifying'</b>.
-        </p>
-        <a href="#matrix" class="btn-cyber">Explore the Matrix</a>
-    </section>
+    <!-- Space Background -->
+    <canvas id="space-canvas"></canvas>
 
-    <section class="section-container tech-section">
-        <h2 class="section-title">The <span>Intelligence</span> Core</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 50px; max-width: 800px; margin-inline: auto;">
-            Shattering linear growth limits. Powered by the 'Qubit Algorithm' for 24/7 fully automated problem solving with zero risk, zero inventory, and zero capital constraints.
-        </p>
-        
-        <div class="tech-grid">
-            <div class="tech-card">
-                <h3>Superposition @ Biz</h3>
-                <p>When an Idea is modeled, multi-dimensional projects stand by in a superposed state for immediate execution.</p>
+    <main id="sc-app">
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container hero-content reveal">
+                <span class="subtitle neon-text-red">SISTAR Company</span>
+                <h1>Board the <br><span class="neon-text-cyan">*SC Spaceship</span></h1>
+                <p>We are navigating the deepest reaches of the Business Galaxy. Powered by pure intelligence, driven by the ultimate crew.</p>
+                <div class="hero-btns">
+                    <a href="#onboard" class="btn btn-primary">Onboard Now</a>
+                    <a href="#mission" class="btn btn-secondary">Explore Mission</a>
+                </div>
             </div>
-            <div class="tech-card">
-                <h3>Entanglement</h3>
-                <p>A single data ingestion triggers regulatory approvals and automated logistics in a light-speed chain reaction.</p>
-            </div>
-            <div class="tech-card">
-                <h3>Tunneling</h3>
-                <p>Piercing through capital and inventory barriers to allow immediate, massive global market entry.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-container matrix-section" id="matrix">
-        <h2 class="section-title">100 <span>Matrix</span> Scale</h2>
+        <!-- Mission & Commander Section -->
+        <section id="mission" class="container">
+            <div class="grid-2">
+                <div class="reveal">
+                    <span class="subtitle">The Mission</span>
+                    <h2 class="section-title">Navigating the <br><span class="neon-text-red">Business Galaxy</span></h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        The cosmos of commerce is vast and unforgiving, but we thrive in the unknown. At *SC, we don't just follow trajectories; we create them. 
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1.1rem;">
+                        Under the absolute guidance of <strong>Commander Scarlet</strong>, our fleets navigate through market anomalies and asteroid belts of legacy systems, forging new paths to unprecedented value.
+                    </p>
+                </div>
+                <div class="glass-card reveal" style="text-align: center; border-color: rgba(255,36,0,0.3);">
+                    <!-- Pure SVG Icon instead of external images -->
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--scarlet-red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 80px; height: 80px; margin: 0 auto 1.5rem auto;">
+                        <polygon points="12 2 2 22 12 17 22 22 12 2"></polygon>
+                    </svg>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff;">Commander Scarlet</h3>
+                    <p style="color: var(--text-muted);">"The galaxy belongs to those who calculate the risks and accelerate past them."</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="matrix-stats">
-            <div class="stat-item">
-                <div class="stat-number">1,000+</div>
-                <div class="stat-label">Pipeline Ideas</div>
+        <!-- Technology (The Engine) -->
+        <section id="engine" class="container reveal">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem auto;">
+                <span class="subtitle">The Powertrain</span>
+                <h2 class="section-title">Engineered for <span class="neon-text-cyan">Hyper-Scale</span></h2>
+                <p style="color: var(--text-muted);">The *SC Spaceship is propelled by proprietary technology designed to process universal data streams in real-time.</p>
             </div>
-            <div class="stat-item">
-                <div class="stat-number">100</div>
-                <div class="stat-label">Commercial Platforms</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">AI Automation</div>
-            </div>
-        </div>
 
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <h4>SISTAR Studio & AI</h4>
-                <p>Qubit Star, Qubit Ads, AI Mkt Agency (MA), and AI Web/App Building (Vibe Coding).</p>
-            </div>
-            <div class="portfolio-item">
-                <h4>SISTAR Commerce & Hub</h4>
-                <p>B2B, Siscart, Nearbuy, PetFood Bank, and sis-Proteins global trade pipelines.</p>
-            </div>
-            <div class="portfolio-item">
-                <h4>SISTAR Data Factory (DF)</h4>
-                <p>"Data For All". Overnight (10 PM - 8 AM) AI data ingestion & automated Daily Briefs.</p>
-            </div>
-            <div class="portfolio-item">
-                <h4>SISTAR Physical & Bio</h4>
-                <p>Robotics (s-Robot), Pet Healthcare (MedIX), and Ayurvedic Therapy solutions.</p>
-            </div>
-        </div>
-    </section>
+            <div class="grid-3">
+                <div class="glass-card reveal">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #fff;">Qubit Algorithm</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Our primary fuel source. A quantum-inspired computational matrix that predicts market fluctuations before they occur. It is the engine that keeps our spaceship lightyears ahead.</p>
+                </div>
 
-    <section class="section-container command-section">
-        <h2 class="section-title">Global <span>Command</span> Network</h2>
-        
-        <div class="map-container">
-            <h3 style="color: var(--cyber-cyan); letter-spacing: 5px; margin-bottom: 15px;">TRIPLE CONTROL TOWERS</h3>
-            <p style="color: var(--text-muted);">
-                Anchored by <b>*SC Head Quarter</b> in Seoul, South Korea,<br>
-                our <b>Command Center</b> and <b>Analysis Center</b> form an operational triad.
-            </p>
-        </div>
+                <div class="glass-card reveal" style="transition-delay: 0.1s;">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #fff;">Intelligence Core</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">The pulsating heart of *SC. By aggregating deep-learning node networks, the Intelligence Core automates strategy, optimizes our flight paths, and ensures maximum profitability.</p>
+                </div>
 
-        <div>
-            <div class="crew-role commander">Commander SCARLET</div>
-            <div class="crew-role">SISTAR Astronauts</div>
-            <div class="crew-role">SISTAR Vibe Works</div>
-            <div class="crew-role">IoT Freelancers</div>
-        </div>
-    </section>
+                <div class="glass-card reveal" style="transition-delay: 0.2s;">
+                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #fff;">Seamless Warp</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Frictionless integration into the Business Galaxy. Our architectures bypass standard rendering and processing blockers, launching applications at unparalleled speeds.</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="cta-section">
-        <h2 style="font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">Ready to OnBoard?</h2>
-        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
-            Board the *SC Spaceship. It's time to Play, Make Money, and explore the Business Galaxy.
-        </p>
-        <button class="btn-cyber" onclick="window.copyToCyberClipboard('denniiku@sistarcompany.com', 'Command Center comms (email) copied to clipboard!\\ndenniiku@sistarcompany.com')">
-            Contact Command Center
-        </button>
-    </section>
+        <!-- Operations & Crew -->
+        <section id="operations" class="container">
+            <div class="grid-2">
+                <div class="glass-card reveal" style="background: rgba(0,243,255,0.02);">
+                    <span class="subtitle">The Network</span>
+                    <h2 class="section-title" style="font-size: 2rem;">Command Centers</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                        Originating from the <strong>*SC Headquarter</strong>, our signals reach across the void. We operate a decentralized array of Command Centers.
+                    </p>
+                    <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 2;">
+                        <li><span class="neon-text-cyan">HQ:</span> Central Nervous System</li>
+                        <li><span class="neon-text-cyan">Alpha Center:</span> Qubit Processing</li>
+                        <li><span class="neon-text-cyan">Omega Center:</span> Intelligence Core Maintenance</li>
+                    </ul>
+                </div>
 
+                <div class="reveal">
+                    <span class="subtitle neon-text-red">Careers</span>
+                    <h2 class="section-title">Calling All <br>Astronauts</h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        We do not hire standard employees. We recruit exceptional Astronauts ready to brave the extremes of the Business Galaxy. 
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
+                        If you have the courage to pilot Qubit engines and operate alongside Commander Scarlet, your seat on the *SC Spaceship awaits.
+                    </p>
+                    <a href="#onboard" class="btn btn-secondary">View Open Docks</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Onboard Section -->
+        <section id="onboard" class="container reveal">
+            <div class="glass-card" style="text-align: center; padding: 5rem 2rem; border-color: rgba(0, 243, 255, 0.4); background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 70%);">
+                <h2 class="section-title" style="font-size: 3rem; margin-bottom: 1.5rem;">Initiate Sequence</h2>
+                <p style="font-size: 1.5rem; color: #fff; margin-bottom: 3rem; font-weight: 300;">
+                    Onboard. Play. <span class="neon-text-red" style="font-weight: 700;">Make Money.</span>
+                </p>
+                <button class="btn btn-primary" style="font-size: 1.25rem; padding: 1.25rem 4rem;">Dock & Join *SC</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mandatory Common Footer Placeholder -->
     <div id="common-footer"></div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. High-Performance Space Background (HTML5 Canvas)
+            // Using canvas prevents adding hundreds of DOM elements, maximizing speed.
+            const canvas = document.getElementById('space-canvas');
+            const ctx = canvas.getContext('2d');
+            
+            let width, height;
+            let stars = [];
+
+            function initCanvas() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+                createStars();
+            }
+
+            function createStars() {
+                stars = [];
+                const numStars = Math.floor((width * height) / 3000); // Responsive star density
+                for (let i = 0; i < numStars; i++) {
+                    stars.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 1.5,
+                        speed: Math.random() * 0.5 + 0.1,
+                        opacity: Math.random()
+                    });
+                }
+            }
+
+            function animateStars() {
+                ctx.clearRect(0, 0, width, height);
+                ctx.fillStyle = '#050508'; // Deep Space Black
+                ctx.fillRect(0, 0, width, height);
+                
+                stars.forEach(star => {
+                    // Twinkle effect
+                    star.opacity += (Math.random() - 0.5) * 0.1;
+                    if (star.opacity < 0.2) star.opacity = 0.2;
+                    if (star.opacity > 1) star.opacity = 1;
+
+                    // Upward drifting movement (Spaceship flying forward illusion)
+                    star.y += star.speed;
+                    if (star.y > height) {
+                        star.y = 0;
+                        star.x = Math.random() * width;
+                    }
+
+                    // Render star
+                    ctx.beginPath();
+                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                    // Blueish/white star color
+                    ctx.fillStyle = `rgba(200, 240, 255, ${star.opacity})`;
+                    ctx.fill();
+                });
+
+                requestAnimationFrame(animateStars);
+            }
+
+            // Handle resize efficiently
+            window.addEventListener('resize', () => {
+                initCanvas();
+            });
+
+            initCanvas();
+            animateStars();
+
+            // 2. Scroll Reveal Animation (Intersection Observer)
+            // Extremely lightweight method for modern scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: Unobserve after reveal for slight performance boost
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
