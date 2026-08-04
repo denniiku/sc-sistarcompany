@@ -20,7 +20,7 @@ body {
 }
 
 /* ======================================================
-   Header & Navigation (투명 & 대형 개방감)
+   Header & Navigation (투명 & 한 줄 정렬)
    ====================================================== */
 #common-header {
   background-color: transparent; /* 배경색 완전히 제거 */
@@ -29,27 +29,23 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding-top: 20px;             /* 상단 여백 추가 */
+  padding-top: 15px;             /* 상단 여백 설정 */
 }
 
 .nav-container {
   max-width: 1400px; /* 기존보다 더 넓게 확장 */
   margin: 0 auto;
-  position: relative;
-  height: 60px; /* 로고 상단, 네비 하단 배치를 위한 공간 */
+  display: flex;              /* Flexbox를 사용하여 한 줄에 배치 */
+  align-items: center;        /* 수직 중앙 정렬 */
+  justify-content: space-between; /* 왼쪽 끝(로고)과 오른쪽 끝(메뉴)으로 분리 */
+  height: 60px; 
   padding: 0 30px;
 }
 
-/* 로고 (*SC.) - 왼쪽 상단 픽스 */
-.nav-logo {
-  position: absolute;
-  top: 0;
-  left: 30px;
-}
-
+/* 로고 (*SC.) - 왼쪽 상단 */
 .nav-logo a {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.4rem; /* 크기 축소하여 세련미 강조 */
+  font-size: 1.4rem;
   font-weight: 900;
   color: #ffffff;
   text-decoration: none;
@@ -63,14 +59,11 @@ body {
   text-shadow: 0 0 15px rgba(255, 42, 42, 0.8);
 }
 
-/* 네비게이션 메뉴 - 오른쪽 하단 픽스 */
+/* 네비게이션 메뉴 - 오른쪽 상단 */
 .nav-menu {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
   display: flex;
   list-style: none;
-  gap: 10px; /* 간격 축소 */
+  gap: 15px; 
 }
 
 .nav-item {
@@ -81,9 +74,9 @@ body {
 .nav-link {
   display: block;
   font-family: 'Orbitron', sans-serif;
-  font-size: 0.75rem; /* 글자 크기 대폭 축소 */
+  font-size: 0.75rem; 
   font-weight: 700;
-  color: #64748b; /* 배경에 은은하게 스며드는 색상 */
+  color: #64748b; 
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-decoration: none;
@@ -101,14 +94,14 @@ body {
   display: none;
   position: absolute;
   top: 100%;
-  right: 0; /* 메뉴 텍스트 기준 우측 정렬로 개방감 유지 */
-  background: rgba(5, 8, 15, 0.7); /* 투명도를 대폭 높여 배경이 비치게 함 */
+  right: 0; /* 메뉴 텍스트 기준 우측 정렬 */
+  background: rgba(5, 8, 15, 0.7); 
   backdrop-filter: blur(8px);
-  min-width: 180px; /* 너비 축소 */
+  min-width: 180px; 
   padding: 10px 0;
   margin-top: 10px;
   list-style: none;
-  border-right: 1px solid rgba(0, 243, 255, 0.3); /* 우측 라인만 포인트로 남김 */
+  border-right: 1px solid rgba(0, 243, 255, 0.3); /* 우측 라인 포인트 */
   z-index: 1001;
 }
 
@@ -120,13 +113,13 @@ body {
 .dropdown-link {
   display: block;
   padding: 10px 20px;
-  font-size: 0.85rem; /* 서브메뉴 글자 크기 축소 */
+  font-size: 0.85rem; 
   font-weight: 500;
   color: #94a3b8;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.2s ease;
-  text-align: right; /* 우측 하단 배치 컨셉에 맞춰 텍스트 우측 정렬 */
+  text-align: right; 
   border-right: 2px solid transparent;
 }
 
@@ -148,13 +141,12 @@ body {
    Footer (투명 & 대형 개방감)
    ====================================================== */
 #common-footer {
-  background-color: transparent; /* 배경색 완전히 제거 */
-  border-top: none;              /* 상단 라인 제거 */
-  padding: 0 0 30px 0;           /* 여백 축소 */
+  background-color: transparent; 
+  border-top: none;              
+  padding: 0 0 30px 0;           
   margin-top: auto;
 }
 
-/* 기존 푸터 상단 발광 라인 제거 */
 #common-footer::before {
   display: none; 
 }
@@ -164,23 +156,30 @@ body {
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
-  align-items: flex-end; /* 텍스트와 아이콘을 맨 밑바닥 선에 맞춤 */
-  justify-content: space-between; /* 양 끝으로 밀어내기 */
+  align-items: flex-end; 
+  justify-content: space-between; 
 }
 
-/* 왼쪽 맨 밑: 로고 텍스트 */
+/* 왼쪽 맨 밑: 로고 텍스트 (은은한 네온 효과 적용) */
 .footer-logo-text {
   font-family: 'Orbitron', sans-serif;
-  font-size: 0.85rem; /* 크기 대폭 축소 */
+  font-size: 0.85rem; 
   font-weight: 500;
-  color: #475569; /* 은은하게 스며드는 색상 */
+  color: #64748b; /* 살짝 밝게 조정하여 네온 효과가 잘 보이도록 함 */
   letter-spacing: 2px;
+  text-shadow: 0 0 6px rgba(0, 243, 255, 0.3); /* 은은한 시안색 네온 효과 */
+  transition: all 0.3s ease;
 }
 
-/* 오른쪽 맨 밑: 도메인 링크 (마진을 이용해 우측 아이콘 옆으로 밀착) */
+.footer-logo-text:hover {
+  color: #00f3ff;
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+}
+
+/* 오른쪽 맨 밑: 도메인 링크 */
 .footer-link {
   margin-left: auto; 
-  margin-right: 25px; /* 아이콘과의 간격 */
+  margin-right: 25px; 
 }
 
 .footer-link a {
@@ -200,17 +199,17 @@ body {
   text-shadow: 0 0 10px rgba(255, 42, 42, 0.6);
 }
 
-/* 오른쪽 맨 밑: 메일, 메신저 아이콘 */
+/* 오른쪽 맨 밑: 아이콘 */
 .footer-icons {
   display: flex;
-  gap: 15px; /* 아이콘 간격 축소 */
+  gap: 15px; 
 }
 
 .icon-btn {
-  background: transparent; /* 배경색 제거 */
+  background: transparent; 
   border: 1px solid rgba(0, 243, 255, 0.2);
   color: #00f3ff;
-  width: 32px; /* 아이콘 크기 대폭 축소 */
+  width: 32px; 
   height: 32px;
   border-radius: 50%;
   display: flex;
@@ -237,40 +236,11 @@ body {
 
 
 /* ======================================================
-   Cybernetic Toast Message (유지)
+   Cybernetic Toast Message
    ====================================================== */
 #cyber-toast {
   visibility: hidden;
   min-width: 250px;
   background: rgba(5, 5, 12, 0.85);
   backdrop-filter: blur(5px);
-  border: 1px solid #00f3ff;
-  color: #ffffff;
-  text-align: center;
-  border-radius: 4px;
-  padding: 12px 20px;
-  position: fixed;
-  z-index: 9999;
-  left: 50%;
-  bottom: 40px;
-  transform: translateX(-50%);
-  box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  line-height: 1.5;
-}
-
-#cyber-toast.show {
-  visibility: visible;
-  animation: fadein 0.4s, fadeout 0.4s 2.6s;
-}
-
-@keyframes fadein {
-  from { bottom: 0; opacity: 0; } 
-  to { bottom: 40px; opacity: 1; }
-}
-@keyframes fadeout {
-  from { bottom: 40px; opacity: 1; } 
-  to { bottom: 0; opacity: 0; }
-}
+  border: 1px solid #00
