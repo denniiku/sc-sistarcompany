@@ -7,27 +7,27 @@
     {
       category: "*SC",
       baseUrl: "https://sc-sistarcompany.web.app",
-      items: [{ name: "Main Gateway", url: "https://sc-sistarcompany.web.app/" }]
+      items: [{ name: "Head Quarter", url: "https://sc-sistarcompany.web.app/" }]
     },
     {
       category: "SCARLET AI",
       baseUrl: "https://sc-scarletai.web.app",
-      items: [{ name: "Main Gateway", url: "https://sc-scarletai.web.app/" }]
+      items: [{ name: "Scarlet Gateway", url: "https://sc-scarletai.web.app/" }]
     },
     {
       category: "QUBIT BIZ",
       baseUrl: "https://sc-qubitbiz.web.app",
-      items: [{ name: "Main Gateway", url: "https://sc-qubitbiz.web.app/" }]
+      items: [{ name: "Qubit Trade", url: "https://sc-qubitbiz.web.app/" }]
     },
     {
       category: "BIZ HUB",
       baseUrl: "https://sc-bizhub.web.app",
-      items: [{ name: "Main Gateway", url: "https://sc-bizhub.web.app/" }]
+      items: [{ name: "SISTAR &Co", url: "https://sc-bizhub.web.app/" }]
     },
     {
       category: "BIZ GALAXY",
       baseUrl: "https://sc-bizgalaxy.web.app",
-      items: [{ name: "Main Gateway", url: "https://sc-bizgalaxy.web.app/" }]
+      items: [{ name: "SISPet App", url: "https://sc-bizgalaxy.web.app/sispet/index.html" }]
     }
   ];
 
@@ -38,7 +38,6 @@
 
     let navData = DEFAULT_NAV_DATA;
 
-    // 타임스탬프(?t=)를 추가하여 브라우저 캐시 현상을 강제로 무력화합니다.
     try {
       const response = await fetch('/common/nav-data.json?t=' + new Date().getTime());
       if (response.ok) {
@@ -88,6 +87,20 @@
     }
   }
 
+  // 🔥 [핵심 추가] 스크롤 감지 로직 (헤더 반투명 효과 토글)
+  function initScrollListener() {
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('common-header');
+      if (header) {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+    });
+  }
+
   // 3. 클립보드 복사 및 사이버 토스트
   window.copyToCyberClipboard = function(text, message) {
     const textarea = document.createElement("textarea");
@@ -114,7 +127,7 @@
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 4. Footer 동적 생성
+  // 4. Footer 동적 생성 (스크롤 탑 기능 적용)
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
@@ -124,7 +137,9 @@
 
     footerContainer.innerHTML = `
       <div class="footer-content">
-        <div class="footer-logo-text">*SC SISTAR Company</div>
+        <a href="#" class="footer-logo-text" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="text-decoration: none;" title="Scroll to Top">
+          *SC SISTAR Company ↑
+        </a>
         
         <div class="footer-link">
           <a href="https://sc-sistarcompany.web.app" target="_blank">sistarcompany.com</a>
@@ -146,5 +161,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
     renderFooter();
+    initScrollListener(); // 스크롤 이벤트 리스너 실행
   });
 })();
