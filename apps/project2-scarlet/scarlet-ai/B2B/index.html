@@ -6,24 +6,8 @@
   
   <title>SISTAR B2B Gateway</title>
 
-  <script>
-    (function() {
-      const depth = window.location.pathname.split('/').filter(Boolean).length;
-      const isFile = window.location.pathname.includes('.');
-      const steps = Math.max(0, depth - (isFile ? 1 : 0));
-      const prefix = steps > 0 ? '../'.repeat(steps) : './';
-      
-      const cssLink = document.createElement('link');
-      cssLink.rel = 'stylesheet';
-      cssLink.href = prefix + 'common/common.css';
-      document.head.appendChild(cssLink);
-      
-      const jsScript = document.createElement('script');
-      jsScript.src = prefix + 'common/common.js';
-      jsScript.defer = true;
-      document.body.appendChild(jsScript);
-    })();
-  </script>
+  <link rel="stylesheet" href="/common/common.css">
+  <script src="/common/common.js" defer></script>
 
   <style>
     /* B2B 테스트 페이지 전용 우주/네온 본문 스타일 */
@@ -68,43 +52,6 @@
       line-height: 1.6;
       margin-bottom: 30px;
     }
-
-    .card-grid {
-      display: flex;
-      gap: 20px;
-      max-width: 800px;
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .cyber-card {
-      flex: 1;
-      background: rgba(10, 15, 25, 0.6);
-      border: 1px solid rgba(0, 243, 255, 0.2);
-      padding: 24px;
-      border-radius: 8px;
-      text-align: left;
-      transition: all 0.3s ease;
-    }
-
-    .cyber-card:hover {
-      border-color: #00f3ff;
-      box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
-      transform: translateY(-50%);
-    }
-
-    .cyber-card h3 {
-      font-family: 'Orbitron', sans-serif;
-      color: #00f3ff;
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
-
-    .cyber-card p {
-      font-size: 0.95rem;
-      color: #64748b;
-      margin: 0;
-    }
   </style>
 </head>
 <body>
@@ -115,20 +62,9 @@
     <span class="status-badge">SCARLET AI : B2B NODE</span>
     <h1>SISTAR B2B Gateway</h1>
     <p>
-      이 페이지는 <code>sc-scarletai.web.app/b2b/index.html</code> 경로의 테스트 노드입니다.<br>
-      이 파일의 <code>&lt;title&gt;</code>인 <b>"SISTAR B2B Gateway"</b>가 네비게이션 드롭다운에 수집되는지 확인하세요.
+      이 페이지는 절대 경로(<code>/common/...</code>)를 사용하여<br>
+      에러 없이 완벽하게 네비게이션과 푸터를 불러오는 테스트 노드입니다.
     </p>
-
-    <div class="card-grid">
-      <div class="cyber-card">
-        <h3>Bulk Sourcing</h3>
-        <p>Zero-inventory programmatic demand aggregation engine.</p>
-      </div>
-      <div class="cyber-card">
-        <h3>Trade Finance</h3>
-        <p>Quantum-inspired B2B volume-wise deal clearing.</p>
-      </div>
-    </div>
   </main>
 
   <div id="common-footer"></div>
