@@ -17,6 +17,10 @@ jobs:
         with:
           node-version: 20
 
+      # 🚀 [추가된 부분] 파이어베이스 배포 전 네비게이션 메뉴 자동 생성!
+      - name: Generate Dynamic Navigation
+        run: node generate-nav.js
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
