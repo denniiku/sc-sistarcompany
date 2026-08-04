@@ -52,7 +52,7 @@
       let navHtml = `
         <div class="nav-container">
           <div class="nav-logo">
-            <a href="https://sc-sistarcompany.web.app/">*SC.</a>
+            <a href="https://sc-sistarcompany.web.app/">*SC</a>
           </div>
           <ul class="nav-menu">
       `;
