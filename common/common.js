@@ -127,7 +127,7 @@
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 5. Footer 동적 생성 (스크롤 탑 기능 탑재)
+  // 5. Footer 동적 생성 (스크롤 탑 기능 및 우측 정렬 반영)
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
@@ -138,21 +138,23 @@
     footerContainer.innerHTML = `
       <div class="footer-content">
         <a href="#" class="footer-logo-text" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Scroll to Top">
-          *SC SISTAR Company ↑
+          *SC SISTAR Company
         </a>
         
-        <div class="footer-link">
-          <a href="https://sc-sistarcompany.web.app" target="_blank">sistarcompany.com</a>
-        </div>
+        <div class="footer-right">
+          <div class="footer-link">
+            <a href="https://sc-sistarcompany.web.app" target="_blank">sistarcompany.com</a>
+          </div>
 
-        <div class="footer-icons">
-          <button class="icon-btn" title="Copy Email" onclick="window.copyToCyberClipboard('denniiku@sistarcompany.com', '이메일 주소가 복사되었습니다.\\ndenniiku@sistarcompany.com')">
-            ${mailIcon}
-          </button>
-          
-          <button class="icon-btn" title="Copy Contact" onclick="window.copyToCyberClipboard('+82(0)1028400485', '연락처가 복사되었습니다.\\n+82(0)1028400485')">
-            ${chatIcon}
-          </button>
+          <div class="footer-icons">
+            <button class="icon-btn" title="Copy Email" onclick="window.copyToCyberClipboard('denniiku@sistarcompany.com', '이메일 주소가 복사되었습니다.\\ndenniiku@sistarcompany.com')">
+              ${mailIcon}
+            </button>
+            
+            <button class="icon-btn" title="Copy Contact" onclick="window.copyToCyberClipboard('+82(0)1028400485', '연락처가 복사되었습니다.\\n+82(0)1028400485')">
+              ${chatIcon}
+            </button>
+          </div>
         </div>
       </div>
     `;
