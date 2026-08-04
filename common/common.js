@@ -87,12 +87,12 @@
     }
   }
 
-  // 🔥 [핵심 추가] 스크롤 감지 로직 (헤더 반투명 효과 토글)
+  // 3. 스크롤 감지 이벤트 (헤더 반투명 배경 토글)
   function initScrollListener() {
     window.addEventListener('scroll', () => {
       const header = document.getElementById('common-header');
       if (header) {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 30) {
           header.classList.add('scrolled');
         } else {
           header.classList.remove('scrolled');
@@ -101,7 +101,7 @@
     });
   }
 
-  // 3. 클립보드 복사 및 사이버 토스트
+  // 4. 클립보드 복사 및 토스트
   window.copyToCyberClipboard = function(text, message) {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -127,7 +127,7 @@
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 4. Footer 동적 생성 (스크롤 탑 기능 적용)
+  // 5. Footer 동적 생성 (스크롤 탑 기능 탑재)
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
@@ -137,7 +137,7 @@
 
     footerContainer.innerHTML = `
       <div class="footer-content">
-        <a href="#" class="footer-logo-text" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" style="text-decoration: none;" title="Scroll to Top">
+        <a href="#" class="footer-logo-text" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Scroll to Top">
           *SC SISTAR Company ↑
         </a>
         
@@ -161,6 +161,6 @@
   document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
     renderFooter();
-    initScrollListener(); // 스크롤 이벤트 리스너 실행
+    initScrollListener();
   });
 })();
