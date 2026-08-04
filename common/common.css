@@ -31,13 +31,13 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-/* 🔥 스크롤 시 켜지는 반투명 유리 효과 */
+/* 🔥 스크롤 시 켜지는 반투명 유리 효과 (투명도 증가로 개방감 극대화) */
 #common-header.scrolled {
-  background-color: rgba(5, 8, 15, 0.85);
+  background-color: rgba(5, 8, 15, 0.5); /* 0.85에서 0.5로 투명도 증가 */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 243, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   padding: 10px 0;
 }
 
@@ -98,7 +98,7 @@ body {
   text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
 }
 
-/* 2차 드롭다운 메뉴 */
+/* 2차 드롭다운 메뉴 (아웃라인 제거 완료) */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -110,7 +110,7 @@ body {
   min-width: 200px;
   padding: 10px 0;
   list-style: none;
-  border: 1px solid rgba(0, 243, 255, 0.3);
+  border: none; /* 아웃라인(박스 테두리) 완전 제거 */
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
   z-index: 1001;
@@ -194,6 +194,13 @@ body {
 .footer-logo-text:hover {
   color: #00f3ff;
   text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
+}
+
+/* 🔥 푸터 우측 영역 (링크와 아이콘 묶음) */
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 .footer-link a {
