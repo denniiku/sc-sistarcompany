@@ -57,7 +57,7 @@ body {
 }
 
 .nav-logo a:hover {
-  color: #ff2a2a; /* 스칼렛 레드 발광 */
+  color: #ff2a2a;
   text-shadow: 0 0 15px rgba(255, 42, 42, 0.9), 0 0 30px rgba(255, 42, 42, 0.7);
   transform: scale(1.05);
 }
@@ -72,7 +72,6 @@ body {
   position: relative;
 }
 
-/* 1차 메뉴 텍스트 */
 .nav-link {
   display: flex;
   align-items: center;
@@ -93,7 +92,6 @@ body {
   text-shadow: 0 0 12px rgba(0, 243, 255, 0.8);
 }
 
-/* 홀로그램 드롭다운 메뉴 */
 .dropdown-menu {
   display: none;
   position: absolute;
