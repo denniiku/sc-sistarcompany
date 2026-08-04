@@ -22,20 +22,6 @@
             --scarlet-glow: 0 0 20px rgba(255, 42, 42, 0.4);
         }
 
-        /* Base & Reset */
-        body {
-            background-color: var(--space-black);
-            color: var(--text-main);
-            font-family: 'Rajdhani', sans-serif;
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Orbitron', sans-serif;
-            margin-bottom: 1rem;
-        }
-
         /* Layout Utility */
         .section-container {
             max-width: 1400px;
@@ -68,10 +54,6 @@
             box-shadow: var(--neon-glow);
             margin-bottom: 30px;
             animation: pulse-core 3s infinite alternate;
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.5rem;
-            color: var(--cyber-cyan);
-            font-weight: 900;
         }
 
         @keyframes pulse-core {
@@ -80,6 +62,7 @@
         }
 
         .hero h1 {
+            font-family: 'Orbitron', sans-serif;
             font-size: clamp(2.5rem, 7vw, 5.5rem);
             font-weight: 900;
             text-transform: uppercase;
@@ -91,6 +74,7 @@
         }
 
         .hero .subtitle {
+            font-family: 'Orbitron', sans-serif;
             color: var(--scarlet-red);
             font-size: 1.3rem;
             letter-spacing: 6px;
@@ -104,6 +88,7 @@
             color: var(--text-muted);
             max-width: 800px;
             margin-bottom: 40px;
+            line-height: 1.6;
         }
 
         .btn-cyber {
@@ -134,6 +119,7 @@
         }
 
         .section-title {
+            font-family: 'Orbitron', sans-serif;
             font-size: 2.2rem;
             color: #fff;
             text-align: center;
@@ -164,11 +150,27 @@
             border-color: var(--cyber-cyan);
             box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
         }
+        
+        .tech-icon-svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--cyber-cyan);
+            stroke-width: 1.5;
+            fill: none;
+            margin-bottom: 20px;
+        }
 
         .tech-card h3 {
+            font-family: 'Orbitron', sans-serif;
             color: #fff;
             font-size: 1.3rem;
             letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .tech-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
         }
 
         /* 🪐 Section: 100 Matrix Scale (Biz Portfolio) */
@@ -217,6 +219,7 @@
         }
 
         .portfolio-item h4 {
+            font-family: 'Orbitron', sans-serif;
             color: #fff;
             font-size: 1.15rem;
             margin-bottom: 5px;
@@ -225,6 +228,7 @@
         .portfolio-item p {
             color: var(--text-muted);
             font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         /* 📡 Section: Command Centers & Crew */
@@ -271,7 +275,14 @@
     <div id="common-header"></div>
 
     <section class="hero">
-        <div class="engine-core-ui">*SC</div>
+        <div class="engine-core-ui">
+            <svg class="tech-icon-svg" style="margin:0;" viewBox="0 0 24 24">
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-30 12 12)"></ellipse>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"></ellipse>
+                <circle cx="12" cy="12" r="1.5" fill="var(--cyber-cyan)"></circle>
+            </svg>
+        </div>
         <h1>*SC SISTAR</h1>
         <div class="subtitle">COSMO SEED™ BIZ GALAXY</div>
         <p class="description">
@@ -289,14 +300,29 @@
         
         <div class="tech-grid">
             <div class="tech-card">
+                <svg class="tech-icon-svg" viewBox="0 0 24 24">
+                    <rect x="2" y="2" width="20" height="8" rx="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2"></rect>
+                    <line x1="6" y1="10" x2="6" y2="14"></line>
+                </svg>
                 <h3>Superposition @ Biz</h3>
                 <p>When an Idea is modeled, multi-dimensional projects stand by in a superposed state for immediate execution.</p>
             </div>
             <div class="tech-card">
+                <svg class="tech-icon-svg" viewBox="0 0 24 24">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
                 <h3>Entanglement</h3>
                 <p>A single data ingestion triggers regulatory approvals and automated logistics in a light-speed chain reaction.</p>
             </div>
             <div class="tech-card">
+                <svg class="tech-icon-svg" viewBox="0 0 24 24">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
                 <h3>Tunneling</h3>
                 <p>Piercing through capital and inventory barriers to allow immediate, massive global market entry.</p>
             </div>
@@ -345,7 +371,7 @@
         <h2 class="section-title">Global <span>Command</span> Network</h2>
         
         <div class="map-container">
-            <h3 style="color: var(--cyber-cyan); letter-spacing: 5px; margin-bottom: 15px;">TRIPLE CONTROL TOWERS</h3>
+            <h3 style="font-family: 'Orbitron', sans-serif; color: var(--cyber-cyan); letter-spacing: 5px; margin-bottom: 15px;">TRIPLE CONTROL TOWERS</h3>
             <p style="color: var(--text-muted);">
                 Anchored by <b>*SC Head Quarter</b> in Seoul, South Korea,<br>
                 our <b>Command Center</b> and <b>Analysis Center</b> form an operational triad.
@@ -361,7 +387,7 @@
     </section>
 
     <section class="cta-section">
-        <h2 style="font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">Ready to OnBoard?</h2>
+        <h2 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">Ready to OnBoard?</h2>
         <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
             Board the *SC Spaceship. It's time to Play, Make Money, and explore the Business Galaxy.
         </p>
