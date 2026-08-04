@@ -3,33 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B2B Gateway - Scarlet AI</title>
   
-  <link rel="stylesheet" href="../common/common.css">
-  
+  <title>SISTAR B2B Gateway</title>
+
+  <script>
+    (function() {
+      const depth = window.location.pathname.split('/').filter(Boolean).length;
+      const isFile = window.location.pathname.includes('.');
+      const steps = Math.max(0, depth - (isFile ? 1 : 0));
+      const prefix = steps > 0 ? '../'.repeat(steps) : './';
+      
+      const cssLink = document.createElement('link');
+      cssLink.rel = 'stylesheet';
+      cssLink.href = prefix + 'common/common.css';
+      document.head.appendChild(cssLink);
+      
+      const jsScript = document.createElement('script');
+      jsScript.src = prefix + 'common/common.js';
+      jsScript.defer = true;
+      document.body.appendChild(jsScript);
+    })();
+  </script>
+
   <style>
-    /* B2B 테스트 페이지 전용 임시 스타일 */
-    .b2b-container {
+    /* B2B 테스트 페이지 전용 우주/네온 본문 스타일 */
+    .b2b-hero {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
-    .hologram-badge {
+
+    .status-badge {
       display: inline-block;
-      padding: 8px 20px;
+      padding: 6px 16px;
       background: rgba(0, 243, 255, 0.05);
       border: 1px solid #00f3ff;
       color: #00f3ff;
-      border-radius: 50px;
+      border-radius: 4px;
       font-family: 'Orbitron', sans-serif;
-      font-size: 0.9rem;
-      letter-spacing: 3px;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
       margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(0, 243, 255, 0.2), inset 0 0 10px rgba(0, 243, 255, 0.1);
+      box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
+    }
+
+    .b2b-hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+    }
+
+    .b2b-hero p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      max-width: 650px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 20px;
+      max-width: 800px;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .cyber-card {
+      flex: 1;
+      background: rgba(10, 15, 25, 0.6);
+      border: 1px solid rgba(0, 243, 255, 0.2);
+      padding: 24px;
+      border-radius: 8px;
+      text-align: left;
+      transition: all 0.3s ease;
+    }
+
+    .cyber-card:hover {
+      border-color: #00f3ff;
+      box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+      transform: translateY(-50%);
+    }
+
+    .cyber-card h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00f3ff;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .cyber-card p {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin: 0;
     }
   </style>
 </head>
@@ -37,20 +111,27 @@
 
   <div id="common-header"></div>
 
-  <main class="b2b-container">
-    <span class="hologram-badge">B2B MODULE ONLINE</span>
-    <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 20px; text-shadow: 0 0 20px rgba(255,255,255,0.3);">
-      Scarlet AI : B2B Gateway
-    </h1>
-    <p style="font-size: 1.2rem; color: #94a3b8; max-width: 600px; line-height: 1.6;">
-      이 페이지는 Scarlet AI 프로젝트 하위의 B2B 폴더 구조에서<br>
-      공통 네비게이션과 푸터가 정상 작동하는지 확인하는 테스트 페이지입니다.
+  <main class="b2b-hero">
+    <span class="status-badge">SCARLET AI : B2B NODE</span>
+    <h1>SISTAR B2B Gateway</h1>
+    <p>
+      이 페이지는 <code>sc-scarletai.web.app/b2b/index.html</code> 경로의 테스트 노드입니다.<br>
+      이 파일의 <code>&lt;title&gt;</code>인 <b>"SISTAR B2B Gateway"</b>가 네비게이션 드롭다운에 수집되는지 확인하세요.
     </p>
+
+    <div class="card-grid">
+      <div class="cyber-card">
+        <h3>Bulk Sourcing</h3>
+        <p>Zero-inventory programmatic demand aggregation engine.</p>
+      </div>
+      <div class="cyber-card">
+        <h3>Trade Finance</h3>
+        <p>Quantum-inspired B2B volume-wise deal clearing.</p>
+      </div>
+    </div>
   </main>
 
   <div id="common-footer"></div>
-  
-  <script src="../common/common.js"></script>
 
 </body>
 </html>
