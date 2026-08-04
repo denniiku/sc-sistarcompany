@@ -51,7 +51,7 @@
       let navHtml = `
         <div class="nav-container">
           <div class="nav-logo">
-            <a href="https://sc-sistarcompany.web.app/">*SC</a>
+            <a href="https://sc-sistarcompany.web.app/">*SC- SISTAR Company</a>
           </div>
           <ul class="nav-menu">
       `;
@@ -137,10 +137,6 @@
 
     footerContainer.innerHTML = `
       <div class="footer-content">
-        <a href="#" class="footer-logo-text" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Scroll to Top">
-          *SC SISTAR Company
-        </a>
-        
         <div class="footer-right">
           <div class="footer-link">
             <a href="https://sc-sistarcompany.web.app" target="_blank">sistarcompany.com</a>
