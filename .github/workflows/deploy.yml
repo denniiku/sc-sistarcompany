@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 20
 
-      # 🚀 [추가된 부분] 파이어베이스 배포 전 네비게이션 메뉴 자동 생성!
+      # 🚀 파이어베이스 배포 전 150개 앱 타이틀 자동 수집 및 메뉴 생성
       - name: Generate Dynamic Navigation
         run: node generate-nav.js
 
@@ -32,7 +32,6 @@ jobs:
       - name: Deploy Project 1 (sc-sistarcompany)
         run: |
           cp -r common apps/project1-core/landing/ 2>/dev/null || true
-          cp -r data apps/project1-core/landing/ 2>/dev/null || true
           cd apps/project1-core/landing
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-sistarcompany --only hosting
@@ -43,7 +42,6 @@ jobs:
       - name: Deploy Project 2 (sc-scarletai)
         run: |
           cp -r common apps/project2-scarlet/scarlet-ai/ 2>/dev/null || true
-          cp -r data apps/project2-scarlet/scarlet-ai/ 2>/dev/null || true
           cd apps/project2-scarlet/scarlet-ai
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-scarletai --only hosting
@@ -54,7 +52,6 @@ jobs:
       - name: Deploy Project 3 (sc-qubitbiz)
         run: |
           cp -r common apps/project3-qubitbiz/qubit-biz/ 2>/dev/null || true
-          cp -r data apps/project3-qubitbiz/qubit-biz/ 2>/dev/null || true
           cd apps/project3-qubitbiz/qubit-biz
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-qubitbiz --only hosting
@@ -65,7 +62,6 @@ jobs:
       - name: Deploy Project 4 (sc-bizhub)
         run: |
           cp -r common apps/project4-bizhub/biz-hub/ 2>/dev/null || true
-          cp -r data apps/project4-bizhub/biz-hub/ 2>/dev/null || true
           cd apps/project4-bizhub/biz-hub
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-bizhub --only hosting
@@ -76,7 +72,6 @@ jobs:
       - name: Deploy Project 5 (sc-bizgalaxy)
         run: |
           cp -r common apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
-          cp -r data apps/project5-bizgalaxy/biz-galaxy/ 2>/dev/null || true
           cd apps/project5-bizgalaxy/biz-galaxy
           echo '{"hosting":{"public":"."}}' > firebase.json
           npx firebase-tools deploy --project sc-bizgalaxy --only hosting
