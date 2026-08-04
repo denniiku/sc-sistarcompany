@@ -1,43 +1,46 @@
+/**
+ * SISTAR Monorepo - Global Common Navigation & Layout Script
+ */
 (function () {
-  // 📌 1. 5대 파이어베이스 기본 네비게이션 백업 데이터 (네트워크 오류 방지용)
+  // 1. 네비게이션 기본 백업 데이터
   const DEFAULT_NAV_DATA = [
     {
-      "category": "*SC",
-      "baseUrl": "https://sc-sistarcompany.web.app",
-      "items": [{ "name": "Head Quarter", "url": "https://sc-sistarcompany.web.app/" }]
+      category: "*SC",
+      baseUrl: "https://sc-sistarcompany.web.app",
+      items: [{ name: "Main Gateway", url: "https://sc-sistarcompany.web.app/" }]
     },
     {
-      "category": "Scarlet Ai",
-      "baseUrl": "https://sc-scarletai.web.app",
-      "items": [{ "name": "Scarlet Gateway", "url": "https://sc-scarletai.web.app/" }]
+      category: "SCARLET AI",
+      baseUrl: "https://sc-scarletai.web.app",
+      items: [{ name: "Main Gateway", url: "https://sc-scarletai.web.app/" }]
     },
     {
-      "category": "Qubit Biz",
-      "baseUrl": "https://sc-qubitbiz.web.app",
-      "items": [{ "name": "Qubit Trade", "url": "https://sc-qubitbiz.web.app/" }]
+      category: "QUBIT BIZ",
+      baseUrl: "https://sc-qubitbiz.web.app",
+      items: [{ name: "Main Gateway", url: "https://sc-qubitbiz.web.app/" }]
     },
     {
-      "category": "Biz Hub",
-      "baseUrl": "https://sc-bizhub.web.app",
-      "items": [{ "name": "SISTAR &Co", "url": "https://sc-bizhub.web.app/" }]
+      category: "BIZ HUB",
+      baseUrl: "https://sc-bizhub.web.app",
+      items: [{ name: "Main Gateway", url: "https://sc-bizhub.web.app/" }]
     },
     {
-      "category": "Biz Galaxy",
-      "baseUrl": "https://sc-bizgalaxy.web.app",
-      "items": [{ "name": "SISPet App", "url": "https://sc-bizgalaxy.web.app/sispet/index.html" }]
+      category: "BIZ GALAXY",
+      baseUrl: "https://sc-bizgalaxy.web.app",
+      items: [{ name: "Main Gateway", url: "https://sc-bizgalaxy.web.app/" }]
     }
   ];
 
-  // 📌 2. Navigation Bar 동적 생성
+  // 2. Navigation Bar 동적 생성
   async function renderHeader() {
     const headerContainer = document.getElementById('common-header');
     if (!headerContainer) return;
 
     let navData = DEFAULT_NAV_DATA;
 
-    // 동적으로 생성된 nav-data.json 불러오기 시도 (루트의 절대 경로 사용)
+    // 타임스탬프(?t=)를 추가하여 브라우저 캐시 현상을 강제로 무력화합니다.
     try {
-      const response = await fetch('/common/nav-data.json');
+      const response = await fetch('/common/nav-data.json?t=' + new Date().getTime());
       if (response.ok) {
         navData = await response.json();
       }
@@ -57,7 +60,7 @@
       navData.forEach(cat => {
         navHtml += `
           <li class="nav-item">
-            <a href="#" class="nav-link" onclick="return false;">${cat.category} ▾</a>
+            <a href="${cat.baseUrl}/" class="nav-link" onclick="return false;">${cat.category} ▾</a>
             <ul class="dropdown-menu">
         `;
         cat.items.forEach(item => {
@@ -85,7 +88,7 @@
     }
   }
 
-  // 📌 3. 클립보드 복사 및 사이버틱 토스트 메시지
+  // 3. 클립보드 복사 및 사이버 토스트
   window.copyToCyberClipboard = function(text, message) {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -111,7 +114,7 @@
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 📌 4. Footer 동적 생성
+  // 4. Footer 동적 생성
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
