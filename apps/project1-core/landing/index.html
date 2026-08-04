@@ -3,544 +3,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>*SC- SISTAR Company</title>
     
-    <!-- Mandatory Common Assets -->
+    <title>*SC - SISTAR Company</title>
+
     <link rel="stylesheet" href="/common/common.css">
     <script src="/common/common.js" defer></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* 
-         * PERFORMANCE & THEME OPTIMIZATION
-         * Pure CSS implementation. Zero external dependencies.
-         * Concept: Deep Space & Cosmic Data
-         */
         :root {
-            --bg-deep-space: #010103;
-            --accent-nebula: #7b2cbf;
-            --accent-starlight: #00f0ff;
-            --text-primary: #ffffff;
-            --text-secondary: #a0aabf;
-            --glass-bg: rgba(255, 255, 255, 0.02);
-            --glass-border: rgba(255, 255, 255, 0.05);
-            --glow-spread: rgba(0, 240, 255, 0.15);
+            --space-black: #050508;
+            --cyber-cyan: #00f3ff;
+            --scarlet-red: #ff2a2a;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --neon-glow: 0 0 15px rgba(0, 243, 255, 0.4);
+            --scarlet-glow: 0 0 20px rgba(255, 42, 42, 0.4);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* Base & Reset */
         body {
-            background-color: var(--bg-deep-space);
-            color: var(--text-primary);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
-            line-height: 1.5;
+            background-color: var(--space-black);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
+            line-height: 1.6;
         }
 
-        /* Interactive Cosmic Background */
-        #cosmic-network {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            background: radial-gradient(circle at 50% 50%, #0a0a16 0%, #010103 100%);
+        h1, h2, h3, h4 {
+            font-family: 'Orbitron', sans-serif;
+            margin-bottom: 1rem;
         }
 
-        /* Typography */
-        h1, h2, h3 {
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, #fff 0%, var(--accent-starlight) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .text-nebula {
-            background: linear-gradient(135deg, var(--accent-nebula) 0%, var(--accent-starlight) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle-badge {
-            display: inline-block;
-            padding: 0.5rem 1.2rem;
-            border-radius: 50px;
-            background: rgba(123, 44, 191, 0.1);
-            border: 1px solid rgba(123, 44, 191, 0.3);
-            color: var(--accent-starlight);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 20px var(--glow-spread);
-        }
-
-        /* Layout */
-        .wrapper {
+        /* Layout Utility */
+        .section-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 5%;
-        }
-
-        section {
-            padding: 10rem 0;
+            padding: 100px 40px;
             position: relative;
-            z-index: 10;
         }
 
-        /* Glassmorphism Elements */
-        .glass-panel {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 4rem;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s ease;
-        }
-
-        .glass-panel::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
-            transform: skewX(-20deg);
-            transition: left 0.7s ease;
-        }
-
-        .glass-panel:hover::before {
-            left: 150%;
-        }
-
-        .glass-panel:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(0, 240, 255, 0.2);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.2rem 2.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary {
-            background: var(--text-primary);
-            color: var(--bg-deep-space);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-starlight);
-            box-shadow: 0 0 40px var(--glow-spread);
-            transform: scale(1.02);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--accent-starlight);
-            color: var(--accent-starlight);
-            background: rgba(0, 240, 255, 0.05);
-        }
-
-        /* Specific Sections */
-        .hero-section {
-            min-height: 100vh;
+        /* 🚀 Hero Section: The Launchpad */
+        .hero {
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding-top: 5rem;
-        }
-
-        .hero-title {
-            font-size: clamp(3.5rem, 8vw, 7.5rem);
-            margin-bottom: 1.5rem;
-            max-width: 1000px;
-        }
-
-        .hero-desc {
-            font-size: clamp(1.2rem, 2vw, 1.5rem);
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin-bottom: 3rem;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
             align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.08) 0%, transparent 60%);
+            position: relative;
+            padding: 60px 20px;
         }
 
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .icon-wrapper {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            background: rgba(0, 240, 255, 0.05);
-            border: 1px solid rgba(0, 240, 255, 0.1);
+        .engine-core-ui {
+            width: 100px;
+            height: 100px;
+            border: 2px solid var(--cyber-cyan);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 2rem;
+            box-shadow: var(--neon-glow);
+            margin-bottom: 30px;
+            animation: pulse-core 3s infinite alternate;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--cyber-cyan);
+            font-weight: 900;
         }
 
-        /* Animations */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        @keyframes pulse-core {
+            0% { transform: scale(0.95); box-shadow: 0 0 10px rgba(0, 243, 255, 0.2); }
+            100% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 243, 255, 0.6); }
         }
 
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 12px;
+            background: linear-gradient(to right, #fff, var(--cyber-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
 
-        /* Responsive */
-        @media (max-width: 900px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            .glass-panel {
-                padding: 2.5rem;
-            }
-            section {
-                padding: 6rem 0;
-            }
+        .hero .subtitle {
+            color: var(--scarlet-red);
+            font-size: 1.3rem;
+            letter-spacing: 6px;
+            font-weight: 700;
+            text-shadow: var(--scarlet-glow);
+            margin-bottom: 30px;
+        }
+
+        .hero .description {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .btn-cyber {
+            padding: 16px 40px;
+            background: transparent;
+            border: 1px solid var(--cyber-cyan);
+            color: var(--cyber-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-cyber:hover {
+            background: var(--cyber-cyan);
+            color: var(--space-black);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* 🌌 Section: The Qubit Engine (Core Tech) */
+        .tech-section {
+            border-top: 1px solid rgba(0, 243, 255, 0.1);
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+            letter-spacing: 4px;
+        }
+
+        .section-title span {
+            color: var(--cyber-cyan);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .tech-card {
+            background: rgba(10, 15, 25, 0.6);
+            border: 1px solid rgba(0, 243, 255, 0.15);
+            padding: 35px 25px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--cyber-cyan);
+            box-shadow: 0 10px 30px rgba(0, 243, 255, 0.1);
+        }
+
+        .tech-card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+
+        /* 🪐 Section: 100 Matrix Scale (Biz Portfolio) */
+        .matrix-section {
+            background: linear-gradient(180deg, transparent, rgba(255, 42, 42, 0.03), transparent);
+        }
+
+        .matrix-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--scarlet-red);
+            text-shadow: var(--scarlet-glow);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            border-left: 2px solid var(--cyber-cyan);
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-item h4 {
+            color: #fff;
+            font-size: 1.15rem;
+            margin-bottom: 5px;
+        }
+
+        .portfolio-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 📡 Section: Command Centers & Crew */
+        .command-section {
+            text-align: center;
+        }
+
+        .map-container {
+            margin: 40px auto;
+            max-width: 800px;
+            padding: 30px;
+            border: 1px dashed rgba(0, 243, 255, 0.3);
+            background: rgba(5, 8, 15, 0.5);
+        }
+
+        .crew-role {
+            display: inline-block;
+            margin: 8px;
+            padding: 8px 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-muted);
+            border-radius: 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .crew-role.commander {
+            border-color: var(--scarlet-red);
+            color: var(--scarlet-red);
+            box-shadow: inset 0 0 10px rgba(255, 42, 42, 0.2);
+        }
+
+        /* 🌠 CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 243, 255, 0.1);
         }
     </style>
 </head>
 <body>
-    <!-- Mandatory Common Header Placeholder -->
+
     <div id="common-header"></div>
 
-    <!-- Interactive Background -->
-    <canvas id="cosmic-network"></canvas>
+    <section class="hero">
+        <div class="engine-core-ui">*SC</div>
+        <h1>*SC SISTAR</h1>
+        <div class="subtitle">COSMO SEED™ BIZ GALAXY</div>
+        <p class="description">
+            Originating from Seoul, South Korea, we navigate the global business galaxy.<br>
+            Powered by the computational force of the Qubit Algorithm, we open an era of <b>'One Spark, Infinite Galaxifying'</b>.
+        </p>
+        <a href="#matrix" class="btn-cyber">Explore the Matrix</a>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-section wrapper">
-            <div class="fade-up">
-                <div class="subtitle-badge">SISTAR Company</div>
-                <h1 class="hero-title">Architects of the <br><span class="text-nebula">Infinite.</span></h1>
-                <p class="hero-desc">We do not just adapt to the future. We compute it. *SC is building the universal infrastructure for the next era of hyper-scale enterprise.</p>
-                
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <a href="#solutions" class="btn btn-primary">Explore Infrastructure</a>
-                    <a href="#manifesto" class="btn btn-outline">Read Manifesto</a>
-                </div>
+    <section class="section-container tech-section">
+        <h2 class="section-title">The <span>Intelligence</span> Core</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 50px; max-width: 800px; margin-inline: auto;">
+            Shattering linear growth limits. Powered by the 'Qubit Algorithm' for 24/7 fully automated problem solving with zero risk, zero inventory, and zero capital constraints.
+        </p>
+        
+        <div class="tech-grid">
+            <div class="tech-card">
+                <h3>Superposition @ Biz</h3>
+                <p>When an Idea is modeled, multi-dimensional projects stand by in a superposed state for immediate execution.</p>
             </div>
-        </section>
-
-        <!-- Manifesto / Vision Section -->
-        <section id="manifesto" class="wrapper">
-            <div class="glass-panel grid-2 fade-up">
-                <div>
-                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Beyond <br><span class="text-gradient">Horizons.</span></h2>
-                    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1.5rem;">
-                        The traditional constraints of business logic no longer apply. At *SC, we operate at the intersection of deep data topology and cosmic ambition.
-                    </p>
-                    <p style="color: var(--text-secondary); font-size: 1.1rem;">
-                        Our core philosophy is simple: Information is mass. By manipulating data gravity, we create orbital pathways for unprecedented growth and technological ascension.
-                    </p>
-                </div>
-                <div style="position: relative; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center;">
-                    <!-- Abstract geometric SVG representing data gravity -->
-                    <svg viewBox="0 0 200 200" style="width: 100%; max-width: 300px; opacity: 0.8;">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:var(--accent-nebula);stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:var(--accent-starlight);stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad1)" stroke-width="1" stroke-dasharray="4 4" />
-                        <circle cx="100" cy="100" r="60" fill="none" stroke="url(#grad1)" stroke-width="2" />
-                        <circle cx="100" cy="100" r="40" fill="none" stroke="url(#grad1)" stroke-width="1" stroke-dasharray="2 6" />
-                        <circle cx="100" cy="100" r="10" fill="url(#grad1)" />
-                        <!-- Orbital node -->
-                        <circle cx="160" cy="100" r="4" fill="#fff">
-                            <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="10s" repeatCount="indefinite" />
-                        </circle>
-                        <circle cx="100" cy="20" r="6" fill="#fff">
-                            <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="15s" repeatCount="indefinite" />
-                        </circle>
-                    </svg>
-                </div>
+            <div class="tech-card">
+                <h3>Entanglement</h3>
+                <p>A single data ingestion triggers regulatory approvals and automated logistics in a light-speed chain reaction.</p>
             </div>
-        </section>
-
-        <!-- Core Pillars / Technologies -->
-        <section id="solutions" class="wrapper">
-            <div style="text-align: center; margin-bottom: 5rem;" class="fade-up">
-                <div class="subtitle-badge">Core Technologies</div>
-                <h2 style="font-size: 3.5rem;">The <span class="text-nebula">Stellar Nodes</span></h2>
+            <div class="tech-card">
+                <h3>Tunneling</h3>
+                <p>Piercing through capital and inventory barriers to allow immediate, massive global market entry.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="grid-3">
-                <!-- Pillar 1 -->
-                <div class="glass-panel fade-up" style="padding: 3rem 2rem;">
-                    <div class="icon-wrapper">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-starlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Nebula Architecture</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Decentralized, fluid data systems. Our foundational layer eliminates bottlenecks, distributing immense computational loads across a cosmic-scale network of autonomous nodes.
-                    </p>
-                </div>
+    <section class="section-container matrix-section" id="matrix">
+        <h2 class="section-title">100 <span>Matrix</span> Scale</h2>
 
-                <!-- Pillar 2 -->
-                <div class="glass-panel fade-up" style="padding: 3rem 2rem; transition-delay: 0.1s;">
-                    <div class="icon-wrapper">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-starlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Pulsar Engine</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        High-frequency algorithmic processing. Generating rhythmic, hyper-accurate strategic models that allow enterprises to anticipate market shifts before they emit signals.
-                    </p>
-                </div>
-
-                <!-- Pillar 3 -->
-                <div class="glass-panel fade-up" style="padding: 3rem 2rem; transition-delay: 0.2s;">
-                    <div class="icon-wrapper">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-starlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                            <circle cx="12" cy="12" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Event Horizon AI</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
-                        Predictive intelligence that sees beyond the edge of current data. Once information crosses our horizon, it is instantly converted into inescapable, actionable truth.
-                    </p>
-                </div>
+        <div class="matrix-stats">
+            <div class="stat-item">
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">Pipeline Ideas</div>
             </div>
-        </section>
-
-        <!-- Final CTA Section -->
-        <section class="wrapper" style="padding-bottom: 12rem;">
-            <div class="glass-panel fade-up" style="text-align: center; border-color: rgba(123, 44, 191, 0.4); background: radial-gradient(circle at 50% 0%, rgba(123, 44, 191, 0.1) 0%, transparent 70%);">
-                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem;">Join the <span class="text-gradient">Ascension.</span></h2>
-                <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem auto;">
-                    We are selectively onboarding brilliant minds and visionary partners. The universe is vast, but our trajectory is absolute.
-                </p>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <button class="btn btn-primary">Initiate Contact</button>
-                    <button class="btn btn-outline">View Open Nodes</button>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">100</div>
+                <div class="stat-label">Commercial Platforms</div>
             </div>
-        </section>
-    </main>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">AI Automation</div>
+            </div>
+        </div>
 
-    <!-- Mandatory Common Footer Placeholder -->
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h4>SISTAR Studio & AI</h4>
+                <p>Qubit Star, Qubit Ads, AI Mkt Agency (MA), and AI Web/App Building (Vibe Coding).</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>SISTAR Commerce & Hub</h4>
+                <p>B2B, Siscart, Nearbuy, PetFood Bank, and sis-Proteins global trade pipelines.</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>SISTAR Data Factory (DF)</h4>
+                <p>"Data For All". Overnight (10 PM - 8 AM) AI data ingestion & automated Daily Briefs.</p>
+            </div>
+            <div class="portfolio-item">
+                <h4>SISTAR Physical & Bio</h4>
+                <p>Robotics (s-Robot), Pet Healthcare (MedIX), and Ayurvedic Therapy solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container command-section">
+        <h2 class="section-title">Global <span>Command</span> Network</h2>
+        
+        <div class="map-container">
+            <h3 style="color: var(--cyber-cyan); letter-spacing: 5px; margin-bottom: 15px;">TRIPLE CONTROL TOWERS</h3>
+            <p style="color: var(--text-muted);">
+                Anchored by <b>*SC Head Quarter</b> in Seoul, South Korea,<br>
+                our <b>Command Center</b> and <b>Analysis Center</b> form an operational triad.
+            </p>
+        </div>
+
+        <div>
+            <div class="crew-role commander">Commander SCARLET</div>
+            <div class="crew-role">SISTAR Astronauts</div>
+            <div class="crew-role">SISTAR Vibe Works</div>
+            <div class="crew-role">IoT Freelancers</div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 style="font-size: 2.5rem; color: #fff; text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px;">Ready to OnBoard?</h2>
+        <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 30px;">
+            Board the *SC Spaceship. It's time to Play, Make Money, and explore the Business Galaxy.
+        </p>
+        <button class="btn-cyber" onclick="window.copyToCyberClipboard('denniiku@sistarcompany.com', 'Command Center comms (email) copied to clipboard!\\ndenniiku@sistarcompany.com')">
+            Contact Command Center
+        </button>
+    </section>
+
     <div id="common-footer"></div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // 1. Interactive Cosmic Data Network (Canvas)
-            const canvas = document.getElementById('cosmic-network');
-            const ctx = canvas.getContext('2d');
-            
-            let width, height;
-            let particles = [];
-            
-            // Mouse interaction variables
-            const mouse = {
-                x: null,
-                y: null,
-                radius: 150
-            };
-
-            window.addEventListener('mousemove', (event) => {
-                mouse.x = event.x;
-                mouse.y = event.y;
-            });
-            
-            window.addEventListener('mouseout', () => {
-                mouse.x = undefined;
-                mouse.y = undefined;
-            });
-
-            function resize() {
-                width = window.innerWidth;
-                height = window.innerHeight;
-                canvas.width = width;
-                canvas.height = height;
-                initParticles();
-            }
-
-            class Particle {
-                constructor(x, y, vx, vy, size) {
-                    this.x = x;
-                    this.y = y;
-                    this.vx = vx;
-                    this.vy = vy;
-                    this.size = size;
-                    this.baseColor = '#00f0ff'; // Cyan
-                }
-
-                draw() {
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                    ctx.fillStyle = this.baseColor;
-                    ctx.fill();
-                }
-
-                update() {
-                    // Bounce off edges
-                    if (this.x > width || this.x < 0) this.vx = -this.vx;
-                    if (this.y > height || this.y < 0) this.vy = -this.vy;
-
-                    // Move particle
-                    this.x += this.vx;
-                    this.y += this.vy;
-
-                    // Mouse interactivity: push particles slightly
-                    if (mouse.x && mouse.y) {
-                        let dx = mouse.x - this.x;
-                        let dy = mouse.y - this.y;
-                        let distance = Math.sqrt(dx * dx + dy * dy);
-                        if (distance < mouse.radius) {
-                            const forceDirectionX = dx / distance;
-                            const forceDirectionY = dy / distance;
-                            const maxDistance = mouse.radius;
-                            const force = (maxDistance - distance) / maxDistance;
-                            const directionX = (forceDirectionX * force * 2);
-                            const directionY = (forceDirectionY * force * 2);
-                            
-                            this.x -= directionX;
-                            this.y -= directionY;
-                        }
-                    }
-                    this.draw();
-                }
-            }
-
-            function initParticles() {
-                particles = [];
-                // Calculate particle count based on screen size for performance
-                let numberOfParticles = (width * height) / 12000; 
-                
-                // Cap particles to avoid performance hits on massive screens
-                if (numberOfParticles > 200) numberOfParticles = 200;
-
-                for (let i = 0; i < numberOfParticles; i++) {
-                    let size = (Math.random() * 1.5) + 0.5;
-                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
-                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-                    let vx = (Math.random() * 0.5) - 0.25;
-                    let vy = (Math.random() * 0.5) - 0.25;
-                    particles.push(new Particle(x, y, vx, vy, size));
-                }
-            }
-
-            function connect() {
-                let opacityValue = 1;
-                for (let a = 0; a < particles.length; a++) {
-                    for (let b = a; b < particles.length; b++) {
-                        let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x))
-                            + ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
-                        
-                        // Draw lines if particles are close
-                        if (distance < (width/10) * (height/10)) {
-                            opacityValue = 1 - (distance / 20000);
-                            ctx.strokeStyle = `rgba(123, 44, 191, ${opacityValue})`; // Nebula purple lines
-                            ctx.lineWidth = 1;
-                            ctx.beginPath();
-                            ctx.moveTo(particles[a].x, particles[a].y);
-                            ctx.lineTo(particles[b].x, particles[b].y);
-                            ctx.stroke();
-                        }
-                    }
-                }
-            }
-
-            function animate() {
-                requestAnimationFrame(animate);
-                ctx.clearRect(0, 0, innerWidth, innerHeight);
-                for (let i = 0; i < particles.length; i++) {
-                    particles[i].update();
-                }
-                connect();
-            }
-
-            window.addEventListener('resize', resize);
-            
-            // Start Canvas
-            resize();
-            animate();
-
-            // 2. Intersection Observer for Fade-Up Animations
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        // Stop observing once animated to save resources
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            const fadeElements = document.querySelectorAll('.fade-up');
-            fadeElements.forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 </html>
