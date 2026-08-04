@@ -1,63 +1,51 @@
 (function () {
-  // 📌 1. 현재 HTML 위치에 기반한 상대 경로(prefix) 자동 계산 함수
-  function getRelativePrefix() {
-    const depth = window.location.pathname.split('/').filter(Boolean).length;
-    const isFile = window.location.pathname.includes('.');
-    const steps = Math.max(0, depth - (isFile ? 1 : 0));
-    return steps > 0 ? '../'.repeat(steps) : './';
-  }
-
-  // 📌 2. 네비게이션 데이터 (폴더 동적 매핑)
-  // 새로운 서브 폴더를 깃허브에 만들었다면, 아래 items 배열에 {"name": "메뉴명", "folder": "폴더명"} 만 추가하면 됩니다.
-  const NAV_DATA = [
+  // 📌 1. 5대 파이어베이스 기본 네비게이션 백업 데이터 (네트워크 오류 방지용)
+  const DEFAULT_NAV_DATA = [
     {
       "category": "*SC",
-      "prefix": "project1-",
-      "items": [
-        { "name": "Head Quarter", "folder": "hq" },
-        { "name": "Int'l Bases", "folder": "intl" }
-      ]
+      "baseUrl": "https://sc-sistarcompany.web.app",
+      "items": [{ "name": "Head Quarter", "url": "https://sc-sistarcompany.web.app/" }]
     },
     {
       "category": "Scarlet Ai",
-      "prefix": "project2-",
-      "items": [
-        { "name": "B2B Gateway", "folder": "b2b" },
-        { "name": "Shoppable Media", "folder": "media" }
-      ]
+      "baseUrl": "https://sc-scarletai.web.app",
+      "items": [{ "name": "Scarlet Gateway", "url": "https://sc-scarletai.web.app/" }]
     },
     {
       "category": "Qubit Biz",
-      "prefix": "project3-",
-      "items": [
-        { "name": "Trade Finance", "folder": "trade" },
-        { "name": "Arbitrage Flow", "folder": "flow" }
-      ]
+      "baseUrl": "https://sc-qubitbiz.web.app",
+      "items": [{ "name": "Qubit Trade", "url": "https://sc-qubitbiz.web.app/" }]
     },
     {
       "category": "Biz Hub",
-      "prefix": "project4-",
-      "items": [
-        { "name": "SISTAR &Co", "folder": "co" },
-        { "name": "Franchise Partners", "folder": "franchise" }
-      ]
+      "baseUrl": "https://sc-bizhub.web.app",
+      "items": [{ "name": "SISTAR &Co", "url": "https://sc-bizhub.web.app/" }]
     },
     {
       "category": "Biz Galaxy",
-      "prefix": "project5-",
+      "baseUrl": "https://sc-bizgalaxy.web.app",
       "items": [
-        { "name": "SISPet", "folder": "sispet" },
-        { "name": "SISTAR Studio", "folder": "studio" }
+        { "name": "SISPet App", "url": "https://sc-bizgalaxy.web.app/sispet/index.html" }
       ]
     }
   ];
 
-  // 📌 3. Navigation Bar 동적 생성
-  function renderHeader() {
+  // 📌 2. Navigation Bar 동적 생성
+  async function renderHeader() {
     const headerContainer = document.getElementById('common-header');
     if (!headerContainer) return;
 
-    const pathPrefix = getRelativePrefix();
+    let navData = DEFAULT_NAV_DATA;
+
+    // 동적으로 생성된 nav-data.json 불러오기 시도
+    try {
+      const response = await fetch('/common/nav-data.json');
+      if (response.ok) {
+        navData = await response.json();
+      }
+    } catch (e) {
+      console.log('Using default nav data matrix');
+    }
 
     try {
       let navHtml = `
@@ -68,19 +56,16 @@
           <ul class="nav-menu">
       `;
 
-      NAV_DATA.forEach(cat => {
+      navData.forEach(cat => {
         navHtml += `
           <li class="nav-item">
             <a href="#" class="nav-link" onclick="return false;">${cat.category} ▾</a>
             <ul class="dropdown-menu">
         `;
         cat.items.forEach(item => {
-          // url 값이 명시되어 있으면 그것을 쓰고, 없으면 동적 폴더 경로 생성
-          let targetUrl = item.url ? item.url : `${pathPrefix}${cat.prefix}${item.folder}/index.html`;
-          
           navHtml += `
             <li>
-              <a href="${targetUrl}" class="dropdown-link">${item.name}</a>
+              <a href="${item.url}" class="dropdown-link">${item.name}</a>
             </li>
           `;
         });
@@ -102,7 +87,7 @@
     }
   }
 
-  // 📌 4. 사이버틱 토스트 메시지 생성 및 클립보드 복사 기능
+  // 📌 3. 클립보드 복사 및 사이버틱 토스트 메시지
   window.copyToCyberClipboard = function(text, message) {
     const textarea = document.createElement("textarea");
     textarea.value = text;
@@ -125,11 +110,10 @@
     toast.innerHTML = message.replace(/\\n/g, '<br>');
     toast.className = "show";
     
-    // 3초 후 사라짐
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 📌 5. Footer 동적 생성
+  // 📌 4. Footer 동적 생성 (요청사항 100% 반영)
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
@@ -158,7 +142,6 @@
     `;
   }
 
-  // DOM 로드 완료 후 실행
   document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
     renderFooter();
