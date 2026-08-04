@@ -11,18 +11,19 @@
 
     <style>
         /* 
-         * PERFORMANCE OPTIMIZATION: 
-         * No external font CDN used to prevent render blocking. 
-         * Using system-ui for ultra-fast, modern typography.
+         * PERFORMANCE & THEME OPTIMIZATION
+         * Pure CSS implementation. Zero external dependencies.
+         * Concept: Deep Space & Cosmic Data
          */
         :root {
-            --space-black: #050508;
-            --scarlet-red: #ff2400;
-            --cyber-cyan: #00f3ff;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --text-main: #f0f0f0;
-            --text-muted: #8892b0;
+            --bg-deep-space: #010103;
+            --accent-nebula: #7b2cbf;
+            --accent-starlight: #00f0ff;
+            --text-primary: #ffffff;
+            --text-secondary: #a0aabf;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.05);
+            --glow-spread: rgba(0, 240, 255, 0.15);
         }
 
         * {
@@ -36,143 +37,173 @@
         }
 
         body {
-            background-color: var(--space-black);
-            color: var(--text-main);
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
+            background-color: var(--bg-deep-space);
+            color: var(--text-primary);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+            line-height: 1.5;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* High-performance canvas background */
-        #space-canvas {
+        /* Interactive Cosmic Background */
+        #cosmic-network {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             z-index: -1;
-            pointer-events: none;
+            background: radial-gradient(circle at 50% 50%, #0a0a16 0%, #010103 100%);
         }
 
-        /* Typography & Neon Utilities */
-        .neon-text-cyan {
-            color: var(--cyber-cyan);
-            text-shadow: 0 0 8px rgba(0, 243, 255, 0.6), 0 0 20px rgba(0, 243, 255, 0.2);
-        }
-
-        .neon-text-red {
-            color: var(--scarlet-red);
-            text-shadow: 0 0 8px rgba(255, 36, 0, 0.6), 0 0 20px rgba(255, 36, 0, 0.2);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
+        /* Typography */
+        h1, h2, h3 {
             font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -0.05em;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, var(--accent-starlight) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-nebula {
+            background: linear-gradient(135deg, var(--accent-nebula) 0%, var(--accent-starlight) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle-badge {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            background: rgba(123, 44, 191, 0.1);
+            border: 1px solid rgba(123, 44, 191, 0.3);
+            color: var(--accent-starlight);
+            font-size: 0.85rem;
+            font-weight: 600;
             text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px var(--glow-spread);
         }
 
-        .container {
-            max-width: 1200px;
+        /* Layout */
+        .wrapper {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: 10rem;
-            padding-bottom: 8rem;
+            padding: 0 5%;
         }
 
         section {
+            padding: 10rem 0;
             position: relative;
             z-index: 10;
         }
 
-        .glass-card {
+        /* Glassmorphism Elements */
+        .glass-panel {
             background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 16px;
-            padding: 3rem;
-            transition: transform 0.4s ease, border-color 0.4s ease;
+            border-radius: 24px;
+            padding: 4rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.5s ease;
         }
 
-        .glass-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 243, 255, 0.3);
-            box-shadow: 0 10px 30px -15px rgba(0, 243, 255, 0.1);
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent);
+            transform: skewX(-20deg);
+            transition: left 0.7s ease;
         }
 
-        /* Hero Section */
-        #hero {
-            min-height: 100vh;
-            display: flex;
+        .glass-panel:hover::before {
+            left: 150%;
+        }
+
+        .glass-panel:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(0, 240, 255, 0.2);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            padding-top: 4rem; /* Buffer for potential common header */
-        }
-
-        .hero-content h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.05em;
-        }
-
-        .hero-content p {
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 3rem auto;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
+            padding: 1.2rem 2.5rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border-radius: 50px;
+            border-radius: 12px;
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
-            background-color: var(--cyber-cyan);
-            color: var(--space-black);
-            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+            background: var(--text-primary);
+            color: var(--bg-deep-space);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 0 30px rgba(0, 243, 255, 0.8);
-            transform: scale(1.05);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--scarlet-red);
-            border: 2px solid var(--scarlet-red);
-            box-shadow: 0 0 10px rgba(255, 36, 0, 0.2);
-            margin-left: 1rem;
+            background: var(--accent-starlight);
+            box-shadow: 0 0 40px var(--glow-spread);
+            transform: scale(1.02);
         }
 
-        .btn-secondary:hover {
-            background-color: rgba(255, 36, 0, 0.1);
-            box-shadow: 0 0 20px rgba(255, 36, 0, 0.5);
-            transform: scale(1.05);
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
         }
 
-        /* Grid Layouts */
+        .btn-outline:hover {
+            border-color: var(--accent-starlight);
+            color: var(--accent-starlight);
+            background: rgba(0, 240, 255, 0.05);
+        }
+
+        /* Specific Sections */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 7.5rem);
+            margin-bottom: 1.5rem;
+            max-width: 1000px;
+        }
+
+        .hero-desc {
+            font-size: clamp(1.2rem, 2vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -182,56 +213,44 @@
 
         .grid-3 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
-        /* Specific Sections */
-        .subtitle {
-            color: var(--scarlet-red);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            margin-bottom: 0.5rem;
-            display: block;
+        .icon-wrapper {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            background: rgba(0, 240, 255, 0.05);
+            border: 1px solid rgba(0, 240, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
         }
 
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Scroll Animations (Handled by Intersection Observer) */
-        .reveal {
+        /* Animations */
+        .fade-up {
             opacity: 0;
             transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
-        .reveal.active {
+        .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .grid-2 {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
-            main {
-                gap: 6rem;
+            .glass-panel {
+                padding: 2.5rem;
             }
-            .btn-secondary {
-                margin-left: 0;
-                margin-top: 1rem;
-            }
-            .hero-btns {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                padding: 0 2rem;
+            section {
+                padding: 6rem 0;
             }
         }
     </style>
@@ -240,122 +259,125 @@
     <!-- Mandatory Common Header Placeholder -->
     <div id="common-header"></div>
 
-    <!-- Space Background -->
-    <canvas id="space-canvas"></canvas>
+    <!-- Interactive Background -->
+    <canvas id="cosmic-network"></canvas>
 
-    <main id="sc-app">
+    <main>
         <!-- Hero Section -->
-        <section id="hero">
-            <div class="container hero-content reveal">
-                <span class="subtitle neon-text-red">SISTAR Company</span>
-                <h1>Board the <br><span class="neon-text-cyan">*SC Spaceship</span></h1>
-                <p>We are navigating the deepest reaches of the Business Galaxy. Powered by pure intelligence, driven by the ultimate crew.</p>
-                <div class="hero-btns">
-                    <a href="#onboard" class="btn btn-primary">Onboard Now</a>
-                    <a href="#mission" class="btn btn-secondary">Explore Mission</a>
+        <section class="hero-section wrapper">
+            <div class="fade-up">
+                <div class="subtitle-badge">SISTAR Company</div>
+                <h1 class="hero-title">Architects of the <br><span class="text-nebula">Infinite.</span></h1>
+                <p class="hero-desc">We do not just adapt to the future. We compute it. *SC is building the universal infrastructure for the next era of hyper-scale enterprise.</p>
+                
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#solutions" class="btn btn-primary">Explore Infrastructure</a>
+                    <a href="#manifesto" class="btn btn-outline">Read Manifesto</a>
                 </div>
             </div>
         </section>
 
-        <!-- Mission & Commander Section -->
-        <section id="mission" class="container">
-            <div class="grid-2">
-                <div class="reveal">
-                    <span class="subtitle">The Mission</span>
-                    <h2 class="section-title">Navigating the <br><span class="neon-text-red">Business Galaxy</span></h2>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
-                        The cosmos of commerce is vast and unforgiving, but we thrive in the unknown. At *SC, we don't just follow trajectories; we create them. 
+        <!-- Manifesto / Vision Section -->
+        <section id="manifesto" class="wrapper">
+            <div class="glass-panel grid-2 fade-up">
+                <div>
+                    <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Beyond <br><span class="text-gradient">Horizons.</span></h2>
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 1.5rem;">
+                        The traditional constraints of business logic no longer apply. At *SC, we operate at the intersection of deep data topology and cosmic ambition.
                     </p>
-                    <p style="color: var(--text-muted); font-size: 1.1rem;">
-                        Under the absolute guidance of <strong>Commander Scarlet</strong>, our fleets navigate through market anomalies and asteroid belts of legacy systems, forging new paths to unprecedented value.
+                    <p style="color: var(--text-secondary); font-size: 1.1rem;">
+                        Our core philosophy is simple: Information is mass. By manipulating data gravity, we create orbital pathways for unprecedented growth and technological ascension.
                     </p>
                 </div>
-                <div class="glass-card reveal" style="text-align: center; border-color: rgba(255,36,0,0.3);">
-                    <!-- Pure SVG Icon instead of external images -->
-                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--scarlet-red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 80px; height: 80px; margin: 0 auto 1.5rem auto;">
-                        <polygon points="12 2 2 22 12 17 22 22 12 2"></polygon>
+                <div style="position: relative; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center;">
+                    <!-- Abstract geometric SVG representing data gravity -->
+                    <svg viewBox="0 0 200 200" style="width: 100%; max-width: 300px; opacity: 0.8;">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:var(--accent-nebula);stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:var(--accent-starlight);stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#grad1)" stroke-width="1" stroke-dasharray="4 4" />
+                        <circle cx="100" cy="100" r="60" fill="none" stroke="url(#grad1)" stroke-width="2" />
+                        <circle cx="100" cy="100" r="40" fill="none" stroke="url(#grad1)" stroke-width="1" stroke-dasharray="2 6" />
+                        <circle cx="100" cy="100" r="10" fill="url(#grad1)" />
+                        <!-- Orbital node -->
+                        <circle cx="160" cy="100" r="4" fill="#fff">
+                            <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="10s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="100" cy="20" r="6" fill="#fff">
+                            <animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="15s" repeatCount="indefinite" />
+                        </circle>
                     </svg>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: #fff;">Commander Scarlet</h3>
-                    <p style="color: var(--text-muted);">"The galaxy belongs to those who calculate the risks and accelerate past them."</p>
                 </div>
             </div>
         </section>
 
-        <!-- Technology (The Engine) -->
-        <section id="engine" class="container reveal">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto 4rem auto;">
-                <span class="subtitle">The Powertrain</span>
-                <h2 class="section-title">Engineered for <span class="neon-text-cyan">Hyper-Scale</span></h2>
-                <p style="color: var(--text-muted);">The *SC Spaceship is propelled by proprietary technology designed to process universal data streams in real-time.</p>
+        <!-- Core Pillars / Technologies -->
+        <section id="solutions" class="wrapper">
+            <div style="text-align: center; margin-bottom: 5rem;" class="fade-up">
+                <div class="subtitle-badge">Core Technologies</div>
+                <h2 style="font-size: 3.5rem;">The <span class="text-nebula">Stellar Nodes</span></h2>
             </div>
 
             <div class="grid-3">
-                <div class="glass-card reveal">
-                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #fff;">Qubit Algorithm</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Our primary fuel source. A quantum-inspired computational matrix that predicts market fluctuations before they occur. It is the engine that keeps our spaceship lightyears ahead.</p>
+                <!-- Pillar 1 -->
+                <div class="glass-panel fade-up" style="padding: 3rem 2rem;">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-starlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Nebula Architecture</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Decentralized, fluid data systems. Our foundational layer eliminates bottlenecks, distributing immense computational loads across a cosmic-scale network of autonomous nodes.
+                    </p>
                 </div>
 
-                <div class="glass-card reveal" style="transition-delay: 0.1s;">
-                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                    </svg>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #fff;">Intelligence Core</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">The pulsating heart of *SC. By aggregating deep-learning node networks, the Intelligence Core automates strategy, optimizes our flight paths, and ensures maximum profitability.</p>
+                <!-- Pillar 2 -->
+                <div class="glass-panel fade-up" style="padding: 3rem 2rem; transition-delay: 0.1s;">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-starlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Pulsar Engine</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        High-frequency algorithmic processing. Generating rhythmic, hyper-accurate strategic models that allow enterprises to anticipate market shifts before they emit signals.
+                    </p>
                 </div>
 
-                <div class="glass-card reveal" style="transition-delay: 0.2s;">
-                    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="var(--cyber-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    <h3 style="font-size: 1.25rem; margin-bottom: 1rem; color: #fff;">Seamless Warp</h3>
-                    <p style="color: var(--text-muted); font-size: 0.95rem;">Frictionless integration into the Business Galaxy. Our architectures bypass standard rendering and processing blockers, launching applications at unparalleled speeds.</p>
+                <!-- Pillar 3 -->
+                <div class="glass-panel fade-up" style="padding: 3rem 2rem; transition-delay: 0.2s;">
+                    <div class="icon-wrapper">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-starlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Event Horizon AI</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                        Predictive intelligence that sees beyond the edge of current data. Once information crosses our horizon, it is instantly converted into inescapable, actionable truth.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Operations & Crew -->
-        <section id="operations" class="container">
-            <div class="grid-2">
-                <div class="glass-card reveal" style="background: rgba(0,243,255,0.02);">
-                    <span class="subtitle">The Network</span>
-                    <h2 class="section-title" style="font-size: 2rem;">Command Centers</h2>
-                    <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                        Originating from the <strong>*SC Headquarter</strong>, our signals reach across the void. We operate a decentralized array of Command Centers.
-                    </p>
-                    <ul style="color: var(--text-muted); padding-left: 1.5rem; line-height: 2;">
-                        <li><span class="neon-text-cyan">HQ:</span> Central Nervous System</li>
-                        <li><span class="neon-text-cyan">Alpha Center:</span> Qubit Processing</li>
-                        <li><span class="neon-text-cyan">Omega Center:</span> Intelligence Core Maintenance</li>
-                    </ul>
-                </div>
-
-                <div class="reveal">
-                    <span class="subtitle neon-text-red">Careers</span>
-                    <h2 class="section-title">Calling All <br>Astronauts</h2>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 1.5rem;">
-                        We do not hire standard employees. We recruit exceptional Astronauts ready to brave the extremes of the Business Galaxy. 
-                    </p>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
-                        If you have the courage to pilot Qubit engines and operate alongside Commander Scarlet, your seat on the *SC Spaceship awaits.
-                    </p>
-                    <a href="#onboard" class="btn btn-secondary">View Open Docks</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA / Onboard Section -->
-        <section id="onboard" class="container reveal">
-            <div class="glass-card" style="text-align: center; padding: 5rem 2rem; border-color: rgba(0, 243, 255, 0.4); background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 70%);">
-                <h2 class="section-title" style="font-size: 3rem; margin-bottom: 1.5rem;">Initiate Sequence</h2>
-                <p style="font-size: 1.5rem; color: #fff; margin-bottom: 3rem; font-weight: 300;">
-                    Onboard. Play. <span class="neon-text-red" style="font-weight: 700;">Make Money.</span>
+        <!-- Final CTA Section -->
+        <section class="wrapper" style="padding-bottom: 12rem;">
+            <div class="glass-panel fade-up" style="text-align: center; border-color: rgba(123, 44, 191, 0.4); background: radial-gradient(circle at 50% 0%, rgba(123, 44, 191, 0.1) 0%, transparent 70%);">
+                <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1.5rem;">Join the <span class="text-gradient">Ascension.</span></h2>
+                <p style="color: var(--text-secondary); font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem auto;">
+                    We are selectively onboarding brilliant minds and visionary partners. The universe is vast, but our trajectory is absolute.
                 </p>
-                <button class="btn btn-primary" style="font-size: 1.25rem; padding: 1.25rem 4rem;">Dock & Join *SC</button>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn btn-primary">Initiate Contact</button>
+                    <button class="btn btn-outline">View Open Nodes</button>
+                </div>
             </div>
         </section>
     </main>
@@ -365,75 +387,141 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // 1. High-Performance Space Background (HTML5 Canvas)
-            // Using canvas prevents adding hundreds of DOM elements, maximizing speed.
-            const canvas = document.getElementById('space-canvas');
+            
+            // 1. Interactive Cosmic Data Network (Canvas)
+            const canvas = document.getElementById('cosmic-network');
             const ctx = canvas.getContext('2d');
             
             let width, height;
-            let stars = [];
+            let particles = [];
+            
+            // Mouse interaction variables
+            const mouse = {
+                x: null,
+                y: null,
+                radius: 150
+            };
 
-            function initCanvas() {
+            window.addEventListener('mousemove', (event) => {
+                mouse.x = event.x;
+                mouse.y = event.y;
+            });
+            
+            window.addEventListener('mouseout', () => {
+                mouse.x = undefined;
+                mouse.y = undefined;
+            });
+
+            function resize() {
                 width = window.innerWidth;
                 height = window.innerHeight;
                 canvas.width = width;
                 canvas.height = height;
-                createStars();
+                initParticles();
             }
 
-            function createStars() {
-                stars = [];
-                const numStars = Math.floor((width * height) / 3000); // Responsive star density
-                for (let i = 0; i < numStars; i++) {
-                    stars.push({
-                        x: Math.random() * width,
-                        y: Math.random() * height,
-                        radius: Math.random() * 1.5,
-                        speed: Math.random() * 0.5 + 0.1,
-                        opacity: Math.random()
-                    });
+            class Particle {
+                constructor(x, y, vx, vy, size) {
+                    this.x = x;
+                    this.y = y;
+                    this.vx = vx;
+                    this.vy = vy;
+                    this.size = size;
+                    this.baseColor = '#00f0ff'; // Cyan
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fillStyle = this.baseColor;
+                    ctx.fill();
+                }
+
+                update() {
+                    // Bounce off edges
+                    if (this.x > width || this.x < 0) this.vx = -this.vx;
+                    if (this.y > height || this.y < 0) this.vy = -this.vy;
+
+                    // Move particle
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    // Mouse interactivity: push particles slightly
+                    if (mouse.x && mouse.y) {
+                        let dx = mouse.x - this.x;
+                        let dy = mouse.y - this.y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < mouse.radius) {
+                            const forceDirectionX = dx / distance;
+                            const forceDirectionY = dy / distance;
+                            const maxDistance = mouse.radius;
+                            const force = (maxDistance - distance) / maxDistance;
+                            const directionX = (forceDirectionX * force * 2);
+                            const directionY = (forceDirectionY * force * 2);
+                            
+                            this.x -= directionX;
+                            this.y -= directionY;
+                        }
+                    }
+                    this.draw();
                 }
             }
 
-            function animateStars() {
-                ctx.clearRect(0, 0, width, height);
-                ctx.fillStyle = '#050508'; // Deep Space Black
-                ctx.fillRect(0, 0, width, height);
+            function initParticles() {
+                particles = [];
+                // Calculate particle count based on screen size for performance
+                let numberOfParticles = (width * height) / 12000; 
                 
-                stars.forEach(star => {
-                    // Twinkle effect
-                    star.opacity += (Math.random() - 0.5) * 0.1;
-                    if (star.opacity < 0.2) star.opacity = 0.2;
-                    if (star.opacity > 1) star.opacity = 1;
+                // Cap particles to avoid performance hits on massive screens
+                if (numberOfParticles > 200) numberOfParticles = 200;
 
-                    // Upward drifting movement (Spaceship flying forward illusion)
-                    star.y += star.speed;
-                    if (star.y > height) {
-                        star.y = 0;
-                        star.x = Math.random() * width;
-                    }
-
-                    // Render star
-                    ctx.beginPath();
-                    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                    // Blueish/white star color
-                    ctx.fillStyle = `rgba(200, 240, 255, ${star.opacity})`;
-                    ctx.fill();
-                });
-
-                requestAnimationFrame(animateStars);
+                for (let i = 0; i < numberOfParticles; i++) {
+                    let size = (Math.random() * 1.5) + 0.5;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let vx = (Math.random() * 0.5) - 0.25;
+                    let vy = (Math.random() * 0.5) - 0.25;
+                    particles.push(new Particle(x, y, vx, vy, size));
+                }
             }
 
-            // Handle resize efficiently
-            window.addEventListener('resize', () => {
-                initCanvas();
-            });
+            function connect() {
+                let opacityValue = 1;
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a; b < particles.length; b++) {
+                        let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x))
+                            + ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+                        
+                        // Draw lines if particles are close
+                        if (distance < (width/10) * (height/10)) {
+                            opacityValue = 1 - (distance / 20000);
+                            ctx.strokeStyle = `rgba(123, 44, 191, ${opacityValue})`; // Nebula purple lines
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
 
-            initCanvas();
-            animateStars();
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0, 0, innerWidth, innerHeight);
+                for (let i = 0; i < particles.length; i++) {
+                    particles[i].update();
+                }
+                connect();
+            }
 
-            // 2. Scroll Reveal Animation (Intersection Observer)
-            // Extremely lightweight method for modern scroll animations
+            window.addEventListener('resize', resize);
+            
+            // Start Canvas
+            resize();
+            animate();
+
+            // 2. Intersection Observer for Fade-Up Animations
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -443,15 +531,15 @@
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        // Optional: Unobserve after reveal for slight performance boost
-                        observer.unobserve(entry.target); 
+                        entry.target.classList.add('visible');
+                        // Stop observing once animated to save resources
+                        observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
-            const revealElements = document.querySelectorAll('.reveal');
-            revealElements.forEach(el => observer.observe(el));
+            const fadeElements = document.querySelectorAll('.fade-up');
+            fadeElements.forEach(el => observer.observe(el));
         });
     </script>
 </body>
