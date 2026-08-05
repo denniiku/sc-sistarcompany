@@ -57,9 +57,10 @@
       `;
 
       navData.forEach(cat => {
+        // 🔥 주의: href를 걸어두되, JS로 클릭 이벤트를 통제하기 위해 a 태그 구성
         navHtml += `
           <li class="nav-item">
-            <a href="${cat.baseUrl}/" class="nav-link" onclick="return false;">${cat.category} ▾</a>
+            <a href="${cat.baseUrl}/" class="nav-link">${cat.category} ▾</a>
             <ul class="dropdown-menu">
         `;
         cat.items.forEach(item => {
@@ -80,6 +81,34 @@
         </div>
       `;
       headerContainer.innerHTML = navHtml;
+
+      // 🔥 [핵심 추가] 모바일/태블릿 터치 시 드롭다운 처리 로직
+      const navLinks = headerContainer.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault(); // 기본 링크 이동 막기
+          const parentLi = this.parentElement;
+
+          // 다른 열려있는 메뉴가 있다면 모두 닫기
+          headerContainer.querySelectorAll('.nav-item').forEach(item => {
+            if (item !== parentLi) {
+              item.classList.remove('active');
+            }
+          });
+
+          // 현재 터치한 메뉴의 active 상태 토글 (열기/닫기)
+          parentLi.classList.toggle('active');
+        });
+      });
+
+      // 🔥 바깥 화면을 터치(클릭)하면 열려있던 드롭다운 닫기
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-item')) {
+          headerContainer.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
+          });
+        }
+      });
 
     } catch (error) {
       console.error('[*SC Nav Error]:', error);
@@ -127,7 +156,7 @@
     setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
   };
 
-  // 5. Footer 동적 생성 (스크롤 탑 기능 및 우측 정렬 반영)
+  // 5. Footer 동적 생성
   function renderFooter() {
     const footerContainer = document.getElementById('common-footer');
     if (!footerContainer) return;
