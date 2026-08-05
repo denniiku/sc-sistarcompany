@@ -112,7 +112,7 @@ body {
   min-width: 200px;
   padding: 10px 0;
   list-style: none;
-  border: none; /* 🔥 외부 박스 테두리 완벽 제거 */
+  border: none; /* 🔥 외부 테두리 박스 완전 제거 */
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
   z-index: 1001;
@@ -129,7 +129,7 @@ body {
   background: transparent;
 }
 
-/* PC의 Hover와 모바일의 Active(터치) 모두 메뉴를 열도록 연동 */
+/* PC(Hover) & 모바일(Active/Touch) 메뉴 열기 연동 */
 .nav-item:hover .dropdown-menu,
 .nav-item.active .dropdown-menu {
   display: block;
@@ -150,15 +150,15 @@ body {
   border-right: 2px solid transparent; /* 기본 상태: 투명 선 */
 }
 
-/* 🔥 PC에서 마우스를 올리거나, 모바일에서 터치(:active) 시 네온 효과 발동 */
+/* 🔥 호버 및 터치 시 발동하는 우측 네온 바 */
 .dropdown-link:hover,
 .dropdown-link:active,
 .dropdown-link:focus {
   background-color: rgba(0, 243, 255, 0.1);
   color: #ffffff;
-  border-right: 2px solid #00f3ff; /* 우측 네온 바 생성 */
+  border-right: 2px solid #00f3ff;
   text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
-  padding-right: 25px; /* 애니메이션처럼 살짝 밀리는 효과 */
+  padding-right: 25px;
 }
 
 @keyframes fadeInDown {
@@ -268,7 +268,7 @@ body {
 @keyframes fadeout { from { bottom: 40px; opacity: 1; } to { bottom: 0; opacity: 0; } }
 
 /* ======================================================
-   🔥 [Mobile Responsive] 모바일 화면 최적화
+   🔥 [Mobile Responsive] 모바일 전용 드롭다운 잘림 방지 로직
    ====================================================== */
 @media (max-width: 820px) {
   .nav-container {
@@ -291,7 +291,20 @@ body {
     padding: 5px 8px;
   }
 
-  /* 드롭다운의 PC 네온 효과 속성 그대로 유지 (우측 정렬 및 네온 테두리) */
+  /* 🔥 핵심: 모바일에서는 드롭다운 박스가 절대 화면 밖으로 나가지 않게 안전 구역 설정 */
+  .nav-item {
+    position: static; /* 드롭다운의 기준점을 '개별 메뉴'에서 '전체 화면'으로 해제 */
+  }
+  
+  .dropdown-menu {
+    top: 100%;
+    left: 5%; /* 화면 좌측에서 5% 띄움 */
+    right: auto;
+    width: 90%; /* 화면의 90% 너비를 차지하여 잘림을 원천 봉쇄 */
+    border: none; /* 박스 테두리 없음 */
+  }
+
+  /* 드롭다운의 글자와 우측 네온 효과는 PC와 동일하게 작동합니다 */
 
   .footer-content {
     flex-direction: column;
