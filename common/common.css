@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden; /* 🔥 가로 스크롤 깨짐 방지 */
+  overflow-x: hidden;
 }
 
 /* ======================================================
@@ -47,8 +47,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 35px; /* 🔥 height 대신 min-height로 변경하여 유연성 확보 */
+  min-height: 35px;
   padding: 0 30px;
+  position: relative;
 }
 
 .nav-logo a {
@@ -60,7 +61,7 @@ body {
   letter-spacing: 2px;
   text-shadow: 0 0 10px rgba(0, 243, 255, 0.4);
   transition: all 0.3s ease-in-out;
-  white-space: nowrap; /* 모바일에서 로고 줄바꿈 방지 */
+  white-space: nowrap;
 }
 
 .nav-logo a:hover {
@@ -89,13 +90,15 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   padding: 5px 12px;
+  cursor: pointer;
 }
 
-.nav-link:hover, .nav-item:hover .nav-link {
+.nav-link:hover, .nav-item.active .nav-link {
   color: #00f3ff;
   text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
 }
 
+/* 🔥 PC 및 모바일 공통 드롭다운 스타일 (네온 효과 박스) */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -107,7 +110,7 @@ body {
   min-width: 200px;
   padding: 10px 0;
   list-style: none;
-  border: none;
+  border: 1px solid rgba(0, 243, 255, 0.3); /* 🔥 대표님이 원하시는 네온 테두리 */
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
   z-index: 1001;
@@ -123,7 +126,9 @@ body {
   background: transparent;
 }
 
-.nav-item:hover .dropdown-menu {
+/* 🔥 핵심 수정: PC의 Hover와 모바일의 Active(터치) 모두 메뉴를 열도록 완벽 연동 */
+.nav-item:hover .dropdown-menu,
+.nav-item.active .dropdown-menu {
   display: block;
   animation: fadeInDown 0.2s ease forwards;
 }
@@ -227,10 +232,7 @@ body {
   transform: translateY(-2px);
 }
 
-.icon-btn svg {
-  width: 15px;
-  height: 15px;
-}
+.icon-btn svg { width: 15px; height: 15px; }
 
 #cyber-toast {
   visibility: hidden;
@@ -253,79 +255,37 @@ body {
   letter-spacing: 1px;
   line-height: 1.5;
 }
-
-#cyber-toast.show {
-  visibility: visible;
-  animation: fadein 0.4s, fadeout 0.4s 2.6s;
-}
-
-@keyframes fadein {
-  from { bottom: 0; opacity: 0; }
-  to { bottom: 40px; opacity: 1; }
-}
-@keyframes fadeout {
-  from { bottom: 40px; opacity: 1; }
-  to { bottom: 0; opacity: 0; }
-}
+#cyber-toast.show { visibility: visible; animation: fadein 0.4s, fadeout 0.4s 2.6s; }
+@keyframes fadein { from { bottom: 0; opacity: 0; } to { bottom: 40px; opacity: 1; } }
+@keyframes fadeout { from { bottom: 40px; opacity: 1; } to { bottom: 0; opacity: 0; } }
 
 /* ======================================================
-   🔥 [Mobile Responsive] 모바일 화면 최적화 (핵심 추가)
+   🔥 [Mobile Responsive] 모바일 화면 최적화
    ====================================================== */
 @media (max-width: 820px) {
   .nav-container {
     flex-direction: column;
     padding: 10px 15px;
+    gap: 15px;
+  }
+  
+  /* 🔥 모바일 스와이프 방식을 제거하고 자동 줄바꿈(wrap) 방식으로 변경 -> 드롭다운 잘림 완벽 방지 */
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
     gap: 10px;
   }
   
-  /* 모바일 네비게이션: 터치로 좌우 스와이프 가능하게 설정 */
-  .nav-menu {
-    width: 100%;
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 5px;
-  }
-  
-  /* 모바일 스크롤바 디자인 튜닝 */
-  .nav-menu::-webkit-scrollbar {
-    height: 3px;
-  }
-  .nav-menu::-webkit-scrollbar-thumb {
-    background: rgba(0, 243, 255, 0.3);
-    border-radius: 4px;
-  }
-
   .nav-link {
-    white-space: nowrap; /* 메뉴 글씨 줄바꿈 방지 */
+    white-space: nowrap;
     font-size: 0.75rem;
+    padding: 5px 8px; /* 모바일에서 간격을 살짝 좁혀서 예쁘게 맞춤 */
   }
 
-  /* 🔥 핵심: 모바일에서 드롭다운이 잘리지 않게 풀스크린 모드로 변경 -> 이 부분을 취소하고 상위 메뉴 아래로 정렬 */
-  /*
-  .nav-item {
-    position: static; 
-  }
+  /* 드롭다운은 모바일에서도 PC와 동일한 네온 박스 스타일을 그대로 유지합니다 */
   
-  .dropdown-menu {
-    top: 100%;
-    left: 0;
-    width: 100%; 
-    border-radius: 0 0 10px 10px;
-    border-top: 1px solid rgba(0, 243, 255, 0.2);
-  }
-
-  .dropdown-link {
-    text-align: center; 
-    border-right: none;
-    padding: 15px 20px;
-  }
-  
-  .dropdown-link:hover {
-    border-right: none;
-    padding-right: 20px;
-  }
-  */
-
   /* 푸터 세로 정렬 */
   .footer-content {
     flex-direction: column;
