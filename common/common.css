@@ -98,7 +98,9 @@ body {
   text-shadow: 0 0 10px rgba(0, 243, 255, 0.8);
 }
 
-/* 🔥 PC 및 모바일 공통 드롭다운 스타일 (네온 효과 박스) */
+/* ======================================================
+   [Dropdown] PC 및 모바일 공통 드롭다운 스타일
+   ====================================================== */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -110,12 +112,13 @@ body {
   min-width: 200px;
   padding: 10px 0;
   list-style: none;
-  border: 1px solid rgba(0, 243, 255, 0.3); /* 🔥 대표님이 원하시는 네온 테두리 */
+  border: none; /* 🔥 외부 박스 테두리 완벽 제거 */
   border-radius: 4px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
   z-index: 1001;
 }
 
+/* 마우스 끊김 방지용 투명 다리 */
 .dropdown-menu::before {
   content: "";
   position: absolute;
@@ -126,13 +129,14 @@ body {
   background: transparent;
 }
 
-/* 🔥 핵심 수정: PC의 Hover와 모바일의 Active(터치) 모두 메뉴를 열도록 완벽 연동 */
+/* PC의 Hover와 모바일의 Active(터치) 모두 메뉴를 열도록 연동 */
 .nav-item:hover .dropdown-menu,
 .nav-item.active .dropdown-menu {
   display: block;
   animation: fadeInDown 0.2s ease forwards;
 }
 
+/* 🔥 개별 메뉴 우측 네온 효과 (PC/모바일 동일 적용) */
 .dropdown-link {
   display: block;
   padding: 10px 20px;
@@ -143,15 +147,18 @@ body {
   letter-spacing: 1px;
   transition: all 0.2s ease;
   text-align: right;
-  border-right: 2px solid transparent;
+  border-right: 2px solid transparent; /* 기본 상태: 투명 선 */
 }
 
-.dropdown-link:hover {
+/* 🔥 PC에서 마우스를 올리거나, 모바일에서 터치(:active) 시 네온 효과 발동 */
+.dropdown-link:hover,
+.dropdown-link:active,
+.dropdown-link:focus {
   background-color: rgba(0, 243, 255, 0.1);
   color: #ffffff;
-  border-right: 2px solid #00f3ff;
+  border-right: 2px solid #00f3ff; /* 우측 네온 바 생성 */
   text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
-  padding-right: 25px;
+  padding-right: 25px; /* 애니메이션처럼 살짝 밀리는 효과 */
 }
 
 @keyframes fadeInDown {
@@ -234,6 +241,7 @@ body {
 
 .icon-btn svg { width: 15px; height: 15px; }
 
+/* Toast */
 #cyber-toast {
   visibility: hidden;
   min-width: 250px;
@@ -269,7 +277,6 @@ body {
     gap: 15px;
   }
   
-  /* 🔥 모바일 스와이프 방식을 제거하고 자동 줄바꿈(wrap) 방식으로 변경 -> 드롭다운 잘림 완벽 방지 */
   .nav-menu {
     width: 100%;
     display: flex;
@@ -281,12 +288,11 @@ body {
   .nav-link {
     white-space: nowrap;
     font-size: 0.75rem;
-    padding: 5px 8px; /* 모바일에서 간격을 살짝 좁혀서 예쁘게 맞춤 */
+    padding: 5px 8px;
   }
 
-  /* 드롭다운은 모바일에서도 PC와 동일한 네온 박스 스타일을 그대로 유지합니다 */
-  
-  /* 푸터 세로 정렬 */
+  /* 드롭다운의 PC 네온 효과 속성 그대로 유지 (우측 정렬 및 네온 테두리) */
+
   .footer-content {
     flex-direction: column;
     justify-content: center;
