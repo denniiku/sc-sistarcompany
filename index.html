@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>*SC — SISTAR Company | Full-Stack AI Commerce &amp; Int'l AI Trading</title>
+  <title>*SC - SISTAR Company | Full-Stack AI Commerce &amp; Int'l AI Trading</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
@@ -162,24 +162,18 @@
       margin-bottom: 36px;
     }
 
+    /* Non-clickable static cards (links removed) */
     .portal-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      text-decoration: none;
       background: var(--sc-glass-strong);
       backdrop-filter: blur(16px);
       border: 1px solid var(--sc-border);
       border-radius: 18px;
       padding: 22px;
-      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease, border-color 0.28s ease;
       box-shadow: 0 10px 25px rgba(39, 55, 77, 0.05);
-    }
-
-    .portal-item:hover {
-      transform: translateY(-6px);
-      border-color: var(--sc-ink-primary);
-      box-shadow: 0 18px 36px rgba(39, 55, 77, 0.13);
+      cursor: default;
     }
 
     .portal-top {
@@ -196,24 +190,6 @@
       color: var(--sc-ink-primary);
     }
 
-    .portal-arrow {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--sc-surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--sc-ink-primary);
-      transition: transform 0.25s ease, background 0.25s ease;
-    }
-
-    .portal-item:hover .portal-arrow {
-      transform: translate(2px, -2px);
-      background: var(--sc-ink-primary);
-      color: #ffffff;
-    }
-
     .portal-desc {
       font-size: 0.88rem;
       color: var(--sc-ink-secondary);
@@ -227,96 +203,21 @@
       gap: 24px;
     }
 
-    .info-card {
-      background: rgba(255, 255, 255, 0.84);
-      backdrop-filter: blur(16px);
+    .img-card {
+      background: #ffffff;
       border: 1px solid var(--sc-border);
       border-radius: 20px;
-      padding: 32px;
-      box-shadow: 0 14px 34px rgba(39, 55, 77, 0.07);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .brand-tagline {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--sc-ink-secondary);
-      letter-spacing: 0.5px;
-      margin-bottom: 20px;
-    }
-
-    .brand-logo-row {
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(39, 55, 77, 0.08);
       display: flex;
       align-items: center;
-      gap: 20px;
-      margin: 12px 0 24px;
-      flex-wrap: wrap;
+      justify-content: center;
     }
 
-    .sistar-wordmark {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--sc-ink-primary);
-      letter-spacing: 2px;
-    }
-
-    .hub-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      border-left: 2px solid var(--sc-border);
-      padding-left: 16px;
-    }
-
-    .hub-pill {
-      font-size: 0.76rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 6px;
-      background: var(--sc-surface);
-      color: var(--sc-ink-primary);
-    }
-
-    .contact-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .exec-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--sc-ink-primary);
-      margin: 0 0 2px 0;
-    }
-
-    .exec-role {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--sc-ink-secondary);
-      margin: 0 0 16px 0;
-    }
-
-    .exec-details {
-      font-size: 0.86rem;
-      color: var(--sc-ink-secondary);
-      line-height: 1.65;
-    }
-
-    .exec-details a {
-      color: var(--sc-ink-primary);
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid var(--sc-border);
-    }
-
-    .exec-details a:hover {
-      border-bottom-color: var(--sc-ink-primary);
+    .img-card img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
     footer {
@@ -329,7 +230,6 @@
 
     @media (prefers-reduced-motion: reduce) {
       html, body { animation: none; }
-      .portal-item { transition: none; }
     }
   </style>
 </head>
@@ -343,14 +243,14 @@
         <span class="badge-dot"></span>
         CORPORATE CI INTEGRATION &amp; PLATFORM UPGRADE
       </div>
-      <h1>*SC — SISTAR Company</h1>
+      <h1>*SC - SISTAR Company</h1>
       <p class="subtitle">Brand-New AI Delights &bull; Full-Stack AI Commerce &amp; Int'l AI Trading</p>
     </header>
 
     <section class="glass-card gs-reveal">
       <h2>Thank you for finding PT. SISTAR Indonesia, a SISTAR Company.</h2>
       <p>
-        Starting <span class="highlight">November 2026</span>, <strong>PT. SISTAR Indonesia (a SISTAR Company)</strong> is fully integrating the SISTAR family groups and proudly launching our new corporate identity: <span class="highlight">*SC — SISTAR Company</span>.
+        Starting <span class="highlight">November 2026</span>, <strong>PT. SISTAR Indonesia (a SISTAR Company)</strong> is fully integrating the SISTAR family groups and proudly launching our new corporate identity: <span class="highlight">*SC - SISTAR Company</span>.
       </p>
       <p>
         Pioneering new ways of working and doing global business, <strong>*SC</strong> operates as a <strong>Full-Stack AI Commerce &amp; International AI Trading</strong> enterprise—equipped with our proprietary <span class="highlight">Qubit Algorithm</span>, developed by *SC for brand-new AI commerce and global trading.
@@ -363,91 +263,47 @@
     <div class="gs-reveal">
       <div class="section-label">*SC Signal Star Ecosystem Portals</div>
       <div class="portal-grid">
-        <a class="portal-item" href="https://scarlet-ai.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. SCARLET-AI</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">AI Agent &amp; Autonomous Workflow Core Platform</p>
-        </a>
+        </div>
 
-        <a class="portal-item" href="https://qubit-biz.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. QUBIT-BIZ</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">Proprietary Qubit Algorithm &amp; AI Trading Engine</p>
-        </a>
+        </div>
 
-        <a class="portal-item" href="https://biz-galaxy.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. BIZ-GALAXY</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">Full-Stack Global AI Commerce Universe</p>
-        </a>
+        </div>
 
-        <a class="portal-item" href="https://biz-hub.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. BIZ-HUB</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">International B2B / B2C Partner &amp; Trade Hub</p>
-        </a>
+        </div>
       </div>
     </div>
 
     <section class="cards-grid gs-reveal">
-      <div class="info-card">
-        <div class="brand-tagline">Brand-new AI Delights.</div>
-        <div class="brand-logo-row">
-          <div class="sistar-wordmark">sistar</div>
-          <div class="hub-badges">
-            <span class="hub-pill">Korea</span>
-            <span class="hub-pill">USA</span>
-            <span class="hub-pill">China</span>
-            <span class="hub-pill">Japan</span>
-            <span class="hub-pill">India</span>
-            <span class="hub-pill">Vietnam</span>
-            <span class="hub-pill">Indonesia</span>
-          </div>
-        </div>
-        <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; color: var(--sc-ink-secondary); text-transform: uppercase;">
-          a SISTAR Company
-        </div>
+      <div class="img-card">
+        <img src="./global-map.jpg" alt="SISTAR Company Global Network">
       </div>
-
-      <div class="info-card">
-        <div class="brand-tagline">sistarcompany.com</div>
-        <div class="contact-layout">
-          <div>
-            <div class="sistar-wordmark" style="font-size: 1.75rem; margin-bottom: 4px;">sistar <span style="font-weight: 400; color: var(--sc-ink-secondary);">Indonesia</span></div>
-            <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 1.5px; color: var(--sc-ink-secondary);">a SISTAR Company</div>
-          </div>
-          <div>
-            <div class="exec-name">Denny Ku</div>
-            <div class="exec-role">Director</div>
-            <div class="exec-details">
-              +62 (0)81 394 411 002<br>
-              +82 (0)10 2840 0485<br><br>
-              <a href="mailto:denniiku@sistarcompany.com">denniiku@sistarcompany.com</a><br>
-              <a href="mailto:denniiku@gmail.com">denniiku@gmail.com</a>
-            </div>
-          </div>
-        </div>
+      <div class="img-card">
+        <img src="./business-card.png" alt="Denny Ku - Director, PT. SISTAR Indonesia">
       </div>
     </section>
 
     <footer class="gs-reveal">
-      &copy; 2026 *SC (SISTAR Company) &mdash; PT. SISTAR Indonesia. All rights reserved.
+      &copy; 2026 *SC - SISTAR Company (PT. SISTAR Indonesia). All rights reserved.
     </footer>
   </main>
 
