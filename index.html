@@ -162,24 +162,18 @@
       margin-bottom: 36px;
     }
 
+    /* Non-clickable static cards (links removed) */
     .portal-item {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      text-decoration: none;
       background: var(--sc-glass-strong);
       backdrop-filter: blur(16px);
       border: 1px solid var(--sc-border);
       border-radius: 18px;
       padding: 22px;
-      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease, border-color 0.28s ease;
       box-shadow: 0 10px 25px rgba(39, 55, 77, 0.05);
-    }
-
-    .portal-item:hover {
-      transform: translateY(-6px);
-      border-color: var(--sc-ink-primary);
-      box-shadow: 0 18px 36px rgba(39, 55, 77, 0.13);
+      cursor: default;
     }
 
     .portal-top {
@@ -194,24 +188,6 @@
       font-size: 1.15rem;
       font-weight: 700;
       color: var(--sc-ink-primary);
-    }
-
-    .portal-arrow {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--sc-surface);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--sc-ink-primary);
-      transition: transform 0.25s ease, background 0.25s ease;
-    }
-
-    .portal-item:hover .portal-arrow {
-      transform: translate(2px, -2px);
-      background: var(--sc-ink-primary);
-      color: #ffffff;
     }
 
     .portal-desc {
@@ -254,7 +230,6 @@
 
     @media (prefers-reduced-motion: reduce) {
       html, body { animation: none; }
-      .portal-item { transition: none; }
     }
   </style>
 </head>
@@ -288,54 +263,42 @@
     <div class="gs-reveal">
       <div class="section-label">*SC Signal Star Ecosystem Portals</div>
       <div class="portal-grid">
-        <a class="portal-item" href="https://scarlet-ai.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. SCARLET-AI</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">AI Agent &amp; Autonomous Workflow Core Platform</p>
-        </a>
+        </div>
 
-        <a class="portal-item" href="https://qubit-biz.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. QUBIT-BIZ</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">Proprietary Qubit Algorithm &amp; AI Trading Engine</p>
-        </a>
+        </div>
 
-        <a class="portal-item" href="https://biz-galaxy.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. BIZ-GALAXY</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">Full-Stack Global AI Commerce Universe</p>
-        </a>
+        </div>
 
-        <a class="portal-item" href="https://biz-hub.sistarcompany.com">
+        <div class="portal-item">
           <div class="portal-top">
             <span class="portal-name">*SC. BIZ-HUB</span>
-            <span class="portal-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </span>
           </div>
           <p class="portal-desc">International B2B / B2C Partner &amp; Trade Hub</p>
-        </a>
+        </div>
       </div>
     </div>
 
     <section class="cards-grid gs-reveal">
       <div class="img-card">
-        <img src="card1.png" alt="SISTAR Global Network" style="width:100%; height:auto; display:block; border-radius:16px;">
+        <img src="card1.png" alt="SISTAR Global Network">
       </div>
       <div class="img-card">
-        <img src="card2.png" alt="SISTAR Indonesia Contact" style="width:100%; height:auto; display:block; border-radius:16px;">
+        <img src="card2.png" alt="SISTAR Indonesia Contact">
       </div>
     </section>
 
