@@ -14,7 +14,7 @@
       --sc-border: #9DB2BF;
       --sc-surface: #DDE6ED;
       --sc-glass-bg: rgba(221, 230, 237, 0.52);
-      --sc-glass-strong: rgba(255, 255, 255, 0.72);
+      --sc-glass-strong: rgba(255, 255, 255, 0.74);
     }
 
     html, body {
@@ -22,7 +22,7 @@
       background: -webkit-linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
       background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
       background-size: 240% 240%;
-      animation: gradientFlow 14s ease infinite;
+      animation: gradientFlow 12s ease infinite;
       color: var(--sc-ink-primary);
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       margin: 0;
@@ -40,7 +40,7 @@
 
     * { box-sizing: border-box; }
 
-    /* MotionSites Technique 1: Interactive Qubit Particle Canvas + Cursor Spotlight */
+    /* Interactive Qubit Canvas & Cursor Spotlight */
     #qubit-canvas {
       position: fixed;
       top: 0;
@@ -53,15 +53,13 @@
 
     .cursor-glow {
       position: fixed;
-      width: 520px;
-      height: 520px;
+      width: 560px;
+      height: 560px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.65) 0%, rgba(172,247,240,0.25) 45%, rgba(255,255,255,0) 70%);
+      background: radial-gradient(circle, rgba(255,255,255,0.75) 0%, rgba(172,247,240,0.35) 45%, rgba(255,255,255,0) 70%);
       transform: translate(-50%, -50%);
       pointer-events: none;
       z-index: 0;
-      mix-blend-mode: overlay;
-      transition: width 0.3s, height 0.3s;
     }
 
     .container {
@@ -84,7 +82,7 @@
       gap: 10px;
       padding: 9px 22px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.68);
+      background: rgba(255, 255, 255, 0.72);
       border: 1px solid var(--sc-border);
       backdrop-filter: blur(14px);
       color: var(--sc-ink-primary);
@@ -113,7 +111,7 @@
     }
     @keyframes pulseRing {
       0% { transform: scale(0.6); opacity: 1; }
-      100% { transform: scale(2.2); opacity: 0; }
+      100% { transform: scale(2.4); opacity: 0; }
     }
 
     h1 {
@@ -127,7 +125,7 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.28em;
+      gap: 0.25em;
     }
 
     .word-anim {
@@ -143,7 +141,7 @@
       letter-spacing: -0.2px;
     }
 
-    /* MotionSites Technique 2: 3D Tilt & Glare Surface */
+    /* 3D Tilt & Glare Surface */
     .tilt-card {
       position: relative;
       transform-style: preserve-3d;
@@ -158,11 +156,10 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.55), transparent 60%);
+      background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), transparent 55%);
       opacity: 0;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.25s ease;
       z-index: 3;
-      mix-blend-mode: soft-light;
     }
 
     .tilt-card:hover .glare {
@@ -173,7 +170,7 @@
       background: var(--sc-glass-bg);
       backdrop-filter: blur(22px);
       -webkit-backdrop-filter: blur(22px);
-      border: 1px solid rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.8);
       border-radius: 24px;
       padding: clamp(28px, 4.5vw, 48px);
       box-shadow: 0 24px 60px rgba(39, 55, 77, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.85);
@@ -201,15 +198,15 @@
     .highlight {
       color: var(--sc-ink-primary);
       font-weight: 700;
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.7);
       padding: 2px 8px;
       border-radius: 6px;
-      border: 1px solid rgba(157, 178, 191, 0.5);
+      border: 1px solid rgba(157, 178, 191, 0.55);
       display: inline-block;
       transition: transform 0.25s ease, background 0.25s ease;
     }
     .highlight:hover {
-      transform: translateY(-2px);
+      transform: translateY(-2px) scale(1.03);
       background: #ffffff;
     }
 
@@ -235,10 +232,10 @@
       justify-content: space-between;
       background: var(--sc-glass-strong);
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.85);
       border-radius: 18px;
       padding: 22px;
-      box-shadow: 0 12px 30px rgba(39, 55, 77, 0.07);
+      box-shadow: 0 12px 30px rgba(39, 55, 77, 0.08);
       cursor: default;
     }
 
@@ -278,7 +275,7 @@
       align-items: stretch;
     }
 
-    /* Fixed bottom blue line alignment for both cards */
+    /* Crop out the bottom blue bar completely on both business cards */
     .img-card {
       background: #ffffff;
       border: 1px solid var(--sc-border);
@@ -286,16 +283,14 @@
       overflow: hidden;
       box-shadow: 0 16px 40px rgba(39, 55, 77, 0.1);
       display: flex;
-      align-items: stretch;
+      align-items: flex-start;
     }
 
     .img-card img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
+      height: auto;
       display: block;
-      margin-bottom: -4px;
+      margin-bottom: -7%; /* 하단 하늘색 바 영역을 프레임 밖으로 완전히 밀어내어 숨김 */
     }
 
     footer {
@@ -308,7 +303,6 @@
   </style>
 </head>
 <body>
-  <!-- MotionSites Interactive Background Layers -->
   <div class="cursor-glow" id="cursor-glow"></div>
   <canvas id="qubit-canvas"></canvas>
 
@@ -404,21 +398,20 @@
       // 1. GSAP Choreographed Entrance & Floating Physics
       if (typeof gsap !== 'undefined') {
         const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-        tl.from('.badge', { y: -24, opacity: 0, scale: 0.9, duration: 0.9 })
-          .from('.word-anim', { y: 60, opacity: 0, rotateX: -65, stagger: 0.1, duration: 1.1 }, '-=0.5')
-          .from('.gs-reveal', { y: 40, opacity: 0, stagger: 0.15, duration: 1.1 }, '-=0.7');
+        tl.from('.badge', { y: -30, opacity: 0, scale: 0.85, duration: 1.0 })
+          .from('.word-anim', { y: 70, opacity: 0, rotateX: -75, stagger: 0.12, duration: 1.2 }, '-=0.6')
+          .from('.gs-reveal', { y: 45, opacity: 0, stagger: 0.16, duration: 1.1 }, '-=0.8');
 
-        // Continuous subtle floating on top badge
         gsap.to('.gs-float', {
-          y: -6,
-          duration: 2.4,
+          y: -8,
+          duration: 2.2,
           repeat: -1,
           yoyo: true,
           ease: 'sine.inOut'
         });
       }
 
-      // 2. 3D Magnetic Tilt & Glare Effect on Cards
+      // 2. 3D Magnetic Tilt & Glare Effect on All Cards
       const tiltCards = document.querySelectorAll('.tilt-card');
       tiltCards.forEach(card => {
         const glare = card.querySelector('.glare');
@@ -428,20 +421,20 @@
           const y = e.clientY - rect.top;
           const centerX = rect.width / 2;
           const centerY = rect.height / 2;
-          const rotateX = ((y - centerY) / centerY) * -5;
-          const rotateY = ((x - centerX) / centerX) * 5;
+          const rotateX = ((y - centerY) / centerY) * -8;
+          const rotateY = ((x - centerX) / centerX) * 8;
 
           gsap.to(card, {
             rotateX: rotateX,
             rotateY: rotateY,
-            scale: 1.015,
-            duration: 0.35,
+            scale: 1.025,
+            duration: 0.3,
             ease: 'power2.out',
-            transformPerspective: 1000
+            transformPerspective: 900
           });
 
           if (glare) {
-            glare.style.background = adial-gradient(circle at px px, rgba(255,255,255,0.65), transparent 60%);
+            glare.style.background = 'radial-gradient(circle at ' + x + 'px ' + y + 'px, rgba(255,255,255,0.75), transparent 55%)';
           }
         });
 
@@ -450,20 +443,20 @@
             rotateX: 0,
             rotateY: 0,
             scale: 1,
-            duration: 0.7,
+            duration: 0.8,
             ease: 'elastic.out(1, 0.5)'
           });
         });
       });
 
-      // 3. Interactive Qubit Constellation Network Canvas
+      // 3. Visible Qubit Constellation Network Canvas
       const canvas = document.getElementById('qubit-canvas');
       const ctx = canvas.getContext('2d');
       const glow = document.getElementById('cursor-glow');
       let width = canvas.width = window.innerWidth;
       let height = canvas.height = window.innerHeight;
 
-      const mouse = { x: width / 2, y: height / 2, radius: 170 };
+      const mouse = { x: width / 2, y: height / 2, radius: 190 };
       window.addEventListener('mousemove', e => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
@@ -478,12 +471,12 @@
         height = canvas.height = window.innerHeight;
       });
 
-      const particles = Array.from({ length: 58 }, () => ({
+      const particles = Array.from({ length: 75 }, () => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.65,
-        vy: (Math.random() - 0.5) * 0.65,
-        size: Math.random() * 2.4 + 1.2
+        vx: (Math.random() - 0.5) * 0.9,
+        vy: (Math.random() - 0.5) * 0.9,
+        size: Math.random() * 2.8 + 1.5
       }));
 
       function animateParticles() {
@@ -496,29 +489,28 @@
           if (p.x < 0 || p.x > width) p.vx *= -1;
           if (p.y < 0 || p.y > height) p.vy *= -1;
 
-          // Mouse interaction
           const dxMouse = mouse.x - p.x;
           const dyMouse = mouse.y - p.y;
           const distMouse = Math.hypot(dxMouse, dyMouse);
           if (distMouse < mouse.radius) {
-            p.x -= dxMouse * 0.015;
-            p.y -= dyMouse * 0.015;
+            p.x -= dxMouse * 0.025;
+            p.y -= dyMouse * 0.025;
           }
 
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(39, 55, 77, 0.35)';
+          ctx.fillStyle = 'rgba(39, 55, 77, 0.55)';
           ctx.fill();
 
           for (let j = i + 1; j < particles.length; j++) {
             let p2 = particles[j];
             const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
-            if (dist < 135) {
+            if (dist < 150) {
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = gba(82, 109, 130, );
-              ctx.lineWidth = 1;
+              ctx.strokeStyle = 'rgba(39, 55, 77, ' + (0.35 * (1 - dist / 150)) + ')';
+              ctx.lineWidth = 1.2;
               ctx.stroke();
             }
           }
