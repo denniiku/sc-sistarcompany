@@ -1,25 +1,62 @@
-# *SC — SISTAR Company | Master Web Ecosystem PRD
+# *SC — SISTAR Company | Master Integrated PRD (Infra & Web Ecosystem)
 
-## 1. Project Purpose & Target Audience
-- **Primary Goal:** Appeal to and convince IR Pitch Deck Investors (VC, TIPS, K-SURE, KIBO) and Global B2B Partners.
-- **Core Philosophy:** "More Infographic than Text". Every page visually demonstrates system architecture, quantum business logic, and scalable portfolio matrices.
-- **Access Policy:** Zero login/authentication barriers on all Gate & Showcase Webs (Pure MPA).
-
-## 2. Official Brand Identity & Approved Slogans
-- **Official Wordmark (Logo):** `*SC - SISTAR Company`
+## [PART 1] Master Web Ecosystem & Content Standards (Latest Interview Confirmed)
+- **Primary Goal:** Appeal to and convince IR Pitch Deck Investors (VC, TIPS, K-SURE, KIBO) and Global B2B Partners ("More Infographic than Text").
+- **Official Wordmark (Logo):** *SC - SISTAR Company
 - **Approved Core Slogans (Use ONLY these 3 official taglines):**
   1. **Qubit Algorithm / Qubit Biz:** "One Spark, Infinite Galaxifying — Powered by Qubit Algorithm™ & COSMO SEED™"
   2. **Scarlet AI:** "I’m Not Fool — Where Magic Happens with a Spell"
   3. **Biz Hub:** "SISTAR &Co — Connect • Innovate • Grow Together"
+- **Mandatory Core Corporate Copy (Main Gate Web):**
+  1. "Starting November 2026, PT. SISTAR Indonesia (a SISTAR Company) is fully integrating the SISTAR family groups and proudly launching our new corporate identity: *SC - SISTAR Company."
+  2. "Pioneering new ways of working and doing global business, *SC operates as a Full-Stack AI Commerce & International AI Trading enterprise—equipped with our proprietary Qubit Algorithm, developed by *SC for brand-new AI commerce and global trading."
+  3. "Furthermore, this web portal is currently being fully upgraded into a next-generation platform to deliver brand-new AI experiences for our global partners and clients."
+- **5-Domain Master Hierarchy (Section ➔ Category ➔ Company ➔ Project):**
+  1. sc-sistarcompany (sistarcompany.com): Main Universe Gate Web (/headquarter, /qubit-algorithm, /intelligence-core, /command-centers)
+  2. scarlet-ai (scarlet-ai.sistarcompany.com): AI Agent Platform, AI Shopping Malls & Industry AI Portals
+  3. qubit-biz (qubit-biz.sistarcompany.com): COSMO SEED™ Biz Models, AI Trading, BNPL & Qubit Bank
+  4. iz-hub (iz-hub.sistarcompany.com): SISTAR &Co Global B2B Hub, ODM, Campaigns, Franchise & Proposals
+  5. iz-galaxy (iz-galaxy.sistarcompany.com): Multi-Vertical Industry & Product Showcase Directory
 
-## 3. Mandatory Core Corporate Copy (Main Gate Web)
-1. "Starting November 2026, PT. SISTAR Indonesia (a SISTAR Company) is fully integrating the SISTAR family groups and proudly launching our new corporate identity: *SC - SISTAR Company."
-2. "Pioneering new ways of working and doing global business, *SC operates as a Full-Stack AI Commerce & International AI Trading enterprise—equipped with our proprietary Qubit Algorithm, developed by *SC for brand-new AI commerce and global trading."
-3. "Furthermore, this web portal is currently being fully upgraded into a next-generation platform to deliver brand-new AI experiences for our global partners and clients."
+---
 
-## 4. 5-Domain Master Hierarchy
-1. `sc-sistarcompany` (`sistarcompany.com`): Main Universe Gate Web (`/headquarter`, `/qubit-algorithm`, `/intelligence-core`, `/command-centers`)
-2. `scarlet-ai` (`scarlet-ai.sistarcompany.com`): AI Agent Platform & AI Shopping Malls
-3. `qubit-biz` (`qubit-biz.sistarcompany.com`): COSMO SEED™ Biz Models, AI Trading, BNPL & Qubit Bank
-4. `biz-hub` (`biz-hub.sistarcompany.com`): SISTAR &Co Global B2B Hub, ODM, Campaigns, Franchise & Proposals
-5. `biz-galaxy` (`biz-galaxy.sistarcompany.com`): Multi-Vertical Industry & Product Showcase Directory
+## [PART 2] Initial Infrastructure & Foundational PRD Specifications
+# PRD: *SC (SISTAR Company) AI App Factory & Gate Ecosystem (v4.1 Final)
+
+## 1. 기업 정체성 및 핵심 브랜드 철학 (*SC Identity)
+- **Company Name:** SISTAR Company (약칭: **`*SC`**)
+- **AI Executive Secretary (`Ms. Scarlet`):** 
+  - `*SC`의 총괄 AI 비서이자 자율 에이전트.
+  - 사내 ERP(`sc-erp-ai-centers`), 사내 RAG(Dify Knowledges), 모든 자동화 파이프라인에 전권 접근.
+  - 아이디어 입력 -> 프로젝트 생성 -> 5대 기획 문서(`.md`) 작성 -> 웹/앱 개발(`agy cli`) -> 자동 배포 및 웹 포스팅까지 전 과정 총괄.
+- **양대 핵심 코어 브랜드:**
+  1. **`Qubit` (Qubit Biz):** 독자 개발한 **Qubit Algorithm**을 비즈니스에 적용한 모든 상용 사업 브랜드 (`Qubit` 타이틀 부여).
+  2. **`Scarlet` (Scarlet AI):** AI Agent 기반의 모든 상용 웹앱 및 지능형 서비스를 대표하는 플래그십 AI 브랜드.
+
+## 2. 웹(Gate)과 앱(App)의 역할 분리 원칙
+- **Gate Web (설명·정보·신뢰·관문):** 무거운 기능이나 복잡한 인증, 인위적인 SPA 방식을 배제하고, 한 페이지 안에서 명확한 정보 전달과 신뢰성 구축, 그리고 실제 앱으로 이동시키는 게이트(Gate) 역할에 집중한다.
+- **Active App (실제 구동 앱):** 실제 구동과 DB 연산이 필요한 웹앱은 게이트 웹의 링크를 통해 이동하며, 별도의 GitHub 레포지토리(`C:\projects\sc_app`)와 독립 백엔드에서 구동된다.
+
+## 3. 도메인 및 GitHub 레포지토리 최종 매핑 구조 (SC Web)
+로컬 PC의 `C:\projects\sc_web\` 하위 폴더와 GitHub 저장소, 도메인을 1:1로 매칭하여 관리한다.
+
+1. **메인 본부 웹 (`sistarcompany.com`)**
+   - **하위 섹션:** `/headquarters`, `/intelligence-core`, `/qubit-algorithm`, `/command-centers`
+   - **GitHub Repo:** `denniiku/sc-sistarcompany`
+   - **Local Path:** `C:\projects\sc_web\sc-sistarcompany`
+2. **Scarlet AI 게이트 웹 (`scarlet-ai.sistarcompany.com`)**
+   - **GitHub Repo:** `denniiku/scarlet-ai`
+   - **Local Path:** `C:\projects\sc_web\scarlet-ai`
+3. **Qubit Biz 게이트 웹 (`qubit-biz.sistarcompany.com`)**
+   - **GitHub Repo:** `denniiku/qubit-biz`
+   - **Local Path:** `C:\projects\sc_web\qubit-biz`
+4. **Biz Galaxy 게이트 웹 (`biz-galaxy.sistarcompany.com`)**
+   - **GitHub Repo:** `denniiku/biz-galaxy`
+   - **Local Path:** `C:\projects\sc_web\biz-galaxy`
+5. **Biz Hub 게이트 웹 (`biz-hub.sistarcompany.com`)**
+   - **GitHub Repo:** `denniiku/biz-hub`
+   - **Local Path:** `C:\projects\sc_web\biz-hub`
+
+## 4. 특수 목적 및 개별 프로젝트 저장소
+- **AI Trials & Mockups (`denniiku/sistarcompany-ai`):** 상용화 전 사내 테스트, 목업(Mockup), 실험용 AI 프로젝트 관리 (`C:\projects\sistarcompany-ai`).
+- **Commercial Active Apps:** `Qubit` 및 `Scarlet` 산하의 실제 구동형 상용 앱들은 프로젝트별 독립 GitHub 레포지토리로 생성 및 배포.
