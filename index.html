@@ -210,14 +210,16 @@
       overflow: hidden;
       box-shadow: 0 14px 34px rgba(39, 55, 77, 0.08);
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: stretch;
     }
 
     .img-card img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
       display: block;
+      margin-bottom: -4px; /* 오른쪽 하단 미세한 흰색 여백을 박스 밖으로 밀어내어 감춤 */
     }
 
     footer {
@@ -324,3 +326,4 @@
   </script>
 </body>
 </html>
+
