@@ -1,0 +1,19 @@
+# [마스터 동기화 스크립트] sc-sistarcompany의 common_assets_web을 5대 도메인 전체에 일괄 반영 & GitHub Push
+$masterAssets = "C:\projects\sc-sistarcompany\common_assets\*"
+$allProjects  = @("sc-sistarcompany", "scarlet-ai", "qubit-biz", "biz-hub", "biz-galaxy")
+
+foreach ($proj in $allProjects) {
+    $targetDir = "C:\projects\$proj"
+    if (Test-Path $targetDir) {
+        if ($proj -ne "sc-sistarcompany") {
+            New-Item -ItemType Directory -Path "$targetDir\common_assets_web" -Force | Out-Null
+            Copy-Item -Path $masterAssets -Destination "$targetDir\common_assets_web\" -Force
+        }
+        Set-Location $targetDir
+        git add common_assets_web/
+        git commit -m "docs: sync updated master common_assets_web across all repositories" 2>$null
+        git push origin main 2>$null
+        Write-Host "✅ [$proj] 마스터 문서 동기화 및 GitHub 업로드 완료!" -ForegroundColor Cyan
+    }
+}
+Set-Location "C:\projects\sc-sistarcompany"
