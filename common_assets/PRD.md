@@ -1,62 +1,198 @@
-# *SC — SISTAR Company | Master Integrated PRD (Infra & Web Ecosystem)
+* Refering to 🔹project : sc_web, to update prd & skill .md
 
-## [PART 1] Master Web Ecosystem & Content Standards (Latest Interview Confirmed)
-- **Primary Goal:** Appeal to and convince IR Pitch Deck Investors (VC, TIPS, K-SURE, KIBO) and Global B2B Partners ("More Infographic than Text").
-- **Official Wordmark (Logo):** *SC - SISTAR Company
-- **Approved Core Slogans (Use ONLY these 3 official taglines):**
-  1. **Qubit Algorithm / Qubit Biz:** "One Spark, Infinite Galaxifying — Powered by Qubit Algorithm™ & COSMO SEED™"
-  2. **Scarlet AI:** "I’m Not Fool — Where Magic Happens with a Spell"
-  3. **Biz Hub:** "SISTAR &Co — Connect • Innovate • Grow Together"
-- **Mandatory Core Corporate Copy (Main Gate Web):**
-  1. "Starting November 2026, PT. SISTAR Indonesia (a SISTAR Company) is fully integrating the SISTAR family groups and proudly launching our new corporate identity: *SC - SISTAR Company."
-  2. "Pioneering new ways of working and doing global business, *SC operates as a Full-Stack AI Commerce & International AI Trading enterprise—equipped with our proprietary Qubit Algorithm, developed by *SC for brand-new AI commerce and global trading."
-  3. "Furthermore, this web portal is currently being fully upgraded into a next-generation platform to deliver brand-new AI experiences for our global partners and clients."
-- **5-Domain Master Hierarchy (Section ➔ Category ➔ Company ➔ Project):**
-  1. sc-sistarcompany (sistarcompany.com): Main Universe Gate Web (/headquarter, /qubit-algorithm, /intelligence-core, /command-centers)
-  2. scarlet-ai (scarlet-ai.sistarcompany.com): AI Agent Platform, AI Shopping Malls & Industry AI Portals
-  3. qubit-biz (qubit-biz.sistarcompany.com): COSMO SEED™ Biz Models, AI Trading, BNPL & Qubit Bank
-  4. iz-hub (iz-hub.sistarcompany.com): SISTAR &Co Global B2B Hub, ODM, Campaigns, Franchise & Proposals
-  5. iz-galaxy (iz-galaxy.sistarcompany.com): Multi-Vertical Industry & Product Showcase Directory
+[general]
 
----
+design
+left-side as folded/ unfolded (as like gemini-web design.)
+top-left: ‘*sc - sistarcompany’  & search button & unfolding button’
+navigator, below ‘*sc - sistarcompany’  & search button & unfolding button’
+if folded, just *sc & unfolding button is shown.
+navigator
+titles of🔺1s level &🔸2nd level are shown, once unfolded
+if click 🔸2nd level -> drop down🔹3rd level
+🔺: about,🔸: main category/ companies, 🔹: projects, ▫️details
 
-## [PART 2] Initial Infrastructure & Foundational PRD Specifications
-# PRD: *SC (SISTAR Company) AI App Factory & Gate Ecosystem (v4.1 Final)
+background & font
+to apply -half transparent bright-gray background for the navigator section , above main gradation effect for all 
+roadmap
+phase i : 🔺🔸companies, to set, phase ii :🔹projects to add
+qubit algorithm engine + intelligence core -> commercial: scarlet-ai, qubit biz 
+one spare, infinite galaxifying
 
-## 1. 기업 정체성 및 핵심 브랜드 철학 (*SC Identity)
-- **Company Name:** SISTAR Company (약칭: **`*SC`**)
-- **AI Executive Secretary (`Ms. Scarlet`):** 
-  - `*SC`의 총괄 AI 비서이자 자율 에이전트.
-  - 사내 ERP(`sc-erp-ai-centers`), 사내 RAG(Dify Knowledges), 모든 자동화 파이프라인에 전권 접근.
-  - 아이디어 입력 -> 프로젝트 생성 -> 5대 기획 문서(`.md`) 작성 -> 웹/앱 개발(`agy cli`) -> 자동 배포 및 웹 포스팅까지 전 과정 총괄.
-- **양대 핵심 코어 브랜드:**
-  1. **`Qubit` (Qubit Biz):** 독자 개발한 **Qubit Algorithm**을 비즈니스에 적용한 모든 상용 사업 브랜드 (`Qubit` 타이틀 부여).
-  2. **`Scarlet` (Scarlet AI):** AI Agent 기반의 모든 상용 웹앱 및 지능형 서비스를 대표하는 플래그십 AI 브랜드.
+[main landing page]
+ *sc - sistar company &  search button & 
+  signal star universe
+slogan, tag lines
+cinematic effect, with slogans & cinematic effects from keywords
+one spare, infinite galaxifying
+key words for ‘signal star universe’: 
+*sc - sistar company spaceship, command center, qubit engine,
+ biz galaxy, signal star universe, 
+cosmos view, for main landing page
 
-## 2. 웹(Gate)과 앱(App)의 역할 분리 원칙
-- **Gate Web (설명·정보·신뢰·관문):** 무거운 기능이나 복잡한 인증, 인위적인 SPA 방식을 배제하고, 한 페이지 안에서 명확한 정보 전달과 신뢰성 구축, 그리고 실제 앱으로 이동시키는 게이트(Gate) 역할에 집중한다.
-- **Active App (실제 구동 앱):** 실제 구동과 DB 연산이 필요한 웹앱은 게이트 웹의 링크를 통해 이동하며, 별도의 GitHub 레포지토리(`C:\projects\sc_app`)와 독립 백엔드에서 구동된다.
+* with navigator
+[structure] : menu, sub menu, slogan- taglines
+🔺*sc - sistar company 
+🔸*sc - sistar company
+▫️signal star
+▫️greetings, team sistar
+▫️sistar company
+▫️identity
+▫️sistar superior to
+▫️team sistar
+▫️sistar crm
+▫️join us
 
-## 3. 도메인 및 GitHub 레포지토리 최종 매핑 구조 (SC Web)
-로컬 PC의 `C:\projects\sc_web\` 하위 폴더와 GitHub 저장소, 도메인을 1:1로 매칭하여 관리한다.
+▫️identities/ signatures
+ai, int’l
 
-1. **메인 본부 웹 (`sistarcompany.com`)**
-   - **하위 섹션:** `/headquarters`, `/intelligence-core`, `/qubit-algorithm`, `/command-centers`
-   - **GitHub Repo:** `denniiku/sc-sistarcompany`
-   - **Local Path:** `C:\projects\sc_web\sc-sistarcompany`
-2. **Scarlet AI 게이트 웹 (`scarlet-ai.sistarcompany.com`)**
-   - **GitHub Repo:** `denniiku/scarlet-ai`
-   - **Local Path:** `C:\projects\sc_web\scarlet-ai`
-3. **Qubit Biz 게이트 웹 (`qubit-biz.sistarcompany.com`)**
-   - **GitHub Repo:** `denniiku/qubit-biz`
-   - **Local Path:** `C:\projects\sc_web\qubit-biz`
-4. **Biz Galaxy 게이트 웹 (`biz-galaxy.sistarcompany.com`)**
-   - **GitHub Repo:** `denniiku/biz-galaxy`
-   - **Local Path:** `C:\projects\sc_web\biz-galaxy`
-5. **Biz Hub 게이트 웹 (`biz-hub.sistarcompany.com`)**
-   - **GitHub Repo:** `denniiku/biz-hub`
-   - **Local Path:** `C:\projects\sc_web\biz-hub`
+🔸sistar int’l
+🔹sc, sc .id, sc .kr, sc .vn, sc .jp, sc .cn, sc .us
 
-## 4. 특수 목적 및 개별 프로젝트 저장소
-- **AI Trials & Mockups (`denniiku/sistarcompany-ai`):** 상용화 전 사내 테스트, 목업(Mockup), 실험용 AI 프로젝트 관리 (`C:\projects\sistarcompany-ai`).
-- **Commercial Active Apps:** `Qubit` 및 `Scarlet` 산하의 실제 구동형 상용 앱들은 프로젝트별 독립 GitHub 레포지토리로 생성 및 배포.
+🔸associations Int’l
+🔹iint’l ai trade alliance
+🔹Int’l ai data alliance
++
+🔺qubit-algorithm (qubit-algorithm.sistarcompany .com)
+🔸qubit algorithm
+🔸cosmoseed biz models
+
+🔺sistar-challengers (challengers.sistarcompany .com)
+🔸sistar challengers
+invitation letter
+spirits
+vibe working
+refine ur work vids
+vibe working vids
+qna vids
+benefits vids
+procedures
+qna
+guide vids
+orientations
+
+🔸vibe-working
+🔹sistar challengers int’l
+🔹sistar vibe working
+
+🔺Ir- pitchdeck
+🔸report…
+
+🔺media
+🔸sistar studio
+🔸the sistar post 
+
+🔺intelligence-core : sistar biz intelligences
+🔸sistar bi : biz intelligence
+🔹qubit erp
+🔹ai centers : modular ai services
+🔹rag/ fine-tuning
+🔹intelligence on tab, hr
+🔹dynamic pricing, f’ce
+🔹bnpl, f’ce
+🔹smart logistics
+🔹space sharing, warehousing
+🔹open accounts, sales
+🔹project generator
+🔹scarlet web builder
+🔹scarlet web working
+
+🔸sistar a/c : ai- commerce
+🔸sistar i/t : Int’l ai trade
+🔸sistar s/r : robotics, physical ai
+🔹robo-blocks
+🔸sistar a/b, w/a: agent builder, work automation
+🔸sistar w/a : work automation
+🔸sistar exo-brain : exo brain
+🔹& i
+🔸sistar df : data factory: data mining/ datapipelines
+🔸sistar mmd : money making designs
+🔸sistar b/d : brand new online delights
+
+🔺scarlet-ai : where magic happens with a spell - ai commerce/ int’l ai trade platforms
+🔸int’l ai trading platform
+🔸ai-commerce platform ind.
+🔸mall.sisTV
+🔸ms. scarlet : ai secretary
+🔸robot market
+🔸on-demand
+🔸b2b
+🔸resell
+🔸siscart, nearbuy
+🔸zero wastage
+🔸sisdiet
+
+
+🔺qubit-biz : cosmo seed biz models.- engineered by qubit algorithm ™
+🔸qubit erp
+🔸c.a.n. (ceo action note ai)
+🔸qubit marketplace
+🔸qubit planet games
+🔸qubit mkt
+🔹qubit affiliators’ program
+🔸qubit bank
+🔹time bank space bank, idea bank
+🔹petfood bank
+🔸exo brain
+🔸qubit star
+🔸qubit ads
+🔸qubit taxes
+🔸qubit knowledge networks
+
+🔺biz-galaxy, biz showcase. - one spark, galaxifying biz
+🔸sistar mind company : mind 
+🔹sistar mind company 
+🔹mind navi
+🔹n.f.q.
+🔹ai companion
+🔹mind test
+🔸sispet : petfood & general
+🔹scarlet the cat
+🔹forever-young dog
+🔹n.b.s.
+🔹dazzle
+🔹ca kr
+🔸sistar medix : pet clinic
+🔹chd
+🔹sistar medix
+clinical edition : 
+botanical edition : 
+🔸aquasis : marine
+🔹aquasis ai
+🔹sis marine
+🔸sistar at : ayurvedic therapy
+🔸sistar ei : edu
+🔹edu institute, knowledge to flex
+🔹flexkids ai
+🔸sis food
+🔹sis proteins
+🔹jave nature premium
+🔸sistar ls ife : lifestyle goods
+🔹lifestyle goods
+🔸sistar studio : media
+🔹sistar studio
+🔹studio butter : smooth like a butter
+🔸beauty
+▫️sismii
+🔸diagnotics
+▫️sistar dx
+🔸livestock
+▫️sispharm
+🔸apparel
+▫️sisloa
+
+🔺biz-hub, connect - innovate - grow
+🔸sistar & co : connect - innovate 
+🔹petfood bank
+🔸sistar br : brands
+🔹Sistar br : co-branding 
+🔸int’l tech trading
+🔸int’l data factory
+🔸biz campaigns
+Zero-wastage movement
+🔸sistar frenz : franchise partnership
+🔹sistar m.i.n.t. colored shop
+🔹suu
+🔹iruka is back
+🔹sistar l/p: my neighbour lifestyle platform
+🔸n.f.q: ▫️sistar solutions
