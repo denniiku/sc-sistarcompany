@@ -1,5 +1,6 @@
 (function() {
   const isFile = location.protocol === 'file:';
+  const isTouchDevice = () => window.innerWidth <= 768 || ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 
   function resolveUrl(repoFolder, subPath) {
     const cleanSub = subPath ? subPath.replace(/^\/+|\/+$/g, '') : '';
@@ -17,7 +18,9 @@
 
   function buildNavigator() {
     if (document.getElementById('sc-left-nav')) return;
-    const isMobile = window.innerWidth <= 768; document.body.classList.remove('sc-nav-open', 'sc-nav-folded'); document.body.classList.add(isMobile ? 'sc-nav-folded' : 'sc-nav-open');
+    const isMobileInit = window.innerWidth <= 768;
+    document.body.classList.remove('sc-nav-open', 'sc-nav-folded');
+    document.body.classList.add(isMobileInit ? 'sc-nav-folded' : 'sc-nav-open');
 
     const nav = document.createElement('aside');
     nav.id = 'sc-left-nav';
@@ -45,27 +48,107 @@
             '</div></div>';
         }
 
-        l2Html += '<div class="sc-l2-item"><a class="sc-l2-link" href="' + l2Url + '">' + l2.title + '</a>' + l3Html + '</div>';
+        l2Html += '<div class="sc-l2-item" data-l2="' + l2.path + '"><a class="sc-l2-link" href="' + l2Url + '">' + l2.title + '</a>' + l3Html + '</div>';
       });
 
-      treeHtml += '<div class="sc-l1-item"><a class="sc-l1-link" href="' + l1Url + '">' + l1.title + '</a><div class="sc-l2-wrap"><div class="sc-l2-inner">' + l2Html + '</div></div></div>';
+      treeHtml += '<div class="sc-l1-item" data-repo="' + l1.repo + '"><a class="sc-l1-link" href="' + l1Url + '">' + l1.title + '</a><div class="sc-l2-wrap"><div class="sc-l2-inner">' + l2Html + '</div></div></div>';
     });
 
-    const homeUrl = isFile
-      ? resolveUrl('sc-sistarcompany', '')
-      : resolveUrl('sc-sistarcompany', '');
+    const homeUrl = resolveUrl('sc-sistarcompany', '');
 
     nav.innerHTML = '<div><div class="sc-nav-top"><a href="' + homeUrl + '" class="sc-brand-link"><span class="sc-brand-full">*sc - sistarcompany</span><span class="sc-brand-short">*sc</span></a><div class="sc-nav-actions"><button class="sc-plain-btn sc-search-btn" id="sc-search-btn" title="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="20" y1="20" x2="16.2" y2="16.2"></line></svg></button><button class="sc-plain-btn" id="sc-fold-btn" title="Toggle Menu"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button></div></div><div class="sc-search-wrap" id="sc-search-wrap"><input type="text" class="sc-search-input" id="sc-search-input" placeholder="Search universe..." autocomplete="off" /><div class="sc-search-dropdown" id="sc-search-dropdown"></div></div></div><div class="sc-nav-scroll" id="sc-nav-scroll">' + treeHtml + '</div><div class="sc-nav-bottom"><div class="sc-copy-toast" id="sc-copy-toast">Copied: sc@sistarcompany.com</div><button class="sc-mono-icon" id="sc-copy-email" title="Copy sc@sistarcompany.com"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></button><div class="sc-social-group"><a class="sc-mono-icon" href="https://youtube.com" target="_blank" rel="noopener" title="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"></rect><polygon points="10 9 15 12 10 15 10 9"></polygon></svg></a><a class="sc-mono-icon" href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a><a class="sc-mono-icon" href="https://x.com" target="_blank" rel="noopener" title="X"><svg viewBox="0 0 24 24"><path d="M4 4l16 16M20 4L4 20"></path></svg></a><a class="sc-mono-icon" href="https://threads.net" target="_blank" rel="noopener" title="Threads"><svg viewBox="0 0 24 24"><path d="M12 12c-2-2.5-5-2.5-5 0s3 2.5 5 0c2 2.5 5 2.5 5 0s-3-2.5-5 0z"></path><circle cx="12" cy="12" r="9"></circle></svg></a></div></div>';
 
     document.body.prepend(nav);
 
+    // Restore open state on desktop only (on mobile, keep clean folded drawer)
+    if (!isMobileInit) {
+      try {
+        const savedRepo = sessionStorage.getItem('sc_open_l1');
+        const savedL2 = sessionStorage.getItem('sc_open_l2');
+        const savedScroll = sessionStorage.getItem('sc_nav_scroll');
+        if (savedRepo) {
+          const activeL1 = nav.querySelector('.sc-l1-item[data-repo="' + savedRepo + '"]');
+          if (activeL1) {
+            activeL1.classList.add('is-open');
+            if (savedL2) {
+              const activeL2 = activeL1.querySelector('.sc-l2-item[data-l2="' + savedL2 + '"]');
+              if (activeL2) activeL2.classList.add('is-open');
+            }
+          }
+        }
+        if (savedScroll) document.getElementById('sc-nav-scroll').scrollTop = parseInt(savedScroll, 10);
+      } catch(e) {}
+    }
+
+    const l1Items = nav.querySelectorAll('.sc-l1-item');
+    const l2Items = nav.querySelectorAll('.sc-l2-item');
+
+    // Link Click Handler: Mobile Two-Tap (1st tap opens submenu, 2nd tap navigates)
+    nav.querySelectorAll('a[href]').forEach(link => {
+      if (link.target === '_blank') return;
+      link.addEventListener('click', e => {
+        const targetUrl = link.getAttribute('href');
+        if (!targetUrl || e.ctrlKey || e.metaKey || e.shiftKey) return;
+
+        // If on Mobile / Touch screen:
+        if (isTouchDevice()) {
+          // 1) Tapped a Level 1 Link that has Level 2 children
+          if (link.classList.contains('sc-l1-link')) {
+            const parentL1 = link.closest('.sc-l1-item');
+            const hasL2 = parentL1 && parentL1.querySelectorAll('.sc-l2-item').length > 0;
+            if (hasL2 && !parentL1.classList.contains('is-open')) {
+              e.preventDefault();
+              e.stopPropagation();
+              l1Items.forEach(o => {
+                if (o !== parentL1) {
+                  o.classList.remove('is-open');
+                  o.querySelectorAll('.sc-l2-item.is-open').forEach(s => s.classList.remove('is-open'));
+                }
+              });
+              parentL1.classList.add('is-open');
+              return; // STOP HERE on 1st tap! Do not navigate!
+            }
+          }
+
+          // 2) Tapped a Level 2 Link that has Level 3 children
+          if (link.classList.contains('sc-l2-link')) {
+            const parentL2 = link.closest('.sc-l2-item');
+            const hasL3 = parentL2 && parentL2.querySelectorAll('.sc-l3-link').length > 0;
+            if (hasL3 && !parentL2.classList.contains('is-open')) {
+              e.preventDefault();
+              e.stopPropagation();
+              parentL2.parentElement.querySelectorAll('.sc-l2-item').forEach(sib => {
+                if (sib !== parentL2) sib.classList.remove('is-open');
+              });
+              parentL2.classList.add('is-open');
+              return; // STOP HERE on 1st tap! Do not navigate!
+            }
+          }
+        }
+
+        // Otherwise (2nd tap on opened menu, or leaf menu with no children, or Desktop click) -> Navigate!
+        e.preventDefault();
+        try {
+          const parentL1 = link.closest('.sc-l1-item');
+          const parentL2 = link.closest('.sc-l2-item');
+          sessionStorage.setItem('sc_open_l1', parentL1 ? parentL1.getAttribute('data-repo') : '');
+          sessionStorage.setItem('sc_open_l2', parentL2 ? parentL2.getAttribute('data-l2') : '');
+          sessionStorage.setItem('sc_nav_scroll', document.getElementById('sc-nav-scroll').scrollTop);
+        } catch(err) {}
+
+        document.body.classList.add('sc-page-leaving');
+        setTimeout(() => { window.location.href = targetUrl; }, 180);
+      });
+    });
+
+    // Desktop Hover Timers (Disabled on touch devices so submenus never auto-close or conflict)
     const OPEN_DELAY = 480;
     const CLOSE_DELAY = 420;
-    const l1Items = nav.querySelectorAll('.sc-l1-item');
     let l1OpenTimer = null, l1CloseTimer = null;
 
     l1Items.forEach(item => {
       item.addEventListener('mouseenter', () => {
+        if (isTouchDevice()) return;
         clearTimeout(l1CloseTimer); clearTimeout(l1OpenTimer);
         l1OpenTimer = setTimeout(() => {
           l1Items.forEach(o => { if (o !== item) { o.classList.remove('is-open'); o.querySelectorAll('.sc-l2-item.is-open').forEach(s => s.classList.remove('is-open')); } });
@@ -73,6 +156,7 @@
         }, OPEN_DELAY);
       });
       item.addEventListener('mouseleave', () => {
+        if (isTouchDevice()) return;
         clearTimeout(l1OpenTimer);
         l1CloseTimer = setTimeout(() => {
           item.classList.remove('is-open');
@@ -81,10 +165,10 @@
       });
     });
 
-    const l2Items = nav.querySelectorAll('.sc-l2-item');
     let l2OpenTimer = null, l2CloseTimer = null;
     l2Items.forEach(item => {
       item.addEventListener('mouseenter', () => {
+        if (isTouchDevice()) return;
         clearTimeout(l2CloseTimer); clearTimeout(l2OpenTimer);
         l2OpenTimer = setTimeout(() => {
           item.parentElement.querySelectorAll('.sc-l2-item').forEach(sib => { if (sib !== item) sib.classList.remove('is-open'); });
@@ -92,11 +176,13 @@
         }, 380);
       });
       item.addEventListener('mouseleave', () => {
+        if (isTouchDevice()) return;
         clearTimeout(l2OpenTimer);
         l2CloseTimer = setTimeout(() => { item.classList.remove('is-open'); }, 350);
       });
     });
 
+    // Close mobile nav drawer when tapping outside main content
     document.querySelectorAll('.sc-main-stage, body > main').forEach(el => {
       el.addEventListener('click', () => {
         if (window.innerWidth <= 768 && document.body.classList.contains('sc-nav-open')) {
@@ -105,6 +191,7 @@
         }
       });
     });
+
     document.getElementById('sc-fold-btn').addEventListener('click', () => {
       const folded = document.body.classList.toggle('sc-nav-folded');
       document.body.classList.toggle('sc-nav-open', !folded);
