@@ -182,14 +182,17 @@
       });
     });
 
-    // Close mobile nav drawer when tapping outside main content
-    document.querySelectorAll('.sc-main-stage, body > main').forEach(el => {
-      el.addEventListener('click', () => {
-        if (window.innerWidth <= 768 && document.body.classList.contains('sc-nav-open')) {
-          document.body.classList.remove('sc-nav-open');
-          document.body.classList.add('sc-nav-folded');
-        }
-      });
+    // Universal Outside Click/Touch: Fold navigator when clicking/tapping anywhere outside #sc-left-nav (PC & Mobile)
+    document.addEventListener('click', e => {
+      if (!document.body.classList.contains('sc-nav-open')) return;
+      if (nav.contains(e.target)) return;
+      document.body.classList.remove('sc-nav-open');
+      document.body.classList.add('sc-nav-folded');
+      nav.querySelectorAll('.is-open').forEach(el => el.classList.remove('is-open'));
+      const sw = document.getElementById('sc-search-wrap');
+      const sd = document.getElementById('sc-search-dropdown');
+      if (sw) sw.classList.remove('active');
+      if (sd) sd.classList.remove('show');
     });
 
     document.getElementById('sc-fold-btn').addEventListener('click', () => {
