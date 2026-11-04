@@ -17,7 +17,7 @@
 
   function buildNavigator() {
     if (document.getElementById('sc-left-nav')) return;
-    document.body.classList.add('sc-nav-open');
+    const isMobile = window.innerWidth <= 768; document.body.classList.remove('sc-nav-open', 'sc-nav-folded'); document.body.classList.add(isMobile ? 'sc-nav-folded' : 'sc-nav-open');
 
     const nav = document.createElement('aside');
     nav.id = 'sc-left-nav';
@@ -97,6 +97,14 @@
       });
     });
 
+    document.querySelectorAll('.sc-main-stage, body > main').forEach(el => {
+      el.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && document.body.classList.contains('sc-nav-open')) {
+          document.body.classList.remove('sc-nav-open');
+          document.body.classList.add('sc-nav-folded');
+        }
+      });
+    });
     document.getElementById('sc-fold-btn').addEventListener('click', () => {
       const folded = document.body.classList.toggle('sc-nav-folded');
       document.body.classList.toggle('sc-nav-open', !folded);

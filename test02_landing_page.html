@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>*sc — sistar company | Signal Star Universe (test02)</title>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:220px;}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:220px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:44px!important;}}main,.sc-main-stage{opacity:0;}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, '/');
@@ -13,9 +13,9 @@
         var i = p.toLowerCase().indexOf('/sc_web/');
         base = i !== -1 ? 'file://' + p.substring(0, i + 8) + 'common_assets/' : './common_assets/';
       }
-      document.write('<link rel="stylesheet" href="' + base + 'common_new.css">');
+      document.write('<link rel="stylesheet" href="' + base + 'common_new.css?v=1793793164">');
       var s = document.createElement('script');
-      s.src = base + 'nav_new.js';
+      s.src = base + 'nav_new.js?v=1793793164';
       s.defer = true;
       document.head.appendChild(s);
     })();
@@ -81,4 +81,5 @@
   </main>
 </body>
 </html>
+
 
