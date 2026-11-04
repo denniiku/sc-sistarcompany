@@ -1,198 +1,35 @@
-* Refering to 🔹project : sc_web, to update prd & skill .md
+# 📋 PRODUCT REQUIREMENTS DOCUMENT (PRD) — *SC Web Ecosystem (v5.0)
+> Reference: `project_sc_web.md` & `Qubit Algorithm™ Mathematical Physics & Commercialization Whitepaper (DennyKu *SC)`[cite: 6, 11, 12]
 
-[general]
+## 1. Product Vision & Qubit Algorithm™ Engine
+- **Product Name:** `*sc - sistar company` Integrated 10-Domain Web Ecosystem (`sc_web`)[cite: 6, 7, 10]
+- **Master Tagline:** **"Signal Star Universe — One Spark, Infinite Galaxifying"**[cite: 6, 11, 12]
+- **Core Theoretical & Commercial Pillars (Qubit Algorithm™ & Cosmo Seed™):**
+  1. **Quantum Superposition (양자 중첩):** Simultaneous profit realization across buyer, manufacturer, logistics, and finance upon a single spark event[cite: 11, 12].
+  2. **Quantum Entanglement (양자 얽힘):** Cross-project synergetic triggers across the 100-Project Matrix (`[Projects]_Master`)[cite: 11, 12].
+  3. **Quantum Tunneling (양자 터널링):** Zero-inventory, zero-capital market entry via pre-order demand aggregation and 4-party Qubit Offsetting / Bartering[cite: 11, 12].
+  4. **Wavefunction Collapse (관측 효과):** Real-time AI signal detection converting latent market demand waves into confirmed contract particles[cite: 11, 12].
+  5. **5 Cosmo Seed™ Core Engines:** `Qubit Factory™`, `Qubit Commerce™ & Media (Scarlet.ai)`, `Qubit Star™`, `Qubit Link™`, and `Qubit Flow™`[cite: 11, 12].
 
-design
-left-side as folded/ unfolded (as like gemini-web design.)
-top-left: ‘*sc - sistarcompany’  & search button & unfolding button’
-navigator, below ‘*sc - sistarcompany’  & search button & unfolding button’
-if folded, just *sc & unfolding button is shown.
-navigator
-titles of🔺1s level &🔸2nd level are shown, once unfolded
-if click 🔸2nd level -> drop down🔹3rd level
-🔺: about,🔸: main category/ companies, 🔹: projects, ▫️details
+## 2. Global UI/UX & Navigation Requirements
+### 2.1 Gemini-Style Left Collapsible Navigator (`common_assets/nav.js`)
+- **Layout:** Left-side collapsible sidebar shared across all 10 domains via `common_assets`[cite: 6, 7, 10].
+- **Header Controls:** Top-left displays `*sc - sistarcompany`, Search button (`🔍`), and Unfolding/Folding toggle button (`☰`)[cite: 6, 7].
+- **Folded Mode:** Compact rail showing only `*sc` and the Unfolding button[cite: 6, 7].
+- **Unfolded Mode:**
+  - Displays all `🔺 1st Level` (10 Domains) and `🔸 2nd Level` (Main Categories / Companies)[cite: 6, 7].
+  - Clicking any `🔸 2nd Level` item drops down its `🔹 3rd Level` (Projects) and `▫️ 4th Level` (Details)[cite: 6, 7].
+  - Direct navigation to each target subdomain/sub-folder URL on click.
+- **Auto-Sync Requirement:** Directory changes in GitHub/local folders automatically update the shared navigator in `common_assets`.
 
-background & font
-to apply -half transparent bright-gray background for the navigator section , above main gradation effect for all 
-roadmap
-phase i : 🔺🔸companies, to set, phase ii :🔹projects to add
-qubit algorithm engine + intelligence core -> commercial: scarlet-ai, qubit biz 
-one spare, infinite galaxifying
+### 2.2 Main Landing Page Exclusive Design (`sistarcompany.com`)
+- **Single Dynamic Concept:** The Cosmos / Universe cinematic dynamic theme is applied **exclusively to the main root landing page (`sistarcompany.com`)**[cite: 6, 7].
+- **Visual Direction:**
+  - **Strict Rule:** Do NOT display literal keywords floating around the screen.
+  - **Cinematic Execution:** Render an inspired, dynamic **Cosmos & Universe View** visually embodying the `*sc spaceship`, `command center`, `qubit engine`, `biz galaxy`, and `signal star universe` above the Luminous Prismatic gradient[cite: 6, 7, 8].
 
-[main landing page]
- *sc - sistar company &  search button & 
-  signal star universe
-slogan, tag lines
-cinematic effect, with slogans & cinematic effects from keywords
-one spare, infinite galaxifying
-key words for ‘signal star universe’: 
-*sc - sistar company spaceship, command center, qubit engine,
- biz galaxy, signal star universe, 
-cosmos view, for main landing page
-
-* with navigator
-[structure] : menu, sub menu, slogan- taglines
-🔺*sc - sistar company 
-🔸*sc - sistar company
-▫️signal star
-▫️greetings, team sistar
-▫️sistar company
-▫️identity
-▫️sistar superior to
-▫️team sistar
-▫️sistar crm
-▫️join us
-
-▫️identities/ signatures
-ai, int’l
-
-🔸sistar int’l
-🔹sc, sc .id, sc .kr, sc .vn, sc .jp, sc .cn, sc .us
-
-🔸associations Int’l
-🔹iint’l ai trade alliance
-🔹Int’l ai data alliance
-+
-🔺qubit-algorithm (qubit-algorithm.sistarcompany .com)
-🔸qubit algorithm
-🔸cosmoseed biz models
-
-🔺sistar-challengers (challengers.sistarcompany .com)
-🔸sistar challengers
-invitation letter
-spirits
-vibe working
-refine ur work vids
-vibe working vids
-qna vids
-benefits vids
-procedures
-qna
-guide vids
-orientations
-
-🔸vibe-working
-🔹sistar challengers int’l
-🔹sistar vibe working
-
-🔺Ir- pitchdeck
-🔸report…
-
-🔺media
-🔸sistar studio
-🔸the sistar post 
-
-🔺intelligence-core : sistar biz intelligences
-🔸sistar bi : biz intelligence
-🔹qubit erp
-🔹ai centers : modular ai services
-🔹rag/ fine-tuning
-🔹intelligence on tab, hr
-🔹dynamic pricing, f’ce
-🔹bnpl, f’ce
-🔹smart logistics
-🔹space sharing, warehousing
-🔹open accounts, sales
-🔹project generator
-🔹scarlet web builder
-🔹scarlet web working
-
-🔸sistar a/c : ai- commerce
-🔸sistar i/t : Int’l ai trade
-🔸sistar s/r : robotics, physical ai
-🔹robo-blocks
-🔸sistar a/b, w/a: agent builder, work automation
-🔸sistar w/a : work automation
-🔸sistar exo-brain : exo brain
-🔹& i
-🔸sistar df : data factory: data mining/ datapipelines
-🔸sistar mmd : money making designs
-🔸sistar b/d : brand new online delights
-
-🔺scarlet-ai : where magic happens with a spell - ai commerce/ int’l ai trade platforms
-🔸int’l ai trading platform
-🔸ai-commerce platform ind.
-🔸mall.sisTV
-🔸ms. scarlet : ai secretary
-🔸robot market
-🔸on-demand
-🔸b2b
-🔸resell
-🔸siscart, nearbuy
-🔸zero wastage
-🔸sisdiet
-
-
-🔺qubit-biz : cosmo seed biz models.- engineered by qubit algorithm ™
-🔸qubit erp
-🔸c.a.n. (ceo action note ai)
-🔸qubit marketplace
-🔸qubit planet games
-🔸qubit mkt
-🔹qubit affiliators’ program
-🔸qubit bank
-🔹time bank space bank, idea bank
-🔹petfood bank
-🔸exo brain
-🔸qubit star
-🔸qubit ads
-🔸qubit taxes
-🔸qubit knowledge networks
-
-🔺biz-galaxy, biz showcase. - one spark, galaxifying biz
-🔸sistar mind company : mind 
-🔹sistar mind company 
-🔹mind navi
-🔹n.f.q.
-🔹ai companion
-🔹mind test
-🔸sispet : petfood & general
-🔹scarlet the cat
-🔹forever-young dog
-🔹n.b.s.
-🔹dazzle
-🔹ca kr
-🔸sistar medix : pet clinic
-🔹chd
-🔹sistar medix
-clinical edition : 
-botanical edition : 
-🔸aquasis : marine
-🔹aquasis ai
-🔹sis marine
-🔸sistar at : ayurvedic therapy
-🔸sistar ei : edu
-🔹edu institute, knowledge to flex
-🔹flexkids ai
-🔸sis food
-🔹sis proteins
-🔹jave nature premium
-🔸sistar ls ife : lifestyle goods
-🔹lifestyle goods
-🔸sistar studio : media
-🔹sistar studio
-🔹studio butter : smooth like a butter
-🔸beauty
-▫️sismii
-🔸diagnotics
-▫️sistar dx
-🔸livestock
-▫️sispharm
-🔸apparel
-▫️sisloa
-
-🔺biz-hub, connect - innovate - grow
-🔸sistar & co : connect - innovate 
-🔹petfood bank
-🔸sistar br : brands
-🔹Sistar br : co-branding 
-🔸int’l tech trading
-🔸int’l data factory
-🔸biz campaigns
-Zero-wastage movement
-🔸sistar frenz : franchise partnership
-🔹sistar m.i.n.t. colored shop
-🔹suu
-🔹iruka is back
-🔹sistar l/p: my neighbour lifestyle platform
-🔸n.f.q: ▫️sistar solutions
+## 3. Commercialization & Monetization Architecture
+- **4-Tier Packaging:** System Instructions (Prompt Chaining), SaaS Apps (`Qubit Agentic OS`), RESTful APIs (N-dimensional offsetting & 3-party trade triggers), and MCP Servers (x402 / Moesif prepaid Qubit Credit metering)[cite: 11].
+- **Phased Roadmap:**
+  - **Phase I:** Complete `🔺` & `🔸` company/category pages across all 10 domains[cite: 6, 7].
+  - **Phase II:** Populate `🔹` projects and connect commercial SaaS/API/MCP endpoints (`scarlet-ai`, `qubit-biz`)[cite: 6, 7, 11].
