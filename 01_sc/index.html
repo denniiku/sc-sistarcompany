@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>*sc | 🔸 sc</title>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:220px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:44px!important;}}main,.sc-main-stage{opacity:0;}</style>
+  <title>*sc | sistar company — signal star</title>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:220px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:44px!important;}}main{opacity:0;}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, '/');
@@ -13,26 +13,240 @@
         var i = p.toLowerCase().indexOf('/sc_web/');
         base = i !== -1 ? 'file://' + p.substring(0, i + 8) + 'common_assets/' : './common_assets/';
       }
-      document.write('<link rel="stylesheet" href="' + base + 'common_new.css?v=1793852517">');
-      var s = document.createElement('script');
-      s.src = base + 'nav_new.js?v=1793852517';
-      s.defer = true;
-      document.head.appendChild(s);
+      document.write('<link rel="stylesheet" href="' + base + 'common_new.css?v=' + Date.now() + '">');
+      var s = document.createElement('script'); s.src = base + 'nav_new.js?v=' + Date.now(); s.defer = true; document.head.appendChild(s);
     })();
   </script>
+  <style>
+    .sc-page {
+      padding: 56px 5vw 96px;
+      max-width: 1180px;
+    }
+    .sc-eyebrow {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #526D82;
+      letter-spacing: 0.05em;
+      margin: 0 0 10px 0;
+      text-transform: lowercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sc-eyebrow::before {
+      content: "🔸";
+      font-size: 0.85rem;
+    }
+    .sc-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 700;
+      color: #27374D;
+      margin: 0 0 14px 0;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+    .sc-lead-sub {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-weight: 600;
+      color: #526D82;
+      margin: 0 0 36px 0;
+      letter-spacing: -0.01em;
+    }
+
+    /* Hero Banner Card */
+    .sc-hero-card {
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(157, 178, 191, 0.55);
+      border-radius: 18px;
+      padding: 34px 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 14px 34px rgba(39, 55, 77, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sc-hero-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(39, 55, 77, 0.1);
+    }
+
+    /* 2-Column Narrative Grid for Sections 2 & 3 */
+    .sc-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .sc-card {
+      background: rgba(255, 255, 255, 0.64);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(157, 178, 191, 0.52);
+      border-radius: 18px;
+      padding: 30px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 12px 28px rgba(39, 55, 77, 0.05);
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sc-card:hover {
+      background: rgba(255, 255, 255, 0.82);
+      transform: translateY(-3px);
+      box-shadow: 0 18px 38px rgba(39, 55, 77, 0.1);
+    }
+
+    .sc-step-badge {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 11px;
+      border-radius: 99px;
+      background: linear-gradient(120deg, rgba(240,172,247,0.55), rgba(172,247,240,0.55), rgba(247,240,172,0.55));
+      border: 1px solid rgba(157, 178, 191, 0.65);
+      color: #27374D;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .sc-card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+      font-weight: 700;
+      color: #27374D;
+      margin: 0 0 14px 0;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+    .sc-card-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.78;
+      color: #27374D;
+      margin: 0;
+    }
+
+    /* Inline Highlight Pill for *sc Core Modules */
+    .sc-kw {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.92em;
+      padding: 1px 8px;
+      border-radius: 6px;
+      background: linear-gradient(120deg, rgba(240,172,247,0.42), rgba(172,247,240,0.42));
+      border: 1px solid rgba(157, 178, 191, 0.55);
+      color: #27374D;
+      white-space: nowrap;
+    }
+
+    /* Constellation Flow Bar at Bottom */
+    .sc-flow-bar {
+      background: rgba(255, 255, 255, 0.52);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(157, 178, 191, 0.48);
+      border-radius: 14px;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #526D82;
+    }
+    .sc-flow-nodes {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .sc-flow-node {
+      padding: 5px 12px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(157, 178, 191, 0.65);
+      color: #27374D;
+      font-weight: 700;
+    }
+    .sc-flow-arrow {
+      color: #526D82;
+      font-weight: 700;
+    }
+
+    @media (max-width: 860px) {
+      .sc-grid {
+        grid-template-columns: 1fr;
+      }
+      .sc-hero-card, .sc-card {
+        padding: 24px 22px;
+      }
+    }
+  </style>
 </head>
 <body class="sc-nav-open">
-  <main style="padding: 64px 8vw; max-width: 960px;">
-    <p style="font-family:'Space Grotesk',sans-serif; font-size:0.85rem; color:#526D82; margin-bottom:10px;">sistar company</p>
-    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:clamp(2.2rem,4vw,3.4rem); color:#27374D; margin-bottom:18px;">🔸 sc</h1>
-    <p style="font-size:1rem; color:#526D82; line-height:1.6;">Connected via <code>nav_new.js?v=1793852517</code> &amp; <code>common_new.css?v=1793852517</code>. Any change to folder numbers, names, or <code>index.html</code> is reflected in the navigator.</p>
+  <main class="sc-page">
+    <p class="sc-eyebrow">sistar company &mdash; signal star</p>
+    <h1 class="sc-title">*sc</h1>
+    <p class="sc-lead-sub">An AI-Driven International Organization</p>
+
+    <!-- Section 1: Hero / Core Engine -->
+    <section class="sc-hero-card">
+      <span class="sc-step-badge">01 &bull; Core Business Engine</span>
+      <h2 class="sc-card-title">An AI-Driven International Organization</h2>
+      <p class="sc-card-body">
+        Powered by our proprietary core business engine&mdash;the <span class="sc-kw">qubit-algorithm</span>, forged from 30 years of hands-on international trading mastery&mdash;we pioneer entirely new paradigms in how global business is built and how the world works.
+      </p>
+    </section>
+
+    <!-- Sections 2 & 3: 2-Column Grid -->
+    <div class="sc-grid">
+      <section class="sc-card">
+        <div>
+          <span class="sc-step-badge">02 &bull; AI Nexus &amp; Launchpad</span>
+          <h2 class="sc-card-title">One Spark, Infinite Galaxying.</h2>
+          <p class="sc-card-body">
+            Engineered by the <span class="sc-kw">qubit-algorithm</span>, our <span class="sc-kw">sc intelligence-core</span> ignites <span class="sc-kw">scarlet-ai</span>&mdash;the nexus where magic happens. Casting a new spell over AI commerce and automated cross-border trading, it generates <strong>Cosmo Seed</strong> business models: <span class="sc-kw">qubit-biz</span>, the launchpad where your boldest ideas are realized into reality.
+          </p>
+        </div>
+      </section>
+
+      <section class="sc-card">
+        <div>
+          <span class="sc-step-badge">03 &bull; Quantum Architecture</span>
+          <h2 class="sc-card-title">The Signal Star Universe.</h2>
+          <p class="sc-card-body">
+            Inspired by quantum mechanics, our <span class="sc-kw">biz-galaxy</span> architecture shapes the Signal Star Universe&mdash;guided by the central <span class="sc-kw">*Signal Star (sc)</span> and illuminated by the twinkling stars of every global partner connected across our constellation.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bottom Architecture Flow -->
+    <div class="sc-flow-bar">
+      <span>SIGNAL STAR UNIVERSE ARCHITECTURE</span>
+      <div class="sc-flow-nodes">
+        <span class="sc-flow-node">*sc</span>
+        <span class="sc-flow-arrow">&rarr;</span>
+        <span class="sc-flow-node">qubit-algorithm</span>
+        <span class="sc-flow-arrow">&rarr;</span>
+        <span class="sc-flow-node">intelligence-core</span>
+        <span class="sc-flow-arrow">&rarr;</span>
+        <span class="sc-flow-node">scarlet-ai</span>
+        <span class="sc-flow-arrow">&rarr;</span>
+        <span class="sc-flow-node">qubit-biz</span>
+        <span class="sc-flow-arrow">&rarr;</span>
+        <span class="sc-flow-node">biz-galaxy</span>
+      </div>
+    </div>
   </main>
 </body>
 </html>
-
-
-
-
-
-
-
