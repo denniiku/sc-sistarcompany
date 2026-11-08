@@ -21,7 +21,36 @@
     }
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:220px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:44px!important;}}main{opacity:0;}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:220px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:44px!important;}}main{opacity:0;}    .sc-split-stretch {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: clamp(32px, 4.5vw, 60px);
+      align-items: center !important;
+    }
+    .sc-split-stretch.img-left {
+      grid-template-columns: 0.82fr 1.18fr;
+      align-items: center !important;
+    }
+    .sc-photo-tall {
+      margin: 0;
+      width: 100%;
+      min-height: 0 !important;
+      height: auto !important;
+      background: transparent !important;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: none !important;
+    }
+    .sc-photo-tall img {
+      width: 100%;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+    }
+  </style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -268,6 +297,35 @@
       font-weight: 500;
     }
     .sc-check-list li { margin-bottom: 6px; }
+      .sc-split-stretch {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: clamp(32px, 4.5vw, 60px);
+      align-items: center !important;
+    }
+    .sc-split-stretch.img-left {
+      grid-template-columns: 0.82fr 1.18fr;
+      align-items: center !important;
+    }
+    .sc-photo-tall {
+      margin: 0;
+      width: 100%;
+      min-height: 0 !important;
+      height: auto !important;
+      background: transparent !important;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: none !important;
+    }
+    .sc-photo-tall img {
+      width: 100%;
+      height: auto !important;
+      max-height: none !important;
+      object-fit: contain !important;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+    }
   </style>
 </head>
 <body class="sc-nav-open">
@@ -283,7 +341,7 @@
           <p class="sc-lead" style="margin-bottom:0;">The art and science of customer relationship management: building lasting relationships through strategic interaction management and data-driven insights.</p>
         </div>
         <figure class="sc-photo-tall">
-          <img src="./storage/slide_01_img_01.jpg" alt="SISTAR CRM Executive Boardroom" />
+          <img src="." alt="SISTAR CRM Executive Boardroom" />
         </figure>
       </div>
     </section>
@@ -342,7 +400,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-stretch img-left">
         <figure class="sc-photo-tall">
-          <img src="./storage/slide_04_img_01.jpg" alt="SISTAR CRM Core Platform Sphere" loading="lazy" />
+          <img src="." alt="SISTAR CRM Core Platform Sphere" loading="lazy" />
         </figure>
         <div class="sc-text-col">
           <div><span class="sc-tag">KEY FEATURES</span></div>
@@ -434,7 +492,7 @@
           </div>
         </div>
         <figure class="sc-photo-tall">
-          <img src="./storage/slide_06_img_01.jpg" alt="Benefits of Effective SISTAR CRM Analytics Growth" loading="lazy" />
+          <img src="." alt="Benefits of Effective SISTAR CRM Analytics Growth" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -443,7 +501,7 @@
     <section class="sc-slide-block">
       <h2 class="sc-h2">Customer Lifecycle at a Glance</h2>
       <figure class="sc-wide-diagram">
-        <img src="./storage/slide_07_img_01.jpg" alt="Customer Lifecycle: Awareness, Purchase, Advocacy" loading="lazy" />
+        <img src="." alt="Customer Lifecycle: Awareness, Purchase, Advocacy" loading="lazy" />
       </figure>
       <p class="sc-lead" style="margin-top:16px; margin-bottom:0;">SISTAR CRM maps every stage of the customer journey, from first awareness through purchase to long-term advocacy, so no moment in the relationship goes unmanaged or unmeasured.</p>
     </section>
@@ -453,7 +511,7 @@
       <div><span class="sc-tag">CHAPTER 2 &bull; SALES STRATEGY</span></div>
       <h2 class="sc-h2">Inbound vs. Outbound Sales Strategies</h2>
       <figure class="sc-wide-diagram">
-        <img src="./storage/slide_08_img_01.jpg" alt="Inbound Sales vs Outbound Sales Diagram" loading="lazy" />
+        <img src="." alt="Inbound Sales vs Outbound Sales Diagram" loading="lazy" />
       </figure>
       <p class="sc-lead" style="margin-top:16px; margin-bottom:0;">Both strategies play a vital role in a balanced sales pipeline. Inbound builds authority and attracts high-intent buyers over time, while outbound accelerates pipeline velocity and expands market reach. SISTAR CRM lets teams run both motions from a single platform.</p>
     </section>
@@ -462,7 +520,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
         <figure class="sc-illus-box">
-          <img src="./storage/slide_09_img_01.jpg" alt="Value-Based & Consultative Selling Dashboard" loading="lazy" />
+          <img src="." alt="Value-Based & Consultative Selling Dashboard" loading="lazy" />
         </figure>
         <div>
           <div><span class="sc-tag">SELLING METHODOLOGY</span></div>
@@ -524,7 +582,7 @@
           </div>
         </div>
         <figure class="sc-illus-box">
-          <img src="./storage/slide_11_img_01.jpg" alt="SPIN and Social Selling Collaboration" loading="lazy" />
+          <img src="." alt="SPIN and Social Selling Collaboration" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -533,7 +591,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-stretch img-left">
         <figure class="sc-photo-tall">
-          <img src="./storage/slide_12_img_01.jpg" alt="Sales Pipeline Glass Funnel" loading="lazy" />
+          <img src="." alt="Sales Pipeline Glass Funnel" loading="lazy" />
         </figure>
         <div class="sc-text-col">
           <div><span class="sc-tag">PIPELINE MANAGEMENT</span></div>
@@ -583,7 +641,7 @@
           </div>
         </div>
         <figure class="sc-illus-box">
-          <img src="./storage/slide_13_img_01.jpg" alt="Data-Driven Sales Insights" loading="lazy" />
+          <img src="." alt="Data-Driven Sales Insights" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -610,7 +668,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
         <figure class="sc-illus-box">
-          <img src="./storage/slide_15_img_01.jpg" alt="SISTAR CRM Implementation Team" loading="lazy" />
+          <img src="." alt="SISTAR CRM Implementation Team" loading="lazy" />
         </figure>
         <div>
           <div><span class="sc-tag">CHAPTER 3 &bull; IMPLEMENTATION</span></div>
@@ -622,7 +680,7 @@
       <div style="margin-top:44px;">
         <h3 class="sc-h2" style="font-size:1.55rem;">Four Phases of Successful Implementation</h3>
         <figure class="sc-wide-diagram">
-          <img src="./storage/slide_16_img_01.png" alt="Four Phases Roadmap Curve" loading="lazy" />
+          <img src="." alt="Four Phases Roadmap Curve" loading="lazy" />
         </figure>
         <div class="sc-grid-4">
           <div class="sc-item-line">
@@ -675,7 +733,7 @@
           </div>
         </div>
         <figure class="sc-illus-box">
-          <img src="./storage/slide_17_img_01.jpg" alt="Practical SISTAR CRM Action Steps" loading="lazy" />
+          <img src="." alt="Practical SISTAR CRM Action Steps" loading="lazy" />
         </figure>
       </div>
       <div class="sc-callout">CRM is not a one-time setup. Establish a regular review cadence, quarterly at minimum, to assess performance, refine workflows, and unlock new capabilities as your business evolves.</div>
@@ -685,7 +743,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
         <figure class="sc-illus-box">
-          <img src="./storage/slide_18_img_01.jpg" alt="Customer Retention Network" loading="lazy" />
+          <img src="." alt="Customer Retention Network" loading="lazy" />
         </figure>
         <div>
           <div><span class="sc-tag">CHAPTER 4 &bull; RETENTION</span></div>
@@ -722,7 +780,7 @@
           </div>
         </div>
         <figure class="sc-photo-tall">
-          <img src="./storage/slide_19_img_01.jpg" alt="Customer Care and Retention" loading="lazy" />
+          <img src="." alt="Customer Care and Retention" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -735,7 +793,7 @@
           <p class="sc-p">At the heart of SISTAR CRM is a unified customer profile that brings every interaction, transaction, preference, and support record into one accessible view. Sales, marketing, and support teams work from the same intelligence, which removes blind spots, reduces friction, and enables personalized engagement at scale.</p>
         </div>
         <figure class="sc-illus-box">
-          <img src="./storage/slide_20_img_01.jpg" alt="Unified Customer Profile Interface" loading="lazy" />
+          <img src="." alt="Unified Customer Profile Interface" loading="lazy" />
         </figure>
       </div>
       <div class="sc-grid-3" style="margin-top:28px;">
@@ -758,7 +816,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
         <figure class="sc-illus-box">
-          <img src="./storage/slide_21_img_01.jpg" alt="SISTAR CRM Dashboard Intelligence" loading="lazy" />
+          <img src="." alt="SISTAR CRM Dashboard Intelligence" loading="lazy" />
         </figure>
         <div>
           <div><span class="sc-tag">PLATFORM OVERVIEW</span></div>
@@ -780,7 +838,7 @@
       <div><span class="sc-tag">INTEGRATION ECOSYSTEM</span></div>
       <h2 class="sc-h2">SISTAR CRM Connects Your Entire Tech Stack</h2>
       <figure class="sc-wide-diagram">
-        <img src="./storage/slide_22_img_01.jpg" alt="SISTAR CRM Integration Ecosystem" loading="lazy" />
+        <img src="." alt="SISTAR CRM Integration Ecosystem" loading="lazy" />
       </figure>
       <div class="sc-grid-4">
         <div class="sc-item-line">
@@ -829,7 +887,7 @@
           </div>
         </div>
         <figure class="sc-illus-box">
-          <img src="./storage/slide_23_img_01.jpg" alt="Workflow Automation Engine" loading="lazy" />
+          <img src="." alt="Workflow Automation Engine" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -838,7 +896,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
         <figure class="sc-illus-box">
-          <img src="./storage/slide_24_img_01.jpg" alt="Partnership Network & Analytics" loading="lazy" />
+          <img src="." alt="Partnership Network & Analytics" loading="lazy" />
         </figure>
         <div>
           <div><span class="sc-tag">ANALYTICS &amp; INSIGHTS</span></div>
@@ -863,7 +921,7 @@
       <h2 class="sc-h2">Managing the Commercial Pipeline End-to-End</h2>
       <p class="sc-lead">A healthy pipeline is the lifeblood of any commercial organization. SISTAR CRM gives you complete visibility and control across every stage, from first touch to closed revenue, so no deal stalls, slips, or disappears without action.</p>
       <figure class="sc-wide-diagram">
-        <img src="./storage/slide_25_img_01.jpg" alt="6-Stage Commercial Pipeline Flow" loading="lazy" />
+        <img src="." alt="6-Stage Commercial Pipeline Flow" loading="lazy" />
       </figure>
     </section>
 
@@ -898,7 +956,7 @@
           </div>
         </div>
         <figure class="sc-photo-tall">
-          <img src="./storage/slide_26_img_01.jpg" alt="Cross-Functional Team Collaboration" loading="lazy" />
+          <img src="." alt="Cross-Functional Team Collaboration" loading="lazy" />
         </figure>
       </div>
     </section>
@@ -907,7 +965,7 @@
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
         <figure class="sc-illus-box">
-          <img src="./storage/slide_27_img_01.jpg" alt="Qubit ERP Integration ROI" loading="lazy" />
+          <img src="." alt="Qubit ERP Integration ROI" loading="lazy" />
         </figure>
         <div>
           <div><span class="sc-tag">QUBIT ERP INTEGRATION</span></div>
@@ -948,7 +1006,7 @@
           </div>
         </div>
         <figure class="sc-illus-box">
-          <img src="./storage/slide_28_img_01.jpg" alt="Trusted Advisor KPIs" loading="lazy" />
+          <img src="." alt="Trusted Advisor KPIs" loading="lazy" />
         </figure>
       </div>
     </section>
