@@ -47,6 +47,50 @@
       display: block;
       box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
     }
+      /* === PURE EDITORIAL ZERO-ERROR LAYOUT === */
+    figure.sc-photo-tall,
+    figure.sc-illus-box,
+    figure.sc-wide-diagram,
+    .sc-card-thumb,
+    img.sc-brand-logo,
+    img[src*="storage"] {
+      display: none !important;
+    }
+    .sc-split-stretch,
+    .sc-split-stretch.img-left,
+    .sc-split-center,
+    .sc-split-center.img-left {
+      display: block !important;
+    }
+    .sc-lead {
+      max-width: 100% !important;
+      font-size: clamp(1.08rem, 1.35vw, 1.22rem) !important;
+      color: #1e293b !important;
+    }
+    .sc-badge-teal {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 8px !important;
+      background: rgba(22, 135, 101, 0.14) !important;
+      border: 1.5px solid #168765 !important;
+      box-shadow: none !important;
+      position: relative;
+    }
+    .sc-badge-teal::after {
+      content: "✦";
+      color: #0f5132;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .sc-item-line,
+    .sc-item-green,
+    .sc-img-card {
+      padding-top: 18px !important;
+      border-top: 2px solid rgba(15, 23, 42, 0.22) !important;
+    }
+    .sc-item-green {
+      border-top: 3px solid #168765 !important;
+    }
   </style>
   <script>
     (function() {
@@ -345,6 +389,50 @@
       border-radius: 16px;
       display: block;
       box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+    }
+      /* === PURE EDITORIAL ZERO-ERROR LAYOUT === */
+    figure.sc-photo-tall,
+    figure.sc-illus-box,
+    figure.sc-wide-diagram,
+    .sc-card-thumb,
+    img.sc-brand-logo,
+    img[src*="storage"] {
+      display: none !important;
+    }
+    .sc-split-stretch,
+    .sc-split-stretch.img-left,
+    .sc-split-center,
+    .sc-split-center.img-left {
+      display: block !important;
+    }
+    .sc-lead {
+      max-width: 100% !important;
+      font-size: clamp(1.08rem, 1.35vw, 1.22rem) !important;
+      color: #1e293b !important;
+    }
+    .sc-badge-teal {
+      width: 36px !important;
+      height: 36px !important;
+      border-radius: 8px !important;
+      background: rgba(22, 135, 101, 0.14) !important;
+      border: 1.5px solid #168765 !important;
+      box-shadow: none !important;
+      position: relative;
+    }
+    .sc-badge-teal::after {
+      content: "✦";
+      color: #0f5132;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .sc-item-line,
+    .sc-item-green,
+    .sc-img-card {
+      padding-top: 18px !important;
+      border-top: 2px solid rgba(15, 23, 42, 0.22) !important;
+    }
+    .sc-item-green {
+      border-top: 3px solid #168765 !important;
     }
   </style>
 </head>
