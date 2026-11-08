@@ -70,21 +70,8 @@
       font-size: clamp(1.08rem, 1.35vw, 1.22rem) !important;
       color: #1e293b !important;
     }
-    .sc-badge-teal {
-      width: 36px !important;
-      height: 36px !important;
-      border-radius: 8px !important;
-      background: rgba(22, 135, 101, 0.14) !important;
-      border: 1.5px solid #168765 !important;
-      box-shadow: none !important;
-      position: relative;
-    }
-    .sc-badge-teal::after {
-      content: "✦";
-      color: #0f5132;
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
+    .sc-badge-teal { display: none !important; }
+    .sc-badge-teal::after { content: none !important; display: none !important; }
     .sc-item-line,
     .sc-item-green,
     .sc-img-card {
@@ -93,6 +80,32 @@
     }
     .sc-item-green {
       border-top: 3px solid #168765 !important;
+    }
+      /* === ZERO-ICON PURE TEXT ENFORCEMENT === */
+    .sc-badge-teal,
+    .sc-badge-teal::before,
+    .sc-badge-teal::after,
+    .sc-icon-direct,
+    .sc-cta-pill,
+    .sc-card-thumb,
+    figure {
+      display: none !important;
+      content: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+    .sc-split-stretch,
+    .sc-split-stretch.img-left,
+    .sc-split-center,
+    .sc-split-center.img-left,
+    .sc-feature-row {
+      display: block !important;
+    }
+    .sc-feature-row {
+      padding: 16px 0 !important;
     }
   </style>
   <script>
@@ -265,18 +278,7 @@
     /* ==========================================================================
        ICON BADGES & EDITORIAL GRIDS
        ========================================================================== */
-    .sc-badge-teal {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: #168765;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 12px;
-      flex-shrink: 0;
-      box-shadow: 0 4px 10px rgba(22, 135, 101, 0.22);
-    }
+    .sc-badge-teal { display: none !important; }
     .sc-badge-teal img {
       width: 22px;
       height: 22px;
@@ -390,21 +392,8 @@
       font-size: clamp(1.08rem, 1.35vw, 1.22rem) !important;
       color: #1e293b !important;
     }
-    .sc-badge-teal {
-      width: 36px !important;
-      height: 36px !important;
-      border-radius: 8px !important;
-      background: rgba(22, 135, 101, 0.14) !important;
-      border: 1.5px solid #168765 !important;
-      box-shadow: none !important;
-      position: relative;
-    }
-    .sc-badge-teal::after {
-      content: "✦";
-      color: #0f5132;
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
+    .sc-badge-teal { display: none !important; }
+    .sc-badge-teal::after { content: none !important; display: none !important; }
     .sc-item-line,
     .sc-item-green,
     .sc-img-card {
@@ -413,6 +402,32 @@
     }
     .sc-item-green {
       border-top: 3px solid #168765 !important;
+    }
+      /* === ZERO-ICON PURE TEXT ENFORCEMENT === */
+    .sc-badge-teal,
+    .sc-badge-teal::before,
+    .sc-badge-teal::after,
+    .sc-icon-direct,
+    .sc-cta-pill,
+    .sc-card-thumb,
+    figure {
+      display: none !important;
+      content: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+    }
+    .sc-split-stretch,
+    .sc-split-stretch.img-left,
+    .sc-split-center,
+    .sc-split-center.img-left,
+    .sc-feature-row {
+      display: block !important;
+    }
+    .sc-feature-row {
+      padding: 16px 0 !important;
     }
   </style>
 </head>
@@ -428,9 +443,7 @@
           <h1 class="sc-hero-h1">SISTAR CRM</h1>
           <p class="sc-lead" style="margin-bottom:0;">The art and science of customer relationship management: building lasting relationships through strategic interaction management and data-driven insights.</p>
         </div>
-        <figure class="sc-photo-tall">
-          <img src="." alt="SISTAR CRM Executive Boardroom" />
-        </figure>
+        
       </div>
     </section>
 
@@ -487,29 +500,27 @@
     <!-- SLIDE 4: KEY FEATURES (3D Teal Orb Left + 3 Icon Rows Right) -->
     <section class="sc-slide-block">
       <div class="sc-split-stretch img-left">
-        <figure class="sc-photo-tall">
-          <img src="." alt="SISTAR CRM Core Platform Sphere" loading="lazy" />
-        </figure>
+        
         <div class="sc-text-col">
           <div><span class="sc-tag">KEY FEATURES</span></div>
           <h2 class="sc-h2">SISTAR CRM Systems: What Powers the Platform</h2>
           <div style="margin-top:12px;">
             <div class="sc-feature-row">
-              <span class="sc-badge-teal"><img src="./storage/slide_04_img_02.png" alt="Unified Profile" /></span>
+              
               <div>
                 <h3 class="sc-h3">Unified Customer Information</h3>
                 <p class="sc-p">Consolidate contact history, purchase records, preferences, and support interactions into one complete profile, accessible across the entire organization.</p>
               </div>
             </div>
             <div class="sc-feature-row">
-              <span class="sc-badge-teal"><img src="./storage/slide_04_img_03.png" alt="Sales & Marketing" /></span>
+              
               <div>
                 <h3 class="sc-h3">Integrated Sales &amp; Marketing Tools</h3>
                 <p class="sc-p">Streamline lead management, track pipeline progress in real time, and automate marketing campaigns so no opportunity falls through the cracks.</p>
               </div>
             </div>
             <div class="sc-feature-row">
-              <span class="sc-badge-teal"><img src="./storage/slide_04_img_04.png" alt="Customer Support" /></span>
+              
               <div>
                 <h3 class="sc-h3">Efficient Customer Support</h3>
                 <p class="sc-p">Manage inquiries and support tickets with speed and precision, delivering personalized responses that resolve issues quickly and build trust.</p>
@@ -527,17 +538,17 @@
       <p class="sc-lead">SISTAR CRM is built on three complementary system types, each serving a distinct organizational function. Together, they form a complete CRM ecosystem.</p>
       <div class="sc-grid-3">
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_05_img_01.png" alt="Operational CRM" />
+          
           <h3 class="sc-h3">Operational CRM</h3>
           <p class="sc-p">Automates day-to-day tasks across sales, marketing, and customer service. By streamlining repetitive interactions and workflows, it frees teams to focus on high-value work that requires human judgment and creativity.</p>
         </div>
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_05_img_02.png" alt="Analytical CRM" />
+          
           <h3 class="sc-h3">Analytical CRM</h3>
           <p class="sc-p">Digs into customer data to uncover behavioral trends, predict future purchases, and surface strategic insights that inform product development, pricing, and go-to-market decisions.</p>
         </div>
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_05_img_03.png" alt="Collaborative CRM" />
+          
           <h3 class="sc-h3">Collaborative CRM</h3>
           <p class="sc-p">Breaks down silos between departments and external partners by enabling seamless information sharing. Every team works from the same customer intelligence, delivering consistent, coordinated experiences at every touchpoint.</p>
         </div>
@@ -553,44 +564,40 @@
           <p class="sc-lead" style="margin-bottom:16px;">Strategically implemented, SISTAR CRM delivers measurable impact across every dimension of business performance, from customer satisfaction to bottom-line revenue.</p>
           <div class="sc-grid-2">
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_06_img_02.png" alt="Retention" /></span>
+              
               <h3 class="sc-h3">Enhanced Customer Retention</h3>
               <p class="sc-p">Personalized, timely interactions make customers feel known and valued.</p>
             </div>
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_06_img_03.png" alt="Revenue" /></span>
+              
               <h3 class="sc-h3">Increased Sales Revenue</h3>
               <p class="sc-p">Streamlined pipelines and smart lead prioritization accelerate growth.</p>
             </div>
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_06_img_04.png" alt="Satisfaction" /></span>
+              
               <h3 class="sc-h3">Improved Satisfaction</h3>
               <p class="sc-p">Consistent, high-quality service across every channel and department.</p>
             </div>
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_06_img_05.png" alt="Efficiency" /></span>
+              
               <h3 class="sc-h3">Greater Operational Efficiency</h3>
               <p class="sc-p">Intelligent automation removes repetitive manual tasks.</p>
             </div>
             <div class="sc-item-line sc-item-span2">
-              <span class="sc-badge-teal"><img src="./storage/slide_06_img_06.png" alt="Decisions" /></span>
+              
               <h3 class="sc-h3">Better Strategic Decisions</h3>
               <p class="sc-p">Real-time, data-driven insights and predictive analytics guide action.</p>
             </div>
           </div>
         </div>
-        <figure class="sc-photo-tall">
-          <img src="." alt="Benefits of Effective SISTAR CRM Analytics Growth" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
     <!-- SLIDE 7: CUSTOMER LIFECYCLE AT A GLANCE -->
     <section class="sc-slide-block">
       <h2 class="sc-h2">Customer Lifecycle at a Glance</h2>
-      <figure class="sc-wide-diagram">
-        <img src="." alt="Customer Lifecycle: Awareness, Purchase, Advocacy" loading="lazy" />
-      </figure>
+      
       <p class="sc-lead" style="margin-top:16px; margin-bottom:0;">SISTAR CRM maps every stage of the customer journey, from first awareness through purchase to long-term advocacy, so no moment in the relationship goes unmanaged or unmeasured.</p>
     </section>
 
@@ -598,18 +605,14 @@
     <section class="sc-slide-block">
       <div><span class="sc-tag">CHAPTER 2 &bull; SALES STRATEGY</span></div>
       <h2 class="sc-h2">Inbound vs. Outbound Sales Strategies</h2>
-      <figure class="sc-wide-diagram">
-        <img src="." alt="Inbound Sales vs Outbound Sales Diagram" loading="lazy" />
-      </figure>
+      
       <p class="sc-lead" style="margin-top:16px; margin-bottom:0;">Both strategies play a vital role in a balanced sales pipeline. Inbound builds authority and attracts high-intent buyers over time, while outbound accelerates pipeline velocity and expands market reach. SISTAR CRM lets teams run both motions from a single platform.</p>
     </section>
 
     <!-- SLIDE 9: SELLING METHODOLOGY (Illustration + Value-Based & Consultative) -->
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
-        <figure class="sc-illus-box">
-          <img src="." alt="Value-Based & Consultative Selling Dashboard" loading="lazy" />
-        </figure>
+        
         <div>
           <div><span class="sc-tag">SELLING METHODOLOGY</span></div>
           <h2 class="sc-h2">Value-Based &amp; Consultative Selling</h2>
@@ -669,38 +672,34 @@
             </div>
           </div>
         </div>
-        <figure class="sc-illus-box">
-          <img src="." alt="SPIN and Social Selling Collaboration" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
     <!-- SLIDE 12: PIPELINE MANAGEMENT (Glass Funnel Left + 3 Icon Strategies Right) -->
     <section class="sc-slide-block">
       <div class="sc-split-stretch img-left">
-        <figure class="sc-photo-tall">
-          <img src="." alt="Sales Pipeline Glass Funnel" loading="lazy" />
-        </figure>
+        
         <div class="sc-text-col">
           <div><span class="sc-tag">PIPELINE MANAGEMENT</span></div>
           <h2 class="sc-h2">Essential Sales Pipeline Strategies</h2>
           <div style="margin-top:12px;">
             <div class="sc-feature-row">
-              <span class="sc-badge-teal"><img src="./storage/slide_12_img_02.png" alt="Plan Process" /></span>
+              
               <div>
                 <h3 class="sc-h3">Plan Your Sales Process</h3>
                 <p class="sc-p">Define a clear, documented process for how prospects move through each pipeline stage, from first contact to closed deal. A consistent process produces consistent results.</p>
               </div>
             </div>
             <div class="sc-feature-row">
-              <span class="sc-badge-teal"><img src="./storage/slide_12_img_03.png" alt="Rank Leads" /></span>
+              
               <div>
                 <h3 class="sc-h3">Rank Your Leads</h3>
                 <p class="sc-p">Use SISTAR CRM's scoring tools to identify and prioritize the leads most likely to convert. Focus your team's effort where it delivers the highest return and the shortest time-to-close.</p>
               </div>
             </div>
             <div class="sc-feature-row">
-              <span class="sc-badge-teal"><img src="./storage/slide_12_img_04.png" alt="Referral Programs" /></span>
+              
               <div>
                 <h3 class="sc-h3">Launch Referral Programs</h3>
                 <p class="sc-p">Turn your happiest customers into growth engines. Structured referral programs use authentic advocacy to expand your pipeline organically, at a fraction of the cost of paid acquisition.</p>
@@ -728,9 +727,7 @@
             </div>
           </div>
         </div>
-        <figure class="sc-illus-box">
-          <img src="." alt="Data-Driven Sales Insights" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
@@ -755,9 +752,7 @@
     <!-- SLIDE 15 & 16: CHAPTER 3 - IMPLEMENTATION & FOUR PHASES ROADMAP -->
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
-        <figure class="sc-illus-box">
-          <img src="." alt="SISTAR CRM Implementation Team" loading="lazy" />
-        </figure>
+        
         <div>
           <div><span class="sc-tag">CHAPTER 3 &bull; IMPLEMENTATION</span></div>
           <h2 class="sc-h2">SISTAR CRM Implementation Strategy</h2>
@@ -767,9 +762,7 @@
 
       <div style="margin-top:44px;">
         <h3 class="sc-h2" style="font-size:1.55rem;">Four Phases of Successful Implementation</h3>
-        <figure class="sc-wide-diagram">
-          <img src="." alt="Four Phases Roadmap Curve" loading="lazy" />
-        </figure>
+        
         <div class="sc-grid-4">
           <div class="sc-item-line">
             <div class="sc-num-badge">01</div>
@@ -820,9 +813,7 @@
             </div>
           </div>
         </div>
-        <figure class="sc-illus-box">
-          <img src="." alt="Practical SISTAR CRM Action Steps" loading="lazy" />
-        </figure>
+        
       </div>
       <div class="sc-callout">CRM is not a one-time setup. Establish a regular review cadence, quarterly at minimum, to assess performance, refine workflows, and unlock new capabilities as your business evolves.</div>
     </section>
@@ -830,9 +821,7 @@
     <!-- SLIDE 18 & 19: CHAPTER 4 - RETENTION & CHURN PREVENTION -->
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
-        <figure class="sc-illus-box">
-          <img src="." alt="Customer Retention Network" loading="lazy" />
-        </figure>
+        
         <div>
           <div><span class="sc-tag">CHAPTER 4 &bull; RETENTION</span></div>
           <h2 class="sc-h2">The Key to Customer Retention</h2>
@@ -846,30 +835,28 @@
           <h3 class="sc-h2">Four Strategies to Prevent Customer Churn</h3>
           <div class="sc-grid-2">
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_19_img_02.png" alt="Find Out Why" /></span>
+              
               <h3 class="sc-h3">Find Out Why Customers Leave</h3>
               <p class="sc-p">Use exit surveys and churn analytics to uncover root causes. SISTAR CRM flags at-risk accounts early, based on engagement drop-off, support ticket volume, and usage patterns.</p>
             </div>
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_19_img_03.png" alt="Act Early" /></span>
+              
               <h3 class="sc-h3">Act Early, Don't Wait</h3>
               <p class="sc-p">Set up automated alerts and health-score triggers in SISTAR CRM so customer success teams can step in at the first sign of disengagement.</p>
             </div>
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_19_img_04.png" alt="Connect and Teach" /></span>
+              
               <h3 class="sc-h3">Connect and Teach</h3>
               <p class="sc-p">Onboarding programs, knowledge bases, and training webinars build confidence. SISTAR CRM tracks educational engagement to spot customers who need support.</p>
             </div>
             <div class="sc-item-line">
-              <span class="sc-badge-teal"><img src="./storage/slide_19_img_05.png" alt="Reward Loyalty" /></span>
+              
               <h3 class="sc-h3">Deliver Great Service &amp; Reward Loyalty</h3>
               <p class="sc-p">Loyalty programs and personalized milestones make customers feel valued. SISTAR CRM triggers rewards automatically at key relationship moments.</p>
             </div>
           </div>
         </div>
-        <figure class="sc-photo-tall">
-          <img src="." alt="Customer Care and Retention" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
@@ -880,9 +867,7 @@
           <h2 class="sc-h2">Unified Customer Profiles: Know Every Customer</h2>
           <p class="sc-p">At the heart of SISTAR CRM is a unified customer profile that brings every interaction, transaction, preference, and support record into one accessible view. Sales, marketing, and support teams work from the same intelligence, which removes blind spots, reduces friction, and enables personalized engagement at scale.</p>
         </div>
-        <figure class="sc-illus-box">
-          <img src="." alt="Unified Customer Profile Interface" loading="lazy" />
-        </figure>
+        
       </div>
       <div class="sc-grid-3" style="margin-top:28px;">
         <div class="sc-item-line" style="border-top-color:#168765; border-top-width:3px;">
@@ -903,9 +888,7 @@
     <!-- SLIDE 21: PLATFORM OVERVIEW - DASHBOARD INTELLIGENCE -->
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
-        <figure class="sc-illus-box">
-          <img src="." alt="SISTAR CRM Dashboard Intelligence" loading="lazy" />
-        </figure>
+        
         <div>
           <div><span class="sc-tag">PLATFORM OVERVIEW</span></div>
           <h2 class="sc-h2">SISTAR CRM Dashboard Intelligence</h2>
@@ -925,27 +908,25 @@
     <section class="sc-slide-block">
       <div><span class="sc-tag">INTEGRATION ECOSYSTEM</span></div>
       <h2 class="sc-h2">SISTAR CRM Connects Your Entire Tech Stack</h2>
-      <figure class="sc-wide-diagram">
-        <img src="." alt="SISTAR CRM Integration Ecosystem" loading="lazy" />
-      </figure>
+      
       <div class="sc-grid-4">
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_22_img_02.png" alt="Email & Calendar" />
+          
           <h3 class="sc-h3">Email &amp; Calendar</h3>
           <p class="sc-p">Sync with Gmail, Outlook, and calendar platforms to log every communication automatically and schedule follow-ups without leaving the CRM.</p>
         </div>
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_22_img_03.png" alt="Accounting & Finance" />
+          
           <h3 class="sc-h3">Accounting &amp; Finance</h3>
           <p class="sc-p">Connect ERP and accounting systems to link deal values, invoice status, and payment history directly to customer records.</p>
         </div>
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_22_img_04.png" alt="Marketing Automation" />
+          
           <h3 class="sc-h3">Marketing Automation</h3>
           <p class="sc-p">Integrate with marketing platforms to align nurturing sequences with CRM pipeline stages for seamless handoffs between marketing and sales.</p>
         </div>
         <div class="sc-item-line">
-          <img class="sc-icon-direct" src="./storage/slide_22_img_05.png" alt="Website & Analytics" />
+          
           <h3 class="sc-h3">Website &amp; Analytics</h3>
           <p class="sc-p">Pull web behavior data, including page visits, form submissions, and content engagement, into contact records for richer intent signals.</p>
         </div>
@@ -974,18 +955,14 @@
             </div>
           </div>
         </div>
-        <figure class="sc-illus-box">
-          <img src="." alt="Workflow Automation Engine" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
     <!-- SLIDE 24: ANALYTICS & INSIGHTS -->
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
-        <figure class="sc-illus-box">
-          <img src="." alt="Partnership Network & Analytics" loading="lazy" />
-        </figure>
+        
         <div>
           <div><span class="sc-tag">ANALYTICS &amp; INSIGHTS</span></div>
           <h2 class="sc-h2">Turn Customer Data Into Competitive Advantage</h2>
@@ -1008,9 +985,7 @@
       <div><span class="sc-tag">COMMERCIAL PIPELINE</span></div>
       <h2 class="sc-h2">Managing the Commercial Pipeline End-to-End</h2>
       <p class="sc-lead">A healthy pipeline is the lifeblood of any commercial organization. SISTAR CRM gives you complete visibility and control across every stage, from first touch to closed revenue, so no deal stalls, slips, or disappears without action.</p>
-      <figure class="sc-wide-diagram">
-        <img src="." alt="6-Stage Commercial Pipeline Flow" loading="lazy" />
-      </figure>
+      
     </section>
 
     <!-- SLIDE 26: TEAM COLLABORATION -->
@@ -1043,18 +1018,14 @@
             </div>
           </div>
         </div>
-        <figure class="sc-photo-tall">
-          <img src="." alt="Cross-Functional Team Collaboration" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
     <!-- SLIDE 27: QUBIT ERP INTEGRATION -->
     <section class="sc-slide-block">
       <div class="sc-split-center img-left">
-        <figure class="sc-illus-box">
-          <img src="." alt="Qubit ERP Integration ROI" loading="lazy" />
-        </figure>
+        
         <div>
           <div><span class="sc-tag">QUBIT ERP INTEGRATION</span></div>
           <h2 class="sc-h2">SISTAR CRM Within the Qubit ERP Ecosystem</h2>
@@ -1072,30 +1043,28 @@
           <h2 class="sc-h2">Measuring CRM Success: Key Performance Indicators</h2>
           <div class="sc-grid-2">
             <div class="sc-item-line">
-              <img class="sc-icon-direct" src="./storage/slide_28_img_02.png" alt="Retention Rate" />
+              
               <h3 class="sc-h3">Customer Retention Rate</h3>
               <p class="sc-p">Track the share of customers who stay with your business over a set period. It is the most direct measure of CRM effectiveness and relationship quality.</p>
             </div>
             <div class="sc-item-line">
-              <img class="sc-icon-direct" src="./storage/slide_28_img_03.png" alt="Pipeline Conversion" />
+              
               <h3 class="sc-h3">Pipeline Conversion Rate</h3>
               <p class="sc-p">Measure how well your team converts qualified leads into paying customers at each stage, revealing where the biggest gains are possible.</p>
             </div>
             <div class="sc-item-line">
-              <img class="sc-icon-direct" src="./storage/slide_28_img_04.png" alt="CSAT Score" />
+              
               <h3 class="sc-h3">Customer Satisfaction Score</h3>
               <p class="sc-p">CSAT and NPS scores captured in SISTAR CRM gauge relationship health and act as leading indicators of renewal risk and expansion potential.</p>
             </div>
             <div class="sc-item-line">
-              <img class="sc-icon-direct" src="./storage/slide_28_img_05.png" alt="Customer Lifetime Value" />
+              
               <h3 class="sc-h3">Customer Lifetime Value</h3>
               <p class="sc-p">CLV captures the total revenue a customer generates over the full relationship, making it the ultimate measure of CRM-driven business impact and long-term ROI.</p>
             </div>
           </div>
         </div>
-        <figure class="sc-illus-box">
-          <img src="." alt="Trusted Advisor KPIs" loading="lazy" />
-        </figure>
+        
       </div>
     </section>
 
@@ -1105,27 +1074,27 @@
       <h2 class="sc-h2">The SISTAR CRM Advantage: A Strategic Recap</h2>
       <div class="sc-grid-5">
         <div class="sc-item-line">
-          <span class="sc-badge-teal"><img src="./storage/slide_29_img_02.png" alt="Unified Data" /></span>
+          
           <h3 class="sc-h3">Unified Data</h3>
           <p class="sc-p">One accurate, complete customer record that powers every team across the organization.</p>
         </div>
         <div class="sc-item-line">
-          <span class="sc-badge-teal"><img src="./storage/slide_29_img_03.png" alt="Intelligent Automation" /></span>
+          
           <h3 class="sc-h3">Intelligent Automation</h3>
           <p class="sc-p">Automate repetitive tasks so teams can focus on relationships, strategy, and high-value work.</p>
         </div>
         <div class="sc-item-line">
-          <span class="sc-badge-teal"><img src="./storage/slide_29_img_04.png" alt="Actionable Analytics" /></span>
+          
           <h3 class="sc-h3">Actionable Analytics</h3>
           <p class="sc-p">Real-time insights that reveal what is working, what is at risk, and where to invest next.</p>
         </div>
         <div class="sc-item-line">
-          <span class="sc-badge-teal"><img src="./storage/slide_29_img_05.png" alt="End-to-End Pipeline" /></span>
+          
           <h3 class="sc-h3">End-to-End Pipeline</h3>
           <p class="sc-p">Full commercial pipeline visibility, from first lead to renewed contract and beyond.</p>
         </div>
         <div class="sc-item-line">
-          <span class="sc-badge-teal"><img src="./storage/slide_29_img_06.png" alt="ERP Integration" /></span>
+          
           <h3 class="sc-h3">ERP Integration</h3>
           <p class="sc-p">Connect seamlessly to Qubit ERP for a unified, enterprise-grade business management platform.</p>
         </div>
@@ -1135,9 +1104,7 @@
     <!-- SLIDE 30: CLOSING -->
     <section class="sc-slide-block">
       <div class="sc-split-stretch img-left">
-        <figure class="sc-photo-tall">
-          <img src="" alt="Start Your SISTAR CRM Journey" loading="lazy" />
-        </figure>
+        
         <div class="sc-text-col">
           <h2 class="sc-h2">Start Your SISTAR CRM Journey</h2>
           <p class="sc-lead" style="margin-bottom:0;">SISTAR CRM is more than a platform. It is the foundation for every meaningful customer relationship your organization will build. Whether you are modernizing a legacy sales process, scaling a growing team, or transforming your entire go-to-market approach, SISTAR CRM within the Qubit ERP ecosystem gives you the tools, intelligence, and integration to do it with confidence.</p>
