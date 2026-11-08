@@ -18,7 +18,141 @@
     }
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:64px!important;}}main{opacity:0;}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:64px!important;}}main{opacity:0;}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
+    .sc-sec {
+      padding: 68px 0 !important;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.14) !important;
+    }
+    .sc-lead {
+      margin-bottom: 36px !important;
+      line-height: 1.85 !important;
+    }
+    .sc-p {
+      line-height: 1.82 !important;
+      margin-bottom: 16px !important;
+    }
+    /* 모든 3열, 4열, 5열을 여유로운 2열(한 줄에 2단락, 아래에 2단락)로 통일 */
+    .sc-grid-3,
+    .sc-grid-4,
+    .sc-grid-5 {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      column-gap: 48px !important;
+      row-gap: 38px !important;
+      margin-top: 32px !important;
+      margin-bottom: 24px !important;
+    }
+    .sc-grid-2 {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      column-gap: 48px !important;
+      row-gap: 38px !important;
+      margin-top: 32px !important;
+      margin-bottom: 24px !important;
+    }
+    @media (max-width: 760px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4, .sc-grid-5 {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    .sc-card-line,
+    .sc-card-emerald {
+      padding-top: 22px !important;
+      padding-bottom: 10px !important;
+    }
+    .sc-h2 {
+      margin-top: 12px !important;
+      margin-bottom: 20px !important;
+    }
+    /* 프로젝트 블록 간 간격 대폭 확대 */
+    h2.sc-h2[style*="margin-top:40px"] {
+      margin-top: 76px !important;
+      padding-top: 44px !important;
+      border-top: 1px solid rgba(15, 23, 42, 0.14) !important;
+    }
+    .sc-svg-frame {
+      margin: 40px 0 !important;
+      padding: 30px !important;
+    }
+    .sc-callout {
+      margin-top: 40px !important;
+      padding: 22px 26px !important;
+    }
+
+    /* === PDF / PRINT: 100% PURE WHITE BACKGROUND & GENEROUS MULTI-PAGE PAGINATION === */
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm;
+    }
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        background-image: none !important;
+        color: #0f172a !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
+        display: none !important;
+      }
+      body.sc-nav-open, body.sc-nav-folded, body {
+        padding-left: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+      }
+      main, .sc-prd-page {
+        opacity: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+      }
+      .sc-svg-frame {
+        background: #f8fafc !important;
+        border: 1.5px solid #cbd5e1 !important;
+        margin: 28px 0 !important;
+      }
+      .sc-callout {
+        background: #f8fafc !important;
+      }
+      .sc-phrase-pill {
+        background: #f1f5f9 !important;
+      }
+      /* 각 대섹션(.sc-sec)과 짝수/홀수 프로젝트 단위로 넉넉하게 새 페이지 시작 */
+      .sc-sec {
+        padding: 28px 0 !important;
+        border-bottom: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .sc-sec:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .sc-page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+        margin-top: 0 !important;
+        padding-top: 16px !important;
+        border-top: none !important;
+      }
+      .sc-grid-2, .sc-grid-3, .sc-grid-4, .sc-grid-5 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        column-gap: 32px !important;
+        row-gap: 28px !important;
+        margin-top: 22px !important;
+      }
+      .sc-card-line, .sc-card-emerald, .sc-svg-frame, .sc-callout, .sc-table tr {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      h1, h2, h3, h4, .sc-kicker {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+      }
+    }
+  </style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -261,6 +395,140 @@
         page-break-after: avoid !important;
       }
     }
+      /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
+    .sc-sec {
+      padding: 68px 0 !important;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.14) !important;
+    }
+    .sc-lead {
+      margin-bottom: 36px !important;
+      line-height: 1.85 !important;
+    }
+    .sc-p {
+      line-height: 1.82 !important;
+      margin-bottom: 16px !important;
+    }
+    /* 모든 3열, 4열, 5열을 여유로운 2열(한 줄에 2단락, 아래에 2단락)로 통일 */
+    .sc-grid-3,
+    .sc-grid-4,
+    .sc-grid-5 {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      column-gap: 48px !important;
+      row-gap: 38px !important;
+      margin-top: 32px !important;
+      margin-bottom: 24px !important;
+    }
+    .sc-grid-2 {
+      display: grid !important;
+      grid-template-columns: repeat(2, 1fr) !important;
+      column-gap: 48px !important;
+      row-gap: 38px !important;
+      margin-top: 32px !important;
+      margin-bottom: 24px !important;
+    }
+    @media (max-width: 760px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4, .sc-grid-5 {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    .sc-card-line,
+    .sc-card-emerald {
+      padding-top: 22px !important;
+      padding-bottom: 10px !important;
+    }
+    .sc-h2 {
+      margin-top: 12px !important;
+      margin-bottom: 20px !important;
+    }
+    /* 프로젝트 블록 간 간격 대폭 확대 */
+    h2.sc-h2[style*="margin-top:40px"] {
+      margin-top: 76px !important;
+      padding-top: 44px !important;
+      border-top: 1px solid rgba(15, 23, 42, 0.14) !important;
+    }
+    .sc-svg-frame {
+      margin: 40px 0 !important;
+      padding: 30px !important;
+    }
+    .sc-callout {
+      margin-top: 40px !important;
+      padding: 22px 26px !important;
+    }
+
+    /* === PDF / PRINT: 100% PURE WHITE BACKGROUND & GENEROUS MULTI-PAGE PAGINATION === */
+    @page {
+      size: A4 portrait;
+      margin: 18mm 16mm;
+    }
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        background-image: none !important;
+        color: #0f172a !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
+        display: none !important;
+      }
+      body.sc-nav-open, body.sc-nav-folded, body {
+        padding-left: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+      }
+      main, .sc-prd-page {
+        opacity: 1 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+      }
+      .sc-svg-frame {
+        background: #f8fafc !important;
+        border: 1.5px solid #cbd5e1 !important;
+        margin: 28px 0 !important;
+      }
+      .sc-callout {
+        background: #f8fafc !important;
+      }
+      .sc-phrase-pill {
+        background: #f1f5f9 !important;
+      }
+      /* 각 대섹션(.sc-sec)과 짝수/홀수 프로젝트 단위로 넉넉하게 새 페이지 시작 */
+      .sc-sec {
+        padding: 28px 0 !important;
+        border-bottom: none !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .sc-sec:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .sc-page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+        margin-top: 0 !important;
+        padding-top: 16px !important;
+        border-top: none !important;
+      }
+      .sc-grid-2, .sc-grid-3, .sc-grid-4, .sc-grid-5 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        column-gap: 32px !important;
+        row-gap: 28px !important;
+        margin-top: 22px !important;
+      }
+      .sc-card-line, .sc-card-emerald, .sc-svg-frame, .sc-callout, .sc-table tr {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+      h1, h2, h3, h4, .sc-kicker {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+      }
+    }
   </style>
 </head>
 <body class="sc-nav-open">
@@ -477,7 +745,7 @@
         </table>
       </div>
 
-      <h3 class="sc-h3" style="font-size:1.25rem; margin-top:36px;">2026 Priority Portfolio Summary (Detailed in Founder Projects Report Ver 02)</h3>
+      <h3 class="sc-h3 sc-page-break" style="font-size:1.25rem; margin-top:36px;">2026 Priority Portfolio Summary (Detailed in Founder Projects Report Ver 02)</h3>
       <div class="sc-grid-2">
         <div class="sc-card-line">
           <div class="sc-num-label">TRACK I &bull; AI &amp; ENTERPRISE INFRASTRUCTURE (PROJECTS 01&ndash;05)</div>
