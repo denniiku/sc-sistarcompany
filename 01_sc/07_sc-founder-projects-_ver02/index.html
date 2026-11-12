@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <title>*SC (SISTAR Company) | 15 Founder Projects — Companion Technical & Commercial Investment Dossier</title>
+  <meta name="description" content="Standalone Companion Investment Dossier detailing the 15 Entangled Founder Projects of *SC (SISTAR Company), engineered with *SC Identity Signatures and powered by *SC AI Centers International." />
+  <style>
+    html, body {
+      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
+      margin: 0;
+      padding: 0;
+      color: #0f172a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.sc-nav-open { padding-left: 236px; }
+    body.sc-nav-folded { padding-left: 64px; }
+    @media (max-width: 768px) {
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+    }
+
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1380px, 95%);
+      margin: 0 auto;
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 5vw, 76px) 120px;
+    }
+    .sc-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.15);
+    }
+    .sc-route {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #475569;
+      margin: 0;
+      letter-spacing: 0.03em;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sc-btn-pdf {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      border: 1.5px solid #0f172a;
+      background: rgba(255, 255, 255, 0.85);
+      color: #0f172a;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .sc-btn-pdf.emerald {
+      background: #0f5132;
+      border-color: #0f5132;
+      color: #ffffff;
+    }
+    .sc-btn-pdf:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    /* === CHAPTER & PAGE STRUCTURE === */
+    .sc-chapter {
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      border-radius: 18px;
+      padding: clamp(32px, 4.5vw, 56px);
+      margin-bottom: 44px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    }
+    .sc-chapter-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 14px;
+      margin-bottom: 22px;
+      border-bottom: 2px solid #0f172a;
+    }
+    .sc-chapter-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+    }
+    .sc-chapter-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #64748b;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .sc-doc-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.1rem, 3.6vw, 3.05rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.55rem, 2.4vw, 2.05rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 10px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: #1e293b;
+      line-height: 1.82;
+      margin: 0 0 24px 0;
+    }
+    .sc-p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.99rem;
+      color: #334155;
+      line-height: 1.82;
+      margin: 0 0 16px 0;
+    }
+
+    /* === EXECUTIVE DARK HERO & METRICS === */
+    .sc-exec-hero {
+      background: linear-gradient(135deg, #090d16 0%, #0f172a 55%, #064e3b 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: clamp(28px, 3.8vw, 44px);
+      margin: 22px 0 32px 0;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+    .sc-exec-hero h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+      line-height: 1.3;
+    }
+    .sc-exec-hero p {
+      font-size: 1.02rem;
+      color: #e2e8f0;
+      line-height: 1.78;
+      margin: 0 0 24px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (max-width: 900px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    .sc-kpi-cell {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .sc-kpi-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.42rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 4px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* === EDITORIAL GRIDS & PANELS === */
+    .sc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin: 24px 0;
+    }
+    .sc-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 24px 0;
+    }
+    @media (max-width: 860px) {
+      .sc-grid-2, .sc-grid-3 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-top: 4px solid #0f172a;
+      border-radius: 12px;
+      padding: 24px 26px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    }
+    .sc-panel.emerald { border-top-color: #0f5132; background: #f8fafc; }
+    .sc-panel.blue { border-top-color: #1d4ed8; }
+    .sc-panel.purple { border-top-color: #6d28d9; }
+    .sc-panel-kicker {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f5132;
+      margin-bottom: 8px;
+    }
+    .sc-panel.blue .sc-panel-kicker { color: #1d4ed8; }
+    .sc-panel.purple .sc-panel-kicker { color: #6d28d9; }
+
+    /* === FORMULA & ARCHITECTURE BLOCKS === */
+    .sc-math-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin: 16px 0;
+      border-left: 4px solid #10b981;
+    }
+    .sc-math-code {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 7px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 8px 0 12px 0;
+    }
+
+    /* === TABLES === */
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+    .sc-table th {
+      background: #0f172a;
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 14px 18px;
+      letter-spacing: 0.03em;
+    }
+    .sc-table td {
+      padding: 15px 18px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.94rem;
+      color: #1e293b;
+      line-height: 1.65;
+      vertical-align: top;
+    }
+    .sc-table tr:last-child td { border-bottom: none; }
+    .sc-table tr:nth-child(even) td { background: #f8fafc; }
+
+    /* === CALLOUTS & DOSSIER HEADERS === */
+    .sc-callout {
+      background: #f0fdf4;
+      border-left: 5px solid #0f5132;
+      border-radius: 0 12px 12px 0;
+      padding: 22px 26px;
+      margin: 24px 0;
+    }
+    .sc-callout-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #064e3b;
+      margin-bottom: 8px;
+    }
+    .sc-dossier-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+    .sc-dossier-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+    .sc-dossier-id {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: #0f172a;
+      color: #4ade80;
+      padding: 5px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+    .sc-dossier-domain {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #0f5132;
+    }
+    .sc-dossier-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 760px) {
+      .sc-dossier-metrics { grid-template-columns: 1fr; }
+    }
+
+    /* === MULTI-PAGE A4 PRINT ENGINE (10+ PAGES GUARANTEED) === */
+    @page {
+      size: A4 portrait;
+      margin: 15mm 14mm;
+    }
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
+        display: none !important;
+      }
+      body.sc-nav-open, body.sc-nav-folded, body {
+        padding-left: 0 !important;
+      }
+      .sc-monograph {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      .sc-chapter {
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 10px 0 24px 0 !important;
+        margin-bottom: 0 !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .sc-chapter:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .sc-page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+      }
+      .sc-exec-hero, .sc-math-box {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border: 1.5px solid #94a3b8 !important;
+      }
+      .sc-exec-hero h3, .sc-exec-hero p, .sc-kpi-val, .sc-kpi-desc, .sc-math-code {
+        color: #0f172a !important;
+      }
+      .sc-panel, .sc-dossier-card, .sc-callout, .sc-table tr {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
+  <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+</head><body class="sc-nav-open">
+  <main class="sc-monograph">
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - *sc - sc founder projects</p>
+      <div class="sc-action-btns">
+        <a class="sc-btn-pdf emerald" href="../06_sc-master-brochure-_ver03/index.html">&larr; View Master Corporate Brochure</a>
+        <button class="sc-btn-pdf" onclick="window.print()">Print / Export Dossier PDF</button>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         DOSSIER SECTION I: EXECUTIVE THESIS & PORTFOLIO ARCHITECTURE
+         ====================================================================== -->
+    <article class="sc-chapter">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">COMPANION INVESTMENT DOSSIER &bull; ANNEX TO THE *SC MASTER BROCHURE</span>
+        <span class="sc-chapter-tag">PORTFOLIO ARCHITECTURE &bull; SECTION 01 / 06</span>
+      </div>
+      <h1 class="sc-doc-h1">*SC Founder Projects (01&ndash;15): Technical &amp; Commercial Portfolio Dossier</h1>
+      <p class="sc-lead"><strong>Projects Engineered with *SC Identity Signatures. Powered by *SC AI Centers International.</strong> This document serves both as a standalone institutional investment dossier and as the official technical annex to the <em>*SC Master Corporate Brochure</em>. It details the fifteen foundational initiatives launched at *SC&rsquo;s inception to construct our permanent AI, data, bio-veterinary, and cross-border trading infrastructure.</p>
+
+      <div class="sc-exec-hero">
+        <div class="sc-chapter-num" style="color:#4ade80; margin-bottom:8px;">THE FOUNDATIONAL CAPABILITY THESIS &bull; WHY THESE 15 PROJECTS?</div>
+        <h3>Not Scattered Diversification—Fifteen Entangled Nodes of One Quantum Operating Engine</h3>
+        <p>In a conventional linear startup, pursuing fifteen initiatives simultaneously would result in operational fragmentation. Within *SC, these fifteen Founder Projects are <strong>strategically selected capability multipliers</strong> governed by the <strong>Qubit Algorithm&trade;</strong>. Every project solves a critical infrastructure requirement for the parent company—meaning the completion of each node permanently lowers the cost, risk, and time-to-market of every subsequent venture across the <strong>Signal Star Universe</strong>.</p>
+        <div class="sc-kpi-strip">
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">Tier I (01&ndash;06)</div>
+            <div class="sc-kpi-desc">Enterprise AI Core &amp; Cognitive OS (Autonomous Brain &amp; 75&ndash;85% GM SaaS)</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">Tier II (07&ndash;09)</div>
+            <div class="sc-kpi-desc">Veterinary &amp; Bio-Health Deep-Tech (Clinical Data Moat &amp; ODM Cashflow)</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">Tier III (10&ndash;13)</div>
+            <div class="sc-kpi-desc">Direct Cross-Border AI Trade &amp; Challenger Federation ($t=0$ Clearing)</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">Tier IV (14&ndash;15)</div>
+            <div class="sc-kpi-desc">Hyper-Growth Venture Cloning &amp; Programmatic GTM Multipliers</div>
+          </div>
+        </div>
+      </div>
+
+      <table class="sc-table">
+        <thead>
+          <tr>
+            <th style="width:8%;">Code</th>
+            <th style="width:27%;">Founder Project Title</th>
+            <th style="width:23%;">Architectural Tier &amp; Domain</th>
+            <th style="width:42%;">Primary Capability Built for *SC &amp; Monetization Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>FP-01</strong></td><td><strong>Qubit ERP</strong></td><td>Tier I &bull; <code>intelligence-core</code></td><td>Autonomous cross-border finance, tax &amp; shared SCM backbone + B2B SaaS licensing.</td></tr>
+          <tr><td><strong>FP-02</strong></td><td><strong>Company RAG Solution</strong></td><td>Tier I &bull; <code>intelligence-core</code></td><td>Zero-entropy vector knowledge base encoding 20+ years of trade &amp; clinical data.</td></tr>
+          <tr><td><strong>FP-03</strong></td><td><strong>Agent Builder &amp; AI Secretary</strong></td><td>Tier I &bull; <code>scarlet-ai</code></td><td>No-code digital workforce factory &amp; 24/7 multilingual B2B closer (<em>Ms. Scarlet</em>).</td></tr>
+          <tr><td><strong>FP-04</strong></td><td><strong>c.a.n. &mdash; CEO ActionNote</strong></td><td>Tier I &bull; <code>qubit-biz</code></td><td>Executive intent-to-action command center exploding voice sparks into live tasks.</td></tr>
+          <tr><td><strong>FP-05</strong></td><td><strong>Exo-Brain &amp; Wearable Physical AI</strong></td><td>Tier I &bull; <code>intelligence-core</code></td><td>Edge-AI wearable telemetry (<code>[&amp; I]</code>) &amp; externalized personal/enterprise memory.</td></tr>
+          <tr><td><strong>FP-06</strong></td><td><strong>Mind Company</strong></td><td>Tier I &bull; <code>biz-galaxy</code></td><td>Human-AI cognitive resilience (<em>Mind Navi / NFQ</em>) &amp; AI talent academy (<em>FlexKids</em>).</td></tr>
+          <tr><td><strong>FP-07</strong></td><td><strong>Auto Formulator for Vet</strong></td><td>Tier II &bull; <code>biz-hub</code></td><td>Algorithmic veterinary nutrition/supplement formulation &amp; micro-sachet ODM engine.</td></tr>
+          <tr><td><strong>FP-08</strong></td><td><strong>Vet Special AI Prescription Services</strong></td><td>Tier II &bull; <code>scarlet-ai</code></td><td>Clinical Decision Support System (<em>Vet CDSS</em>) capturing hospital prescription flows.</td></tr>
+          <tr><td><strong>FP-09</strong></td><td><strong>R&amp;D &amp; Manufacturing for Vet Clinics</strong></td><td>Tier II &bull; <code>biz-galaxy</code></td><td>Dedicated veterinary R&amp;D and factory-direct private-label OEM/ODM supply chain.</td></tr>
+          <tr><td><strong>FP-10</strong></td><td><strong>Int&rsquo;l Sistar Challenger Networks</strong></td><td>Tier III &bull; <code>challengers</code></td><td>Federated global alliance of performance-based local market executors (&ldquo;Astronauts&rdquo;).</td></tr>
+          <tr><td><strong>FP-11</strong></td><td><strong>Import &amp; Distribute: AI Trade Int&rsquo;l</strong></td><td>Tier III &bull; <code>qubit-biz</code></td><td>AI-predicted cross-border sourcing, customs clearance &amp; national B2B distribution.</td></tr>
+          <tr><td><strong>FP-12</strong></td><td><strong>AI Commerce International Platform</strong></td><td>Tier III &bull; <code>scarlet-ai</code></td><td>Conversational D2C/B2B shopping &amp; <em>Buy4Me</em> demand-aggregated reverse auctions.</td></tr>
+          <tr><td><strong>FP-13</strong></td><td><strong>AI Trade International Platform</strong></td><td>Tier III &bull; <code>qubit-biz</code></td><td>Direct B2B cross-border trading exchange with $t=0$ clearing &amp; <em>Qubit Offsetting</em>.</td></tr>
+          <tr><td><strong>FP-14</strong></td><td><strong>Daily 1 VIP Launching Factory</strong></td><td>Tier IV &bull; <code>qubit-algorithm</code></td><td>24/7 automated venture-cloning assembly line deploying one VIP brand or portal daily.</td></tr>
+          <tr><td><strong>FP-15</strong></td><td><strong>Marketing Tool Package by Project</strong></td><td>Tier IV &bull; <code>media / intelligence</code></td><td>Modular full-funnel AI growth &amp; automated short-form media suite per project.</td></tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- ======================================================================
+         DOSSIER SECTION II: TIER I (PROJECTS 01 - 03)
+         ====================================================================== -->
+    <article class="sc-chapter">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">TIER I &bull; ENTERPRISE AI CORE &amp; COGNITIVE OS (PART A: PROJECTS 01&ndash;03)</span>
+        <span class="sc-chapter-tag">INFRASTRUCTURE DOSSIER &bull; SECTION 02 / 06</span>
+      </div>
+      <h2 class="sc-chapter-h2">Autonomous Enterprise Backbone: ERP, Corporate Memory &amp; Digital Workforce</h2>
+
+      <!-- PROJECT 01 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 01 &bull; QUBIT ERP</span>
+          <span class="sc-dossier-domain">Primary Nodes: intelligence-core / qubit-biz</span>
+        </div>
+        <h3 class="sc-sub-h3">Quantum-Concurrent Enterprise Resource Planning &amp; Shared Cross-Border SCM</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Traditional ERP suites (SAP, Oracle) are passive accounting ledgers designed for linear corporations, requiring armies of clerks to reconcile invoices across borders. <strong>Qubit ERP</strong> is *SC&rsquo;s autonomous central nervous system—unifying multi-jurisdictional financial accounting, automated VAT/tax compliance (Korea, Indonesia, Vietnam), computer-vision warehouse stock counting (<em>Vertex AI Video Opname</em>), and collaborative logistics (<em>Space Sharing &amp; Deliver Together</em>).</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Engineered atop Google Workspace Studio, Apps Script, BigQuery, and Gemini APIs, Qubit ERP operates on event-driven webhooks. The instant a commercial transaction is confirmed in <em>Scarlet AI (FP-12)</em> or <em>Qubit Trade (FP-13)</em>, Qubit ERP simultaneously generates customs documentation, splits payment gateway settlements, updates multi-currency trial balances, and dispatches optimal container/courier routing at $t=0$.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Internally, Qubit ERP compresses administrative and accounting headcount overhead by nearly 100%, enabling *SC to manage 15+ ventures on a near-$0 fixed G&amp;A base. Externally, it is packaged as a turnkey B2B SaaS and shared-warehouse brokerage solution for regional trading SMEs and clinic chains.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Near-$0 Internal ERP &amp; Admin Drag</div>
+          <div><strong>External Revenue Model:</strong> Tiered B2B SaaS + Shared SCM Spread</div>
+          <div><strong>Target Gross Margin:</strong> 80&ndash;85% Software &amp; Clearing Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 02 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 02 &bull; COMPANY RAG SOLUTION</span>
+          <span class="sc-dossier-domain">Primary Nodes: intelligence-core / *SC AI Centers Int&rsquo;l</span>
+        </div>
+        <h3 class="sc-sub-h3">Zero-Entropy Enterprise Knowledge Engine &amp; Overnight Data Factory</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Large Language Models without proprietary domain grounding produce generic outputs that fail in regulated cross-border commerce. <strong>Company RAG Solution</strong> encodes *SC&rsquo;s 20+ years of international trade contracts, HS-code tariff schedules, veterinary clinical protocols, and supplier BOMs into a continuously updating, zero-hallucination Retrieval-Augmented Generation vector brain.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Combines nightly automated web scrapers (<em>Browse AI, Apify</em> running 10 PM&ndash;8 AM) with hybrid vector databases (<em>NotebookLM, Dify, AnythingLLM</em> on local Ryzen 9 Ollama servers + <em>Gemini Flash</em>). Raw market noise is distilled overnight into structured JSON intelligence that feeds <em>Auto Formulator (FP-07)</em>, <em>Import &amp; Distribute (FP-11)</em>, and <em>SISTAR CRM</em> every morning.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Serves as the proprietary intelligence moat protecting all *SC ventures while monetizing externally through turnkey &ldquo;Corporate Brain&rdquo; deployment engagements—installing private, air-gapped RAG architectures for partner manufacturers, law/tax practices, and hospital groups.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> 24/7 Automated Market &amp; Tariff Intelligence</div>
+          <div><strong>External Revenue Model:</strong> Enterprise Deployment Fee + Monthly Retainer</div>
+          <div><strong>Target Gross Margin:</strong> 75&ndash;85% Hybrid Local/Cloud Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 03 -->
+      <div class="sc-dossier-card" style="margin-bottom:0;">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 03 &bull; AGENT BUILDER &amp; AI SECRETARY</span>
+          <span class="sc-dossier-domain">Primary Nodes: scarlet-ai / intelligence-core</span>
+        </div>
+        <h3 class="sc-sub-h3">Modular Digital Workforce Generator (SISTAR AB) &amp; Executive AI Closer (Ms. Scarlet)</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Realizing our signature doctrine—<em>&ldquo;Let your AI work for AI Commerce &amp; Trading&rdquo;</em>—requires autonomous agents that do not merely chat, but execute binding commercial workflows. <strong>Agent Builder &amp; AI Secretary</strong> provides a no-code factory for deploying role-specific AI employees alongside <strong>Ms. Scarlet</strong>, our 24/7 multilingual executive secretary and B2B deal closer.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Built on Model Context Protocol (MCP) servers, agentic browser controllers (<em>Manus, OpenClaw</em>), and omnichannel messaging APIs (WhatsApp, Telegram, Instagram, Email). Agents query <em>Company RAG (FP-02)</em> in real time to answer technical product inquiries, negotiate volume-tiered pricing, issue pro-forma invoices, and trigger <em>Qubit ERP (FP-01)</em> fulfillment.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Eliminates the need for multi-country human customer service and inside-sales teams across *SC&rsquo;s 12 domains, while scaling externally as an Agent-as-a-Service (AaaS) subscription and commission-per-closed-deal offering for SMEs and veterinary clinics.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> 24/7 Autonomous Sales &amp; Partner Support</div>
+          <div><strong>External Revenue Model:</strong> AaaS Subscription + Closing Commission</div>
+          <div><strong>Target Gross Margin:</strong> 80%+ Automated Execution Margin</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ======================================================================
+         DOSSIER SECTION III: TIER I PART B (PROJECTS 04 - 06)
+         ====================================================================== -->
+    <article class="sc-chapter">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">TIER I &bull; ENTERPRISE AI CORE &amp; COGNITIVE OS (PART B: PROJECTS 04&ndash;06)</span>
+        <span class="sc-chapter-tag">COGNITIVE &amp; PHYSICAL AI DOSSIER &bull; SECTION 03 / 06</span>
+      </div>
+      <h2 class="sc-chapter-h2">Executive Command, Wearable Edge Telemetry &amp; Human Cognitive Alignment</h2>
+
+      <!-- PROJECT 04 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 04 &bull; c.a.n. &mdash; CEO ACTIONNOTE</span>
+          <span class="sc-dossier-domain">Primary Nodes: qubit-biz / *SC Command Center</span>
+        </div>
+        <h3 class="sc-sub-h3">The &ldquo;One Spark&rdquo; Executive Command Center &amp; Cross-Project Orchestrator</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> In the <em>One-Man Unicorn</em> paradigm, the human founder&rsquo;s highest-value function is generating strategic insights (<em>One Spark</em>). <strong>c.a.n. (CEO ActionNote)</strong> captures raw executive voice memos, meeting reflections, or fleeting ideas and autonomously decomposes them into structured PRDs, multi-project task trees, and live agent dispatches.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Integrates speech-to-intent LLM pipelines with our <em>Spark Exploder</em> recursive prompt engine and <em>Qubit Master JSON Schema</em>. A single 30-second voice command recorded in <em>c.a.n.</em> simultaneously updates the master project ledger, assigns tasks to <em>Sistar Challengers (FP-10)</em>, and instructs <em>Daily 1 VIP Factory (FP-14)</em> to spin up a new prototype portal.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Compresses executive management time to 30 minutes per day across the entire *SC holding structure, while commercializing externally as a flagship C-suite productivity and venture-orchestration SaaS for global founders and alliance leaders.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> 10x Executive Ideation-to-Deployment Velocity</div>
+          <div><strong>External Revenue Model:</strong> Executive SaaS Licensing + Seat Tiers</div>
+          <div><strong>Target Gross Margin:</strong> 85%+ Pure Software Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 05 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 05 &bull; EXO-BRAIN &amp; WEARABLE PHYSICAL AI</span>
+          <span class="sc-dossier-domain">Primary Nodes: intelligence-core / SISTAR Robotics (SR)</span>
+        </div>
+        <h3 class="sc-sub-h3">Lifelong Cognitive Memory Extension &amp; Edge-AI Wearable Hardware (<code>[&amp; I]</code>)</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Screen-bound AI misses 90% of real-world business context—on-site factory inspections, clinical consultations, and live trade negotiations. <strong>Exo-Brain &amp; Wearable Physical AI</strong> bridges digital intelligence with physical reality through lightweight wearable edge devices (<code>[&amp; I]</code> pendants, smart audio/visual glasses) and <em>SISTAR Robotics (Robot Qubit)</em>.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Edge hardware captures encrypted ambient audio and visual telemetry, streaming it into a personalized <em>Exo-Brain</em> vector vault. The system automatically extracts action items into <em>c.a.n. (FP-04)</em>, logs clinical/warehouse observations into <em>Company RAG (FP-02)</em>, and triggers real-time translation or negotiation prompts.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Equips *SC executives, veterinarians, and Challengers with superhuman recall and field intelligence, while generating dual-stream external revenue via ODM hardware sales bundled with high-retention monthly cloud-memory subscriptions.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Zero-Friction Real-World Data Capture</div>
+          <div><strong>External Revenue Model:</strong> Hardware-as-a-Service (HaaS) + Cloud Subscription</div>
+          <div><strong>Target Gross Margin:</strong> 55% Hardware / 80% Cloud Bundle</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 06 -->
+      <div class="sc-dossier-card" style="margin-bottom:0;">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 06 &bull; MIND COMPANY</span>
+          <span class="sc-dossier-domain">Primary Nodes: biz-galaxy / SISTAR MI &amp; EI</span>
+        </div>
+        <h3 class="sc-sub-h3">Human-AI Cognitive Alignment, Mental Resilience (Mind Navi / NFQ) &amp; Next-Gen AI Education</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> When AI agents take over operational execution, human consciousness, emotional resilience, and creative problem-framing become the decisive factors of success. <strong>Mind Company</strong> fortifies the human operators of the AI era through psychological AI platforms (<em>Mind Navi, AI Companion, NFQ — Never F***ing Quit</em>) and future-ready educational curriculums (<em>FlexKids AI, SISTAR Academy</em>).</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Combines empathetic conversational AI agents and psychometric diagnostics with role-based Google Cloud/AI learning pathways. Graduates of <em>SISTAR Academy</em> and <em>Mind Company</em> programs are seamlessly onboarded into <em>International Sistar Challenger Networks (FP-10)</em> as certified AI-native operators.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Acts as *SC&rsquo;s self-funding talent incubator and psychological anchor while generating B2C/B2B subscription revenue, corporate wellness contracts, and international ed-tech franchise licensing.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Zero-CAC Certified Talent &amp; Operator Pipeline</div>
+          <div><strong>External Revenue Model:</strong> B2C/B2B Subscriptions &amp; Curriculum Licensing</div>
+          <div><strong>Target Gross Margin:</strong> 75&ndash;85% Digital Content &amp; SaaS Margin</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ======================================================================
+         DOSSIER SECTION IV: TIER II (PROJECTS 07 - 09)
+         ====================================================================== -->
+    <article class="sc-chapter">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">TIER II &bull; VERTICAL DEEP-TECH: VET SPECIALTIES &amp; BIO-HEALTH (PROJECTS 07&ndash;09)</span>
+        <span class="sc-chapter-tag">CLINICAL &amp; ODM ANCHOR DOSSIER &bull; SECTION 04 / 06</span>
+      </div>
+      <h2 class="sc-chapter-h2">High-Margin Domain Proof: Veterinary AI Formulation, Prescription CDSS &amp; ODM Supply Chain</h2>
+
+      <!-- PROJECT 07 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 07 &bull; AUTO FORMULATOR FOR VET</span>
+          <span class="sc-dossier-domain">Primary Nodes: biz-hub / biz-galaxy (SISTAR Mfg.)</span>
+        </div>
+        <h3 class="sc-sub-h3">Algorithmic Veterinary Nutrition &amp; Supplement Formulation Engine + Micro-Sachet Protocol</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Developing new veterinary diets, therapeutic treats, and clinical supplements traditionally takes 12&ndash;24 months of manual R&amp;D and faces steep local price-affordability barriers in emerging markets. <strong>Auto Formulator for Vet</strong> uses AI to generate clinically balanced, species-specific formulations in minutes and pairs them with our <strong>Quantum Tunneling Micro-Sachet Protocol</strong> (e.g., <code>Rp 1,320</code> single-dose sachets in Indonesia).</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Cross-references veterinary nutritional databases, AAFCO/FEDIAF clinical standards, and real-time raw material costs inside <em>Company RAG (FP-02)</em>. When <em>Vet AI Prescription Services (FP-08)</em> detects rising regional incidence of renal, hepatic, or dermatological conditions, Auto Formulator instantly outputs optimized BOMs for <em>Vet Clinic Manufacturing (FP-09)</em>.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Compresses R&amp;D cost by 90% and unlocks massive volume demand across price-sensitive ASEAN markets via discrete quantum price-level packaging—generating high-margin B2B ODM sales and formulation licensing royalties.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Instant R&amp;D-to-SKU Velocity &amp; Regulatory Tunneling</div>
+          <div><strong>External Revenue Model:</strong> B2B Sachet/Bulk Supply + Formulation Royalties</div>
+          <div><strong>Target Gross Margin:</strong> 50&ndash;65% Proprietary Formulation Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 08 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 08 &bull; VET SPECIAL AI PRESCRIPTION SERVICES</span>
+          <span class="sc-dossier-domain">Primary Nodes: scarlet-ai (petclinic.scarlet.ai) / SISTAR MedIX</span>
+        </div>
+        <h3 class="sc-sub-h3">Scarlet Vet CDSS (Clinical Decision Support System) &amp; Automated Prescription Fulfillment</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> In the global animal health industry, the veterinarian&rsquo;s consultation room is the ultimate gatekeeper of trust and recurring commerce. <strong>Vet Special AI Prescription Services</strong> embeds *SC&rsquo;s AI directly into veterinary clinics—assisting doctors with rapid POCT diagnostic interpretation, differential diagnosis, drug-interaction checks, and personalized therapeutic diet/supplement prescriptions.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Powered by veterinary-trained multimodal LLMs and clinical RAG datasets. The moment a veterinarian finalizes a prescription in <em>Scarlet Vet CDSS</em>, quantum entanglement simultaneously triggers clinic inventory replenishment from <em>Project 09</em> and enrolls the pet owner into automated home-delivery refills via <em>SISPet / AI Commerce (FP-12)</em>—sharing recurring commission back with the prescribing clinic.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Creates an unassailable clinical data moat and zero-CAC B2B2C customer acquisition engine—monetizing via clinic SaaS subscriptions and guaranteed downstream fulfillment of prescribed pharmaceuticals, diagnostics, and therapeutic nutrition.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Point-of-Prescription Lock-In &amp; Clinical Data Factory</div>
+          <div><strong>External Revenue Model:</strong> Clinic SaaS + Automatic Prescription Supply Spread</div>
+          <div><strong>Target Gross Margin:</strong> 60&ndash;75% Blended Software &amp; Specialty Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 09 -->
+      <div class="sc-dossier-card" style="margin-bottom:0;">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 09 &bull; R&amp;D &amp; MANUFACTURING FOR VET CLINICS</span>
+          <span class="sc-dossier-domain">Primary Nodes: biz-galaxy / biz-hub (SISTAR MedIX, SISPharm, SISPet, SISTAR Dx)</span>
+        </div>
+        <h3 class="sc-sub-h3">Dedicated Veterinary R&amp;D, Co-Branded OEM/ODM Production &amp; Direct Hospital Supply Chain</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Digital platforms without physical product sovereignty are easily disintermediated. <strong>R&amp;D &amp; Manufacturing for Vet Clinics</strong> anchors *SC in the real economy—operating dedicated veterinary R&amp;D, Korean-ASEAN dual-stream OEM/ODM manufacturing, and direct distribution of pharmaceuticals, POCT diagnostic kits, medical shampoos, and therapeutic treats exclusively for veterinary hospitals.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Unites proven Korean bio-manufacturing alliances (<em>CHD, SungBo, Michlo, Iskhan, Dazzle, Zeelice</em>) with localized ASEAN repackaging hubs. Pre-aggregated clinic demand from <em>Project 08</em> and <em>Project 13</em> locks in 50% advance deposits (<em>Quantum Tunneling</em>), funding production runs with zero inventory holding risk.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Serves as *SC&rsquo;s immediate physical cashflow anchor—generating high-ticket B2B container revenues, clinic co-branding ODM contracts, and exclusive national distribution margins across Asia.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Physical Supply Sovereignty &amp; Immediate Cashflow Anchor</div>
+          <div><strong>External Revenue Model:</strong> Direct Clinic B2B Supply + Co-Branded ODM Contracts</div>
+          <div><strong>Target Gross Margin:</strong> 45&ndash;65% Direct Factory-to-Clinic Margin</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ======================================================================
+         DOSSIER SECTION V: TIER III (PROJECTS 10 - 13)
+         ====================================================================== -->
+    <article class="sc-chapter">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">TIER III &bull; DIRECT AI COMMERCE &amp; INTERNATIONAL TRADE PLATFORMS (PROJECTS 10&ndash;13)</span>
+        <span class="sc-chapter-tag">CROSS-BORDER TRADE DOSSIER &bull; SECTION 05 / 06</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Federated Global Trade Highway: Challengers, Direct Import &amp; $t=0$ Exchanges</h2>
+
+      <!-- PROJECT 10 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 10 &bull; INTERNATIONAL SISTAR CHALLENGER NETWORKS</span>
+          <span class="sc-dossier-domain">Primary Nodes: challengers / *SC Global Bases (S1&ndash;S6)</span>
+        </div>
+        <h3 class="sc-sub-h3">Borderless Federation of Local Market Executors (&ldquo;Astronauts&rdquo;) &amp; Collaborative Franchise-ship</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Scaling across eight countries via traditional expat branches requires millions in fixed overhead. <strong>International Sistar Challenger Networks</strong> operationalizes our movement—<em>&ldquo;Together, Against Global AI Giants&rdquo;</em>—by uniting ambitious local entrepreneurs, regional BD directors, veterinarians, and creators into a zero-fixed-cost global execution alliance.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Challengers are onboarded via <em>Qubit Star&trade;</em> and equipped with *SC&rsquo;s full AI arsenal (<em>Agent Builder, Company RAG, Marketing Package</em>) plus turnkey <em>S1&ndash;S6 Franchise-ship</em> models (e.g., <em>SISTAR Mint, PetFood Bank Re:D, Local B2B Dealerships</em>). Field intelligence gathered by Challengers feeds directly back into <em>Company RAG (FP-02)</em>.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Enables *SC to penetrate new national markets with $0 fixed payroll drag while generating recurring franchise-ship royalties, B2B deal-sharing commissions, and localized joint-venture equity.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Borderless On-the-Ground Execution at $0 Fixed HR Cost</div>
+          <div><strong>External Revenue Model:</strong> Franchise-ship Royalties + Shared Trade Margins</div>
+          <div><strong>Target Gross Margin:</strong> 70%+ Platform &amp; Alliance Royalty Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 11 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 11 &bull; IMPORT &amp; DISTRIBUTE: AI TRADE INTERNATIONAL</span>
+          <span class="sc-dossier-domain">Primary Nodes: qubit-biz / *SC Global Corridors (SCK &harr; SCI/SCV)</span>
+        </div>
+        <h3 class="sc-sub-h3">AI-Predicted Cross-Border Sourcing, Regulatory Tunneling &amp; National B2B Distribution</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Even in an AI world, physical goods must cross borders, clear customs, and reach local shelves. <strong>Import &amp; Distribute: AI Trade International</strong> weaponizes *SC&rsquo;s 20+ years of active import licenses, customs corridors, and national distributor relationships by pairing them with predictive AI demand forecasting.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> <em>Company RAG (FP-02)</em> identifies high-margin price and SKU gaps between Korea/Japan/India and ASEAN markets. Before a single container is shipped, <em>SISTAR CRM</em> and <em>Challengers (FP-10)</em> lock in pre-sold volume commitments from local wholesale dealers, while <em>Qubit ERP (FP-01)</em> automates HS-code classification and local warehouse dispatch.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Generates immediate, repeatable wholesale distribution cashflow across veterinary specialties, K-beauty (<em>SISMii</em>), Ayurvedic raw materials (<em>Indoherb</em>), and functional foods with zero dead-stock risk.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Battle-Tested Physical Cross-Border Distribution Spine</div>
+          <div><strong>External Revenue Model:</strong> Container Wholesale Spreads + Exclusive Agency Retainers</div>
+          <div><strong>Target Gross Margin:</strong> 30&ndash;50% Pre-Sold Import/Distribution Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 12 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 12 &bull; AI COMMERCE INTERNATIONAL PLATFORM</span>
+          <span class="sc-dossier-domain">Primary Nodes: scarlet-ai (scarlet.sistarcompany.com / sisMall.ai)</span>
+        </div>
+        <h3 class="sc-sub-h3">Scarlet.ai Conversational Procurement, Buy4Me Reverse Auctions &amp; 70/30 PG Cashback</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Legacy e-commerce forces consumers to manually search thousands of paid-ad listings while merchants lose 30%+ of revenue to platform ad taxes and PG fees. <strong>AI Commerce International Platform (Scarlet.ai)</strong> shifts e-commerce from manual search to <strong>AI-delegated procurement and collective demand aggregation</strong>.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Features personal AI shopping agents, <strong>Buy4Me</strong> buyer-initiated group purchasing (integrating demand waves $\Psi(x,t)$ until the factory bulk threshold $Q^*$ is reached), hyper-local <em>sisCart NearBuy</em> delivery, and shoppable video portals (<em>mall.sisTV</em>). Direct clearing returns <strong>70% of saved PG fees</strong> to buyers.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Provides *SC and all alliance brands with a proprietary D2C/B2B sales gateway free from Amazon/Shopee ad taxation—earning platform take-rates, group-buy volume spreads, and viral organic retention.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Proprietary D2C/B2B Demand-Aggregation Gateway</div>
+          <div><strong>External Revenue Model:</strong> Transaction Take-Rate + 30% Retained PG Spread + Group-Buy Margin</div>
+          <div><strong>Target Gross Margin:</strong> 65&ndash;80% Platform Clearing Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 13 -->
+      <div class="sc-dossier-card" style="margin-bottom:0;">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 13 &bull; AI TRADE INTERNATIONAL PLATFORM</span>
+          <span class="sc-dossier-domain">Primary Nodes: qubit-biz (qubit.sistarcompany.com / Qubit Link &amp; Flow)</span>
+        </div>
+        <h3 class="sc-sub-h3">Autonomous B2B Cross-Border Trading Exchange, K-SURE BNPL &amp; 4-Way Qubit Offsetting</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Embodies our core signature: <em>&ldquo;Do International Trading Directly via AI.&rdquo;</em> <strong>AI Trade International Platform</strong> disintermediates traditional export/import brokers by connecting global manufacturers, regional wholesalers, freight forwarders, and trade-finance institutions into a single simultaneous smart-contract exchange.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Powered by <em>Qubit Link&trade;</em> (3-party simultaneous trade execution at $t=0$), <em>Qubit Flow&trade;</em> (autonomous cross-border price-gap arbitrage), <strong>K-SURE BNPL APIs</strong> (100% upfront supplier payout with 30-to-60-day buyer credit), and our <strong>4-Way Qubit Offsetting</strong> ledger (bartering goods, AI SaaS, media, and warehouse space).</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Captures high-ticket B2B clearing fees, trade-finance factoring spreads (2&ndash;4%), and automated cross-border arbitrage profits without balance-sheet inventory exposure.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> $t=0$ Global B2B Clearinghouse &amp; Cashless Barter Network</div>
+          <div><strong>External Revenue Model:</strong> B2B Clearing Fees + BNPL Factoring Spread + Arbitrage Yield</div>
+          <div><strong>Target Gross Margin:</strong> 70%+ Fintech &amp; Algorithmic Trade Margin</div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ======================================================================
+         DOSSIER SECTION VI: TIER IV (PROJECTS 14 - 15) & SYNERGY CONCLUSION
+         ====================================================================== -->
+    <article class="sc-chapter">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">TIER IV &bull; HYPER-GROWTH LAUNCHPAD &amp; GTM MULTIPLIERS (PROJECTS 14&ndash;15)</span>
+        <span class="sc-chapter-tag">GALAXIFYING ENGINE DOSSIER &bull; SECTION 06 / 06</span>
+      </div>
+      <h2 class="sc-chapter-h2">Industrializing &ldquo;One Spark, Infinite Galaxifying&rdquo;: Daily Venture Cloning &amp; Programmatic GTM</h2>
+
+      <!-- PROJECT 14 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 14 &bull; DAILY 1 VIP LAUNCHING FACTORY</span>
+          <span class="sc-dossier-domain">Primary Nodes: qubit-algorithm / Qubit App Factory Int&rsquo;l</span>
+        </div>
+        <h3 class="sc-sub-h3">24/7 Autonomous Venture-Cloning &amp; Auto-Reskinning Assembly Line</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Once Tiers I&ndash;III validate a profitable <em>Cosmo Seed&trade;</em> business model, manual replication across countries and partner brands is too slow. <strong>Daily 1 VIP Launching Factory</strong> industrializes venture building—capable of packaging, localizing, and deploying <strong>one turnkey VIP partner brand, micro-SaaS portal, or specialized commerce storefront every single day</strong>.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Utilizes modular master codebases, Firebase Multi-Site hosting, automated subdomain routing, and our zero-runtime-API 6-language static translation architecture. Every spun-out VIP portal comes pre-wired into <em>Qubit ERP (FP-01)</em>, <em>Company RAG (FP-02)</em>, <em>Ms. Scarlet (FP-03)</em>, and <em>AI Trade clearing (FP-13)</em> from minute one.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Drives *SC&rsquo;s <em>100 Brands / 100 Commercial Platforms / 100 App-Flipping</em> matrix—generating upfront turnkey VIP launch fees alongside perpetual revenue-share royalties and equity carry in every launched venture.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Near-Zero Marginal Cost Venture Replication Speed</div>
+          <div><strong>External Revenue Model:</strong> Turnkey VIP Launch Fee + Ongoing Royalty / Equity Carry</div>
+          <div><strong>Target Gross Margin:</strong> 85%+ Automated Cloning Margin</div>
+        </div>
+      </div>
+
+      <!-- PROJECT 15 -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">FOUNDER PROJECT 15 &bull; MARKETING TOOL PACKAGE BY PROJECT</span>
+          <span class="sc-dossier-domain">Primary Nodes: media / intelligence-core (SISTAR MA &amp; SISTAR Studio)</span>
+        </div>
+        <h3 class="sc-sub-h3">Modular Plug-and-Play AI Growth Agency, Automated Media Studio &amp; Closed-Loop CRM</h3>
+        <p class="sc-p"><strong>Executive Thesis &amp; Architectural Role:</strong> Superior products and platforms fail without distribution velocity. <strong>Marketing Tool Package by Project</strong> embeds a dedicated, automated AI marketing agency directly into every Founder Project and VIP partner launch—eliminating external agency retainers and paid-ad dependency.</p>
+        <div class="sc-grid-2">
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Technical Stack &amp; Quantum Entanglement:</strong> Combines <em>SISTAR Studio</em> automated media pipelines (<em>Veo video generation, Sharon TTS, NotebookLM audio/video synthesis</em> producing 10+ localized short-form videos, blogs, and detail pages daily) with <em>Qubit Star</em> influencer matching and <em>SISTAR CRM</em> automated outbound funnels.</p>
+          </div>
+          <div>
+            <p class="sc-p" style="margin-bottom:0;"><strong>Commercialization &amp; Value Capture:</strong> Slashes Customer Acquisition Cost (CAC) across all 15 Founder Projects to near zero while monetizing externally as a productized &ldquo;AI Marketing Agency-in-a-Box&rdquo; subscription for global partner brands.</p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div><strong>Foundational Impact:</strong> Guaranteed Go-To-Market Velocity for Every Ecosystem Node</div>
+          <div><strong>External Revenue Model:</strong> Project-Tiered Marketing SaaS + Performance Revenue Share</div>
+          <div><strong>Target Gross Margin:</strong> 75&ndash;85% Programmatic Media &amp; SaaS Margin</div>
+        </div>
+      </div>
+
+      <div class="sc-callout" style="margin-top:28px;">
+        <div class="sc-callout-title">The Complete Entangled Flywheel: How All 15 Founder Projects Compound Together</div>
+        <p class="sc-p" style="margin-bottom:0;"><strong>Tier I (Projects 01&ndash;06)</strong> provides the zero-overhead AI brain, ERP, and executive command center &rarr; <strong>Tier II (Projects 07&ndash;09)</strong> proves the model in high-margin veterinary bio-health, generating immediate B2B cashflow and proprietary clinical data &rarr; <strong>Tier III (Projects 10&ndash;13)</strong> scales distribution globally through Sistar Challengers and direct $t=0$ AI commerce/trade platforms &rarr; <strong>Tier IV (Projects 14&ndash;15)</strong> clones these validated engines into new VIP partner ventures daily with automated full-funnel marketing. This is the living realization of <strong>One Spark, Infinite Galaxifying</strong>.</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
