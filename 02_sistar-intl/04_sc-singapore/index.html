@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
   <title>*sc | sistar company singapore — sistar company - sistar intl - sc singapore</title>
-  <meta name="description" content="sc singapore (SCS) — Global quantum finance, Qubit Funds treasury, daily NAV disclosure, and multilateral offsetting clearinghouse of *sc." />
+  <meta name="description" content="sc singapore (SCS) — Global quantum finance, Qubit Funds treasury, daily NAV disclosure, Dual-Track Risk Firewall, and multilateral offsetting clearinghouse of *sc." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*sc | sistar company singapore",
-    "description": "sc singapore (SCS) — Global quantum finance, Qubit Funds treasury, daily NAV disclosure, and multilateral offsetting clearinghouse of *sc.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "sistar company (*sc)",
-      "alternateName": "signal star",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "sistar company singapore (SCS / sc singapore)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/02_sistar-intl/04_sc-singapore/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*sc | sistar company singapore — Global Quantum Finance & Multilateral Clearing Monograph",
+        "description": "sc singapore (SCS) — Global quantum finance, Qubit Funds treasury, daily NAV disclosure, and multilateral offsetting clearinghouse of *sc.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "alternateName": "signal star",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -30,57 +44,649 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-doc { box-sizing: border-box; width: 100%; max-width: min(1400px, 96%); padding: clamp(48px, 6vh, 84px) clamp(28px, 6vw, 96px) 120px; }
-    .sc-eyebrow { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 500; color: #526D82; letter-spacing: 0.04em; margin: 0 0 8px 0; text-transform: lowercase; }
-    .sc-main-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #27374D; margin: 0 0 20px 0; letter-spacing: -0.03em; line-height: 1.05; text-transform: lowercase; }
-    .sc-lead { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.12rem, 1.5vw, 1.28rem); font-weight: 500; color: #27374D; line-height: 1.65; margin: 0 0 56px 0; }
-    .sc-section { margin-bottom: 52px; }
-    .sc-sec-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.35rem, 2vw, 1.6rem); font-weight: 700; color: #27374D; margin: 0 0 14px 0; letter-spacing: -0.02em; line-height: 1.3; padding-left: 1.45em; text-indent: -1.45em; }
-    .sc-sec-body { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.85; color: #27374D; margin: 0 0 16px 2.15rem; }
-    .sc-list { list-style: none; margin: 12px 0 20px 2.15rem; padding-left: 0; font-family: "Inter", sans-serif; font-size: 0.98rem; line-height: 1.85; color: #27374D; }
-    .sc-list li { margin-bottom: 14px; padding-left: 1.25em; text-indent: -1.25em; }
-    .sc-hr { border: 0; border-top: 1px solid rgba(39, 55, 77, 0.16); margin: 48px 0; }
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
+      font-family: "Inter", sans-serif;
+      color: #0f172a;
+      line-height: 1.76;
+    }
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
+    }
+    .sc-route {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .sc-btn-pdf {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+      background: rgba(22, 135, 101, 0.15);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-doc-h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
+      font-weight: 700;
+      color: #0f172a;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
+      font-weight: 500;
+      color: #0f172a;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
+    }
+    @media print {
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-doc">
-    <p class="sc-eyebrow">sistar company - sistar intl - sc singapore</p>
-    <h1 class="sc-main-title">sistar company singapore</h1>
-    <p class="sc-lead">
-      "The Global Quantum Finance, Multilateral Clearing &amp; Treasury Hub (SCS). Orchestrating Qubit Funds, daily NAV public disclosure, cross-border trade factoring, and cashless debt extinction."
-    </p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - sistar intl - sc singapore</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export SC Singapore Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Strategic Identity &amp; Role within the *sc Universe</h2>
-      <p class="sc-sec-body">
-        <strong>sistar company singapore (sc singapore / SCS)</strong> serves as the financial, legal, and algorithmic clearing nexus of the Signal Star Universe. Leveraging Singapore's position as Asia's premier fintech, maritime logistics, and international arbitration center, <em>sc singapore</em> governs our capital flows, multi-currency settlements, and risk-isolated holding structures.
-      </p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — GLOBAL QUANTUM FINANCE & MULTILATERAL CLEARING HUB -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">NODE [SC.SG / SCS] &bull; GLOBAL TREASURY, QUBIT FUNDS &amp; DAILY NAV AUDIT</span>
+      </div>
+      <h1 class="sc-doc-h1">sistar company singapore (SCS) — Global Quantum Finance, Multilateral Clearing &amp; Treasury Hub</h1>
+      <p class="sc-lead">"The Global Quantum Finance, Multilateral Clearing &amp; Treasury Hub (SCS). Orchestrating Qubit Funds, daily NAV public disclosure, cross-border trade factoring, and cashless debt extinction."</p>
+
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote"><strong>sistar company singapore (sc singapore / SCS)</strong> serves as the financial, legal, and algorithmic clearing nexus of the Signal Star Universe. Leveraging Singapore's position as Asia's premier fintech, maritime logistics, and international arbitration center, <em>sc singapore</em> governs our capital flows, multi-currency settlements, and risk-isolated holding structures.</p>
+        <p class="sc-p">Every cross-border trade transaction, 70/30 PG webhook split, and 4-Way Qubit Bank barter offset across Korea, Indonesia, Vietnam, China, Japan, the US, and India is netted and audited through <strong>sc singapore</strong>—enforcing a strict legal firewall between core intellectual property (<em>SC Index</em>) and high-yield commercial SPVs (<em>Biz Galaxy</em>).</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">Daily NAV Audit</div>
+          <div class="sc-kpi-desc">Automated AI Accounting &amp; Public Net Asset Value Disclosure via SC Index</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">4-Way Qubit Bank</div>
+          <div class="sc-kpi-desc">Time, Space, Idea &amp; Petfood/Commodity Multilateral Netting Ledger</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">Dual-Track Firewall</div>
+          <div class="sc-kpi-desc">100% Legal Separation Between Core IP Holding &amp; Operating Trade SPVs</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">IATA &amp; IADA Anchor</div>
+          <div class="sc-kpi-desc">Neutral Common-Law Arbitration &amp; Sovereign Alliance Clearinghouse</div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG 1: SC SINGAPORE DUAL-TRACK FIREWALL & 4-WAY QUBIT CLEARINGHOUSE -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC Singapore Dual-Track Investment Firewall and 4-Way Qubit Bank Clearinghouse">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // SC SINGAPORE [SCS] — DUAL-TRACK CAPITAL FIREWALL, 4-WAY QUBIT BANK &amp; DAILY NAV CLEARING</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Column: Track 1 SC Index -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. TRACK A: SC INDEX VAULT</text>
+
+          <rect x="38" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="48" y="116" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Intangible Asset Isolation</text>
+          <text x="48" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Holds 100 Patents, 100 Global Trademarks,</text>
+          <text x="48" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Qubit Algorithm Code &amp; Treasury Reserves</text>
+
+          <rect x="38" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Daily Public NAV Auditing</text>
+          <text x="48" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Real-time AI accounting pipeline publishes</text>
+          <text x="48" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">verified Net Asset Value for LP/VC clarity</text>
+
+          <rect x="38" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="48" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">ZERO OPERATIONAL CONTAGION</text>
+          <text x="48" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Ring-fenced from shipping/trade liabilities</text>
+
+          <!-- Center Column: 4-Way Qubit Clearinghouse -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="351" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. 4-WAY QUBIT CLEARINGHOUSE</text>
+
+          <rect x="351" y="96" width="124" height="66" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="361" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">IDEA BANK</text>
+          <text x="361" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Patent &amp; Brand</text>
+          <text x="361" y="147" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">License Credits</text>
+
+          <rect x="485" y="96" width="124" height="66" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="495" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TIME BANK</text>
+          <text x="495" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">GMP Shift Hours</text>
+          <text x="495" y="147" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; AI Dev Sprints</text>
+
+          <rect x="351" y="172" width="124" height="66" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="361" y="192" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SPACE BANK</text>
+          <text x="361" y="209" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Cold/Bonded</text>
+          <text x="361" y="223" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Warehouse Bays</text>
+
+          <rect x="485" y="172" width="124" height="66" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="495" y="192" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">PETFOOD/BIO</text>
+          <text x="495" y="209" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Botanical APIs</text>
+          <text x="495" y="223" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; Finished SKUs</text>
+
+          <rect x="351" y="250" width="258" height="72" rx="4" fill="#1e3a8a" />
+          <text x="363" y="272" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">CASHLESS DEBT EXTINCTION</text>
+          <text x="363" y="289" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Converts internal Qubit units into legally</text>
+          <text x="363" y="304" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">compliant B2B trade credits &amp; vouchers.</text>
+
+          <!-- Right Column: Track 2 Biz Galaxy & Qubit Link -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="664" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. TRACK B: BIZ GALAXY &amp; LINK</text>
+
+          <rect x="664" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="676" y="116" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">High-Yield Commercial SPVs</text>
+          <text x="676" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Country-specific &amp; vertical JVs across</text>
+          <text x="676" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Indonesia, Vietnam, Japan, India &amp; China</text>
+
+          <rect x="664" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="676" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Qubit Link&trade; Smart Factoring</text>
+          <text x="676" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Locks buyers, suppliers, shipping lines &amp;</text>
+          <text x="676" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">70/30 PG webhooks into simultaneous clear</text>
+
+          <rect x="664" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="676" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">IATA &amp; IADA ARBITRATION HUB</text>
+          <text x="676" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Singapore common-law compliance anchor</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // SC Singapore's Dual-Track Investment &amp; Risk Firewall (SC Index vs. Biz Galaxy) and the 4-Way Qubit Bank multilateral clearinghouse.</figcaption>
+      </figure>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER II: CORE FINANCIAL & COMMERCIAL ENGINES -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">CORE FINANCIAL ENGINES &bull; TREASURY &amp; CLEARING</span>
+      </div>
+      <h2 class="sc-chapter-h2">Core Financial &amp; Commercial Engines Governed by SC Singapore</h2>
+      <p class="sc-lead"><strong>sistar company singapore (SCS)</strong> operates three institutional financial engines that protect investor capital while accelerating cross-border trade velocity:</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Core Financial &amp; Commercial Engines</h2>
-      <ul class="sc-list">
-        <li>• <strong>Dual-Track Investment &amp; Risk Firewall (<em>SC Index</em> vs. <em>Biz Galaxy</em>):</strong> Manages the master capital architecture separating the stable core holding portfolio (<em>SC Index</em>) from high-yield operational ventures (<em>Biz Galaxy</em>), legally isolating the core organization from external fulfillment liabilities.</li>
-        <li>• <strong>Multi-Dimensional <em>qubit banks</em> &amp; Closed-Loop Loyalty Protocol:</strong> Operates the clearing ledger for <em>Idea Bank, Time Bank, Space Bank, and Petfood/Commodity Bank</em>—converting internal Qubit value units into legally compliant e-commerce vouchers and B2B trade credits.</li>
-        <li>• <strong>Cross-Border Trade Factoring (<em>Qubit Link™</em>):</strong> Locks international buyers, regional suppliers, shipping lines, and trade finance institutions into simultaneous smart-contract and webhook settlements.</li>
-      </ul>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">1. Dual-Track Investment &amp; Risk Firewall (<em>SC Index</em> vs. <em>Biz Galaxy</em>)</h3>
+          <p class="sc-p">Manages the master capital architecture separating the stable core holding portfolio (<em>SC Index</em>) from high-yield operational ventures (<em>Biz Galaxy</em>), legally isolating the core organization from external fulfillment liabilities.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">2. Multi-Dimensional <em>qubit banks</em> &amp; Closed-Loop Loyalty Protocol</h3>
+          <p class="sc-p">Operates the clearing ledger for <em>Idea Bank, Time Bank, Space Bank, and Petfood/Commodity Bank</em>—converting internal Qubit value units into legally compliant e-commerce vouchers and B2B trade credits.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">3. Cross-Border Trade Factoring (<em>Qubit Link&trade;</em>)</h3>
+          <p class="sc-p">Locks international buyers, regional suppliers, shipping lines, and trade finance institutions into simultaneous smart-contract and webhook settlements.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>Qubit Bank Ledger</th>
+              <th>Underlying Contributed Asset</th>
+              <th>Primary Contributing Nodes</th>
+              <th>Cleared Output Credit</th>
+              <th>FX &amp; Working Capital Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">Q-IDEA</span></td>
+              <td>Patents, Clinical Formulations, Brand Trademarks &amp; R1 BOMs</td>
+              <td>SC Korea (SCK), SC Japan (SCJ), SC USA (SCU)</td>
+              <td>Royalty-bearing brand licenses &amp; equity stakes in local JVs</td>
+              <td>Monetizes R&amp;D globally with zero upfront licensing friction</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">Q-TIME</span></td>
+              <td>Idle GMP Production Hours, Sachet Filling Shifts &amp; AI Dev Hours</td>
+              <td>SC Korea (SCK), SC Indonesia (SCI), SC Vietnam (SCV)</td>
+              <td>Finished product allocations &amp; SaaS revenue-share rights</td>
+              <td>Eliminates fixed payroll and toll-manufacturing cash burn</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">Q-SPACE</span></td>
+              <td>Cold-Chain Storage, Bonded Warehouses &amp; Clinic/Retail Shelves</td>
+              <td>SC Indonesia (SCI), SC Vietnam (SCV), Retailer Alliance</td>
+              <td>Priority inventory drops &amp; 30% instant checkout margin</td>
+              <td>Replaces overseas warehouse lease capex with variable space sharing</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">Q-BIO</span></td>
+              <td>Standardized Botanical Extracts, Vet APIs &amp; Hardware/Packaging</td>
+              <td>SC India (SCN), SC China (SCC), SC Korea (SCK)</td>
+              <td>Cross-border barter credits redeemable for finished SKUs</td>
+              <td>Reduces hard-currency USD/FX outflow by up to <span class="notranslate" translate="no">65%</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER III: MULTILATERAL NETTING MATHEMATICS & DAILY NAV FORMULA -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">ALGORITHMIC NETTING &bull; DAILY PUBLIC NAV MATHEMATICS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Multilateral Debt Extinction &amp; Daily Public NAV Auditing</h2>
+      <p class="sc-lead">Instead of executing eight separate bilateral wire transfers—each losing <span class="notranslate" translate="no">1.5%–3.5%</span> in bank FX spreads and waiting days for SWIFT settlement—<strong>sc singapore</strong> nets multilateral obligations algorithmically.</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Partnership &amp; Investor Confidence</h2>
-      <ul class="sc-list">
-        <li>• <strong>Daily Public NAV Transparency:</strong> Automated AI accounting pipelines calculate and publish real-time Net Asset Value (NAV) across all entangled <em>*sc</em> projects, providing institutional investors with complete audit clarity.</li>
-        <li>• <strong>Multilateral Offsetting Clearinghouse:</strong> Enables global B2B partners to settle cross-border obligations across physical goods, IT/AI solutions, IP licenses, and warehouse space without foreign-exchange friction.</li>
-        <li>• <strong>International Alliance Governance (<em>IATA</em> &amp; <em>IADA</em>):</strong> Anchors global compliance and data standards for the International AI-Trade Association and International AI-Data Association.</li>
-      </ul>
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: MULTILATERAL GRAPH CYCLE DEBT EXTINCTION (SCS CLEARING ENGINE)</span>
+        Cycle(SCN_Botanicals &rarr; SCK_Concentrate &rarr; SCI_Sachets &rarr; SCN_Finished_SKUs) &rArr; Net_Cash_Transfer = min(Edge_Weights) &rarr; Extinguished<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: DAILY PUBLIC NAV CALCULATION (SC INDEX)</span>
+        NAV_Daily(t) = [ Cash_Treasury_SCS + &Sigma; Verified_IP_Valuation(100_Patents, 100_Brands) + &Sigma; (0.70 &times; PG_Escrow_Inflows) - Senior_K-SURE_Lines ] / Total_SC_Index_Units
+      </div>
+
+      <!-- INLINE SVG 2: MULTILATERAL NETTING GRAPH & DAILY NAV PIPELINE -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC Singapore Multilateral Netting Cycle and Daily Public NAV Audit Pipeline">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // SC SINGAPORE MULTILATERAL BARTER NETTING CYCLE &amp; DAILY PUBLIC NAV AUDIT PIPELINE</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Box: Multilateral Netting Ring -->
+          <rect x="24" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="40" y="82" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">A. 4-NODE CASHLESS BARTER NETTING RING</text>
+
+          <rect x="40" y="98" width="196" height="68" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="50" y="118" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. SC INDIA [SCN]</text>
+          <text x="50" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Supplies $100K IndoHerbs</text>
+          <text x="50" y="149" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Botanical Extracts &rarr; SCK</text>
+
+          <rect x="256" y="98" width="196" height="68" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="266" y="118" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. SC KOREA [SCK]</text>
+          <text x="266" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Supplies $100K Clinical</text>
+          <text x="266" y="149" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Bio Premix &rarr; SCI Indonesia</text>
+
+          <rect x="256" y="180" width="196" height="68" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="266" y="200" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. SC INDONESIA [SCI]</text>
+          <text x="266" y="217" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Supplies $100K Rp 1,320</text>
+          <text x="266" y="231" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Finished Sachets &rarr; SCC/SCN</text>
+
+          <rect x="40" y="180" width="196" height="68" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="50" y="200" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">4. SC CHINA [SCC]</text>
+          <text x="50" y="217" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Supplies $100K Foil &amp; POCT</text>
+          <text x="50" y="231" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Hardware &rarr; SCK / SCI</text>
+
+          <rect x="40" y="260" width="412" height="60" rx="4" fill="#0f5132" />
+          <text x="52" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SCS SINGAPORE NETTING RESULT:</text>
+          <text x="52" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">$400K Gross Cross-Border Trade Cleared with $0 SWIFT FX</text>
+          <text x="52" y="311" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">Outflow via Qubit Bank Voucher &amp; Ledger Offsetting.</text>
+
+          <!-- Right Box: Daily Public NAV Audit -->
+          <rect x="492" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="508" y="82" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">B. DAILY PUBLIC NAV AUDIT PIPELINE (24/7)</text>
+
+          <rect x="508" y="98" width="412" height="66" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="520" y="118" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. Real-Time Webhook Ingestion (8 Countries)</text>
+          <text x="520" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Every 70/30 PG checkout, K-SURE shipment &amp; SaaS invoice</text>
+          <text x="520" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">streams into the Singapore Qubit ERP ledger in real time.</text>
+
+          <rect x="508" y="176" width="412" height="66" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="520" y="196" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. Overnight AI Reconciliation (22:00–08:00 KST)</text>
+          <text x="520" y="213" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Reconciles warehouse vision audits, patent royalty accruals</text>
+          <text x="520" y="228" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; multi-currency balances into SGD/USD equivalent.</text>
+
+          <rect x="508" y="254" width="412" height="66" rx="4" fill="#1e3a8a" />
+          <text x="520" y="274" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. 08:00 AM Public NAV Disclosure (scindex.org)</text>
+          <text x="520" y="291" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">Institutional LPs, VCs &amp; JV partners inspect verified</text>
+          <text x="520" y="306" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">asset backing and daily yield without quarterly audit lag.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // SC Singapore's 4-Node Cashless Barter Netting Ring (left) and the 24/7 Daily Public NAV Audit Pipeline published on scindex.org (right).</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: INTERNATIONAL ALLIANCE GOVERNANCE (IATA & IADA) -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">ALLIANCE GOVERNANCE &bull; IATA &amp; IADA COMPLIANCE</span>
+      </div>
+      <h2 class="sc-chapter-h2">International Alliance Governance: Anchoring IATA &amp; IADA in Singapore</h2>
+      <p class="sc-lead"><strong>sc singapore</strong> anchors the legal compliance, smart-contract escrow rules, and data sovereignty standards for the <strong>International AI Trade Alliance (IATA)</strong> and the <strong>International AI Data Alliance (IADA)</strong>.</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. Common-Law Escrow &amp; Arbitration</h3>
+          <p class="sc-p">Provides neutral Singapore common-law contract templates and SIAC-compatible dispute resolution for multi-party cross-border trade deals executed across our 8 hubs.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. Closed-Loop Voucher Compliance</h3>
+          <p class="sc-p">Structures all 4-Way Qubit Bank credits as legally compliant closed-loop B2B commercial vouchers and loyalty offsets—avoiding unregulated speculative crypto volatility.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">3. Sovereign Data Governance</h3>
+          <p class="sc-p">Enforces PDPA/GDPR-aligned zero-knowledge data federation rules for clinical and trade datasets shared across IADA member institutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER V: PARTNERSHIP & MULTILATERAL CLEARING ONBOARDING -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; MULTILATERAL CLEARINGHOUSE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Partnership &amp; Investor Confidence: Onboarding into SC Singapore</h2>
+      <p class="sc-lead">Global B2B trade counterparties, trade finance institutions, and regional JV partners onboard through <strong>sc singapore</strong> to eliminate FX friction and payment default:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Daily Public NAV Transparency</h3>
+          <p class="sc-p">Automated AI accounting pipelines calculate and publish real-time Net Asset Value (NAV) across all entangled <em>*sc</em> projects, providing institutional investors with complete audit clarity.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Multilateral Offsetting Clearinghouse</h3>
+          <p class="sc-p">Enables global B2B partners to settle cross-border obligations across physical goods, IT/AI solutions, IP licenses, and warehouse space without foreign-exchange friction.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">International Alliance Governance (<em>IATA</em> &amp; <em>IADA</em>)</h3>
+          <p class="sc-p">Anchors global compliance and data standards for the International AI-Trade Association and International AI-Data Association.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER VI: VC & INSTITUTIONAL INVESTOR THESIS FOR SC SINGAPORE -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; LP INVESTMENT THESIS &bull; QUBIT FUNDS &amp; SC INDEX</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional LP Thesis: The Singapore Treasury &amp; IP Vault</h2>
+      <p class="sc-lead">For global family offices, institutional Venture Capital funds, and private credit LPs, <strong>sc singapore (SCS)</strong> provides the clean, common-law institutional vehicle to participate in the Signal Star Universe.</p>
+      <div class="sc-callout">
+        <strong>Dual-Track Institutional Participation:</strong> LPs and equity investors can allocate to <strong>SC Index</strong> (holding our 100 Patents, 100 Brands, and core AI SaaS IP with zero operational liability) or co-invest into ring-fenced <strong>Qubit Trade Factoring &amp; Biz Galaxy SPVs</strong> backed by K-SURE sovereign guarantees and 70/30 real-time PG webhook cashflows.
+      </div>
     </section>
   </main>
 </body>

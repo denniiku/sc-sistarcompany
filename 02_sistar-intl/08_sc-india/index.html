@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
   <title>*sc | sistar company india — sistar company - sistar intl - sc india</title>
-  <meta name="description" content="sc india (SCIND) — Ayurvedic phyto-sourcing (sisayurvedic / Vital Seeds), ind.scarlet.ai commerce gateway, and AI engineering hub of *sc." />
+  <meta name="description" content="sc india (SCIND / SCN) — Ayurvedic phyto-sourcing (sisayurvedic / IndoHerbs / Vital Seeds), ind.scarlet.ai commerce gateway, and AI engineering hub of *sc." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*sc | sistar company india",
-    "description": "sc india (SCIND) — Ayurvedic phyto-sourcing (sisayurvedic / Vital Seeds), ind.scarlet.ai commerce gateway, and AI engineering hub of *sc.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "sistar company (*sc)",
-      "alternateName": "signal star",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "sistar company india (SCIND / SCN / sc india)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/02_sistar-intl/08_sc-india/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*sc | sistar company india — Ayurvedic Bio-Science, Phyto-Raw Material & AI Engineering Monograph",
+        "description": "sc india (SCIND) — Ayurvedic phyto-sourcing (sisayurvedic / Vital Seeds), ind.scarlet.ai commerce gateway, and AI engineering hub of *sc.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "alternateName": "signal star",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -30,57 +44,637 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-doc { box-sizing: border-box; width: 100%; max-width: min(1400px, 96%); padding: clamp(48px, 6vh, 84px) clamp(28px, 6vw, 96px) 120px; }
-    .sc-eyebrow { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 500; color: #526D82; letter-spacing: 0.04em; margin: 0 0 8px 0; text-transform: lowercase; }
-    .sc-main-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #27374D; margin: 0 0 20px 0; letter-spacing: -0.03em; line-height: 1.05; text-transform: lowercase; }
-    .sc-lead { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.12rem, 1.5vw, 1.28rem); font-weight: 500; color: #27374D; line-height: 1.65; margin: 0 0 56px 0; }
-    .sc-section { margin-bottom: 52px; }
-    .sc-sec-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.35rem, 2vw, 1.6rem); font-weight: 700; color: #27374D; margin: 0 0 14px 0; letter-spacing: -0.02em; line-height: 1.3; padding-left: 1.45em; text-indent: -1.45em; }
-    .sc-sec-body { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.85; color: #27374D; margin: 0 0 16px 2.15rem; }
-    .sc-list { list-style: none; margin: 12px 0 20px 2.15rem; padding-left: 0; font-family: "Inter", sans-serif; font-size: 0.98rem; line-height: 1.85; color: #27374D; }
-    .sc-list li { margin-bottom: 14px; padding-left: 1.25em; text-indent: -1.25em; }
-    .sc-hr { border: 0; border-top: 1px solid rgba(39, 55, 77, 0.16); margin: 48px 0; }
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
+      font-family: "Inter", sans-serif;
+      color: #0f172a;
+      line-height: 1.76;
+    }
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
+    }
+    .sc-route {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .sc-btn-pdf {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+      background: rgba(22, 135, 101, 0.15);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-doc-h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
+      font-weight: 700;
+      color: #0f172a;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
+      font-weight: 500;
+      color: #0f172a;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
+    }
+    @media print {
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-doc">
-    <p class="sc-eyebrow">sistar company - sistar intl - sc india</p>
-    <h1 class="sc-main-title">sistar company india</h1>
-    <p class="sc-lead">
-      "The Ayurvedic Bio-Science, Phyto-Raw Material &amp; AI Engineering Powerhouse (SCIND). Powering sisayurvedic (Vital Seeds), ind.scarlet.ai programmatic commerce, and global technical talent entanglement."
-    </p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - sistar intl - sc india</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export SC India Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Strategic Identity &amp; Role within the *sc Universe</h2>
-      <p class="sc-sec-body">
-        <strong>sistar company india (sc india / SCIND)</strong> is the bio-botanical origin hub and South Asian digital commerce engine of the Signal Star Universe. Combining India's Ayurvedic phytochemistry heritage and world-scale pharmaceutical manufacturing with deep AI and software engineering talent, <em>sc india</em> fuels both our physical wellness supply chain and our digital automation pipelines.
-      </p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — AYURVEDIC BIO-SCIENCE, PHYTO-RAW MATERIAL & AI HUB -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">NODE [SC.IN / SCIND] &bull; INDOHERBS, VITAL SEEDS &amp; PYTHON/MCP ENGINEERING</span>
+      </div>
+      <h1 class="sc-doc-h1">sistar company india (SCIND) — Ayurvedic Bio-Science, Phyto-Raw Material &amp; AI Engineering Powerhouse</h1>
+      <p class="sc-lead">"The Ayurvedic Bio-Science, Phyto-Raw Material &amp; AI Engineering Powerhouse (SCIND). Powering sisayurvedic (Vital Seeds), ind.scarlet.ai programmatic commerce, and global technical talent entanglement."</p>
+
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote"><strong>sistar company india (sc india / SCIND)</strong> is the bio-botanical origin hub and South Asian digital commerce engine of the Signal Star Universe. Combining India's Ayurvedic phytochemistry heritage and world-scale pharmaceutical manufacturing with deep AI and software engineering talent, <em>sc india</em> fuels both our physical wellness supply chain and our digital automation pipelines.</p>
+        <p class="sc-p">Through the <strong>India–ASEAN–Korea Quantum Bio-Corridor</strong>, standardized botanical extracts and veterinary APIs sourced in India (<em>IndoHerbs / Vital Seeds</em>) are entangled directly with Korean clinical R&amp;D (<em>Auto-Formulator R1</em>) and Indonesian <span class="notranslate" translate="no">Rp 1,320 (~$0.08)</span> GMP micro-sachet packaging—while Indian Python/RAG architects keep our <strong>SC Intelligence Core</strong> running 24/7.</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">IndoHerbs &bull; APIs</div>
+          <div class="sc-kpi-desc">Standardized Ayurvedic Extracts, Phytogenic Feed Additives &amp; Vet APIs</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">IN-ID-KR Corridor</div>
+          <div class="sc-kpi-desc">Direct Raw-Material Entanglement with SC Korea R&amp;D &amp; SC Indonesia Sachets</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">ind.scarlet.ai</div>
+          <div class="sc-kpi-desc">1.4B Consumer Market AI Commerce &amp; Reverse-Auction Demand Aggregation</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">Python / MCP Hub</div>
+          <div class="sc-kpi-desc">Data Factory &amp; Zero-Entropy RAG Engineering via SISTAR Challengers Int'l</div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG 1: SC INDIA AYURVEDIC BIO-CORRIDOR & AI DATA FACTORY HUB -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC India Ayurvedic Bio-Sourcing Corridor, ind.scarlet.ai, and Python/MCP Engineering Hub">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // SC INDIA [SCIND] — INDOHERBS PHYTO-SOURCING, IND.SCARLET.AI &amp; PYTHON/RAG ENGINEERING HUB</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Column 1: Ayurvedic & Phyto Sourcing -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. SISAYURVEDIC &amp; INDOHERBS</text>
+
+          <rect x="38" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="48" y="116" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Standardized Phyto-Extracts</text>
+          <text x="48" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">HPLC-verified Ashwagandha, Curcumin,</text>
+          <text x="48" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Boswellia, Moringa &amp; Vital Seeds</text>
+
+          <rect x="38" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Phytogenic Livestock &amp; Vet APIs</text>
+          <text x="48" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Antibiotic-free herbal poultry/aquaculture</text>
+          <text x="48" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">additives &amp; veterinary active ingredients</text>
+
+          <rect x="38" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="48" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">AUTO-FORMULATOR R1 FEEDSTOCK</text>
+          <text x="48" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Primary botanical input for Pipeline 3</text>
+
+          <!-- Column 2: India-ASEAN-Korea Quantum Corridor -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="351" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. IN-ID-KR QUANTUM BIO-CORRIDOR</text>
+
+          <rect x="351" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="363" y="116" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Cashless Raw Material Offsetting</text>
+          <text x="363" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Indian extractors supply bulk botanicals &harr;</text>
+          <text x="363" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Receive Korean POCT kits &amp; K-Vet biologics</text>
+
+          <rect x="351" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="363" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Indonesian Rp 1,320 Sachet Fusion</text>
+          <text x="363" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Indian Ayurveda + Indonesian Jamu repacked</text>
+          <text x="363" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">at Rp 1,320 (~$0.08) for ASEAN mass retail</text>
+
+          <rect x="351" y="260" width="258" height="62" rx="4" fill="#1e3a8a" />
+          <text x="363" y="280" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">IND.SCARLET.AI COMMERCE</text>
+          <text x="363" y="297" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Reverse-auction B2B/B2C across India</text>
+
+          <!-- Column 3: Python / RAG & Data Factory Engineering -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="664" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. PYTHON / RAG &amp; DATA FACTORY</text>
+
+          <rect x="664" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="676" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Backend &amp; RAG Architects</text>
+          <text x="676" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Bangalore/Mumbai data scientists building</text>
+          <text x="676" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Zero-Entropy RAG &amp; MCP server pipelines</text>
+
+          <rect x="664" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="676" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Follow-the-Sun Relay (UTC+5:30)</text>
+          <text x="676" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Bridges Seoul/Jakarta overnight runs with</text>
+          <text x="676" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">European &amp; North American market hours</text>
+
+          <rect x="664" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="676" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SISTAR CHALLENGERS INDIA</text>
+          <text x="676" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Tokenized via Qubit Time &amp; Idea Banks</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // SC India (SCIND) operational matrix: Ayurvedic &amp; veterinary API sourcing (IndoHerbs / Vital Seeds), the India–ASEAN–Korea Quantum Bio-Corridor, and Python/RAG backend engineering.</figcaption>
+      </figure>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER II: CORE BIO-SOURCING & DIGITAL ENGINES IN INDIA -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">CORE ENGINES &bull; AYURVEDA, IND.SCARLET.AI &amp; DATA FACTORY</span>
+      </div>
+      <h2 class="sc-chapter-h2">Core Bio-Sourcing &amp; Digital Engines in SC India</h2>
+      <p class="sc-lead"><strong>sistar company india (SCIND)</strong> anchors three core pillars of the Signal Star global value chain:</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Core Bio-Sourcing &amp; Digital Engines</h2>
-      <ul class="sc-list">
-        <li>• <strong>Ayurvedic &amp; Phyto-Therapeutic Sourcing (<em>sisayurvedic - ayurveda</em> &amp; <em>Vital Seeds</em>):</strong> Direct B2B sourcing and clinical standardization of active herbal extracts, phytogenic livestock feed additives (<em>Indian Herbs</em>), and natural human and pet therapeutics.</li>
-        <li>• <strong>Indian AI Commerce Gateway (<em>ind.scarlet.ai</em>):</strong> Conversational B2B/B2C commerce and reverse-auction demand aggregation tailored to India's rapidly expanding digital retail, veterinary, and healthcare markets.</li>
-        <li>• <strong>Global AI &amp; Data Factory Engineering (<em>data factory intl</em> &amp; <em>tech trade intl</em>):</strong> Mobilizes top-tier Indian data scientists, Python/MCP backend engineers, and RAG architects via <em>SISTAR Challengers Int'l</em>.</li>
-      </ul>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">1. Ayurvedic &amp; Phyto-Therapeutic Sourcing (<em>sisayurvedic - ayurveda</em> &amp; <em>Vital Seeds</em>)</h3>
+          <p class="sc-p">Direct B2B sourcing and clinical standardization of active herbal extracts, phytogenic livestock feed additives (<em>IndoHerbs</em>), and natural human and pet therapeutics.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">2. Indian AI Commerce Gateway (<em>ind.scarlet.ai</em>)</h3>
+          <p class="sc-p">Conversational B2B/B2C commerce and reverse-auction demand aggregation tailored to India's rapidly expanding digital retail, veterinary, and healthcare markets.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">3. Global AI &amp; Data Factory Engineering (<em>data factory intl</em> &amp; <em>tech trade intl</em>)</h3>
+          <p class="sc-p">Mobilizes top-tier Indian data scientists, Python/MCP backend engineers, and RAG architects via <em>SISTAR Challengers Int'l</em>.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>SCIND Pipeline</th>
+              <th>Product / Technical Category</th>
+              <th>Standardization &amp; QA Protocol</th>
+              <th>Entangled Sister Nodes</th>
+              <th>Commercial &amp; Financial Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">SCN-01</span></td>
+              <td><strong>IndoHerbs &amp; Vital Seeds Botanicals</strong></td>
+              <td>HPLC/GC-MS standardized active marker percentages + CoA</td>
+              <td>SC Korea (R1 Formulation) &amp; SC Indonesia (<span class="notranslate" translate="no">Rp 1,320</span> Sachets)</td>
+              <td>Powers Master Revenue Pipeline 3 with <span class="notranslate" translate="no">50%+</span> raw material cost advantage</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCN-02</span></td>
+              <td><strong>Phytogenic Poultry &amp; Aqua Feed Additives</strong></td>
+              <td>Non-antibiotic herbal growth &amp; immunity promoters</td>
+              <td>SC Indonesia (SCI) &amp; SC Vietnam (SCV <em>aquasis / sispharm</em>)</td>
+              <td>Direct container-scale B2B supply into ASEAN integrators</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCN-03</span></td>
+              <td><strong>Inbound K-Vet, POCT &amp; K-Beauty</strong></td>
+              <td>CDSCO / AYUSH registration &amp; local clinical distribution</td>
+              <td>SC Korea (SCK) &amp; SC China (SCC POCT Hardware)</td>
+              <td>Paid via cashless raw-material barter in the 4-Way Qubit Bank</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCN-04</span></td>
+              <td><strong>Python / RAG / MCP Backend Engineering</strong></td>
+              <td>Deterministic citation tests &amp; overnight Data Factory SLAs</td>
+              <td>SC Korea (SCK), SC USA (SCU) &amp; SC Vietnam (SCV)</td>
+              <td>Zero-fixed-burn engineering tokenized via <em>Qubit Time Bank</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER III: THE INDIA–ASEAN–KOREA QUANTUM BIO-CORRIDOR MATHEMATICS -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">TRIANGULAR BIO-ARBITRAGE &bull; AUTO-FORMULATOR R1</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Mathematics of the India–ASEAN–Korea Quantum Bio-Corridor</h2>
+      <p class="sc-lead">When Indian standardized phytochemistry is combined with Korean clinical delivery technology (liposomal/exosome/micro-encapsulation) and Indonesian <span class="notranslate" translate="no">Rp 1,320</span> GMP micro-sachet packaging, *sc creates a triangular bio-health moat that no single-country manufacturer can replicate.</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Partnership &amp; Investment Synergy</h2>
-      <ul class="sc-list">
-        <li>• <strong>The India–ASEAN–Korea Quantum Bio-Corridor:</strong> Indian herbal and phytogenic raw material suppliers are entangled directly with <em>sc indonesia</em> (localized sachet repacking) and <em>sc korea</em> (clinical R&amp;D formulation) via simultaneous <em>Qubit Link™</em> volume contracts.</li>
-        <li>• <strong>Cashless Raw Material Offsetting:</strong> Indian manufacturing partners receive Korean POCT diagnostics, K-Vet biologics, and <em>*sc</em> enterprise AI automation in direct multilateral offset for bulk Ayurvedic extracts.</li>
-        <li>• <strong>Follow-the-Sun Autonomous Engineering:</strong> Bridges time zones between Seoul, Jakarta, Mumbai, and New York so the <em>sc intelligence-core</em> Data Factory and commercial platforms operate non-stop around the clock.</li>
-      </ul>
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: AUTO-FORMULATOR R1 TRIANGULAR BOM OPTIMIZATION</span>
+        BOM_Optimal = argmin_{SCN_Extracts, SCK_Actives} [ Cost_Per_Clinical_Dose ] &nbsp;subject to&nbsp; Efficacy_Score &ge; Clinical_Threshold<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: CASHLESS PHYTO-FOR-DIAGNOSTICS BARTER SWAP (4-WAY QUBIT BANK)</span>
+        Value(Bulk_IndoHerbs_SCN &rarr; SCK/SCI) == Value(POCT_Kits_SCK + K-Beauty_SKUs &rarr; SCN) &rArr; $0 Hard-Currency FX Outflow
+      </div>
+
+      <!-- INLINE SVG 2: INDIA-KOREA-INDONESIA TRIANGULAR BIO-CORRIDOR -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="India-Korea-Indonesia Quantum Bio-Corridor and Cashless Raw Material Offsetting">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // THE INDIA–KOREA–INDONESIA QUANTUM BIO-CORRIDOR &amp; CASHLESS BARTER OFFSETTING</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Node 1: SC India -->
+          <rect x="24" y="60" width="286" height="274" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="40" y="84" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">VERTEX 1: SC INDIA [SCIND]</text>
+          <rect x="40" y="98" width="254" height="102" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="52" y="118" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Outbound: Phyto &amp; Vet APIs</text>
+          <text x="52" y="136" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; Standardized Ayurvedic Extracts</text>
+          <text x="52" y="152" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; Phytogenic Poultry/Aqua Premixes</text>
+          <text x="52" y="168" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; Python / RAG Engineering Hours</text>
+          <text x="52" y="186" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">Credited to Qubit Bio &amp; Time Banks</text>
+
+          <rect x="40" y="212" width="254" height="106" rx="4" fill="#0f5132" />
+          <text x="52" y="234" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Inbound to India (0% FX Drain):</text>
+          <text x="52" y="252" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Receives Korean POCT diagnostics, K-Vet</text>
+          <text x="52" y="267" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">companion animal therapeutics &amp; Michlo</text>
+          <text x="52" y="282" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">derma-cosmetics for ind.scarlet.ai</text>
+          <text x="52" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">distribution across Indian cities.</text>
+
+          <!-- Node 2: SC Korea -->
+          <rect x="337" y="60" width="286" height="274" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="353" y="84" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">VERTEX 2: SC KOREA [SCK]</text>
+          <rect x="353" y="98" width="254" height="102" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="365" y="118" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Auto-Formulator R1 Synthesis</text>
+          <text x="365" y="136" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; Blends Indian phyto-actives with</text>
+          <text x="365" y="152" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">  Korean peptides &amp; nano-emulsions</text>
+          <text x="365" y="168" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; Registers joint patents in SC Index</text>
+          <text x="365" y="186" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">&bull; Attaches K-SURE 90d Export Credit</text>
+
+          <rect x="353" y="212" width="254" height="106" rx="4" fill="#1e3a8a" />
+          <text x="365" y="234" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Clinical Value Multiplication:</text>
+          <text x="365" y="252" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Upgrades raw botanical commodities into</text>
+          <text x="365" y="267" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">high-margin clinical veterinary &amp; human</text>
+          <text x="365" y="282" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">longevity concentrates (3.5x–6x margin</text>
+          <text x="365" y="297" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">expansion over bulk herb trading).</text>
+
+          <!-- Node 3: SC Indonesia & ASEAN -->
+          <rect x="650" y="60" width="286" height="274" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="666" y="84" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">VERTEX 3: SC INDONESIA [SCI]</text>
+          <rect x="666" y="98" width="254" height="102" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="678" y="118" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Rp 1,320 (~$0.08) Sachet ODM</text>
+          <text x="678" y="136" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; Repacks IN+KR concentrates into</text>
+          <text x="678" y="152" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">  Halal/BPOM single-serve sachets</text>
+          <text x="678" y="168" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">&bull; 20x Superposition SKU deployment</text>
+          <text x="678" y="186" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">&bull; 70/30 Real-Time PG Settlement</text>
+
+          <rect x="666" y="212" width="254" height="106" rx="4" fill="#0f5132" />
+          <text x="678" y="234" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">ASEAN Mass-Market Velocity:</text>
+          <text x="678" y="252" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Penetrates 370M+ Indonesian &amp; Vietnamese</text>
+          <text x="678" y="267" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">consumers, poultry farms &amp; vet clinics</text>
+          <text x="678" y="282" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">while returning 70% PG cashflows to</text>
+          <text x="678" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">clear the entire 3-country triangle.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // The India–Korea–Indonesia Quantum Bio-Corridor: combining Indian Ayurvedic phyto-extracts, Korean Auto-Formulator R1 clinical synthesis, and Indonesian Rp 1,320 GMP micro-sachet ODM.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: FOLLOW-THE-SUN AUTONOMOUS DATA FACTORY & PYTHON/MCP HUB -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">FOLLOW-THE-SUN ENGINEERING &bull; PYTHON, RAG &amp; MCP</span>
+      </div>
+      <h2 class="sc-chapter-h2">Follow-the-Sun Autonomous Engineering: Bridging Seoul, Jakarta, Mumbai &amp; New York</h2>
+      <p class="sc-lead">Operating in Indian Standard Time (UTC+5:30), <strong>sc india</strong> provides the critical engineering bridge between East Asian overnight data runs and Western hemisphere commercial execution.</p>
+      <div class="sc-grid-2">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. Zero-Entropy RAG &amp; Phytochemical Knowledge Graph</h3>
+          <p class="sc-p">Indian data scientists and bioinformatics engineers curate structured phytochemical, veterinary toxicology, and global pharmacopoeia datasets inside the <strong>SC Intelligence Core</strong>—powering deterministic formulation generation for <em>Auto-Formulator R1</em>.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. ind.scarlet.ai Conversational B2B Matchmaking</h3>
+          <p class="sc-p">Localizes the <em>Ms. Scarlet</em> conversational commerce agent for Indian pharmaceutical exporters, veterinary distributors, and urban D2C wellness buyers across Mumbai, Bengaluru, Delhi NCR, and Hyderabad.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER V: PARTNERSHIP SYNERGY & ONBOARDING IN INDIA -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; INDIAN EXTRACTORS, PHARMA &amp; AI DEVS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Partnership &amp; Investment Synergy: Onboarding into SC India</h2>
+      <p class="sc-lead"><strong>sc india</strong> invites Indian botanical extractors, veterinary pharmaceutical manufacturers, and AI engineers to plug directly into our global network:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">The India–ASEAN–Korea Quantum Bio-Corridor</h3>
+          <p class="sc-p">Indian herbal and phytogenic raw material suppliers are entangled directly with <em>sc indonesia</em> (localized sachet repacking) and <em>sc korea</em> (clinical R&amp;D formulation) via simultaneous <em>Qubit Link&trade;</em> volume contracts.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Cashless Raw Material Offsetting</h3>
+          <p class="sc-p">Indian manufacturing partners receive Korean POCT diagnostics, K-Vet biologics, and <em>*sc</em> enterprise AI automation in direct multilateral offset for bulk Ayurvedic extracts.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Follow-the-Sun Autonomous Engineering</h3>
+          <p class="sc-p">Bridges time zones between Seoul, Jakarta, Mumbai, and New York so the <em>sc intelligence-core</em> Data Factory and commercial platforms operate non-stop around the clock.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER VI: VC & INSTITUTIONAL INVESTOR THESIS FOR SC INDIA -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; IR INVESTMENT THESIS &bull; UPSTREAM BIO MOAT &amp; AI SCALE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional Investor Thesis: Upstream Bio-Margin Control</h2>
+      <p class="sc-lead">Most consumer health and veterinary brands are vulnerable to upstream active-ingredient inflation. Through <strong>sc india (SCIND)</strong>, *sc controls its botanical and API supply at the origin while tapping a 1.4-billion consumer market.</p>
+      <div class="sc-callout">
+        <strong>Structural BOM Deflation + Cashless Barter Expansion:</strong> By sourcing standardized <em>IndoHerbs / Vital Seeds</em> extracts directly in India and paying via multilateral barter offsets of Korean clinical products and AI SaaS, SCIND locks in industry-lowest BOM costs across the entire Signal Star Universe.
+      </div>
     </section>
   </main>
 </body>

@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
   <title>*sc | sistar company korea — sistar company - sistar intl - sc korea</title>
   <meta name="description" content="sc korea (SCK) — Global headquarters, R&D origination hub, K-Vet/K-Beauty/Diagnostics export engine, and K-SURE BNPL trade finance command center of *sc." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*sc | sistar company korea",
-    "description": "sc korea (SCK) — Global headquarters, R&D origination hub, K-Vet/K-Beauty/Diagnostics export engine, and K-SURE BNPL trade finance command center of *sc.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "sistar company (*sc)",
-      "alternateName": "signal star",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "SISTAR Company Korea Co., Ltd. (SCK / sc korea)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/02_sistar-intl/01_sc-korea/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*sc | sistar company korea — Global HQ & R&D Origination Monograph",
+        "description": "sc korea (SCK) — Global headquarters, R&D origination hub, K-Vet/K-Beauty/Diagnostics export engine, and K-SURE BNPL trade finance command center of *sc.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "alternateName": "signal star",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -30,61 +44,650 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-doc { box-sizing: border-box; width: 100%; max-width: min(1400px, 96%); padding: clamp(48px, 6vh, 84px) clamp(28px, 6vw, 96px) 120px; }
-    .sc-eyebrow { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 500; color: #526D82; letter-spacing: 0.04em; margin: 0 0 8px 0; text-transform: lowercase; }
-    .sc-main-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #27374D; margin: 0 0 20px 0; letter-spacing: -0.03em; line-height: 1.05; text-transform: lowercase; }
-    .sc-lead { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.12rem, 1.5vw, 1.28rem); font-weight: 500; color: #27374D; line-height: 1.65; margin: 0 0 56px 0; }
-    .sc-section { margin-bottom: 52px; }
-    .sc-sec-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.35rem, 2vw, 1.6rem); font-weight: 700; color: #27374D; margin: 0 0 14px 0; letter-spacing: -0.02em; line-height: 1.3; padding-left: 1.45em; text-indent: -1.45em; }
-    .sc-sec-body { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.85; color: #27374D; margin: 0 0 16px 2.15rem; }
-    .sc-list { list-style: none; margin: 12px 0 20px 2.15rem; padding-left: 0; font-family: "Inter", sans-serif; font-size: 0.98rem; line-height: 1.85; color: #27374D; }
-    .sc-list li { margin-bottom: 14px; padding-left: 1.25em; text-indent: -1.25em; }
-    .sc-hr { border: 0; border-top: 1px solid rgba(39, 55, 77, 0.16); margin: 48px 0; }
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
+      font-family: "Inter", sans-serif;
+      color: #0f172a;
+      line-height: 1.76;
+    }
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
+    }
+    .sc-route {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .sc-btn-pdf {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+      background: rgba(22, 135, 101, 0.15);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-doc-h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
+      font-weight: 700;
+      color: #0f172a;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
+      font-weight: 500;
+      color: #0f172a;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
+    }
+    @media print {
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-doc">
-    <p class="sc-eyebrow">sistar company - sistar intl - sc korea</p>
-    <h1 class="sc-main-title">sistar company korea</h1>
-    <p class="sc-lead">
-      "The Central Command Tower &amp; R&amp;D Origin Node (SCK — SISTAR Company Korea Co., Ltd.). Forged from three decades of international trading mastery, sc korea anchors our global IP, clinical formulations, and K-SURE trade finance architecture."
-    </p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - sistar intl - sc korea</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export SC Korea Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Strategic Identity &amp; Role within the *sc Universe</h2>
-      <p class="sc-sec-body">
-        Operating from Seoul, <strong>sistar company korea (sc korea / SCK)</strong> serves as the strategic headquarters, R&amp;D origination hub, and export command center of the Signal Star Universe. It bridges South Korea's world-leading biotechnology, veterinary medicine, diagnostics, derma-cosmetics, and AI engineering capabilities directly with our global <em>biz-galaxy</em> and international bases.
-      </p>
-      <p class="sc-sec-body">
-        Rather than holding dead warehouse inventory, <strong>sc korea</strong> operates on the <strong>Qubit Algorithm™</strong>—converting verified overseas demand signals into immediate ODM production runs, K-SURE backed export credit deals, and automated cross-border settlements.
-      </p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — GLOBAL HQ & R&D ORIGINATION NODE -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">NODE [SC.KR / SCK] &bull; GLOBAL HQ, IP &amp; K-SURE COMMAND TOWER</span>
+      </div>
+      <h1 class="sc-doc-h1">sistar company korea (SCK) — Global HQ, R&amp;D Origination &amp; K-SURE Export Command</h1>
+      <p class="sc-lead">"The Central Command Tower &amp; R&amp;D Origin Node (SCK — SISTAR Company Korea Co., Ltd.). Forged from three decades of international trading mastery, sc korea anchors our global IP, clinical formulations, and K-SURE trade finance architecture."</p>
+
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote">Operating from Seoul, <strong>sistar company korea (sc korea / SCK)</strong> serves as the strategic headquarters, R&amp;D origination hub, and export command center of the Signal Star Universe. It bridges South Korea's world-leading biotechnology, veterinary medicine, diagnostics, derma-cosmetics, and AI engineering capabilities directly with our global <em>biz-galaxy</em> and international bases.</p>
+        <p class="sc-p">Rather than holding dead warehouse inventory, <strong>sc korea</strong> operates on the <strong>Qubit Algorithm&trade;</strong>—converting verified overseas demand signals into immediate ODM production runs, K-SURE backed export credit deals, and automated cross-border settlements.</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">100 Patents &bull; 100 Brands</div>
+          <div class="sc-kpi-desc">Master IP Origination, Clinical Formulations &amp; Trademark Vault</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">K-SURE 90d BNPL</div>
+          <div class="sc-kpi-desc">Sovereign Export Credit Insurance Enabling Zero-Capex Buyer Scaling</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">22:00–08:00 KST</div>
+          <div class="sc-kpi-desc">Unmanned Overnight Data Factory &amp; Zero-Entropy Company RAG Core</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">4 Core Bio Verticals</div>
+          <div class="sc-kpi-desc">K-Vet (SISPet), POCT Diagnostics, K-Beauty (Michlo/sismii) &amp; Auto-Formulator R1</div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG 1: SC KOREA COMMAND TOWER & K-SURE EXPORT ENGINE -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC Korea Global HQ, R&D Origination, and K-SURE Export Credit Architecture">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // SC KOREA [SCK] — SEOUL SUPREME COMMAND, GMP OEM ALLIANCE &amp; K-SURE EXPORT ENGINE</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Column: Korean R&D & GMP OEM Alliance -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. KOREAN R&amp;D &amp; GMP OEM ALLIANCE</text>
+
+          <rect x="38" y="94" width="258" height="52" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="114" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">K-Vet &amp; Companion Bio (SISPet)</text>
+          <text x="48" y="130" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Forever Young Dog &bull; Prescription Topicals</text>
+
+          <rect x="38" y="154" width="258" height="52" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="174" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">POCT Diagnostics &amp; Livestock (DX)</text>
+          <text x="48" y="190" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Rapid Vet Kits &bull; CDSS &bull; Sispharm Additives</text>
+
+          <rect x="38" y="214" width="258" height="52" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="234" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Clinical K-Beauty (Michlo / sismii)</text>
+          <text x="48" y="250" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">MedIX Aesthetics &bull; Exosome &amp; PDRN Concentrates</text>
+
+          <rect x="38" y="274" width="258" height="48" rx="4" fill="#0f5132" />
+          <text x="48" y="294" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Auto-Formulator R1 (FP-06)</text>
+          <text x="48" y="310" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">AI BOM Optimization &amp; Bulk Premix Export</text>
+
+          <!-- Center Column: SCK Control Tower & K-SURE -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="351" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. SCK COMMAND &amp; K-SURE ENGINE</text>
+
+          <rect x="351" y="94" width="258" height="72" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="363" y="114" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">K-SURE Export Credit Guarantee</text>
+          <text x="363" y="131" fill="#f8fafc" font-family="Inter, sans-serif" font-size="10">&bull; 90-Day Open Account / BNPL Terms</text>
+          <text x="363" y="148" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">&bull; 100% Instant Factoring for Korean OEMs</text>
+
+          <rect x="351" y="176" width="258" height="72" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="363" y="196" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SC Intelligence Core (Seoul Lab)</text>
+          <text x="363" y="213" fill="#f8fafc" font-family="Inter, sans-serif" font-size="10">&bull; 22:00–08:00 KST Unmanned Data Factory</text>
+          <text x="363" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&bull; Company RAG &amp; Exo-Brain Origination</text>
+
+          <rect x="351" y="258" width="258" height="64" rx="4" fill="#1e3a8a" />
+          <text x="363" y="278" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">100 PATENTS &amp; 100 BRANDS VAULT</text>
+          <text x="363" y="295" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Co-registers domestic lab IP into global</text>
+          <text x="363" y="309" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">trademarks audited daily in SC Index.</text>
+
+          <!-- Right Column: 7 Overseas Destination Hubs -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="664" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. 7 OVERSEAS EXECUTION NODES</text>
+
+          <rect x="664" y="94" width="258" height="62" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="676" y="114" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SCI Indonesia &amp; SCV Vietnam</text>
+          <text x="676" y="130" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Receives Korean bulk concentrates &rarr;</text>
+          <text x="676" y="145" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="9">Repacks into Rp 1,320 GMP Sachets</text>
+
+          <rect x="664" y="166" width="258" height="62" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="676" y="186" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SCJ Japan &amp; SCU United States</text>
+          <text x="676" y="202" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Premium Pet Longevity &amp; Derma SKUs</text>
+          <text x="676" y="217" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="9">+ Enterprise AI SaaS Subscriptions</text>
+
+          <rect x="664" y="238" width="258" height="84" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="676" y="258" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SCS Singapore + SCN India + SCC China</text>
+          <text x="676" y="275" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">&bull; 70% PG Principal Returned to SCK/SCS</text>
+          <text x="676" y="290" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">&bull; Indian Botanicals &amp; Chinese Hardware</text>
+          <text x="676" y="305" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">&bull; Bartered via 4-Way Qubit Offsetting</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // Operational architecture of sistar company korea (SCK), linking Korean GMP R&amp;D and K-SURE export credit directly to the 7 overseas execution bases.</figcaption>
+      </figure>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER II: CORE BUSINESS ENGINES & EXPORT VERTICALS -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">CORE EXPORT VERTICALS &bull; K-VET, POCT, K-BEAUTY &amp; K-SURE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Core Business Engines &amp; Export Verticals Originated in Seoul</h2>
+      <p class="sc-lead"><strong>sistar company korea (SCK)</strong> transforms South Korea's most competitive R&amp;D sectors into standardized, high-velocity international export pipelines:</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Core Business Engines &amp; Export Verticals</h2>
-      <ul class="sc-list">
-        <li>• <strong>K-Vet &amp; Companion Animal Therapeutics (<em>sistar medix</em> &amp; <em>sispet</em>):</strong> Direct R&amp;D and ODM sourcing of veterinary prescription products, medical shampoos, functional pet supplements, and <em>Forever Young Dog</em> lifecycle care solutions.</li>
-        <li>• <strong>POCT Diagnostics &amp; Livestock Biologics (<em>sistar dx</em> &amp; <em>sispharm</em>):</strong> Export orchestration of Point-of-Care Testing rapid kits, veterinary clinical decision support systems (CDSS), and high-efficacy feed additives.</li>
-        <li>• <strong>Clinical K-Beauty &amp; Mind Wellness (<em>sismii</em> &amp; <em>sistar mind company</em>):</strong> Formulation and global licensing of derma-cosmetic lines and AI-driven behavioral wellness platforms.</li>
-        <li>• <strong>K-SURE BNPL &amp; Open Account Trade Finance (<em>qubit-biz</em>):</strong> Integration with Korea Trade Insurance Corporation (K-SURE) credit frameworks to provide risk-mitigated Buy-Now-Pay-Later (BNPL) and Rolling Purchasing Forecast (RPF) financing for verified global buyers.</li>
-      </ul>
+      <div class="sc-grid-2">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">1. K-Vet &amp; Companion Animal Therapeutics (<em>sistar medix</em> &amp; <em>sispet</em>)</h3>
+          <p class="sc-p">Direct R&amp;D and ODM sourcing of veterinary prescription products, medical shampoos, functional pet supplements, and <em>Forever Young Dog</em> lifecycle care solutions.</p>
+          <h3 class="sc-sub-h4" style="margin-top:18px;">2. POCT Diagnostics &amp; Livestock Biologics (<em>sistar dx</em> &amp; <em>sispharm</em>)</h3>
+          <p class="sc-p">Export orchestration of Point-of-Care Testing rapid kits, veterinary clinical decision support systems (CDSS), and high-efficacy feed additives.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">3. Clinical K-Beauty &amp; Mind Wellness (<em>sismii</em> &amp; <em>sistar mind company</em>)</h3>
+          <p class="sc-p">Formulation and global licensing of derma-cosmetic lines (including <em>Michlo</em> medical aesthetics) and AI-driven behavioral wellness platforms.</p>
+          <h3 class="sc-sub-h4" style="margin-top:18px;">4. K-SURE BNPL &amp; Open Account Trade Finance (<em>qubit-biz</em>)</h3>
+          <p class="sc-p">Integration with Korea Trade Insurance Corporation (K-SURE) credit frameworks to provide risk-mitigated Buy-Now-Pay-Later (BNPL) and Rolling Purchasing Forecast (RPF) financing for verified global buyers.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>Export Pipeline ID</th>
+              <th>Korean Origination Vertical</th>
+              <th>Flagship Brands &amp; IP</th>
+              <th>Export Format (Superposition)</th>
+              <th>Primary Target Corridors</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">SCK-V01</span></td>
+              <td><strong>Companion Animal Longevity &amp; Vet Rx</strong></td>
+              <td><em>SISPet</em>, <em>Forever Young Dog</em>, <em>Zeelice</em></td>
+              <td>Clinical Hospital Bottles + Bulk Premix for <span class="notranslate" translate="no">Rp 1,320</span> Sachets</td>
+              <td>Japan (SCJ), Indonesia (SCI), USA (SCU), Vietnam (SCV)</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCK-V02</span></td>
+              <td><strong>Veterinary POCT &amp; Livestock Biologics</strong></td>
+              <td><em>sistar dx</em>, <em>sispharm</em>, <em>aquasis</em></td>
+              <td>Rapid Diagnostic Cassettes + Concentrated Water-Soluble Biologics</td>
+              <td>Indonesia (SCI), Vietnam (SCV), India (SCN)</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCK-V03</span></td>
+              <td><strong>Medical Aesthetics &amp; Clinical K-Beauty</strong></td>
+              <td><em>Michlo</em>, <em>MedIX</em>, <em>sismii</em></td>
+              <td>Clinic Ampoules/Devices + D2C Single-Dose Trial Sachets</td>
+              <td>Indonesia (SCI), Japan (SCJ), China (SCC), Vietnam (SCV)</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCK-V04</span></td>
+              <td><strong>AI-Automated ODM &amp; Formulation IP</strong></td>
+              <td><em>Auto-Formulator R1</em> (FP-06), 100 Patents</td>
+              <td>Turnkey BOM + Regulatory Dossier + Master Concentrate</td>
+              <td>All 8 Global Bases + IATA Member Factories</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER III: K-SURE BNPL & ROLLING PURCHASING FORECAST (RPF) MECHANICS -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">K-SURE TRADE FINANCE &bull; ZERO-DEFAULT EXPORT FACTORING</span>
+      </div>
+      <h2 class="sc-chapter-h2">K-SURE BNPL &amp; Rolling Purchasing Forecast (RPF) Trade Finance Engine</h2>
+      <p class="sc-lead">Small and mid-sized Korean bio/cosmetic manufacturers often fail to scale exports because overseas buyers demand 60-to-90-day credit terms while Korean factories require cash on shipment. <strong>sc korea</strong> solves this structural impasse.</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Partnership &amp; Investment Synergy</h2>
-      <ul class="sc-list">
-        <li>• <strong>Co-Brand &amp; Patent IP Origination:</strong> Korean R&amp;D labs and manufacturers partner with <em>sc korea</em> to transform proven domestic formulations into globally trademarked <em>biz-galaxy</em> brands exported across seven international nodes.</li>
-        <li>• <strong>Simultaneous Export Factoring:</strong> By combining pre-aggregated overseas demand with K-SURE export credit insurance, Korean manufacturing partners achieve immediate payment settlement upon shipment without export collection risk.</li>
-        <li>• <strong>Central Intelligence &amp; Asset Engine:</strong> Houses the <em>sc intelligence-core</em> Data Factory and Exo Brain RAG infrastructure that continuously powers market intelligence across the entire global network.</li>
-      </ul>
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: K-SURE + RPF SIMULTANEOUS FACTORY FACTORING</span>
+        Overseas_RPF_PreOrder + K-SURE_Export_Policy &rArr; 100% Cash Payout to Korean OEM at Bill of Lading (t_BL = 0)<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: OVERSEAS BUYER BNPL AMORTIZATION VIA 70/30 PG WEBHOOK</span>
+        90_Day_BNPL_Liability = &Sigma;_{t=1..90} [ 0.70 &times; Daily_Local_PG_Checkout(t) ] &rArr; Self-Liquidating Credit Line
+      </div>
+
+      <!-- INLINE SVG 2: K-SURE + RPF + 70/30 PG WEBHOOK LOOP -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="K-SURE Export Credit, Rolling Purchasing Forecast, and 70/30 PG Settlement Loop">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // SC KOREA K-SURE BNPL + ROLLING PURCHASING FORECAST (RPF) + 70/30 PG SELF-LIQUIDATING LOOP</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Step 1 -->
+          <rect x="24" y="64" width="212" height="264" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="38" y="88" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">STEP 1: RPF DEMAND LOCK</text>
+          <rect x="38" y="104" width="184" height="96" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="124" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Overseas Partner / Hub</text>
+          <text x="48" y="142" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Submits 90-day Rolling</text>
+          <text x="48" y="156" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Purchasing Forecast (RPF)</text>
+          <text x="48" y="175" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">Verified by Scarlet AI</text>
+          <rect x="38" y="214" width="184" height="96" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="234" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Zero Speculative MOQ</text>
+          <text x="48" y="252" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Aggregates veterinary clinics</text>
+          <text x="48" y="266" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; retail chains before run.</text>
+
+          <!-- Step 2 -->
+          <rect x="256" y="64" width="212" height="264" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="270" y="88" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">STEP 2: K-SURE UNDERWRITING</text>
+          <rect x="270" y="104" width="184" height="96" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="280" y="124" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">K-SURE Policy Issuance</text>
+          <text x="280" y="142" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">SCK secures state-backed</text>
+          <text x="280" y="156" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">export credit insurance on</text>
+          <text x="280" y="170" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">verified overseas buyer.</text>
+          <rect x="270" y="214" width="184" height="96" rx="4" fill="#0f5132" />
+          <text x="280" y="234" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Instant Factory Payout</text>
+          <text x="280" y="252" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Korean GMP OEM factory is</text>
+          <text x="280" y="266" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">paid 100% upon shipment</text>
+          <text x="280" y="280" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">with zero collection risk.</text>
+
+          <!-- Step 3 -->
+          <rect x="488" y="64" width="212" height="264" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="502" y="88" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">STEP 3: 90D BNPL TUNNELING</text>
+          <rect x="502" y="104" width="184" height="96" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="512" y="124" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Bulk / Sachet Arrival</text>
+          <text x="512" y="142" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Overseas hub receives goods</text>
+          <text x="512" y="156" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">with 90 days to sell before</text>
+          <text x="512" y="170" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">invoice maturity date.</text>
+          <rect x="502" y="214" width="184" height="96" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="512" y="234" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">20x Superposition Sales</text>
+          <text x="512" y="252" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Local sachet repacking &amp;</text>
+          <text x="512" y="266" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">clinic distribution begins</text>
+          <text x="512" y="280" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">generating daily cashflow.</text>
+
+          <!-- Step 4 -->
+          <rect x="720" y="64" width="216" height="264" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="734" y="88" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">STEP 4: 70/30 AUTO-SETTLE</text>
+          <rect x="734" y="104" width="188" height="96" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="744" y="124" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">PG Webhook Split (t = 0)</text>
+          <text x="744" y="142" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">70% &rarr; Retires K-SURE Line</text>
+          <text x="744" y="158" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">30% &rarr; Partner Profit Wallet</text>
+          <text x="744" y="176" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Automatic credit renewal.</text>
+          <rect x="734" y="214" width="188" height="96" rx="4" fill="#1e3a8a" />
+          <text x="744" y="234" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Zero Default Record</text>
+          <text x="744" y="252" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Expands buyer credit limit</text>
+          <text x="744" y="266" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">every quarter for continuous</text>
+          <text x="744" y="280" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">container scaling.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // SC Korea's K-SURE BNPL and Rolling Purchasing Forecast (RPF) trade finance engine, guaranteeing immediate payment to Korean GMP factories while providing 90-day self-liquidating credit to overseas hubs.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: SEOUL INTELLIGENCE CORE & 15 FOUNDER PROJECTS ORIGINATION -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">SC INTELLIGENCE CORE &bull; AI &amp; BIO R&amp;D NEXUS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Seoul Intelligence Core: Originating the 15 Founder Projects &amp; 100-Patent Vault</h2>
+      <p class="sc-lead">In addition to physical bio-health exports, <strong>sc korea</strong> houses the central architecture lab for our <strong>SC Intelligence Core</strong> and originates our 15 Dual-Return Founder Projects.</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. Unmanned Overnight Data Factory</h3>
+          <p class="sc-p">Houses the <em>sc intelligence-core</em> Data Factory and Exo-Brain RAG infrastructure that runs autonomously from 22:00 to 08:00 KST, compiling global pricing, regulatory updates, and clinical literature across all 8 hubs.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. Auto-Formulator R1 (FP-06)</h3>
+          <p class="sc-p">Matches Korean active peptides, exosomes, and veterinary therapeutics with Indian standardized botanicals (<em>IndoHerbs</em>) to generate cost-optimized, regulatory-compliant BOMs in minutes.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">3. 100 Patents &amp; 100 Brands Origination</h3>
+          <p class="sc-p">Korean R&amp;D labs and university spin-offs co-register patents and brand trademarks with <strong>sc korea</strong>, immediately unlocking global commercialization across 7 overseas nodes while building permanent NAV inside <em>SC Index</em>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER V: KOREAN OEM/ODM & R&D LAB PARTNER ONBOARDING -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; KOREAN OEM &amp; R&amp;D ALLIANCE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Partnership Synergy: Onboarding Korean R&amp;D Labs &amp; GMP Manufacturers</h2>
+      <p class="sc-lead"><strong>sc korea</strong> invites South Korean veterinary, pharmaceutical, diagnostic, and derma-cosmetic manufacturers to plug their idle production capacity and R&amp;D formulations directly into our 8-country export spaceship:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Co-Brand &amp; Patent IP Origination</h3>
+          <p class="sc-p">Korean R&amp;D labs and manufacturers partner with <em>sc korea</em> to transform proven domestic formulations into globally trademarked <em>biz-galaxy</em> brands exported across seven international nodes.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Simultaneous Export Factoring</h3>
+          <p class="sc-p">By combining pre-aggregated overseas demand with K-SURE export credit insurance, Korean manufacturing partners achieve immediate payment settlement upon shipment without export collection risk.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Qubit Time Bank Line Utilization</h3>
+          <p class="sc-p">Manufacturers can deposit off-peak GMP production line hours into the <em>Qubit Time Bank</em> in exchange for global distribution credits, imported botanical raw materials, or equity stakes in high-growth overseas JVs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER VI: VC & INSTITUTIONAL INVESTOR THESIS FOR SC KOREA -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; IR INVESTMENT THESIS &bull; KOREAN DEEP-TECH &amp; EXPORT ALPHA</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional Investor Thesis: Capturing Korean R&amp;D Alpha Globally</h2>
+      <p class="sc-lead">South Korea possesses world-class clinical bio-health, veterinary, and cosmetic R&amp;D at a fraction of US/EU development costs, yet most Korean SMEs remain trapped in a saturated domestic market. <strong>sc korea (SCK)</strong> is the institutional bridge that monetizes Korean R&amp;D across ASEAN, Japan, India, and the US.</p>
+      <div class="sc-callout">
+        <strong>Institutional Co-Investment &amp; TIPS / Global VC Synergy:</strong> Investors participating in <strong>SCK</strong> gain direct exposure to our 100-Patent / 100-Brand IP origination vault, K-SURE state-guaranteed export receivables (0% credit default), and the Seoul AI engineering core powering all 12 orbital domains.
+      </div>
     </section>
   </main>
 </body>

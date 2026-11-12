@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
   <title>*sc | sistar company usa — sistar company - sistar intl - sc usa</title>
-  <meta name="description" content="sc usa (SCU) — North American Agentic AI, micro-SaaS factory, MCP Server commercialization, and global IR hub of *sc." />
+  <meta name="description" content="sc usa (SCU) — North American Agentic AI, micro-SaaS factory, MCP Server commercialization, FDA/AAFCO regulatory benchmark, and global IR hub of *sc." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*sc | sistar company usa",
-    "description": "sc usa (SCU) — North American Agentic AI, micro-SaaS factory, MCP Server commercialization, and global IR hub of *sc.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "sistar company (*sc)",
-      "alternateName": "signal star",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "sistar company usa (SCU / sc usa)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/02_sistar-intl/07_sc-usa/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*sc | sistar company usa — North American Agentic AI, Micro-SaaS & Global Capital Markets Monograph",
+        "description": "sc usa (SCU) — North American Agentic AI, micro-SaaS factory, MCP Server commercialization, and global IR hub of *sc.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "alternateName": "signal star",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -30,57 +44,627 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-doc { box-sizing: border-box; width: 100%; max-width: min(1400px, 96%); padding: clamp(48px, 6vh, 84px) clamp(28px, 6vw, 96px) 120px; }
-    .sc-eyebrow { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 500; color: #526D82; letter-spacing: 0.04em; margin: 0 0 8px 0; text-transform: lowercase; }
-    .sc-main-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #27374D; margin: 0 0 20px 0; letter-spacing: -0.03em; line-height: 1.05; text-transform: lowercase; }
-    .sc-lead { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.12rem, 1.5vw, 1.28rem); font-weight: 500; color: #27374D; line-height: 1.65; margin: 0 0 56px 0; }
-    .sc-section { margin-bottom: 52px; }
-    .sc-sec-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.35rem, 2vw, 1.6rem); font-weight: 700; color: #27374D; margin: 0 0 14px 0; letter-spacing: -0.02em; line-height: 1.3; padding-left: 1.45em; text-indent: -1.45em; }
-    .sc-sec-body { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.85; color: #27374D; margin: 0 0 16px 2.15rem; }
-    .sc-list { list-style: none; margin: 12px 0 20px 2.15rem; padding-left: 0; font-family: "Inter", sans-serif; font-size: 0.98rem; line-height: 1.85; color: #27374D; }
-    .sc-list li { margin-bottom: 14px; padding-left: 1.25em; text-indent: -1.25em; }
-    .sc-hr { border: 0; border-top: 1px solid rgba(39, 55, 77, 0.16); margin: 48px 0; }
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
+      font-family: "Inter", sans-serif;
+      color: #0f172a;
+      line-height: 1.76;
+    }
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
+    }
+    .sc-route {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .sc-btn-pdf {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+      background: rgba(22, 135, 101, 0.15);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-doc-h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
+      font-weight: 700;
+      color: #0f172a;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
+      font-weight: 500;
+      color: #0f172a;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
+    }
+    @media print {
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-doc">
-    <p class="sc-eyebrow">sistar company - sistar intl - sc usa</p>
-    <h1 class="sc-main-title">sistar company usa</h1>
-    <p class="sc-lead">
-      "The North American Agentic AI, Micro-SaaS Factory &amp; Global Capital Markets Node (SCU). Commercializing Qubit Agentic OS, MCP Server micropayments, and scale-up venture pipelines."
-    </p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - sistar intl - sc usa</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export SC USA Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Strategic Identity &amp; Role within the *sc Universe</h2>
-      <p class="sc-sec-body">
-        <strong>sistar company usa (sc usa / SCU)</strong> is the technology commercialization, enterprise SaaS, and global capital markets spearhead of <strong>*sc</strong>. Anchored in the world's largest software and venture ecosystem, <em>sc usa</em> transforms our proprietary <strong>qubit-algorithm</strong>, <strong>scarlet-ai</strong>, and <strong>qubit-biz</strong> architectures into recurring USD subscription revenue (MRR), API/MCP usage fees, and institutional partnerships.
-      </p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — NORTH AMERICAN AGENTIC AI, MICRO-SAAS & GLOBAL IR HUB -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">NODE [SC.US / SCU] &bull; ENTERPRISE AI SAAS, MCP SERVER &amp; GLOBAL CAPITAL MARKETS</span>
+      </div>
+      <h1 class="sc-doc-h1">sistar company usa (SCU) — North American Agentic AI, Micro-SaaS Factory &amp; Global Capital Markets Node</h1>
+      <p class="sc-lead">"The North American Agentic AI, Micro-SaaS Factory &amp; Global Capital Markets Node (SCU). Commercializing Qubit Agentic OS, MCP Server micropayments, and scale-up venture pipelines."</p>
+
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote"><strong>sistar company usa (sc usa / SCU)</strong> is the technology commercialization, enterprise SaaS, and global capital markets spearhead of <strong>*sc</strong>. Anchored in the world's largest software and venture ecosystem, <em>sc usa</em> transforms our proprietary <strong>qubit-algorithm</strong>, <strong>scarlet-ai</strong>, and <strong>qubit-biz</strong> architectures into recurring USD subscription revenue (MRR), API/MCP usage fees, and institutional partnerships.</p>
+        <p class="sc-p">While our Asian nodes (Korea, Indonesia, Vietnam, India, China, Japan, Singapore) generate immediate physical cashflow and proprietary trade telemetry, <strong>sc usa</strong> packages our internal AI operating stack—<em>01 Qubit ERP</em>, <em>02 Company RAG</em>, <em>03 Agent Builder</em>, <em>04 C.A.N. ActionNote</em>, and <em>05 Exo-Brain &amp; [&amp; I]</em>—into high-multiple North American B2B/B2C SaaS products and metered Model Context Protocol (MCP) endpoints.</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">5 Core AI SaaS</div>
+          <div class="sc-kpi-desc">Qubit ERP, Company RAG, Agent Builder, C.A.N. &amp; Exo-Brain Commercialization</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">MCP Micropayments</div>
+          <div class="sc-kpi-desc">Metered Agent-to-Agent B2B Wholesale, Tariff &amp; Formulation API Endpoints</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">Qubit Factory&trade;</div>
+          <div class="sc-kpi-desc">Autonomous Vertical Micro-SaaS Cloning, Localization &amp; Digital Asset Exits</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">FDA / AAFCO + VC</div>
+          <div class="sc-kpi-desc">North American Pet/Bio Market Gateway &amp; Silicon Valley / Wall Street IR</div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG 1: SC USA AGENTIC AI SAAS, MCP SERVER & CAPITAL GATEWAY -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC USA Agentic AI SaaS Stack, MCP Server Economy, and Global Capital Markets Gateway">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // SC USA [SCU] — PHASE I DUAL-RETURN AI SAAS STACK, MCP SERVER ECONOMY &amp; US CAPITAL MARKETS</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Column 1: Phase I AI SaaS Stack (FP-01 to FP-05) -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. ENTERPRISE AI SAAS (FP-01..05)</text>
+
+          <rect x="38" y="96" width="258" height="44" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="48" y="114" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">FP-01: Qubit ERP &amp; FP-02: Company RAG</text>
+          <text x="48" y="129" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Zero-Entropy Enterprise Knowledge &amp; Trade OS</text>
+
+          <rect x="38" y="148" width="258" height="44" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="48" y="166" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">FP-03: Scarlet Agent Builder</text>
+          <text x="48" y="181" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">No-code B2B/B2C Autonomous Sales Agents</text>
+
+          <rect x="38" y="200" width="258" height="44" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="48" y="218" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">FP-04: C.A.N. CEO ActionNote</text>
+          <text x="48" y="233" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Voice-to-Execution Executive Decision OS</text>
+
+          <rect x="38" y="252" width="258" height="70" rx="4" fill="#0f5132" />
+          <text x="48" y="272" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">FP-05: Exo-Brain &amp; [&amp; I] Wearable</text>
+          <text x="48" y="289" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Personal cognitive twin + Shenzhen hardware</text>
+          <text x="48" y="304" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">sold in USD recurring subscription bundles.</text>
+
+          <!-- Column 2: MCP Server & Micro-SaaS Factory -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="351" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. MCP ECONOMY &amp; APP FACTORY</text>
+
+          <rect x="351" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="363" y="116" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Model Context Protocol (MCP) Hub</text>
+          <text x="363" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">External AI agents query *sc tariff, BOM</text>
+          <text x="363" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; wholesale offer databases via micropayment</text>
+
+          <rect x="351" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="363" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Qubit App Factory &amp; App Flipping</text>
+          <text x="363" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Auto-reskins vertical micro-SaaS portals;</text>
+          <text x="363" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">scales MRR &amp; executes digital asset exits</text>
+
+          <rect x="351" y="260" width="258" height="62" rx="4" fill="#1e3a8a" />
+          <text x="363" y="280" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">JSON-LD SEMANTIC AI SEO</text>
+          <text x="363" y="297" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Near-zero CAC via LLM citation dominance</text>
+
+          <!-- Column 3: US Bio/Pet Gateway & Global IR -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="664" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. US BIO COMMERCE &amp; GLOBAL IR</text>
+
+          <rect x="664" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="676" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">US Pet Longevity &amp; K-Beauty D2C</text>
+          <text x="676" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">FDA/AAFCO aligned Forever Young Dog,</text>
+          <text x="676" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">sismii &amp; IndoHerbs pre-order aggregation</text>
+
+          <rect x="664" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="676" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Silicon Valley &amp; Wall Street IR</text>
+          <text x="676" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Direct institutional VC/PE &amp; family office</text>
+          <text x="676" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">gateway into SC Index &amp; Biz Galaxy SPVs</text>
+
+          <rect x="664" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="676" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SAAS VALUATION MULTIPLE</text>
+          <text x="676" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Re-rates physical trade cashflow at AI multiples</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // SC USA (SCU) architecture: commercializing Phase I Internal AI Infrastructure (FP-01 to FP-05) as USD Enterprise SaaS, operating metered MCP endpoints, and anchoring North American VC/IR.</figcaption>
+      </figure>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER II: CORE COMMERCIAL & TECH ENGINES IN NORTH AMERICA -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">CORE TECH ENGINES &bull; MICRO-SAAS, MCP &amp; US COMMERCE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Core Commercial &amp; Tech Engines in SC USA</h2>
+      <p class="sc-lead"><strong>sistar company usa (SCU)</strong> executes three high-margin technology and cross-border commerce mandates:</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Core Commercial &amp; Tech Engines</h2>
-      <ul class="sc-list">
-        <li>• <strong>Qubit App Factory Int'l (Micro-SaaS Replication &amp; App Flipping):</strong> Autonomous generation, localization, and deployment of vertical micro-SaaS portals, <em>c.a.n. ceo action note</em> executive tools, and <em>qubit web builder</em> subscriptions.</li>
-        <li>• <strong>Model Context Protocol (MCP) &amp; Agent-to-Agent Economy:</strong> Operates public and private MCP server endpoints allowing global AI agents and autonomous procurement bots to query <em>*sc</em> B2B wholesale databases, tariff engines, and volume-deal matchmakers via automated micropayment metering.</li>
-        <li>• <strong>North American Cross-Border Brand Gateway:</strong> Connects US retail buyers and D2C audiences directly to our <em>biz-galaxy</em> wellness, pet care, and K-Beauty supply chains via zero-inventory demand aggregation.</li>
-      </ul>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">1. Qubit App Factory Int'l (Micro-SaaS Replication &amp; App Flipping)</h3>
+          <p class="sc-p">Autonomous generation, localization, and deployment of vertical micro-SaaS portals, <em>c.a.n. ceo action note</em> executive tools, and <em>qubit web builder</em> subscriptions.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">2. Model Context Protocol (MCP) &amp; Agent-to-Agent Economy</h3>
+          <p class="sc-p">Operates public and private MCP server endpoints allowing global AI agents and autonomous procurement bots to query <em>*sc</em> B2B wholesale databases, tariff engines, and volume-deal matchmakers via automated micropayment metering.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">3. North American Cross-Border Brand Gateway</h3>
+          <p class="sc-p">Connects US retail buyers and D2C audiences directly to our <em>biz-galaxy</em> wellness, pet care, and K-Beauty supply chains via zero-inventory demand aggregation.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>Founder Project / Engine</th>
+              <th>US Commercial Product Name</th>
+              <th>Target North American Customer</th>
+              <th>Revenue &amp; Pricing Model</th>
+              <th>Competitive Moat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">FP-01 &amp; 02</span></td>
+              <td><strong>Qubit ERP &amp; Zero-Entropy Company RAG</strong></td>
+              <td>Cross-Border Importers, Distributors &amp; Multi-Clinic Groups</td>
+              <td><span class="notranslate" translate="no">$299–$2,499/mo</span> Enterprise SaaS + MCP API metering</td>
+              <td>Pre-trained on 30 years of real HS-code, BOM &amp; trade clearing data</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">FP-03</span></td>
+              <td><strong>Scarlet Agent Builder &amp; B2B Deal Bot</strong></td>
+              <td>E-Commerce Brands, Wholesalers &amp; Procurement Teams</td>
+              <td><span class="notranslate" translate="no">$99–$799/mo</span> + <span class="notranslate" translate="no">2.5%</span> autonomous GMV clearing fee</td>
+              <td>Native integration with 70/30 PG split &amp; group-buying escrows</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">FP-04 &amp; 05</span></td>
+              <td><strong>C.A.N. CEO ActionNote + Exo-Brain &amp; [&amp; I]</strong></td>
+              <td>Founders, Executives, Veterinarians &amp; Knowledge Workers</td>
+              <td><span class="notranslate" translate="no">$29–$99/mo</span> SaaS + <em>[&amp; I]</em> Wearable HaaS Bundle</td>
+              <td>Converts spoken context directly into ERP tasks &amp; RAG memory</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">FP-07 &amp; 08</span></td>
+              <td><strong>FlexKids AI &amp; Forever Young Dog US</strong></td>
+              <td>US Parents, Pediatric Centers &amp; Companion Pet Owners</td>
+              <td>D2C Subscription Boxes + App Membership</td>
+              <td>Clinical Korean/Japanese formulations + privacy-first AI coaching</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER III: MCP AGENT-TO-AGENT ECONOMY & MICRO-SAAS FACTORY MATH -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">MCP MICROPAYMENTS &bull; SAAS REPLICATION MATHEMATICS</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Mathematics of the MCP Agent Economy &amp; Micro-SaaS App Flipping</h2>
+      <p class="sc-lead">As enterprise procurement shifts from human web browsing to autonomous AI agents, <strong>sc usa</strong> monetizes our 12-domain knowledge graph directly at the protocol layer via Model Context Protocol (MCP) servers.</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Partnership &amp; Investment Synergy</h2>
-      <ul class="sc-list">
-        <li>• <strong>High-Multiple SaaS &amp; Digital Asset Liquidity:</strong> Combines recurring B2B/B2C SaaS subscription streams across <em>scarlet.sistarcompany.com</em> and <em>qubit.sistarcompany.com</em> with systematic micro-SaaS app-flipping exits.</li>
-        <li>• <strong>AI-First Semantic Dominance:</strong> High-velocity, Schema.org JSON-LD structured web portals ensure North American LLMs and AI search engines index and recommend <em>*sc</em> partner brands with near-zero customer acquisition cost (CAC).</li>
-        <li>• <strong>Global Institutional IR Gateway (<em>ir-pitchdeck / back us</em>):</strong> Provides North American venture allocators, family offices, and strategic partners direct access to the <em>SC Index</em> and vertical <em>Biz Galaxy</em> investment vehicles.</li>
-      </ul>
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: MCP SERVER AGENT-TO-AGENT MICROPAYMENT STREAM</span>
+        ARR_MCP = &Sigma;_{Agents} [ Queries_Tariff_RAG &times; $0.005 + Queries_AutoFormulator_R1 &times; $0.05 + Executed_B2B_Offer_Escrow &times; 0.025 ]<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: QUBIT APP FACTORY MICRO-SAAS FLIPPING VALUATION</span>
+        Enterprise_Value_App_k = 12 &times; MRR_App_k &times; Multiple_SaaS(4.5x..8.0x) &nbsp;with&nbsp; Marginal_Clone_Cost_SCV &rarr; $0
+      </div>
+
+      <!-- INLINE SVG 2: MCP AGENT-TO-AGENT PROTOCOL & MICRO-SAAS APP FLIPPING ENGINE -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC USA MCP Agent-to-Agent Protocol and Qubit App Factory Flipping Pipeline">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // SC USA MODEL CONTEXT PROTOCOL (MCP) MONETIZATION &amp; QUBIT MICRO-SAAS APP FLIPPING</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Half: MCP Agent Economy -->
+          <rect x="24" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="40" y="82" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">A. MCP SERVER AGENT-TO-AGENT MONETIZATION</text>
+
+          <rect x="40" y="98" width="412" height="64" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="52" y="118" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. External Enterprise Procurement AI Agents</text>
+          <text x="52" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Third-party Claude / OpenAI / Enterprise bots connect</text>
+          <text x="52" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">to SCU's public &amp; authenticated MCP server endpoints.</text>
+
+          <rect x="40" y="174" width="412" height="64" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="52" y="194" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. Zero-Entropy RAG &amp; Offer Sheet Query</text>
+          <text x="52" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Retrieves verified FOB pricing, R1 formulation BOMs,</text>
+          <text x="52" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">K-SURE credit eligibility &amp; container lead times.</text>
+
+          <rect x="40" y="250" width="412" height="68" rx="4" fill="#0f5132" />
+          <text x="52" y="272" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. Automated API Micropayment &amp; Deal Lock</text>
+          <text x="52" y="289" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">Meters per-call API usage in USD and auto-locks</text>
+          <text x="52" y="304" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">smart-contract trade escrows with zero human sales CAC.</text>
+
+          <!-- Right Half: Micro-SaaS App Flipping -->
+          <rect x="492" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="508" y="82" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">B. QUBIT FACTORY&trade; MICRO-SAAS APP FLIPPING</text>
+
+          <rect x="508" y="98" width="412" height="64" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="520" y="118" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. Zero-Cost Vertical Cloning (SCK + SCV)</text>
+          <text x="520" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Clones core *sc RAG/CRM engine into niche US verticals</text>
+          <text x="520" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">(e.g., Vet Clinic AI, Aesthetic Spa CRM, Import ERP).</text>
+
+          <rect x="508" y="174" width="412" height="64" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="520" y="194" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. Organic LLM Search Growth ($10K–$50K MRR)</text>
+          <text x="520" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Schema.org JSON-LD semantic architecture drives organic</text>
+          <text x="520" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">North American subscriber acquisition via Stripe.</text>
+
+          <rect x="508" y="250" width="412" height="68" rx="4" fill="#1e3a8a" />
+          <text x="520" y="272" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. Hold for Cashflow or Flip on US Marketplaces</text>
+          <text x="520" y="289" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">Retains core IP in SC Index while optionally selling</text>
+          <text x="520" y="304" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">mature niche micro-SaaS instances at 4.5x–8x ARR.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // Left: Model Context Protocol (MCP) agent-to-agent B2B monetization. Right: Qubit App Factory vertical micro-SaaS replication and digital asset exit pipeline.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: AI-FIRST SEMANTIC DOMINANCE & ZERO-CAC ACQUISITION -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">AI SEO &amp; JSON-LD &bull; ZERO-CAC ORGANIC DISCOVERY</span>
+      </div>
+      <h2 class="sc-chapter-h2">AI-First Semantic Dominance: Why North American LLMs Cite *sc First</h2>
+      <p class="sc-lead">Traditional US D2C and SaaS startups spend 60%+ of their revenue on Meta and Google ads. <strong>sc usa</strong> achieves near-zero Customer Acquisition Cost (CAC) through institutional-grade semantic web engineering.</p>
+      <div class="sc-grid-2">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. 12-Domain Schema.org JSON-LD Graph</h3>
+          <p class="sc-p">Every page across our 12 domains is embedded with rich Schema.org JSON-LD metadata, mathematical equations, and deterministic technical tables—ensuring ChatGPT, Claude, Perplexity, and Gemini index and recommend *sc products and APIs as authoritative primary sources.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. FDA / AAFCO Benchmarking for US Bio &amp; Pet</h3>
+          <p class="sc-p">By aligning our Korean and Japanese companion animal longevity (<em>Forever Young Dog</em>) and botanical health formulations with US FDA and AAFCO regulatory standards, SCU unlocks direct North American D2C and specialty veterinary distribution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER V: PARTNERSHIP SYNERGY & NORTH AMERICAN ONBOARDING -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; US SAAS, API &amp; RETAIL PARTNERS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Partnership &amp; Investment Synergy in SC USA</h2>
+      <p class="sc-lead"><strong>sc usa</strong> connects North American technology partners, retail buyers, and institutional capital directly into the Signal Star Universe:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">High-Multiple SaaS &amp; Digital Asset Liquidity</h3>
+          <p class="sc-p">Combines recurring B2B/B2C SaaS subscription streams across <em>scarletai.com</em> and <em>qubitbiz.com</em> with systematic micro-SaaS app-flipping exits.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">AI-First Semantic Dominance</h3>
+          <p class="sc-p">High-velocity, Schema.org JSON-LD structured web portals ensure North American LLMs and AI search engines index and recommend <em>*sc</em> partner brands with near-zero customer acquisition cost (CAC).</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Global Institutional IR Gateway (<em>ir-pitchdeck / back us</em>)</h3>
+          <p class="sc-p">Provides North American venture allocators, family offices, and strategic partners direct access to the <em>SC Index</em> and vertical <em>Biz Galaxy</em> investment vehicles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER VI: VC & INSTITUTIONAL INVESTOR THESIS FOR SC USA -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; IR INVESTMENT THESIS &bull; US CAPITAL MARKETS MULTIPLIER</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional Investor Thesis: The Dual-Return Valuation Multiplier</h2>
+      <p class="sc-lead"><strong>sc usa (SCU)</strong> is where the Signal Star Universe's physical Asian trade mastery is translated into North American enterprise software multiples.</p>
+      <div class="sc-callout">
+        <strong>Why Silicon Valley &amp; Global VCs Back *SC via SCU:</strong> Unlike conventional US AI wrappers that have no proprietary real-world data or physical unit economics, SCU's 5 AI SaaS engines (ERP, RAG, Agent Builder, C.A.N., Exo-Brain) are battle-tested daily across 8 international trading hubs and backed by 100 patents/brands in <em>SC Index</em>.
+      </div>
     </section>
   </main>
 </body>

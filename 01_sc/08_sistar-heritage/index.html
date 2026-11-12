@@ -27,18 +27,103 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-heritage-page {
+    .sc-monograph, .sc-heritage-page {
       box-sizing: border-box;
       width: 100%;
-      max-width: min(1360px, 95%);
+      max-width: min(1380px, 95%);
+      margin: 0 auto;
       padding: clamp(40px, 5vh, 72px) clamp(24px, 4.5vw, 76px) 120px;
       font-family: "Inter", sans-serif;
       color: #1e293b;
     }
+    .sc-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 18px;
+      margin-bottom: 28px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.15);
+    }
+    .sc-action-btns { display: flex; gap: 10px; }
+    .sc-btn-pdf {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      background: #0f172a;
+      color: #ffffff !important;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .sc-exec-hero {
+      background: linear-gradient(135deg, #090d16 0%, #0f172a 55%, #064e3b 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: clamp(28px, 3.8vw, 44px);
+      margin: 22px 0 32px 0;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+    .sc-exec-hero h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 700;
+      color: #ffffff !important;
+      margin: 0 0 14px 0 !important;
+      line-height: 1.3;
+    }
+    .sc-exec-hero p {
+      font-size: 1.02rem;
+      color: #e2e8f0 !important;
+      line-height: 1.78;
+      margin: 0 0 24px 0 !important;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (max-width: 900px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    .sc-kpi-cell {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.42rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 4px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    .sc-svg-frame {
+      width: 100%;
+      margin: 32px 0;
+      padding: 24px;
+      box-sizing: border-box;
+      border-top: 3px solid #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 12px;
+    }
+    .sc-svg-frame svg { width: 100%; height: auto; display: block; }
     /* Strict Flush-Left Alignment */
     main h1, main h2, main h3, main h4,
     main p, main .sc-lead, main .sc-p,
@@ -197,8 +282,13 @@
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-heritage-page">
-    <p class="sc-route">sistar company - *sc - sistar heritage</p>
+  <main class="sc-monograph sc-heritage-page">
+    <div class="sc-top-bar">
+      <p class="sc-route" style="margin:0;">sistar company - *sc - sistar heritage</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Print / Save as PDF</button>
+      </div>
+    </div>
 
     <!-- ======================================================================
          PART I: SISTAR — A SIGNAL STAR & CORPORATE VISION (SLIDES 1 - 11)
@@ -207,6 +297,30 @@
       <div><span class="sc-tag">CORPORATE HERITAGE &bull; ARCHIVE I</span></div>
       <h1 class="sc-hero-h1">SISTAR Company — Corporate Heritage</h1>
       <p class="sc-lead">Foundational storybooks, corporate identity, superiority doctrine, and master project archives of SISTAR Company (*sc). A Signal Star guiding innovators, businesses, and investors toward a sustainable future.</p>
+
+      <div class="sc-exec-hero">
+        <div class="sc-tag" style="background:rgba(74,222,128,0.18); color:#4ade80;">20+ YEARS OF INTERNATIONAL TRADE HERITAGE &bull; 2013 CORPORATE ARCHIVE TO *SC QUANTUM EVOLUTION</div>
+        <h3>From Foundational Cross-Border Pioneers to the Autonomous Signal Star Universe (*SC)</h3>
+        <p>Every algorithm, RAG knowledge base, and direct trading corridor in <strong>*SC (SISTAR Company)</strong> rests upon more than two decades of lived overseas residency, cross-border B2B distribution, and 13+ years of formal SISTAR corporate venture building across Korea, Indonesia, Vietnam, Japan, China, and the United States.</p>
+        <div class="sc-kpi-strip">
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">20+ Years</div>
+            <div class="sc-kpi-desc">On-the-Ground Overseas BD &amp; Cross-Border Trade Execution</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">M &bull; I &bull; N &bull; T</div>
+            <div class="sc-kpi-desc">Mass, Intelligent, Network, Transparent Commerce Doctrine</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">Hybrid Moat</div>
+            <div class="sc-kpi-desc">Proprietary AI Digital Core + Physical Logistics &amp; Cold-Chain</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val notranslate">100+ Ventures</div>
+            <div class="sc-kpi-desc">Historical B2B Proposals, Brand Launches &amp; Zero-Overdue Protocol</div>
+          </div>
+        </div>
+      </div>
 
       <h2 class="sc-h2" style="margin-top:36px;">SISTAR — A Signal Star</h2>
       <p class="sc-p">We are dedicated to connecting key players who collaboratively shape a sustainable future. SISTAR serves as the signal — the guiding light — for innovators, businesses, and investors who are committed to building a better world together.</p>
@@ -495,6 +609,45 @@
         </div>
       </div>
       <div class="sc-callout">"Utilizing an intelligent AI network, we provide transparent and reasonable prices to the public."</div>
+
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SISTAR MINT Philosophy and Direct Factory-to-Consumer Economics">
+          <rect width="960" height="320" rx="12" fill="#0f172a"/>
+          <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">HERITAGE DIAGRAM 01 • THE M.I.N.T. PHILOSOPHY &amp; MIDDLEMAN DISINTERMEDIATION ECONOMICS</text>
+          <g font-family="Inter, sans-serif" text-anchor="middle">
+            <rect x="30" y="56" width="210" height="150" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+            <text x="135" y="84" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">1. MASS</text>
+            <text x="135" y="110" fill="#ffffff" font-size="10.5">Accessible Global Reach</text>
+            <text x="135" y="132" fill="#cbd5e1" font-size="9.5">Eliminates 200–400% Retail</text>
+            <text x="135" y="150" fill="#cbd5e1" font-size="9.5">Markup Inflation</text>
+            <text x="135" y="182" fill="#4ade80" font-size="11" font-weight="700">40% Consumer Savings</text>
+
+            <rect x="258" y="56" width="210" height="150" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <text x="363" y="84" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">2. INTELLIGENT</text>
+            <text x="363" y="110" fill="#ffffff" font-size="10.5">Real-Time AI Pricing</text>
+            <text x="363" y="132" fill="#cbd5e1" font-size="9.5">Processes Market &amp; BOM Data</text>
+            <text x="363" y="150" fill="#cbd5e1" font-size="9.5">Smart Supply-Demand Match</text>
+            <text x="363" y="182" fill="#38bdf8" font-size="11" font-weight="700">+65% Maker Revenue</text>
+
+            <rect x="486" y="56" width="210" height="150" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+            <text x="591" y="84" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">3. NETWORK</text>
+            <text x="591" y="110" fill="#ffffff" font-size="10.5">Connected Ecosystem</text>
+            <text x="591" y="132" fill="#cbd5e1" font-size="9.5">Makers • Clinics • Buyers</text>
+            <text x="591" y="150" fill="#cbd5e1" font-size="9.5">Mutually Amplifying Growth</text>
+            <text x="591" y="182" fill="#d8b4fe" font-size="11" font-weight="700">Shared Talent &amp; Trust</text>
+
+            <rect x="714" y="56" width="216" height="150" rx="8" fill="#064e3b" stroke="#fde047" stroke-width="1.6"/>
+            <text x="822" y="84" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">4. TRANSPARENT</text>
+            <text x="822" y="110" fill="#ffffff" font-size="10.5">Zero Hidden Markup</text>
+            <text x="822" y="132" fill="#a7f3d0" font-size="9.5">AI-Verified Authenticity</text>
+            <text x="822" y="150" fill="#a7f3d0" font-size="9.5">Direct Factory-to-Buyer Ledger</text>
+            <text x="822" y="182" fill="#fde047" font-size="11" font-weight="700">100% Full Visibility</text>
+          </g>
+          <rect x="30" y="224" width="900" height="72" rx="8" fill="rgba(255,255,255,0.06)" stroke="#10b981"/>
+          <text x="480" y="252" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" text-anchor="middle">EVOLUTION INTO *SC QUANTUM COMMERCE: MINT DOCTRINE NOW POWERS SCARLET.AI (BUY4ME) &amp; QUBIT TRADE (t = 0)</text>
+          <text x="480" y="274" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">S • I • S • T • A • R = Success In Shared Talent, AI-Driven Relationships</text>
+        </svg>
+      </figure>
     </section>
 
     <!-- ======================================================================
@@ -766,6 +919,43 @@
           <h4 class="sc-h3">AI-Powered Diagnostics (DiagnoSis)</h4>
           <p class="sc-p">Intelligent diagnostic kits for healthcare and veterinary applications — democratizing access to rapid, accurate point-of-care health intelligence across global markets.</p>
         </div>
+      </div>
+
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SISTAR Superior Hybrid Moat and 13-Year Evolution into the 15 Founder Projects">
+          <rect width="960" height="320" rx="12" fill="#090d16"/>
+          <text x="32" y="34" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">HERITAGE DIAGRAM 02 • THE HYBRID MOAT (DIGITAL AI + PHYSICAL LOGISTICS) &amp; EVOLUTION TO 15 FOUNDER PROJECTS</text>
+          <g font-family="Inter, sans-serif" text-anchor="middle">
+            <rect x="32" y="56" width="430" height="236" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6"/>
+            <text x="247" y="84" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">THE DEFENSIBLE HYBRID MOAT ACROSS 1B+ CONSUMERS</text>
+            <text x="247" y="110" fill="#ffffff" font-size="11">Korea • Indonesia (270M) • Japan • China • ASEAN (650M)</text>
+            <rect x="54" y="126" width="184" height="84" rx="6" fill="#0f172a" stroke="#4ade80"/>
+            <text x="146" y="150" fill="#4ade80" font-size="11" font-weight="700">Digital AI Core</text>
+            <text x="146" y="170" fill="#cbd5e1" font-size="9.5">SISTAR MCP Server</text>
+            <text x="146" y="188" fill="#cbd5e1" font-size="9.5">Gemini + Workspace BI</text>
+            <rect x="256" y="126" width="184" height="84" rx="6" fill="#0f172a" stroke="#fde047"/>
+            <text x="348" y="150" fill="#fde047" font-size="11" font-weight="700">Physical Infrastructure</text>
+            <text x="348" y="170" fill="#cbd5e1" font-size="9.5">Cold-Chain &amp; Warehouses</text>
+            <text x="348" y="188" fill="#cbd5e1" font-size="9.5">BPOM/Vet Import Permits</text>
+            <text x="247" y="236" fill="#a7f3d0" font-size="10.5" font-weight="600">Non-Cyclical Anchors: AI-Logistics • AgriTech/Pet • Commerce</text>
+            <text x="247" y="258" fill="#fde047" font-size="10.5" font-weight="700">Outperforms Pure Digital Clone Studios &amp; Siloed Agencies</text>
+
+            <rect x="498" y="56" width="430" height="236" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.6"/>
+            <text x="713" y="84" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">HERITAGE ARCHIVES → LIVE *SC ECOSYSTEM</text>
+            <text x="713" y="110" fill="#ffffff" font-size="10.5">• IruKa Pet Care &amp; DiagnoSis → Vet Specialties (FP 07–09)</text>
+            <text x="713" y="132" fill="#ffffff" font-size="10.5">• Indo Herbs &amp; JAVA Nature → Ayurvedic &amp; Import (FP-11)</text>
+            <text x="713" y="154" fill="#ffffff" font-size="10.5">• BIONDI &amp; MCP Server → Qubit ERP &amp; Daily 1 VIP (FP 01/14)</text>
+            <text x="713" y="176" fill="#ffffff" font-size="10.5">• sisMall / sisMarket / sisCart → Scarlet.ai &amp; Qubit Trade</text>
+            <text x="713" y="198" fill="#ffffff" font-size="10.5">• SISTAR Academy &amp; PL/PTM → Sistar Challengers Int'l (FP-10)</text>
+            <rect x="522" y="216" width="382" height="56" rx="6" fill="#0f172a" stroke="#4ade80"/>
+            <text x="713" y="240" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">13+ YEARS HERITAGE • 100+ B2B PROPOSALS • 0 OVERDUE</text>
+            <text x="713" y="258" fill="#cbd5e1" font-size="10">Institutional Track Record De-Risking Every Future Venture</text>
+          </g>
+        </svg>
+      </figure>
+
+      <div class="sc-callout">
+        <strong>Partner &amp; Institutional Investor Conclusion:</strong> *SC was not invented overnight; it is the culmination of 20+ years of international business development and 13+ years of documented SISTAR venture-building heritage—combining an irreplaceable physical trade moat with autonomous quantum AI execution.
       </div>
     </section>
   </main>

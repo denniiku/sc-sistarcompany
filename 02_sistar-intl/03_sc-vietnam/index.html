@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
   <title>*sc | sistar company vietnam — sistar company - sistar intl - sc vietnam</title>
-  <meta name="description" content="sc vietnam (SCV) — Indochina high-velocity commerce, aquaculture/livestock biologics, and SISTAR Challengers Int'l AI engineering hub." />
+  <meta name="description" content="sc vietnam (SCV) — Indochina high-velocity commerce, aquaculture/livestock biologics (aquasis & sispharm), and SISTAR Challengers Int'l AI engineering hub." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*sc | sistar company vietnam",
-    "description": "sc vietnam (SCV) — Indochina high-velocity commerce, aquaculture/livestock biologics, and SISTAR Challengers Int'l AI engineering hub.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "sistar company (*sc)",
-      "alternateName": "signal star",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "sistar company vietnam (SCV / sc vietnam)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/02_sistar-intl/03_sc-vietnam/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*sc | sistar company vietnam — Indochina Commerce, AgTech & AI Challenger Monograph",
+        "description": "sc vietnam (SCV) — Indochina high-velocity commerce, aquaculture/livestock biologics, and SISTAR Challengers Int'l AI engineering hub.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "sistar company (*sc)",
+          "alternateName": "signal star",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
+  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -30,57 +44,628 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-doc { box-sizing: border-box; width: 100%; max-width: min(1400px, 96%); padding: clamp(48px, 6vh, 84px) clamp(28px, 6vw, 96px) 120px; }
-    .sc-eyebrow { font-family: "Space Grotesk", sans-serif; font-size: 0.9rem; font-weight: 500; color: #526D82; letter-spacing: 0.04em; margin: 0 0 8px 0; text-transform: lowercase; }
-    .sc-main-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.4rem, 4.2vw, 3.4rem); font-weight: 700; color: #27374D; margin: 0 0 20px 0; letter-spacing: -0.03em; line-height: 1.05; text-transform: lowercase; }
-    .sc-lead { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.12rem, 1.5vw, 1.28rem); font-weight: 500; color: #27374D; line-height: 1.65; margin: 0 0 56px 0; }
-    .sc-section { margin-bottom: 52px; }
-    .sc-sec-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.35rem, 2vw, 1.6rem); font-weight: 700; color: #27374D; margin: 0 0 14px 0; letter-spacing: -0.02em; line-height: 1.3; padding-left: 1.45em; text-indent: -1.45em; }
-    .sc-sec-body { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.85; color: #27374D; margin: 0 0 16px 2.15rem; }
-    .sc-list { list-style: none; margin: 12px 0 20px 2.15rem; padding-left: 0; font-family: "Inter", sans-serif; font-size: 0.98rem; line-height: 1.85; color: #27374D; }
-    .sc-list li { margin-bottom: 14px; padding-left: 1.25em; text-indent: -1.25em; }
-    .sc-hr { border: 0; border-top: 1px solid rgba(39, 55, 77, 0.16); margin: 48px 0; }
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
+      font-family: "Inter", sans-serif;
+      color: #0f172a;
+      line-height: 1.76;
+    }
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
+    }
+    .sc-route {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      letter-spacing: 0.04em;
+      margin: 0;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .sc-btn-pdf {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+      background: rgba(22, 135, 101, 0.15);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-doc-h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
+      font-weight: 700;
+      color: #0f172a;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
+      font-weight: 500;
+      color: #0f172a;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
+    }
+    @media print {
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
+    }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-doc">
-    <p class="sc-eyebrow">sistar company - sistar intl - sc vietnam</p>
-    <h1 class="sc-main-title">sistar company vietnam</h1>
-    <p class="sc-lead">
-      "The Indochina High-Velocity Commerce, AgTech &amp; AI Challenger Hub (SCV). Bridging clinical bio-innovation with Vietnam's booming livestock, aquaculture, beauty, and software engineering ecosystems."
-    </p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - sistar intl - sc vietnam</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export SC Vietnam Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Strategic Identity &amp; Role within the *sc Universe</h2>
-      <p class="sc-sec-body">
-        <strong>sistar company vietnam (sc vietnam / SCV)</strong> functions as our high-growth Indochina operational node and fractional engineering powerhouse. Positioned at the intersection of one of Asia's fastest-growing consumer economies and a deep pool of technical talent, <em>sc vietnam</em> drives both physical B2B/B2C trade and digital software replication across the <strong>*sc</strong> constellation.
-      </p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — INDOCHINA COMMERCE, AGTECH & AI CHALLENGER HUB -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">NODE [SC.VN / SCV] &bull; INDOCHINA COMMERCE, AQUASIS &amp; AI CHALLENGERS</span>
+      </div>
+      <h1 class="sc-doc-h1">sistar company vietnam (SCV) — Indochina High-Velocity Commerce, AgTech &amp; AI Challenger Hub</h1>
+      <p class="sc-lead">"The Indochina High-Velocity Commerce, AgTech &amp; AI Challenger Hub (SCV). Bridging clinical bio-innovation with Vietnam's booming livestock, aquaculture, beauty, and software engineering ecosystems."</p>
+
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote"><strong>sistar company vietnam (sc vietnam / SCV)</strong> functions as our high-growth Indochina operational node and fractional engineering powerhouse. Positioned at the intersection of one of Asia's fastest-growing 100-million consumer economies and a deep pool of technical talent, <em>sc vietnam</em> drives both physical B2B/B2C trade and digital software replication across the <strong>*sc</strong> constellation.</p>
+        <p class="sc-p">By entangling Korean clinical formulations (SCK) and Indonesian ASEAN regulatory dossiers (SCI) directly into Ho Chi Minh City and Hanoi, <strong>sc vietnam</strong> compresses market-entry timelines for aquaculture/livestock biologics (<em>aquasis</em> &amp; <em>sispharm</em>), companion animal care (<em>SISPet</em>), and K-Beauty (<em>sismii</em>), while supplying elite full-stack AI developers into our global <em>Qubit Star&trade;</em> talent ledger.</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">100M+ Indochina</div>
+          <div class="sc-kpi-desc">High-Velocity Consumer, Companion Pet, Livestock &amp; Mekong Aquaculture Hub</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">Aquasis &bull; Sispharm</div>
+          <div class="sc-kpi-desc">Smart Marine/Shrimp Biologics &amp; Disease-Prevention Feed Additives</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">Qubit Star&trade; Dev</div>
+          <div class="sc-kpi-desc">Fractional Full-Stack AI &amp; UI/UX Engineering Tokenized via Qubit Time Bank</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">TikTok VN &bull; Zalo</div>
+          <div class="sc-kpi-desc">Programmatic Social Commerce &amp; Pre-Import Group Buying Aggregation</div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG 1: SC VIETNAM DUAL ENGINE — MEKONG BIO-COMMERCE & AI CHALLENGER HUB -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC Vietnam Dual Engine: Aquaculture/Livestock Biologics, Viral Commerce, and AI Challenger Dev Hub">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // SC VIETNAM [SCV] — MEKONG AQUASIS/SISPHARM BIOLOGICS, ZALO/TIKTOK COMMERCE &amp; AI DEV HUB</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Column 1: Bio & AgTech Engine -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. AQUASIS &amp; SISPHARM BIOLOGICS</text>
+
+          <rect x="38" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="48" y="116" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Mekong Shrimp &amp; Marine (aquasis)</text>
+          <text x="48" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Water-quality probiotics, viral defense</text>
+          <text x="48" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; smart pond telemetry integration</text>
+
+          <rect x="38" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Swine &amp; Poultry Bio (sispharm)</text>
+          <text x="48" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Concentrated feed additives, herbal</text>
+          <text x="48" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">immunomodulators &amp; rapid POCT kits</text>
+
+          <rect x="38" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="48" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">KR + ID DOSSIER ENTANGLEMENT</text>
+          <text x="48" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Cross-recognizes SCK/SCI clinical data</text>
+
+          <!-- Column 2: Programmatic Social Commerce -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="351" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. PROGRAMMATIC SOCIAL COMMERCE</text>
+
+          <rect x="351" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="363" y="116" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">TikTok Vietnam &amp; Zalo Mini-Apps</text>
+          <text x="363" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Scarlet AI mines trending beauty &amp; pet</text>
+          <text x="363" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">signals &rarr; auto-generates shoppable video</text>
+
+          <rect x="351" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="363" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">B2B2C Retailer Alliance</text>
+          <text x="363" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Unites HCMC/Hanoi pet shops, vet clinics</text>
+          <text x="363" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; K-Beauty spas for group factory pricing</text>
+
+          <rect x="351" y="260" width="258" height="62" rx="4" fill="#1e3a8a" />
+          <text x="363" y="280" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">70/30 VIETQR / PG WEBHOOK SPLIT</text>
+          <text x="363" y="297" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Instant 30% local partner margin payout</text>
+
+          <!-- Column 3: SISTAR Challengers & AI Dev Hub -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="664" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. VIETNAMESE AI DEV &amp; CHALLENGERS</text>
+
+          <rect x="664" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="676" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Qubit Star&trade; ("Intelligence on Tap")</text>
+          <text x="676" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Full-stack AI engineers, UI/UX vibe</text>
+          <text x="676" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">designers &amp; MCP workflow builders</text>
+
+          <rect x="664" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="676" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Qubit Factory&trade; Micro-SaaS Cloning</text>
+          <text x="676" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Rapidly clones &amp; localizes *sc web portals</text>
+          <text x="676" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">&amp; CRM modules at near-zero fixed cost</text>
+
+          <rect x="664" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="676" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">QUBIT TIME BANK OFFSETTING</text>
+          <text x="676" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Dev hours offset against Korean Bio SKUs</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // Three-pillar architecture of SC Vietnam (SCV): Mekong Aquaculture &amp; Livestock Biologics, Zalo/TikTok Programmatic Social Commerce, and the SISTAR Challengers AI Engineering Hub.</figcaption>
+      </figure>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER II: CORE BUSINESS ENGINES & REGIONAL VERTICALS -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">CORE BUSINESS ENGINES &bull; INDOCHINA VERTICALS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Core Business Engines &amp; Regional Verticals in Vietnam</h2>
+      <p class="sc-lead"><strong>sistar company vietnam (SCV)</strong> operates three synergistic engines across physical bio-trade, viral social commerce, and global software production:</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Core Business Engines &amp; Regional Verticals</h2>
-      <ul class="sc-list">
-        <li>• <strong>Aquaculture &amp; Livestock Bio-Solutions (<em>aquasis</em> &amp; <em>sispharm</em>):</strong> Deployment of smart marine and shrimp farm monitoring, eco-friendly feed additives, and disease-prevention biologics tailored to Vietnam's Mekong and coastal production belts.</li>
-        <li>• <strong>Programmatic Social Commerce &amp; K-Beauty (<em>sismii</em> &amp; <em>scarlet-ai</em>):</strong> Mining real-time viral signals across TikTok Vietnam and Zalo to auto-generate localized shoppable media and aggregate group-buying demand prior to import.</li>
-        <li>• <strong>SISTAR Challengers Int'l — Vietnam Dev &amp; Automation Hub:</strong> Onboarding elite Vietnamese full-stack developers, UI/UX vibe designers, and AI automation engineers into our <em>Qubit Star™</em> ("Intelligence on Tap") network.</li>
-      </ul>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">1. Aquaculture &amp; Livestock Bio-Solutions (<em>aquasis</em> &amp; <em>sispharm</em>)</h3>
+          <p class="sc-p">Deployment of smart marine and shrimp farm monitoring, eco-friendly feed additives, and disease-prevention biologics tailored to Vietnam's Mekong Delta and coastal production belts.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">2. Programmatic Social Commerce &amp; K-Beauty (<em>sismii</em> &amp; <em>scarlet-ai</em>)</h3>
+          <p class="sc-p">Mining real-time viral signals across TikTok Vietnam and Zalo to auto-generate localized shoppable media and aggregate group-buying demand prior to import.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">3. SISTAR Challengers Int'l — Vietnam Dev &amp; Automation Hub</h3>
+          <p class="sc-p">Onboarding elite Vietnamese full-stack developers, UI/UX vibe designers, and AI automation engineers into our <em>Qubit Star&trade;</em> ("Intelligence on Tap") network.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>SCV Vertical ID</th>
+              <th>Indochina Sector</th>
+              <th>Flagship Brands &amp; Systems</th>
+              <th>Target Customer Cluster</th>
+              <th>Qubit Clearing Mechanism</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">SCV-01</span></td>
+              <td><strong>Mekong Shrimp &amp; Pangasius Aquaculture</strong></td>
+              <td><em>aquasis</em> Probiotics, Water Biologics &amp; Pond AI</td>
+              <td>Mekong Delta Shrimp Integrators &amp; Hatcheries</td>
+              <td>K-SURE 90d BNPL + Harvest Yield Offsetting</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCV-02</span></td>
+              <td><strong>Swine, Poultry &amp; Companion Vet Bio</strong></td>
+              <td><em>sispharm</em>, <em>SISPet</em>, <em>Forever Young Dog</em></td>
+              <td>Commercial Livestock Farms &amp; HCMC/Hanoi Vet Clinics</td>
+              <td>B2B2C Retailer Alliance Group Buying</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCV-03</span></td>
+              <td><strong>Viral K-Beauty &amp; Aesthetic Clinics</strong></td>
+              <td><em>sismii</em>, <em>Michlo</em>, <em>MedIX</em></td>
+              <td>TikTok Shop Vietnam Creators, Zalo Mini-Apps &amp; Spas</td>
+              <td>Real-Time 70/30 PG Webhook Split</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">SCV-04</span></td>
+              <td><strong>Fractional AI Engineering &amp; SaaS Cloning</strong></td>
+              <td><em>Qubit Star&trade;</em>, <em>Qubit Factory&trade;</em>, <em>SISTAR Challengers</em></td>
+              <td>All 12 *sc Orbital Domains &amp; Global B2B SaaS Clients</td>
+              <td><em>Qubit Time Bank</em> Dev-Hour Tokenization</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
-    <hr class="sc-hr" />
+    <!-- CHAPTER III: QUBIT TIME BANK & FRACTIONAL AI ENGINEERING ARBITRAGE -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">QUBIT STAR&trade; &amp; TIME BANK &bull; ENGINEERING VELOCITY</span>
+      </div>
+      <h2 class="sc-chapter-h2">Qubit Time Bank: Converting Vietnamese AI Engineering Talent into Global Trade Equity</h2>
+      <p class="sc-lead">How does *sc maintain 12 semantic web domains, 282+ deep pages, and 15 Founder Projects without a <span class="notranslate" translate="no">$10M</span> Silicon Valley payroll? Through <strong>SC Vietnam's Qubit Star&trade;</strong> fractional engineering matrix.</p>
 
-    <section class="sc-section">
-      <h2 class="sc-sec-title">▫️ Partnership &amp; Investment Synergy</h2>
-      <ul class="sc-list">
-        <li>• <strong>Cross-Entangled ASEAN Expansion:</strong> Clinical validations and regulatory dossiers established in Korea and Indonesia are entangled directly into Vietnam, cutting market-entry timelines and compliance costs for partner brands.</li>
-        <li>• <strong>B2B2C Retailer Alliance (<em>qubit marketplace work</em>):</strong> Local veterinary clinics, pet shops, aquaculture farms, and beauty retailers unite through our demand-aggregation platform to access direct factory pricing.</li>
-        <li>• <strong>Scalable Tech &amp; SaaS Production:</strong> Provides high-velocity engineering capacity to localize and maintain micro-SaaS portals across the global <em>*sc</em> ecosystem at minimal fixed cost.</li>
-      </ul>
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: QUBIT TIME BANK ENGINEERING-FOR-COMMERCE OFFSETTING</span>
+        Dev_Hours_SCV (Q_Time) &rArr; Clones &amp; Localizes 20_Micro_SaaS_Portals &rArr; Earns % Revenue Share + Korean Bio SKU Allocations<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: PRE-IMPORT SOCIAL DEMAND TUNNELING (ZALO / TIKTOK VN)</span>
+        Import_Container_Trigger = True &nbsp;iff&nbsp; &Sigma; Zalo_TikTok_GroupBuy_Escrow &ge; 1.25 &times; Landed_CIF_Cost
+      </div>
+
+      <!-- INLINE SVG 2: QUBIT TIME BANK & B2B2C RETAILER ALLIANCE IN VIETNAM -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SC Vietnam Qubit Time Bank Engineering Loop and B2B2C Retailer Alliance">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // SC VIETNAM QUBIT TIME BANK (DEV HOURS &harr; BIO SKUS) &amp; B2B2C RETAILER ALLIANCE</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Half: Qubit Time Bank Dev Loop -->
+          <rect x="24" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="40" y="82" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">A. QUBIT TIME BANK — VIETNAMESE AI DEV ENGINE</text>
+
+          <rect x="40" y="98" width="412" height="66" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="52" y="118" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. Elite Vietnamese Developers &amp; Vibe Designers</text>
+          <text x="52" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Contribute verified sprint hours into Qubit Time Bank</text>
+          <text x="52" y="150" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">Zero fixed corporate burn; 100% milestone-verified output</text>
+
+          <rect x="40" y="176" width="412" height="66" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="52" y="196" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. Qubit Factory&trade; Auto-Reskinning &amp; MCP Agents</text>
+          <text x="52" y="213" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Deploys localized e-commerce, CRM &amp; RAG nodes for</text>
+          <text x="52" y="228" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">veterinary hospitals, aquaculture cooperatives &amp; spas</text>
+
+          <rect x="40" y="254" width="412" height="66" rx="4" fill="#0f5132" />
+          <text x="52" y="274" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. Dual Compensation: Cash + Trade Revenue Share</text>
+          <text x="52" y="291" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">Developers earn USD SaaS royalties + direct wholesale</text>
+          <text x="52" y="306" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">allocations of Korean K-Beauty &amp; Pet Bio products</text>
+
+          <!-- Right Half: B2B2C Retailer Alliance -->
+          <rect x="492" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="508" y="82" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">B. INDOCHINA B2B2C RETAILER ALLIANCE</text>
+
+          <rect x="508" y="98" width="412" height="66" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="520" y="118" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. Demand Aggregation Before Shipment</text>
+          <text x="520" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">500+ Independent Vet Clinics, Pet Shops &amp; Shrimp Farms</text>
+          <text x="520" y="150" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">Pool monthly orders via Qubit Marketplace Work</text>
+
+          <rect x="508" y="176" width="412" height="66" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="520" y="196" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. Direct Korean / Indonesian Factory Pricing</text>
+          <text x="520" y="213" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Bypasses 3 layers of local Vietnamese import brokers;</text>
+          <text x="520" y="228" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">unlocks container-tier FOB pricing for small retailers</text>
+
+          <rect x="508" y="254" width="412" height="66" rx="4" fill="#1e3a8a" />
+          <text x="520" y="274" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. Automated 70/30 PG Settlement &amp; Loyalty</text>
+          <text x="520" y="291" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">Instant 30% retailer margin split + Qubit loyalty credits</text>
+          <text x="520" y="306" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">redeemable across all *sc global product lines</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // Synergy between SC Vietnam's Qubit Time Bank fractional engineering hub (left) and the Indochina B2B2C Retailer Alliance (right).</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: CROSS-ENTANGLED ASEAN REGULATORY & LOGISTICS CORRIDOR -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">VKFTA / RCEP CORRIDOR &bull; ASEAN REGULATORY ENTANGLEMENT</span>
+      </div>
+      <h2 class="sc-chapter-h2">Cross-Entangled ASEAN Expansion: Linking Korea, Indonesia &amp; Vietnam</h2>
+      <p class="sc-lead">Clinical validations and regulatory dossiers established in Korea (SCK) and Indonesia (SCI) are entangled directly into Vietnam (SCV), cutting market-entry timelines and compliance costs by over 60%.</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. VKFTA &amp; ASEAN Trade Prefs</h3>
+          <p class="sc-p">Leverages the Vietnam–Korea Free Trade Agreement (VKFTA) and ATIGA (ASEAN Trade in Goods Agreement) to import both Korean clinical concentrates and Indonesian <span class="notranslate" translate="no">Rp 1,320</span> GMP micro-sachets at preferential tariff rates.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. Shared Clinical &amp; Field Data</h3>
+          <p class="sc-p">Poultry and aquaculture efficacy trials conducted in Indonesia and Vietnam are pooled inside the <strong>International AI Data Alliance (IADA)</strong> RAG vault, giving veterinary buyers in both countries verified tropical clinical proof.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">3. Indochina Land Corridor</h3>
+          <p class="sc-p">From Ho Chi Minh City and Da Nang, <strong>sc vietnam</strong> serves as the logistics launchpad into neighboring Cambodia and Laos, extending the Signal Star footprint across the entire Mekong subregion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER V: PARTNERSHIP SYNERGY & ONBOARDING IN VIETNAM -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; RETAILER ALLIANCE &amp; DEV CHALLENGERS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Partnership &amp; Investment Synergy: Joining SC Vietnam</h2>
+      <p class="sc-lead"><strong>sc vietnam</strong> welcomes three primary partner categories into our Indochina constellation:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Cross-Entangled ASEAN Expansion</h3>
+          <p class="sc-p">Clinical validations and regulatory dossiers established in Korea and Indonesia are entangled directly into Vietnam, cutting market-entry timelines and compliance costs for partner brands.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">B2B2C Retailer Alliance (<em>qubit marketplace work</em>)</h3>
+          <p class="sc-p">Local veterinary clinics, pet shops, aquaculture farms, and beauty retailers unite through our demand-aggregation platform to access direct factory pricing and 90-day BNPL credit.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Scalable Tech &amp; SaaS Production</h3>
+          <p class="sc-p">Vietnamese software studios and independent AI engineers join <em>SISTAR Challengers Int'l</em> to localize and maintain micro-SaaS portals across the global <em>*sc</em> ecosystem at minimal fixed cost in exchange for revenue share.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER VI: VC & INSTITUTIONAL INVESTOR THESIS FOR SC VIETNAM -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; IR INVESTMENT THESIS &bull; INDOCHINA DUAL ALPHA</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional Investor Thesis: Indochina Dual Alpha</h2>
+      <p class="sc-lead">For institutional investors, <strong>sc vietnam (SCV)</strong> delivers dual alpha: high-margin revenue growth in Asia's fastest-expanding aquaculture, companion pet, and K-Beauty consumer market, combined with an ultra-capital-efficient AI engineering center that powers the entire 12-domain Signal Star galaxy.</p>
+      <div class="sc-callout">
+        <strong>Zero-Burn Engineering + Pre-Sold Container Trade:</strong> By offsetting Vietnamese software engineering hours via the <em>Qubit Time Bank</em> and pre-selling bio/beauty shipments through Zalo and TikTok Vietnam group-buying escrows, SCV operates with structurally positive cash conversion from Day 1.
+      </div>
     </section>
   </main>
 </body>

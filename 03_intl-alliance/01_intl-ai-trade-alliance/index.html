@@ -3,20 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
-  <title>*SC | Intl AI Trade Alliance - sistar company - intl alliance - intl ai trade alliance</title>
-  <meta name="description" content="*SC (SISTAR Company) - Intl AI Trade Alliance : One Spark to Galaxify Business - Executive Command OS, Quantum Trade Finance &amp; 4-Way Qubit Banking." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+  <title>*SC | Intl AI Trade Alliance — sistar company - intl alliance - intl ai trade alliance</title>
+  <meta name="description" content="*SC (SISTAR Company) - Intl AI Trade Alliance (IATA): One Spark to Galaxify Business — Executive Command OS, C.A.N. Spark Exploder, K-SURE BNPL Trade Finance, 4-Way Qubit Banking, and The Qubit Retailer Alliance." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*SC | Intl AI Trade Alliance",
-    "description": "One Spark to Galaxify Business - Executive Command OS, Quantum Trade Finance &amp; 4-Way Qubit Banking.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "*SC - SISTAR COMPANY",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "*SC - Intl AI Trade Alliance (IATA)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "*SC - SISTAR COMPANY",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/03_intl-alliance/01_intl-ai-trade-alliance/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*SC | Intl AI Trade Alliance (IATA) — Sovereign AI Trade Federation Monograph",
+        "description": "One Spark to Galaxify Business - Executive Command OS, Quantum Trade Finance & 4-Way Qubit Banking.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "*SC - SISTAR COMPANY",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
   <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
@@ -29,196 +43,631 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-auto-page {
+    .sc-monograph {
       box-sizing: border-box;
       width: 100%;
-      max-width: min(1360px, 95%);
-      padding: clamp(40px, 5vh, 68px) clamp(24px, 4.5vw, 72px) 120px;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
       font-family: "Inter", sans-serif;
       color: #0f172a;
+      line-height: 1.76;
     }
-    main h1, main h2, main h3, main h4,
-    main p, main .sc-lead, main .sc-p,
-    main .sc-route, main .sc-sec,
-    main .sc-card-line, main .sc-card-emerald {
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      text-indent: 0 !important;
-      text-align: left !important;
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
     }
     .sc-route {
       font-family: "Space Grotesk", sans-serif;
       font-size: 0.88rem;
       font-weight: 600;
-      color: #475569;
+      color: #334155;
       letter-spacing: 0.04em;
-      margin: 0 0 18px 0;
+      margin: 0;
       text-transform: lowercase;
     }
-    .sc-sec {
-      padding: 52px 0;
-      border-bottom: 1.5px solid rgba(15, 23, 42, 0.14);
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
-    .sc-sec:last-of-type { border-bottom: none; }
-    .sc-kicker {
-      display: inline-block;
+    .sc-btn-pdf {
       font-family: "Space Grotesk", sans-serif;
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #0f5132;
       background: rgba(22, 135, 101, 0.15);
-      padding: 5px 12px;
-      border-radius: 4px;
-      margin: 0 0 14px 0;
+      padding: 4px 10px;
+      border-radius: 3px;
     }
-    .sc-h1 {
+    .sc-doc-h1 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
       font-weight: 700;
       color: #0f172a;
       letter-spacing: -0.025em;
-      line-height: 1.12;
-      margin: 0 0 14px 0;
-    }
-    .sc-sub {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.15rem, 1.6vw, 1.38rem);
-      font-weight: 600;
-      color: #0f5132;
-      line-height: 1.4;
-      margin: 0 0 24px 0;
-    }
-    .sc-h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
+      line-height: 1.2;
       margin: 0 0 18px 0;
     }
-    .sc-h3 {
+    .sc-sub-h3 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1.15rem;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
       font-weight: 700;
       color: #0f172a;
-      margin: 0 0 10px 0;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
       line-height: 1.35;
     }
     .sc-lead {
-      font-size: clamp(1.04rem, 1.22vw, 1.14rem);
-      line-height: 1.82;
-      color: #1e293b;
-      margin: 0 0 34px 0;
-    }
-    .sc-p {
-      font-size: 0.97rem;
-      line-height: 1.8;
-      color: #334155;
-      margin: 0;
-    }
-    /* Spacious 2-Column (2x2) Grid Layout */
-    .sc-grid-2x2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 48px;
-      row-gap: 38px;
-      margin-top: 28px;
-    }
-    @media (max-width: 760px) {
-      .sc-grid-2x2 { grid-template-columns: 1fr; }
-    }
-    .sc-card-line {
-      padding-top: 20px !important;
-      border-top: 2px solid rgba(15, 23, 42, 0.24) !important;
-    }
-    .sc-card-emerald {
-      padding-top: 20px !important;
-      border-top: 3px solid #168765 !important;
-    }
-    .sc-num-label {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #0f5132;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-    }
-    .sc-callout {
-      margin-top: 38px;
-      padding: 20px 24px !important;
-      border-left: 4px solid #0f5132;
-      background: rgba(255, 255, 255, 0.34);
-      font-size: 0.98rem;
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
       font-weight: 500;
       color: #0f172a;
-      line-height: 1.72;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
     }
     @media print {
-      html, body, main, .sc-auto-page { background: #ffffff !important; padding-left: 0 !important; opacity: 1 !important; }
-      #sc-left-nav, .sc-nav-toggle { display: none !important; }
-      .sc-card-line, .sc-card-emerald, .sc-callout { break-inside: avoid !important; page-break-inside: avoid !important; }
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-auto-page">
-    <p class="sc-route">sistar company - intl alliance - intl ai trade alliance</p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - intl alliance - intl ai trade alliance</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export IATA Trade Alliance Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-sec" style="padding-top: 12px;">
-      <div><span class="sc-kicker">COSMO SEED&trade; LAUNCHPAD &bull; QUBIT-BIZ</span></div>
-      <h1 class="sc-h1">*SC - Intl AI Trade Alliance</h1>
-      <p class="sc-sub">One Spark to Galaxify Business - Executive Command OS, Quantum Trade Finance &amp; 4-Way Qubit Banking.</p>
-      <p class="sc-lead">Within the <strong>qubit-biz</strong> launchpad, <strong>Intl AI Trade Alliance</strong> transforms bold business sparks into self-funding commercial realities. By uniting our <strong>C.A.N. (CEO ActionNote AI)</strong> spawner with K-SURE export credit protection and our cashless <strong>4-Way Qubit Bank</strong> ledger, it enables rapid global scaling without balance-sheet strain.</p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — INTERNATIONAL AI TRADE ALLIANCE (IATA) -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">COSMO SEED&trade; LAUNCHPAD &bull; QUBIT-BIZ &amp; IATA GOVERNANCE</span>
+      </div>
+      <h1 class="sc-doc-h1">*SC - Intl AI Trade Alliance (IATA)</h1>
+      <p class="sc-lead">One Spark to Galaxify Business — Executive Command OS, C.A.N. Spark Exploder, Quantum Trade Finance &amp; 4-Way Qubit Banking.</p>
 
-      <div class="sc-grid-2x2">
-        <div class="sc-card-line">
-          <div class="sc-num-label">01 &bull; WHAT IT IS (CORE DEFINITION)</div>
-          <h2 class="sc-h3">C.A.N. Spark Exploder &amp; 100-Project OS</h2>
-          <p class="sc-p">Converts a 10-second executive voice note into 4 synchronized tracks (Micro-Portal, Shoppable Video, 3-Party ODM Contract, and E1-E3 Pricing) governed via one-tap approval (//mo SaaS).</p>
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote">Within the <strong>qubit-biz</strong> launchpad, <strong>Intl AI Trade Alliance (IATA)</strong> transforms bold business sparks into self-funding commercial realities. By uniting our <strong>C.A.N. (CEO ActionNote AI)</strong> spawner with K-SURE export credit protection and our cashless <strong>4-Way Qubit Bank</strong> ledger, it enables rapid global scaling without balance-sheet strain.</p>
+        <p class="sc-p">Independent manufacturers, regional wholesalers, veterinary clinics, and retail operators normally lack the volume leverage, trade credit insurance, and autonomous AI procurement pipelines enjoyed by multinational giants. <strong>IATA</strong> federates hundreds of independent trade nodes across Korea, Indonesia, Vietnam, Singapore, China, Japan, the US, and India into a single virtual conglomerate—executing standardized Agent-to-Agent B2B trade protocols, 3-Month Rolling Purchasing Forecasts (RPF), and 70/30 real-time PG settlements.</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">10s Voice &rarr; 4 Tracks</div>
+          <div class="sc-kpi-desc">C.A.N. Spark Exploder Spawns Portal, Video, 3-Party ODM &amp; E1–E3 Pricing</div>
         </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">4-Way Qubit Bank</div>
+          <div class="sc-kpi-desc">Time, Space, Idea &amp; Petfood/Bio Cashless Multilateral Offsetting</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">K-SURE + 50% Dep</div>
+          <div class="sc-kpi-desc">First 3 Shipments 50% Deposit &rarr; 90-Day State-Backed BNPL Credit</div>
+        </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">3-Mo RPF Alliance</div>
+          <div class="sc-kpi-desc">Qubit Retailer Alliance Pooling Independent Clinics, Pet Shops &amp; Wholesalers</div>
+        </div>
+      </div>
 
-        <div class="sc-card-line">
-          <div class="sc-num-label">02 &bull; WHY WE DO IT (MARKET OPPORTUNITY)</div>
-          <h2 class="sc-h3">4-Way Cashless Offsetting (Qubit Banks)</h2>
+      <!-- INLINE SVG 1: IATA C.A.N. SPARK EXPLODER & 4-WAY QUBIT TRADE CLEARING -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="IATA C.A.N. Spark Exploder, K-SURE 3-Party Trade Clearing, and Qubit Retailer Alliance">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // INTL AI TRADE ALLIANCE (IATA) — C.A.N. SPARK EXPLODER, 4-WAY QUBIT BANK &amp; RETAILER ALLIANCE</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Column 1: C.A.N. Spark Exploder -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. C.A.N. SPARK EXPLODER (FP-04)</text>
+
+          <rect x="38" y="96" width="258" height="58" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="48" y="116" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Input: 10-Second CEO Voice Note</text>
+          <text x="48" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Captured via [&amp; I] Wearable or Mobile App</text>
+
+          <rect x="38" y="164" width="258" height="92" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="184" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Spawns 4 Synchronized Tracks:</text>
+          <text x="48" y="201" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">&bull; Track A: Localized Micro-Portal</text>
+          <text x="48" y="216" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">&bull; Track B: Shoppable Video Campaign</text>
+          <text x="48" y="231" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">&bull; Track C: 3-Party ODM Smart Contract</text>
+          <text x="48" y="246" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="9">&bull; Track D: E1–E3 Tiered Volume Pricing</text>
+
+          <rect x="38" y="266" width="258" height="56" rx="4" fill="#0f5132" />
+          <text x="48" y="286" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">100-PROJECT COMMAND OS</text>
+          <text x="48" y="303" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">One-tap executive approval ($29–$99/mo SaaS)</text>
+
+          <!-- Column 2: K-SURE & 4-Way Qubit Clearing -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="351" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. K-SURE &amp; 4-WAY QUBIT CLEARING</text>
+
+          <rect x="351" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="363" y="116" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3-Party Trade Clearing Contract</text>
+          <text x="363" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">First 3 shipments: 50% advance deposit &rarr;</text>
+          <text x="363" y="148" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">Unlocks K-SURE 90-day BNPL credit line</text>
+
+          <rect x="351" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="363" y="198" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">4-Way Cashless Offsetting</text>
+          <text x="363" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Barter idle capacity across Time, Space,</text>
+          <text x="363" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Idea &amp; Petfood/Bio Qubit Bank ledgers</text>
+
+          <rect x="351" y="260" width="258" height="62" rx="4" fill="#1e3a8a" />
+          <text x="363" y="280" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">70/30 PG WEBHOOK SPLIT</text>
+          <text x="363" y="297" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">70% retires credit / 30% instant partner profit</text>
+
+          <!-- Column 3: The Qubit Retailer Alliance -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="664" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. THE QUBIT RETAILER ALLIANCE</text>
+
+          <rect x="664" y="96" width="258" height="72" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="676" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Virtual Conglomerate Buying Power</text>
+          <text x="676" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Unites 100s of independent pet shops, vet</text>
+          <text x="676" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">clinics &amp; regional wholesalers across ASEAN</text>
+
+          <rect x="664" y="178" width="258" height="72" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="676" y="198" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3-Month Rolling Forecast (RPF)</text>
+          <text x="676" y="215" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Locks factory container pricing + enables</text>
+          <text x="676" y="230" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">zero-wastage inter-member stock swaps</text>
+
+          <rect x="664" y="260" width="258" height="62" rx="4" fill="#0f5132" />
+          <text x="676" y="280" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">DEFEATS MONOPOLY E-COMMERCE</text>
+          <text x="676" y="297" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Container FOB cost for local shopkeepers</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // End-to-end execution of the International AI Trade Alliance (IATA): C.A.N. Spark Exploder (left), K-SURE &amp; 4-Way Qubit Clearing (center), and the Qubit Retailer Alliance (right).</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER II: THE 4 CORE MECHANISMS OF THE INTL AI TRADE ALLIANCE -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">4 CORE MECHANISMS &bull; C.A.N., 4-WAY BANK, K-SURE &amp; RETAILER ALLIANCE</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Four Core Mechanisms of *SC - Intl AI Trade Alliance</h2>
+      <p class="sc-lead"><strong>IATA</strong> replaces fragmented broker negotiations and cash-draining letters of credit with four standardized commercial mechanisms:</p>
+
+      <div class="sc-grid-2">
+        <div class="sc-panel-emerald">
+          <div class="sc-badge">01 &bull; WHAT IT IS (CORE DEFINITION)</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">C.A.N. Spark Exploder &amp; 100-Project OS</h3>
+          <p class="sc-p">Converts a 10-second executive voice note into 4 synchronized tracks (Micro-Portal, Shoppable Video, 3-Party ODM Contract, and E1–E3 Pricing) governed via one-tap approval (<span class="notranslate" translate="no">$29/$99/mo</span> SaaS).</p>
+
+          <div class="sc-badge" style="margin-top:18px;">02 &bull; WHY WE DO IT (MARKET OPPORTUNITY)</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">4-Way Cashless Offsetting (Qubit Banks)</h3>
           <p class="sc-p">Extinguishes cash obligations across Suppliers, IP Owners, IT Builders, and Warehouse Operators by bartering idle capacity through Time Bank, Space Bank, Idea Bank, and Petfood Bank credits.</p>
         </div>
-
-        <div class="sc-card-emerald">
-          <div class="sc-num-label">03 &bull; HOW IT WORKS (OPERATIONAL MECHANISM)</div>
-          <h2 class="sc-h3">K-SURE BNPL &amp; 3-Party Trade Clearing</h2>
+        <div class="sc-panel-emerald">
+          <div class="sc-badge">03 &bull; HOW IT WORKS (OPERATIONAL MECHANISM)</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">K-SURE BNPL &amp; 3-Party Trade Clearing</h3>
           <p class="sc-p">Binds Korean export credit guarantees, customs clearance, and first-3-shipments 50% advance deposits into a single event-driven smart contract.</p>
-        </div>
 
-        <div class="sc-card-emerald">
-          <div class="sc-num-label">04 &bull; REVENUE MODEL &amp; EXPECTED ROI</div>
-          <h2 class="sc-h3">The Qubit Retailer Alliance</h2>
-          <p class="sc-p">Unites ratusan independent pet shops, clinics, and regional wholesalers into a virtual conglomerate powered by 3-Month Rolling Purchasing Forecasts (RPF) and inter-member stock swaps.</p>
+          <div class="sc-badge" style="margin-top:18px;">04 &bull; REVENUE MODEL &amp; EXPECTED ROI</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">The Qubit Retailer Alliance</h3>
+          <p class="sc-p">Unites hundreds (<em>ratusan</em>) of independent pet shops, clinics, and regional wholesalers into a virtual conglomerate powered by 3-Month Rolling Purchasing Forecasts (RPF) and inter-member stock swaps.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>IATA Protocol Layer</th>
+              <th>Mechanism Name</th>
+              <th>Counterparties Bound</th>
+              <th>Pricing / Credit Formula</th>
+              <th>Risk Mitigation Guarantee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">IATA-L1</span></td>
+              <td><strong>C.A.N. Spark Exploder</strong></td>
+              <td>Founder/CEO, Scarlet AI Agent &amp; Qubit Factory&trade;</td>
+              <td>1 Voice Spark &rarr; 4 Commercial Tracks + E1/E2/E3 Volume Tiers</td>
+              <td>Human-in-the-loop one-tap executive authorization</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">IATA-L2</span></td>
+              <td><strong>E1–E3 Tiered Volume Pricing</strong></td>
+              <td>GMP Factory, National Distributor &amp; Retailer Alliance</td>
+              <td>E1 (Trial Box) &rarr; E2 (Pallet RPF) &rarr; E3 (20ft/40ft Container FOB)</td>
+              <td>Pre-aggregated escrow locks E3 factory floor price for small buyers</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">IATA-L3</span></td>
+              <td><strong>Graduated K-SURE BNPL Escalator</strong></td>
+              <td>SCK Exporter, K-SURE &amp; Overseas Importer</td>
+              <td>Shipments 1–3: 50% Deposit / 50% BL &rarr; Shipment 4+: 90-Day K-SURE BNPL</td>
+              <td>Builds verified payment history before unlocking sovereign credit</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">IATA-L4</span></td>
+              <td><strong>Inter-Member Zero-Wastage Stock Swap</strong></td>
+              <td>Qubit Retailer Alliance Clinics, Pet Shops &amp; Warehouses</td>
+              <td>AI Vision Audit detects slow-moving SKUs &rarr; swaps across nearby nodes</td>
+              <td>Eliminates expiry write-offs and dead working capital</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CHAPTER III: E1–E3 VOLUME PRICING & GRADUATED K-SURE CREDIT MATHEMATICS -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">TRADE FINANCE MATHEMATICS &bull; E1–E3 PRICING &amp; RPF ESCALATOR</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Mathematics of Collective Volume Buying (E1–E3) &amp; Graduated Trade Credit</h2>
+      <p class="sc-lead">Why do independent veterinary clinics and regional retailers lose to giant e-commerce platforms? Because a single clinic ordering 50 units pays the highest wholesale tier (<strong>E1</strong>), whereas a monopoly platform ordering 50,000 units commands the factory container floor price (<strong>E3</strong>). <strong>IATA</strong> solves this mathematically.</p>
+
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: QUBIT RETAILER ALLIANCE DEMAND AGGREGATION (E1 &rarr; E3 COLLAPSE)</span>
+        If &Sigma;_{i=1..N} Order_Retailer_i(3_Mo_RPF) &ge; MOQ_Container_E3 &nbsp;&rArr;&nbsp; Every Member i Pays Unit_Price(E3) [Saves 28%–42% COGS]<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: GRADUATED K-SURE TRUST ESCALATOR</span>
+        Shipments_{1..3}(50% Deposit + 70/30 PG Split Verified) &rArr; Unlocks Shipment_{4..&infin;}(0% Upfront, 90-Day K-SURE Open Account)
+      </div>
+
+      <!-- INLINE SVG 2: E1-E3 COLLECTIVE BUYING & GRADUATED K-SURE ESCALATOR -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="IATA E1 to E3 Collective Volume Buying and Graduated K-SURE Credit Escalator">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // IATA COLLECTIVE VOLUME BUYING (E1 &rarr; E3) &amp; GRADUATED K-SURE CREDIT ESCALATOR</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Box: E1-E3 Collective Buying -->
+          <rect x="24" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="40" y="82" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">A. E1–E3 COLLECTIVE VOLUME CONSOLIDATION</text>
+
+          <rect x="40" y="98" width="412" height="64" rx="4" fill="#0f172a" stroke="#ef4444" />
+          <text x="52" y="118" fill="#f87171" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Legacy Isolated Buyer (Tier E1 Pricing)</text>
+          <text x="52" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">1 Vet Clinic / Pet Shop orders 100 units alone &rarr;</text>
+          <text x="52" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Pays +40% importer markup; 100% cash upfront.</text>
+
+          <rect x="40" y="174" width="412" height="64" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="52" y="194" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">IATA 3-Month Rolling Forecast (RPF Pool)</text>
+          <text x="52" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">500 Alliance clinics &amp; shops pool 90-day forecasts</text>
+          <text x="52" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">via Scarlet AI into a single 50,000-unit master PO.</text>
+
+          <rect x="40" y="250" width="412" height="68" rx="4" fill="#0f5132" />
+          <text x="52" y="272" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Result: Tier E3 Container FOB Unlocked for All</text>
+          <text x="52" y="289" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">Every neighborhood clinic enjoys container-level</text>
+          <text x="52" y="304" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">factory pricing + Rp 1,320 local sachet ODM economics.</text>
+
+          <!-- Right Box: Graduated Credit Escalator -->
+          <rect x="492" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="508" y="82" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">B. GRADUATED K-SURE CREDIT ESCALATOR</text>
+
+          <rect x="508" y="98" width="412" height="64" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="520" y="118" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Phase 1 (Shipments 1–3): Trust Verification</text>
+          <text x="520" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">50% Advance Deposit + 50% settled automatically via</text>
+          <text x="520" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">70/30 PG webhook split as goods sell through.</text>
+
+          <rect x="508" y="174" width="412" height="64" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="520" y="194" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Phase 2 (Shipment 4+): K-SURE 90-Day BNPL</text>
+          <text x="520" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Verified on-chain/PG track record qualifies partner</text>
+          <text x="520" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">for 0%-upfront 90-day K-SURE Open Account credit.</text>
+
+          <rect x="508" y="250" width="412" height="68" rx="4" fill="#1e3a8a" />
+          <text x="520" y="272" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Phase 3: 4-Way Qubit Barter Netting</text>
+          <text x="520" y="289" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">Partner offsets remaining balance by contributing</text>
+          <text x="520" y="304" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">warehouse space, GMP hours, or local raw materials.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // Left: IATA's E1-to-E3 collective volume pricing engine. Right: The 3-phase Graduated K-SURE Credit Escalator eliminating default risk while scaling partner volume.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: INTEGRATION WITHIN THE SIGNAL STAR UNIVERSE (*SC) -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">STRATEGIC SYNERGY &bull; 12 DOMAINS &amp; RISK FIREWALL</span>
+      </div>
+      <h2 class="sc-chapter-h2">Integration Within the Signal Star Universe (*SC)</h2>
+      <p class="sc-lead">Every trade contract executed under the <strong>Intl AI Trade Alliance (IATA)</strong> is synchronized across our 12 orbital domains and protected by our Dual-Track Risk Firewall:</p>
+      <div class="sc-grid-2">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. Core Architecture &amp; Technical Integration</h3>
+          <p class="sc-p">Connected across our 12-domain semantic web matrix and 8 international bases (Korea SCK, Indonesia SCI, Singapore SCS, USA SCU, Vietnam SCV, India SCIND, China SCC, Japan SCJ). Every workflow is tracked transparently via standardized Google Workspace Console, Monthly Sales, and Dashboard ledgers.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. Risk Firewall &amp; Settlement Security</h3>
+          <p class="sc-p">Protected by the *SC Triple Control Towers and Dual-Track Legal Firewall (isolating SC Index holding IP from Biz Galaxy commercial liabilities). Transactions leverage 3-Month Rolling Purchasing Forecasts (RPF), K-SURE export credit guarantees, and automated 70/30 PG webhook split settlements.</p>
         </div>
       </div>
     </section>
 
-    <section class="sc-sec">
-      <div><span class="sc-kicker">STRATEGIC SYNERGY &amp; GOVERNANCE</span></div>
-      <h2 class="sc-h2">Integration Within the Signal Star Universe (*SC)</h2>
-      <div class="sc-grid-2x2">
-        <div class="sc-card-line">
-          <h3 class="sc-h3">1. Core Architecture &amp; Technical Integration</h3>
-          <p class="sc-p">Connected across our 12-domain semantic web matrix and 8 international bases (Korea SCK, Indonesia SCI, Singapore SCS, USA SCU, Vietnam SCV, India SCIND, China SCC, Japan SCJ). Every workflow is tracked transparently via standardized Google Workspace Console, Monthly Sales, and Dashboard ledgers.</p>
+    <!-- CHAPTER V: IATA MEMBER & RETAILER ALLIANCE ONBOARDING -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; JOINING THE TRADE ALLIANCE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Business Partner Onboarding: Joining the Qubit Retailer &amp; Trade Alliance</h2>
+      <p class="sc-lead">Wholesalers, veterinary clinics, pet shops, pharmacies, and OEM factories can join <strong>IATA</strong> immediately with zero membership capex:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">1. Wholesalers &amp; Importers</h3>
+          <p class="sc-p">Execute Container Volume Deals starting with a 50% deposit on your first 3 shipments, graduating automatically to 90-day K-SURE BNPL credit once PG webhook velocity is verified.</p>
         </div>
-        <div class="sc-card-line">
-          <h3 class="sc-h3">2. Risk Firewall &amp; Settlement Security</h3>
-          <p class="sc-p">Protected by the *SC Triple Control Towers and Dual-Track Legal Firewall (isolating SC Index holding IP from Biz Galaxy commercial liabilities). Transactions leverage 3-Month Rolling Purchasing Forecasts (RPF), K-SURE export credit guarantees, and automated 70/30 PG webhook split settlements.</p>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">2. Independent Clinics &amp; Retailers</h3>
+          <p class="sc-p">Join the <strong>Qubit Retailer Alliance</strong> by submitting a 3-Month Rolling Purchasing Forecast (RPF)—unlocking Tier E3 container pricing and inter-member stock swap protection.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">3. Factories &amp; Warehouse Operators</h3>
+          <p class="sc-p">Register idle production shifts (<em>Qubit Time</em>) or warehouse bays (<em>Qubit Space</em>) to receive guaranteed IATA purchase orders and high-margin finished SKUs without cash drain.</p>
         </div>
       </div>
-      <div class="sc-callout"><strong>*SC - SISTAR COMPANY | One Spark, Infinite Galaxifying:</strong> Powered by the Qubit Algorithm&trade;, *SC intelligence-core, Scarlet AI, Qubit Biz, and the Biz Galaxy constellation.<br/>Corporate Portal: https://sistarcompany.com &bull; Executive Contact: DennyKu (denniiku@sistarcompany.com)</div>
+    </section>
+
+    <!-- CHAPTER VI: VC & INSTITUTIONAL INVESTOR THESIS FOR IATA -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; IR INVESTMENT THESIS &bull; B2B CLEARING NETWORK EFFECTS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional Investor Thesis: Owning the B2B Clearing Rail</h2>
+      <p class="sc-lead">Every new clinic, retailer, or factory that joins <strong>IATA</strong> increases collective E3 volume purchasing power and expands the liquidity of the 4-Way Qubit Bank—creating a winner-take-most B2B network moat across ASEAN and East Asia.</p>
+      <div class="sc-callout">
+        <strong>*SC - SISTAR COMPANY | One Spark, Infinite Galaxifying:</strong> Powered by the Qubit Algorithm&trade;, *SC intelligence-core, Scarlet AI, Qubit Biz, and the Biz Galaxy constellation.<br/>Corporate Portal: https://sistarcompany.com &bull; Executive Contact: DennyKu (denniiku@sistarcompany.com)
+      </div>
     </section>
   </main>
 </body>

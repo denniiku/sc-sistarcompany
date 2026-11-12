@@ -3,20 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
-  <title>*SC | Intl Alliance - sistar company - intl alliance</title>
-  <meta name="description" content="*SC (SISTAR Company) - Intl Alliance : Zero Sunk-Capex Investment Architecture, 20-Track B2B Offer Sheets &amp; Unmanned Media Broadcasting." />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+  <title>*SC | Intl Alliance — sistar company - intl alliance</title>
+  <meta name="description" content="*SC (SISTAR Company) - Intl Alliance: Together, Against Global AI Giants. Federated Global Movement Governing IATA, IADA, 20-Track B2B Offer Sheets, and Zero Sunk-Capex Investment Architecture." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*SC | Intl Alliance",
-    "description": "Zero Sunk-Capex Investment Architecture, 20-Track B2B Offer Sheets &amp; Unmanned Media Broadcasting.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "*SC - SISTAR COMPANY",
-      "url": "https://sistarcompany.com"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "*SC - Intl Alliance (International AI Trade & Data Federation)",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "*SC - SISTAR COMPANY",
+          "url": "https://sistarcompany.com"
+        },
+        "url": "https://sistarcompany.com/03_intl-alliance/"
+      },
+      {
+        "@type": "WebPage",
+        "name": "*SC | Intl Alliance — Sovereign Global Trade & Data Federation Monograph",
+        "description": "Zero Sunk-Capex Investment Architecture, 20-Track B2B Offer Sheets, Unmanned Media Broadcasting, and IATA/IADA Global Governance.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "*SC - SISTAR COMPANY",
+          "url": "https://sistarcompany.com"
+        }
+      }
+    ]
   }
   </script>
   <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
@@ -29,196 +43,640 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
-    .sc-auto-page {
+    .sc-monograph {
       box-sizing: border-box;
       width: 100%;
-      max-width: min(1360px, 95%);
-      padding: clamp(40px, 5vh, 68px) clamp(24px, 4.5vw, 72px) 120px;
+      max-width: min(1420px, 96%);
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px;
       font-family: "Inter", sans-serif;
       color: #0f172a;
+      line-height: 1.76;
     }
-    main h1, main h2, main h3, main h4,
-    main p, main .sc-lead, main .sc-p,
-    main .sc-route, main .sc-sec,
-    main .sc-card-line, main .sc-card-emerald {
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      text-indent: 0 !important;
-      text-align: left !important;
+    .sc-monograph h1, .sc-monograph h2, .sc-monograph h3, .sc-monograph h4,
+    .sc-monograph p, .sc-monograph ul, .sc-monograph ol, .sc-monograph li,
+    .sc-monograph table, .sc-monograph th, .sc-monograph td, .sc-monograph div {
+      margin-left: 0;
+      text-indent: 0;
+      text-align: left;
+    }
+    .sc-top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      margin-bottom: 28px;
     }
     .sc-route {
       font-family: "Space Grotesk", sans-serif;
       font-size: 0.88rem;
       font-weight: 600;
-      color: #475569;
+      color: #334155;
       letter-spacing: 0.04em;
-      margin: 0 0 18px 0;
+      margin: 0;
       text-transform: lowercase;
     }
-    .sc-sec {
-      padding: 52px 0;
-      border-bottom: 1.5px solid rgba(15, 23, 42, 0.14);
+    .sc-action-btns {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
     }
-    .sc-sec:last-of-type { border-bottom: none; }
-    .sc-kicker {
-      display: inline-block;
+    .sc-btn-pdf {
       font-family: "Space Grotesk", sans-serif;
       font-size: 0.78rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      background: rgba(255, 255, 255, 0.45);
+      border: 1.5px solid rgba(15, 23, 42, 0.45);
+      padding: 7px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .sc-btn-pdf:hover {
+      background: #0f172a;
+      color: #ffffff;
+    }
+    .sc-chapter {
+      padding: 46px 0;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.18);
+    }
+    .sc-chapter:last-of-type {
+      border-bottom: none;
+    }
+    .sc-chapter-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .sc-chapter-num {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #0f172a;
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+    .sc-chapter-tag {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #0f5132;
       background: rgba(22, 135, 101, 0.15);
-      padding: 5px 12px;
-      border-radius: 4px;
-      margin: 0 0 14px 0;
+      padding: 4px 10px;
+      border-radius: 3px;
     }
-    .sc-h1 {
+    .sc-doc-h1 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+      font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin: 0 0 18px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
       font-weight: 700;
       color: #0f172a;
       letter-spacing: -0.025em;
-      line-height: 1.12;
-      margin: 0 0 14px 0;
-    }
-    .sc-sub {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.15rem, 1.6vw, 1.38rem);
-      font-weight: 600;
-      color: #0f5132;
-      line-height: 1.4;
-      margin: 0 0 24px 0;
-    }
-    .sc-h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.45rem, 2.2vw, 1.95rem);
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: -0.02em;
-      line-height: 1.25;
+      line-height: 1.2;
       margin: 0 0 18px 0;
     }
-    .sc-h3 {
+    .sc-sub-h3 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: 1.15rem;
+      font-size: clamp(1.18rem, 1.6vw, 1.38rem);
       font-weight: 700;
       color: #0f172a;
-      margin: 0 0 10px 0;
+      margin: 28px 0 10px 0;
+      line-height: 1.32;
+    }
+    .sc-sub-h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 8px 0;
       line-height: 1.35;
     }
     .sc-lead {
-      font-size: clamp(1.04rem, 1.22vw, 1.14rem);
-      line-height: 1.82;
-      color: #1e293b;
-      margin: 0 0 34px 0;
-    }
-    .sc-p {
-      font-size: 0.97rem;
-      line-height: 1.8;
-      color: #334155;
-      margin: 0;
-    }
-    /* Spacious 2-Column (2x2) Grid Layout */
-    .sc-grid-2x2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 48px;
-      row-gap: 38px;
-      margin-top: 28px;
-    }
-    @media (max-width: 760px) {
-      .sc-grid-2x2 { grid-template-columns: 1fr; }
-    }
-    .sc-card-line {
-      padding-top: 20px !important;
-      border-top: 2px solid rgba(15, 23, 42, 0.24) !important;
-    }
-    .sc-card-emerald {
-      padding-top: 20px !important;
-      border-top: 3px solid #168765 !important;
-    }
-    .sc-num-label {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #0f5132;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 8px;
-    }
-    .sc-callout {
-      margin-top: 38px;
-      padding: 20px 24px !important;
-      border-left: 4px solid #0f5132;
-      background: rgba(255, 255, 255, 0.34);
-      font-size: 0.98rem;
+      font-size: clamp(1.06rem, 1.25vw, 1.18rem);
       font-weight: 500;
       color: #0f172a;
-      line-height: 1.72;
+      line-height: 1.75;
+      margin: 0 0 22px 0;
+    }
+    .sc-p {
+      font-size: 0.98rem;
+      color: #1e293b;
+      line-height: 1.76;
+      margin: 0 0 14px 0;
+    }
+    .sc-p:last-child {
+      margin-bottom: 0;
+    }
+    .sc-exec-hero {
+      padding: 26px 30px;
+      border-top: 4px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.34);
+      margin: 22px 0 28px 0;
+    }
+    .sc-exec-quote {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.12rem, 1.45vw, 1.32rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.52;
+      margin: 0 0 12px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin: 24px 0 32px 0;
+    }
+    @media (max-width: 1024px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .sc-kpi-strip { grid-template-columns: 1fr; }
+    }
+    .sc-kpi-cell {
+      padding: 16px 18px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .sc-kpi-val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.45rem, 2.1vw, 1.85rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin: 20px 0; }
+    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin: 20px 0; }
+    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 20px 0; }
+    @media (max-width: 1024px) {
+      .sc-grid-3, .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      padding: 18px 20px;
+      border-top: 2.5px solid rgba(15, 23, 42, 0.38);
+      background: rgba(255, 255, 255, 0.24);
+    }
+    .sc-panel-emerald {
+      padding: 18px 20px;
+      border-top: 3px solid #168765;
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-math-box {
+      margin: 18px 0 24px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #0f172a;
+      background: rgba(15, 23, 42, 0.06);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.88rem;
+      color: #0f172a;
+      line-height: 1.65;
+      overflow-x: auto;
+    }
+    .sc-math-code {
+      display: block;
+      font-weight: 700;
+      color: #0f5132;
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+    .sc-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0 28px 0;
+      border-top: 2px solid #0f172a;
+      border-bottom: 2px solid #0f172a;
+      background: rgba(255, 255, 255, 0.22);
+    }
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.91rem;
+      min-width: 780px;
+    }
+    .sc-table th {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #0f172a;
+      background: rgba(15, 23, 42, 0.08);
+      padding: 12px 14px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.3);
+      vertical-align: bottom;
+    }
+    .sc-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+      color: #1e293b;
+      vertical-align: top;
+      line-height: 1.58;
+    }
+    .sc-table tr:last-child td {
+      border-bottom: none;
+    }
+    .sc-table tr:hover td {
+      background: rgba(255, 255, 255, 0.28);
+    }
+    .sc-callout {
+      margin: 20px 0;
+      padding: 16px 20px;
+      border-left: 4px solid #168765;
+      background: rgba(255, 255, 255, 0.34);
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+    .sc-svg-frame {
+      margin: 28px 0 34px 0;
+      padding: 20px 22px 16px 22px;
+      border-top: 3px solid #0f172a;
+      border-bottom: 2px solid rgba(15, 23, 42, 0.25);
+      background: rgba(255, 255, 255, 0.38);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.14);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+    .sc-badge {
+      display: inline-block;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      color: #0f172a;
+      margin-right: 6px;
     }
     @media print {
-      html, body, main, .sc-auto-page { background: #ffffff !important; padding-left: 0 !important; opacity: 1 !important; }
-      #sc-left-nav, .sc-nav-toggle { display: none !important; }
-      .sc-card-line, .sc-card-emerald, .sc-callout { break-inside: avoid !important; page-break-inside: avoid !important; }
+      html, body { background: #ffffff !important; }
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      #sc-left-nav, .sc-lang-bar, .sc-action-btns { display: none !important; }
+      .sc-monograph { max-width: 100% !important; padding: 0 !important; }
+      .sc-chapter { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-auto-page">
-    <p class="sc-route">sistar company - intl alliance</p>
+  <main class="sc-monograph">
+    <!-- TOP BAR & ROUTE -->
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - intl alliance</p>
+      <div class="sc-action-btns">
+        <button class="sc-btn-pdf" onclick="window.print()">Export Intl Alliance Monograph (PDF)</button>
+      </div>
+    </div>
 
-    <section class="sc-sec" style="padding-top: 12px;">
-      <div><span class="sc-kicker">INSTITUTIONAL IR, PARTNERSHIP &amp; MEDIA GATEWAY</span></div>
-      <h1 class="sc-h1">*SC - Intl Alliance</h1>
-      <p class="sc-sub">Zero Sunk-Capex Investment Architecture, 20-Track B2B Offer Sheets &amp; Unmanned Media Broadcasting.</p>
-      <p class="sc-lead"><strong>Intl Alliance</strong> serves as the institutional interface connecting global investors, manufacturing partners, regional wholesalers, and media audiences with the <strong>*SC (SISTAR Company)</strong> universe - backed by 100% completed cloud/AI infrastructure and verifiable daily NAV auditing.</p>
+    <!-- CHAPTER I: EXECUTIVE MANDATE — TOGETHER, AGAINST GLOBAL AI GIANTS -->
+    <section class="sc-chapter" id="ch-01" style="padding-top:10px;">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I</span>
+        <span class="sc-chapter-tag">INTL ALLIANCE &bull; TOGETHER, AGAINST GLOBAL AI GIANTS</span>
+      </div>
+      <h1 class="sc-doc-h1">*SC - Intl Alliance: Sovereign AI Trade &amp; Data Federation</h1>
+      <p class="sc-lead">Zero Sunk-Capex Investment Architecture, 20-Track B2B Offer Sheets, Unmanned Media Broadcasting &amp; Sovereign Alliance Governance (IATA &amp; IADA).</p>
 
-      <div class="sc-grid-2x2">
-        <div class="sc-card-line">
-          <div class="sc-num-label">01 &bull; WHAT IT IS (CORE DEFINITION)</div>
-          <h2 class="sc-h3">3-Year Financial Trajectory &amp; Unit Economics</h2>
-          <p class="sc-p">Targets Year 1 Revenue of KRW 2.0B (20% OPM) &rarr; Year 2 KRW 7.0B (35% OPM) &rarr; Year 3 KRW 15.0B (35% OPM), supported by an LTV/CAC ratio of 17.5x, 2.8-month payback, and 60-75% blended gross margin.</p>
+      <div class="sc-exec-hero">
+        <p class="sc-exec-quote">"Together, Against Global AI Giants — Uniting independent manufacturers, regional wholesalers, veterinary clinics, and challenger entrepreneurs into a federated quantum conglomerate."</p>
+        <p class="sc-p"><strong>Intl Alliance</strong> serves as the institutional interface connecting global investors, manufacturing partners, regional wholesalers, and media audiences with the <strong>*SC (SISTAR Company)</strong> universe—backed by 100% completed cloud/AI infrastructure and verifiable daily NAV auditing. Through its two canonical pillars—the <strong>International AI Trade Alliance (IATA)</strong> and the <strong>International AI Data Alliance (IADA)</strong>—independent SMEs gain the collective purchasing power, K-SURE export credit, and zero-entropy RAG intelligence required to out-execute centralized tech monopolies.</p>
+      </div>
+
+      <!-- 4-METRIC KPI STRIP -->
+      <div class="sc-kpi-strip">
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">KRW 2B &rarr; 7B &rarr; 15B</div>
+          <div class="sc-kpi-desc">3-Year Revenue Trajectory with 20% &rarr; 35% Operating Profit Margin (OPM)</div>
         </div>
-
-        <div class="sc-card-line">
-          <div class="sc-num-label">02 &bull; WHY WE DO IT (MARKET OPPORTUNITY)</div>
-          <h2 class="sc-h3">20-Track Standardized B2B Offer Sheets</h2>
-          <p class="sc-p">Ready-to-execute commercial packages covering Container Volume Deals (First 3 Shipments 50% Deposit), SISTAR SOD (Zero-Inventory Dropshipping), Offline Wholesalers, Influencers I-III, and S1-S6 Franchises.</p>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">17.5x LTV/CAC</div>
+          <div class="sc-kpi-desc">2.8-Month Payback &amp; 60%–75% Blended Gross Margin via Zero-CAC Media</div>
         </div>
-
-        <div class="sc-card-emerald">
-          <div class="sc-num-label">03 &bull; HOW IT WORKS (OPERATIONAL MECHANISM)</div>
-          <h2 class="sc-h3">SISTAR Studio &amp; The SIGNAL STAR Post</h2>
-          <p class="sc-p">Unmanned media engine producing 10+ shoppable videos, automated newsletters, and global industry briefs daily via RSS/Make/Gemini pipelines - driving zero-CAC organic traffic across all portals.</p>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">20 B2B Offer Tracks</div>
+          <div class="sc-kpi-desc">Turnkey Container Deals, Zero-Inventory SOD, Wholesalers &amp; S1–S6 Franchises</div>
         </div>
+        <div class="sc-kpi-cell">
+          <div class="sc-kpi-val notranslate" translate="no">IATA &bull; IADA</div>
+          <div class="sc-kpi-desc">Dual Sovereign Federations for Cross-Border Trade &amp; Zero-Entropy Data</div>
+        </div>
+      </div>
 
-        <div class="sc-card-emerald">
-          <div class="sc-num-label">04 &bull; REVENUE MODEL &amp; EXPECTED ROI</div>
-          <h2 class="sc-h3">IATA &amp; IADA Global Governance</h2>
+      <!-- INLINE SVG 1: INTL ALLIANCE FEDERATION ARCHITECTURE (IATA + IADA + 20 OFFER TRACKS) -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="Intl Alliance Federation Architecture: IATA, IADA, 20 B2B Offer Tracks, and Unmanned Media Engine">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 1.1 // *SC INTL ALLIANCE — SOVEREIGN FEDERATION ARCHITECTURE (IATA + IADA + 20 B2B OFFER TRACKS)</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Column 1: L3-01 IATA -->
+          <rect x="24" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+          <text x="38" y="80" fill="#10b981" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. INTL AI TRADE ALLIANCE (IATA)</text>
+
+          <rect x="38" y="96" width="258" height="68" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="48" y="116" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">C.A.N. Spark Exploder &amp; 100-Project OS</text>
+          <text x="48" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">10-sec voice note &rarr; 4 synchronized tracks</text>
+          <text x="48" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">(Portal, Video, 3-Party ODM, E1–E3 Pricing)</text>
+
+          <rect x="38" y="174" width="258" height="68" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="48" y="194" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">K-SURE BNPL &amp; 4-Way Qubit Bank</text>
+          <text x="48" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">90d export credit + Time, Space, Idea &amp;</text>
+          <text x="48" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Petfood cashless multilateral offsetting</text>
+
+          <rect x="38" y="252" width="258" height="70" rx="4" fill="#0f5132" />
+          <text x="48" y="272" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">QUBIT RETAILER ALLIANCE</text>
+          <text x="48" y="289" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Unites 100s of clinics, pet shops &amp; wholesalers</text>
+          <text x="48" y="304" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">via 3-Month Rolling Purchasing Forecasts.</text>
+
+          <!-- Column 2: L3-02 IADA -->
+          <rect x="337" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="351" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. INTL AI DATA ALLIANCE (IADA)</text>
+
+          <rect x="351" y="96" width="258" height="68" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="363" y="116" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">Federated Zero-Entropy RAG Pool</text>
+          <text x="363" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Pools cross-border HS tariffs, BPOM/FDA</text>
+          <text x="363" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">dossiers, clinical trials &amp; spot pricing</text>
+
+          <rect x="351" y="174" width="258" height="68" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="363" y="194" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SISTAR Studio &amp; SIGNAL STAR Post</text>
+          <text x="363" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Unmanned RSS/Make/Gemini media factory</text>
+          <text x="363" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">producing 10+ shoppable videos &amp; briefs/day</text>
+
+          <rect x="351" y="252" width="258" height="70" rx="4" fill="#1e3a8a" />
+          <text x="363" y="272" fill="#e0f2fe" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">SOVEREIGN DATA OWNERSHIP</text>
+          <text x="363" y="289" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">Protects SME trade secrets from Big Tech</text>
+          <text x="363" y="304" fill="#bae6fd" font-family="Inter, sans-serif" font-size="9">scraping while monetizing via MCP APIs.</text>
+
+          <!-- Column 3: 20 B2B Offer Sheets & 3-Yr Financials -->
+          <rect x="650" y="58" width="286" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="664" y="80" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. 20 B2B TRACKS &amp; IR METRICS</text>
+
+          <rect x="664" y="96" width="258" height="68" rx="4" fill="#0f172a" stroke="#f59e0b" />
+          <text x="676" y="116" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">20 Standardized B2B Offer Sheets</text>
+          <text x="676" y="133" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Container Deals (50% Dep First 3), SOD</text>
+          <text x="676" y="148" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Dropship, Wholesalers, Influencers &amp; S1–S6</text>
+
+          <rect x="664" y="174" width="258" height="68" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="676" y="194" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3-Year Institutional Trajectory</text>
+          <text x="676" y="211" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="9">Y1: KRW 2B &rarr; Y2: KRW 7B &rarr; Y3: KRW 15B</text>
+          <text x="676" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">17.5x LTV/CAC &bull; 2.8m Payback &bull; 35% OPM</text>
+
+          <rect x="664" y="252" width="258" height="70" rx="4" fill="#0f5132" />
+          <text x="676" y="272" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">70/30 PG WEBHOOK &amp; DAILY NAV</text>
+          <text x="676" y="289" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">Audited daily via Google Workspace Console</text>
+          <text x="676" y="304" fill="#d1fae5" font-family="Inter, sans-serif" font-size="9">&amp; SC Index Dual-Track Firewall.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 1.1 // Architectural overview of *SC Intl Alliance, uniting the International AI Trade Alliance (IATA), the International AI Data Alliance (IADA), and the 20 Standardized B2B Offer Sheet tracks.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER II: THE 4 CORE PILLARS OF INTL ALLIANCE -->
+    <section class="sc-chapter" id="ch-02">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II</span>
+        <span class="sc-chapter-tag">CORE PILLARS &bull; FINANCIAL TRAJECTORY, 20 B2B OFFERS &amp; UNMANNED MEDIA</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Four Institutional Pillars of *SC - Intl Alliance</h2>
+      <p class="sc-lead">Every alliance member and institutional investor plugs into a standardized four-pillar framework engineered for zero sunk-capex and immediate cashflow conversion:</p>
+
+      <div class="sc-grid-2">
+        <div class="sc-panel-emerald">
+          <div class="sc-badge">01 &bull; WHAT IT IS (CORE DEFINITION)</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">3-Year Financial Trajectory &amp; Unit Economics</h3>
+          <p class="sc-p">Targets Year 1 Revenue of <span class="notranslate" translate="no">KRW 2.0B (20% OPM)</span> &rarr; Year 2 <span class="notranslate" translate="no">KRW 7.0B (35% OPM)</span> &rarr; Year 3 <span class="notranslate" translate="no">KRW 15.0B (35% OPM)</span>, supported by an LTV/CAC ratio of <span class="notranslate" translate="no">17.5x</span>, <span class="notranslate" translate="no">2.8-month</span> payback, and <span class="notranslate" translate="no">60–75%</span> blended gross margin.</p>
+
+          <div class="sc-badge" style="margin-top:18px;">02 &bull; WHY WE DO IT (MARKET OPPORTUNITY)</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">20-Track Standardized B2B Offer Sheets</h3>
+          <p class="sc-p">Ready-to-execute commercial packages covering Container Volume Deals (First 3 Shipments 50% Deposit), SISTAR SOD (Zero-Inventory Dropshipping), Offline Wholesalers, Influencers I–III, and S1–S6 Franchises.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <div class="sc-badge">03 &bull; HOW IT WORKS (OPERATIONAL MECHANISM)</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">SISTAR Studio &amp; The SIGNAL STAR Post</h3>
+          <p class="sc-p">Unmanned media engine producing 10+ shoppable videos, automated newsletters, and global industry briefs daily via RSS/Make/Gemini pipelines—driving zero-CAC organic traffic across all portals.</p>
+
+          <div class="sc-badge" style="margin-top:18px;">04 &bull; REVENUE MODEL &amp; EXPECTED ROI</div>
+          <h3 class="sc-sub-h4" style="margin-top:8px;">IATA &amp; IADA Global Governance</h3>
           <p class="sc-p">Anchored by the International AI-Trade Association (IATA) and International AI-Data Association (IADA), establishing global standards for AI-driven cross-border trade and data sovereignty.</p>
+        </div>
+      </div>
+
+      <div class="sc-table-wrap">
+        <table class="sc-table">
+          <thead>
+            <tr>
+              <th>Offer Track Group</th>
+              <th>B2B Offer Sheet Category</th>
+              <th>Target Partner Profile</th>
+              <th>Deposit / Credit Structure</th>
+              <th>Partner Margin &amp; Settlement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="sc-badge">TRACKS 01–04</span></td>
+              <td><strong>Container &amp; Bulk ODM Volume Deals</strong><br/>(Finished CBU + Bulk Premix for <span class="notranslate" translate="no">Rp 1,320</span> Sachets)</td>
+              <td>National Importers, Poultry/Aqua Integrators &amp; Toll Packers</td>
+              <td>First 3 Shipments 50% Deposit &rarr; K-SURE 90-Day BNPL Open Account</td>
+              <td><span class="notranslate" translate="no">35%–55%</span> landed wholesale spread + exclusive territory lock</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">TRACKS 05–08</span></td>
+              <td><strong>SISTAR SOD (Zero-Inventory Dropshipping)</strong><br/>&amp; Superposition Marketplace Listings</td>
+              <td>E-Commerce Sellers (Shopee, Tokopedia, TikTok, Lazada, Amazon)</td>
+              <td><span class="notranslate" translate="no">$0</span> Inventory Capex; fulfilled from local *sc Smart Space Bank</td>
+              <td>Automated <strong>30% net margin</strong> via real-time 70/30 PG webhook split</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">TRACKS 09–12</span></td>
+              <td><strong>Veterinary Hospitals, Aesthetic Clinics &amp; Offline Wholesalers</strong></td>
+              <td>Animal Hospitals (<em>SISPet</em>), Derma Clinics (<em>Michlo</em>) &amp; Pharmacies</td>
+              <td>Zero-Stock QR Prescription or 3-Month Rolling Purchasing Forecast (RPF)</td>
+              <td><strong>30%–45%</strong> clinical dispensing margin + recurring auto-ship royalties</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">TRACKS 13–16</span></td>
+              <td><strong>Influencers Tier I–III &amp; SISTAR Challengers</strong><br/>(Shoppable Video &amp; Group Buying)</td>
+              <td>TikTok/Zalo/IG Creators, University Export Teams &amp; KOL Agencies</td>
+              <td>Turnkey AI video scripts from <em>SISTAR Studio</em> + unique attribution links</td>
+              <td>Performance commission + <em>Qubit Star&trade;</em> brand equity participation</td>
+            </tr>
+            <tr>
+              <td><span class="sc-badge">TRACKS 17–20</span></td>
+              <td><strong>S1–S6 Micro-Franchises &amp; Enterprise AI SaaS</strong><br/>(<em>SISTAR Frenz</em>, <em>mint colored</em>, Qubit ERP/RAG)</td>
+              <td>Neighborhood Storefront Owners, Co-Brand Labs &amp; Enterprise SaaS Users</td>
+              <td>4-Way Qubit Bank Space/Time offset + monthly SaaS subscription</td>
+              <td>High-turn local retail cashflow + recurring B2B SaaS revenue share</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CHAPTER III: UNMANNED MEDIA ENGINE & ZERO-CAC UNIT ECONOMICS MATHEMATICS -->
+    <section class="sc-chapter" id="ch-03">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III</span>
+        <span class="sc-chapter-tag">ZERO-CAC MATHEMATICS &bull; SISTAR STUDIO &amp; SIGNAL STAR POST</span>
+      </div>
+      <h2 class="sc-chapter-h2">The Mathematics of 17.5x LTV/CAC &amp; Unmanned Media Broadcasting</h2>
+      <p class="sc-lead">How does <strong>*SC - Intl Alliance</strong> achieve an industry-leading <span class="notranslate" translate="no">17.5x LTV/CAC</span> ratio and a <span class="notranslate" translate="no">2.8-month</span> payback period? By replacing paid digital ad spend with our autonomous <strong>SISTAR Studio</strong> and <strong>The SIGNAL STAR Post</strong> broadcasting pipeline.</p>
+
+      <div class="sc-math-box notranslate" translate="no">
+        <span class="sc-math-code">// EQUATION 3.1: UNMANNED MEDIA ZERO-CAC ORGANIC FUNNEL</span>
+        CAC_Blended = [ Cost_API(RSS + Make + Gemini + Video_Gen) ] / New_Active_Buyers &rArr; Approaches $0 Paid Ad Spend (LTV / CAC = 17.5x)<br/>
+        <span class="sc-math-code" style="margin-top:10px;">// EQUATION 3.2: 3-YEAR OPERATING LEVERAGE TRAJECTORY</span>
+        Y1: KRW 2.0B (OPM 20%) &rarr; Y2: KRW 7.0B (OPM 35%) &rarr; Y3: KRW 15.0B (OPM 35%) &nbsp;[Fixed Cloud Overhead &lt; 8% of Revenue]
+      </div>
+
+      <!-- INLINE SVG 2: UNMANNED MEDIA ENGINE & 3-YEAR FINANCIAL TRAJECTORY -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="SISTAR Studio Unmanned Media Pipeline and 3-Year Financial Trajectory">
+          <rect x="0" y="0" width="960" height="360" rx="6" fill="#0f172a" />
+          <text x="24" y="30" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700" letter-spacing="1.2">FIG 3.1 // SISTAR STUDIO UNMANNED MEDIA PIPELINE &amp; 3-YEAR INSTITUTIONAL FINANCIAL TRAJECTORY</text>
+          <line x1="24" y1="42" x2="936" y2="42" stroke="#334155" stroke-width="1" />
+
+          <!-- Left Half: Unmanned Media Engine -->
+          <rect x="24" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="40" y="82" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">A. SISTAR STUDIO &amp; THE SIGNAL STAR POST (24/7)</text>
+
+          <rect x="40" y="98" width="412" height="64" rx="4" fill="#0f172a" stroke="#38bdf8" />
+          <text x="52" y="118" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1. Overnight Signal Ingestion (RSS / Make / RAG)</text>
+          <text x="52" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Ingests global veterinary, bio-health, K-Beauty &amp; AI</text>
+          <text x="52" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">breakthroughs across 8 international nodes nightly.</text>
+
+          <rect x="40" y="174" width="412" height="64" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="52" y="194" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">2. Autonomous Multi-Format Synthesis</text>
+          <text x="52" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Auto-generates 10+ daily shoppable short-form videos,</text>
+          <text x="52" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">executive newsletters &amp; multilingual B2B industry briefs.</text>
+
+          <rect x="40" y="250" width="412" height="68" rx="4" fill="#0f5132" />
+          <text x="52" y="272" fill="#ecfdf5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">3. Zero-CAC Conversion Across 12 Domains</text>
+          <text x="52" y="289" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">Drives organic buyer traffic directly into Scarlet AI</text>
+          <text x="52" y="304" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">group-buying checkouts (17.5x LTV/CAC, 2.8m payback).</text>
+
+          <!-- Right Half: 3-Year Financial Trajectory -->
+          <rect x="492" y="58" width="444" height="278" rx="5" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+          <text x="508" y="82" fill="#f59e0b" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">B. 3-YEAR FINANCIAL &amp; OPM EXPANSION</text>
+
+          <rect x="508" y="98" width="412" height="64" rx="4" fill="#0f172a" stroke="#334155" />
+          <text x="520" y="118" fill="#f8fafc" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">YEAR 1: KRW 2.0 Billion Revenue (20% OPM)</text>
+          <text x="520" y="135" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">Immediate cashflow from Pipelines 1–3 (Michlo, SISPet,</text>
+          <text x="520" y="150" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">IndoHerbs Rp 1,320 sachets) + initial SaaS onboarding.</text>
+
+          <rect x="508" y="174" width="412" height="64" rx="4" fill="#0f172a" stroke="#10b981" />
+          <text x="520" y="194" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">YEAR 2: KRW 7.0 Billion Revenue (35% OPM)</text>
+          <text x="520" y="211" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10">8-Hub container scaling under K-SURE BNPL + 20 B2B Offer</text>
+          <text x="520" y="226" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">Sheets + Qubit ERP / Company RAG recurring ARR.</text>
+
+          <rect x="508" y="250" width="412" height="68" rx="4" fill="#1e3a8a" />
+          <text x="520" y="272" fill="#f59e0b" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">YEAR 3: KRW 15.0 Billion Revenue (35% OPM)</text>
+          <text x="520" y="289" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">Full 100-Brand / 100-Patent licensing + IATA/IADA global</text>
+          <text x="520" y="304" fill="#bae6fd" font-family="Inter, sans-serif" font-size="10">alliance clearing fees + high-multiple SaaS dominance.</text>
+        </svg>
+        <figcaption class="sc-svg-caption">FIG 3.1 // Left: SISTAR Studio &amp; The SIGNAL STAR Post unmanned media funnel. Right: 3-year institutional revenue and operating profit margin (OPM) trajectory.</figcaption>
+      </figure>
+    </section>
+
+    <!-- CHAPTER IV: STRATEGIC SYNERGY & GOVERNANCE WITHIN THE SIGNAL STAR UNIVERSE -->
+    <section class="sc-chapter" id="ch-04">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV</span>
+        <span class="sc-chapter-tag">STRATEGIC SYNERGY &bull; 12 DOMAINS &amp; DUAL-TRACK FIREWALL</span>
+      </div>
+      <h2 class="sc-chapter-h2">Integration Within the Signal Star Universe (*SC)</h2>
+      <p class="sc-lead">Every alliance member and partner transaction inside <strong>Intl Alliance</strong> is governed by our unified cloud console and institutional risk firewall:</p>
+      <div class="sc-grid-2">
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">1. Core Architecture &amp; Technical Integration</h3>
+          <p class="sc-p">Connected across our 12-domain semantic web matrix and 8 international bases (Korea SCK, Indonesia SCI, Singapore SCS, USA SCU, Vietnam SCV, India SCIND, China SCC, Japan SCJ). Every workflow is tracked transparently via standardized Google Workspace Console, Monthly Sales, and Dashboard ledgers.</p>
+        </div>
+        <div class="sc-panel">
+          <h3 class="sc-sub-h4">2. Risk Firewall &amp; Settlement Security</h3>
+          <p class="sc-p">Protected by the *SC Triple Control Towers and Dual-Track Legal Firewall (isolating SC Index holding IP from Biz Galaxy commercial liabilities). Transactions leverage 3-Month Rolling Purchasing Forecasts (RPF), K-SURE export credit guarantees, and automated 70/30 PG webhook split settlements.</p>
         </div>
       </div>
     </section>
 
-    <section class="sc-sec">
-      <div><span class="sc-kicker">STRATEGIC SYNERGY &amp; GOVERNANCE</span></div>
-      <h2 class="sc-h2">Integration Within the Signal Star Universe (*SC)</h2>
-      <div class="sc-grid-2x2">
-        <div class="sc-card-line">
-          <h3 class="sc-h3">1. Core Architecture &amp; Technical Integration</h3>
-          <p class="sc-p">Connected across our 12-domain semantic web matrix and 8 international bases (Korea SCK, Indonesia SCI, Singapore SCS, USA SCU, Vietnam SCV, India SCIND, China SCC, Japan SCJ). Every workflow is tracked transparently via standardized Google Workspace Console, Monthly Sales, and Dashboard ledgers.</p>
+    <!-- CHAPTER V: GLOBAL ALLIANCE PARTNER ONBOARDING -->
+    <section class="sc-chapter" id="ch-05">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V</span>
+        <span class="sc-chapter-tag">PARTNER ONBOARDING &bull; JOINING IATA &amp; IADA</span>
+      </div>
+      <h2 class="sc-chapter-h2">Business Partner Onboarding: How to Join the Sovereign Alliance</h2>
+      <p class="sc-lead">Independent manufacturers, regional wholesalers, veterinary/medical clinics, and digital creators can onboard into <strong>Intl Alliance</strong> in three frictionless steps:</p>
+      <div class="sc-grid-3">
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Step 1: Select Your B2B Offer Track (01–20)</h3>
+          <p class="sc-p">Choose from our 20 standardized commercial tracks—ranging from Container Volume Deals (50% deposit on first 3 shipments, followed by K-SURE BNPL) to Zero-Inventory SISTAR SOD Dropshipping or S1–S6 Micro-Franchises.</p>
         </div>
-        <div class="sc-card-line">
-          <h3 class="sc-h3">2. Risk Firewall &amp; Settlement Security</h3>
-          <p class="sc-p">Protected by the *SC Triple Control Towers and Dual-Track Legal Firewall (isolating SC Index holding IP from Biz Galaxy commercial liabilities). Transactions leverage 3-Month Rolling Purchasing Forecasts (RPF), K-SURE export credit guarantees, and automated 70/30 PG webhook split settlements.</p>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Step 2: Connect to IATA &amp; IADA Pools</h3>
+          <p class="sc-p">Gain immediate access to collective factory pricing through the <strong>International AI Trade Alliance (IATA)</strong> and real-time market/regulatory RAG intelligence through the <strong>International AI Data Alliance (IADA)</strong>.</p>
+        </div>
+        <div class="sc-panel-emerald">
+          <h3 class="sc-sub-h4">Step 3: Activate 70/30 PG &amp; 4-Way Qubit Clearing</h3>
+          <p class="sc-p">Begin selling immediately with automated shoppable media support from <em>SISTAR Studio</em>, receiving your 30% net profit split in real time at checkout while offsetting idle capacity via the 4-Way Qubit Bank.</p>
         </div>
       </div>
-      <div class="sc-callout"><strong>*SC - SISTAR COMPANY | One Spark, Infinite Galaxifying:</strong> Powered by the Qubit Algorithm&trade;, *SC intelligence-core, Scarlet AI, Qubit Biz, and the Biz Galaxy constellation.<br/>Corporate Portal: https://sistarcompany.com &bull; Executive Contact: DennyKu (denniiku@sistarcompany.com)</div>
+    </section>
+
+    <!-- CHAPTER VI: INSTITUTIONAL VC & LP INVESTMENT THESIS -->
+    <section class="sc-chapter" id="ch-06">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI</span>
+        <span class="sc-chapter-tag">VC &amp; IR INVESTMENT THESIS &bull; ZERO SUNK-CAPEX ARCHITECTURE</span>
+      </div>
+      <h2 class="sc-chapter-h2">Venture Capital &amp; Institutional Investor Thesis: Zero Sunk-Capex Scaling</h2>
+      <p class="sc-lead"><strong>*SC - Intl Alliance</strong> offers institutional investors a federation model where network effects compound without capital-intensive balance-sheet expansion.</p>
+      <div class="sc-callout">
+        <strong>*SC - SISTAR COMPANY | One Spark, Infinite Galaxifying:</strong> Powered by the Qubit Algorithm&trade;, *SC intelligence-core, Scarlet AI, Qubit Biz, and the Biz Galaxy constellation. With 100% completed cloud/AI infrastructure, <span class="notranslate" translate="no">17.5x LTV/CAC</span>, <span class="notranslate" translate="no">2.8-month</span> payback, and daily public NAV auditing, Intl Alliance converts every dollar of partner and investor capital into immediate global trade velocity.<br/>Corporate Portal: https://sistarcompany.com &bull; Executive Contact: DennyKu (denniiku@sistarcompany.com)
+      </div>
     </section>
   </main>
 </body>
