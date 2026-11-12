@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <title>*SC | SC Architecture — The 6-Layer, 12-Domain Quantum Enterprise Topology</title>
+  <meta name="description" content="Official Enterprise Architecture Monograph of *SC (SISTAR Company): The 6-Layer, 12-Domain Quantum Enterprise Topology connecting Root Identity & Qubit Algorithm to Core AI Vaults, Dual Commercial Platforms, Ecosystem Arenas, Global Participants, and Open Media Forges." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "*SC | SC Architecture — The 6-Layer, 12-Domain Quantum Enterprise Topology",
+    "description": "Comprehensive architectural monograph detailing the 6 Strategic Layers and 12 Interconnected Domains of *SC (SISTAR Company / Signal Star Universe), powered by the Qubit Algorithm and Intelligence-Core.",
+    "author": {
+      "@type": "Organization",
+      "name": "*SC (SISTAR Company)",
+      "url": "https://sistarcompany.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "*SC - SISTAR COMPANY",
+      "url": "https://sistarcompany.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://sistarcompany.com/01_sc/05_sc-architecture/"
+    }
+  }
+  </script>
+  <style>
+    html, body {
+      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
+      margin: 0;
+      padding: 0;
+      color: #0f172a;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.sc-nav-open { padding-left: 236px; }
+    body.sc-nav-folded { padding-left: 64px; }
+    @media (max-width: 768px) {
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+    }
+
+    .sc-monograph {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1380px, 95%);
+      margin: 0 auto;
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 5vw, 76px) 120px;
+    }
+    .sc-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.15);
+    }
+    .sc-route {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #475569;
+      margin: 0;
+      letter-spacing: 0.03em;
+      text-transform: lowercase;
+    }
+    .sc-action-btns {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sc-btn-pdf {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      border: 1.5px solid #0f172a;
+      background: rgba(255, 255, 255, 0.85);
+      color: #0f172a;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .sc-btn-pdf.emerald {
+      background: #0f5132;
+      border-color: #0f5132;
+      color: #ffffff;
+    }
+    .sc-btn-pdf:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
+
+    /* === CHAPTER & PAGE STRUCTURE === */
+    .sc-chapter {
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      border-radius: 18px;
+      padding: clamp(32px, 4.5vw, 56px);
+      margin-bottom: 44px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    }
+    .sc-chapter-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding-bottom: 14px;
+      margin-bottom: 22px;
+      border-bottom: 2px solid #0f172a;
+    }
+    .sc-chapter-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+    }
+    .sc-chapter-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #64748b;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .sc-doc-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.1rem, 3.6vw, 3.05rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px 0;
+    }
+    .sc-chapter-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.55rem, 2.4vw, 2.05rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      margin: 0 0 18px 0;
+    }
+    .sc-sub-h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 10px 0;
+      line-height: 1.35;
+    }
+    .sc-lead {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 500;
+      color: #1e293b;
+      line-height: 1.82;
+      margin: 0 0 24px 0;
+    }
+    .sc-p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.99rem;
+      color: #334155;
+      line-height: 1.82;
+      margin: 0 0 16px 0;
+    }
+
+    /* === EXECUTIVE DARK HERO & METRICS === */
+    .sc-exec-hero {
+      background: linear-gradient(135deg, #090d16 0%, #0f172a 55%, #064e3b 100%);
+      color: #ffffff;
+      border-radius: 16px;
+      padding: clamp(28px, 3.8vw, 44px);
+      margin: 22px 0 32px 0;
+      border: 1px solid rgba(74, 222, 128, 0.3);
+    }
+    .sc-exec-hero h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+      line-height: 1.3;
+    }
+    .sc-exec-hero p {
+      font-size: 1.02rem;
+      color: #e2e8f0;
+      line-height: 1.78;
+      margin: 0 0 24px 0;
+    }
+    .sc-kpi-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    @media (max-width: 900px) {
+      .sc-kpi-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+    .sc-kpi-cell {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .sc-kpi-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.42rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 4px;
+    }
+    .sc-kpi-desc {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+
+    /* === EDITORIAL GRIDS & PANELS === */
+    .sc-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin: 24px 0;
+    }
+    .sc-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin: 24px 0;
+    }
+    @media (max-width: 860px) {
+      .sc-grid-2, .sc-grid-3 { grid-template-columns: 1fr; }
+    }
+    .sc-panel {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-top: 4px solid #0f172a;
+      border-radius: 12px;
+      padding: 24px 26px;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    }
+    .sc-panel.emerald { border-top-color: #0f5132; background: #f8fafc; }
+    .sc-panel.blue { border-top-color: #1d4ed8; }
+    .sc-panel.purple { border-top-color: #6d28d9; }
+    .sc-panel-kicker {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0f5132;
+      margin-bottom: 8px;
+    }
+    .sc-panel.blue .sc-panel-kicker { color: #1d4ed8; }
+    .sc-panel.purple .sc-panel-kicker { color: #6d28d9; }
+
+    /* === FORMULA & ARCHITECTURE BLOCKS === */
+    .sc-math-box {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin: 16px 0;
+      border-left: 4px solid #10b981;
+    }
+    .sc-math-code {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 7px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 8px 0 12px 0;
+    }
+
+    /* === TABLES === */
+    .sc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+    }
+    .sc-table th {
+      background: #0f172a;
+      color: #ffffff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 14px 18px;
+      letter-spacing: 0.03em;
+    }
+    .sc-table td {
+      padding: 15px 18px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 0.94rem;
+      color: #1e293b;
+      line-height: 1.65;
+      vertical-align: top;
+    }
+    .sc-table tr:last-child td { border-bottom: none; }
+    .sc-table tr:nth-child(even) td { background: #f8fafc; }
+
+    /* === CALLOUTS & DOSSIER HEADERS === */
+    .sc-callout {
+      background: #f0fdf4;
+      border-left: 5px solid #0f5132;
+      border-radius: 0 12px 12px 0;
+      padding: 22px 26px;
+      margin: 24px 0;
+    }
+    .sc-callout-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #064e3b;
+      margin-bottom: 8px;
+    }
+    .sc-dossier-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+    .sc-dossier-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      border-bottom: 1.5px solid #e2e8f0;
+    }
+    .sc-dossier-id {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: #0f172a;
+      color: #4ade80;
+      padding: 5px 12px;
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+    }
+    .sc-dossier-domain {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #0f5132;
+    }
+    .sc-dossier-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 760px) {
+      .sc-dossier-metrics { grid-template-columns: 1fr; }
+    }
+
+    .sc-svg-frame {
+      width: 100%;
+      margin: 28px 0;
+      padding: 24px;
+      box-sizing: border-box;
+      border-top: 3px solid #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      border-left: 1px solid #e2e8f0;
+      border-right: 1px solid #e2e8f0;
+      background: #f8fafc;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    }
+    .sc-svg-frame svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sc-svg-caption {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 12px;
+      letter-spacing: 0.02em;
+    }
+
+    /* === MULTI-PAGE A4 PRINT ENGINE (10+ PAGES GUARANTEED) === */
+    @page {
+      size: A4 portrait;
+      margin: 15mm 14mm;
+    }
+    @media print {
+      html, body {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
+        display: none !important;
+      }
+      body.sc-nav-open, body.sc-nav-folded, body {
+        padding-left: 0 !important;
+      }
+      .sc-monograph {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+      .sc-chapter {
+        background: #ffffff !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 10px 0 24px 0 !important;
+        margin-bottom: 0 !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .sc-chapter:last-of-type {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .sc-page-break {
+        page-break-before: always !important;
+        break-before: page !important;
+      }
+      .sc-exec-hero, .sc-math-box {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border: 1.5px solid #94a3b8 !important;
+      }
+      .sc-exec-hero h3, .sc-exec-hero p, .sc-kpi-val, .sc-kpi-desc, .sc-math-code {
+        color: #0f172a !important;
+      }
+      .sc-panel, .sc-dossier-card, .sc-callout, .sc-table tr {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+      }
+    }
+  </style>
+  <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+</head>
+<body class="sc-nav-open">
+  <main class="sc-monograph">
+    <div class="sc-top-bar">
+      <p class="sc-route">sistar company - *sc - sc architecture</p>
+      <div class="sc-action-btns">
+        <a class="sc-btn-pdf emerald" href="../06_sc-master-brochure-_ver03/index.html">Open Master Brochure -></a>
+        <button class="sc-btn-pdf" onclick="window.print()">Print / Export Architectural Monograph PDF</button>
+      </div>
+    </div>
+
+    <!-- ============================================================================
+         CHAPTER I. EXECUTIVE MANIFESTO & MASTER TOPOLOGY OVERVIEW
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-1">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER I • EXECUTIVE MANIFESTO &amp; MASTER TOPOLOGY OVERVIEW</span>
+        <span class="sc-chapter-tag">6 STRATEGIC LAYERS • 12 INTERCONNECTED DOMAINS • QUANTUM GALAXY</span>
+      </div>
+      <h1 class="sc-doc-h1">*SC Enterprise Architecture: The 6-Layer, 12-Domain Quantum Galaxy</h1>
+      <p class="sc-lead">
+        <strong>*SC (SISTAR Company — Signal Star Universe)</strong> is not a single-vertical software vendor or a conventional trading agency. It is architected from first principles as a <strong>6-Layer, 12-Domain Digital Galaxy</strong> engineered to supersede classical Newtonian business friction (<em>A -> B -> C</em>) with non-local quantum value entanglement. Across this unified constitutional topology, a single human insight (<em>One Spark</em>) is systematically ingested, mathematically formalized, powered by proprietary enterprise AI vaults, monetized across twin commercial platforms, scaled across autonomous industry verticals and shared co-creation hubs, and compounded by global human participants and open media forges (<em>One Task, Multi Outcomes</em>).
+      </p>
+
+      <div class="sc-exec-hero">
+        <h3>Why *SC Is Architected as a 6-Layer, 12-Domain Digital Galaxy</h3>
+        <p>
+          Legacy conglomerates fracture into isolated silos—separating corporate strategy from R&amp;D, separating enterprise software from physical supply chains, and separating human talent from capital allocation. In contrast, the <strong>*SC Architecture</strong> binds 12 independent yet quantum-entangled web domains into 6 sequential-yet-simultaneous strategic layers. <strong>Layer 1 (Root Identity &amp; Core Law)</strong> establishes our 20+ years of international business development mastery and the mathematical governance of the <em>Qubit Algorithm™</em>. <strong>Layer 2 (Core AI Asset Vault)</strong> houses our proprietary cognitive engine room (<em>intelligence-core</em>). <strong>Layer 3 (Dual Commercial Platforms)</strong> deploys twin monetization engines (<em>scarlet-ai</em> for marketplace commerce and <em>qubit-biz</em> for Cosmo Seed™ business model cross-pollination). <strong>Layer 4 (Ecosystem Arenas)</strong> manifests both individual shining vertical stars (<em>biz-galaxy</em>) and collective shared-infrastructure co-creation (<em>biz-hub</em>). <strong>Layer 5 (3-Pillar Participants)</strong> aligns talent family (<em>challengers</em>), commercial counterparties (<em>partnership</em>), and institutional capital (<em>ir-pitchdeck</em>). Finally, <strong>Layer 6 (Open Directory &amp; Media Forge)</strong> amplifies global discovery and liquidity through open B2B indexing (<em>biz-directory</em>) and autonomous media synthesis (<em>media</em>).
+        </p>
+        <div class="sc-kpi-strip">
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val">6 Strategic Layers</div>
+            <div class="sc-kpi-desc">Root Law -> AI Vault -> Dual Platforms -> Ecosystem Arenas -> 3-Pillar Participants -> Open Forge</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val">12 Interconnected Domains</div>
+            <div class="sc-kpi-desc">Self-Contained Federated Web Repositories Sharing Unified Common Assets &amp; RAG State</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val">t = 0 Quantum Entanglement</div>
+            <div class="sc-kpi-desc">Simultaneous Multi-Party Value Settlement &amp; Cross-Domain State Synchronization</div>
+          </div>
+          <div class="sc-kpi-cell">
+            <div class="sc-kpi-val">15 Founder Projects Spine</div>
+            <div class="sc-kpi-desc">4-Tier Capability Multiplier Anchoring Internal AI OS Savings &amp; High-Margin B2B Cashflow</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sc-grid-2">
+        <div class="sc-panel emerald">
+          <div class="sc-panel-kicker">ARCHITECTURAL DESIGN PRINCIPLE 01</div>
+          <h3 class="sc-sub-h3">Top-Down Law Meets Bottom-Up Market Liquidity</h3>
+          <p class="sc-p">
+            Every transaction, clinical formulation, ODM production run, or cross-border shipment inside the Signal Star Universe is governed from the top down by <strong>Layer 1</strong> (<code>sc-sistarcompany</code> corporate governance and <code>qubit-algorithm</code> mathematical laws) and powered by <strong>Layer 2</strong> (<code>intelligence-core</code>). Simultaneously, real-world market demand, clinical diagnostics, and B2B proposals flow from the bottom up through <strong>Layers 5 and 6</strong> into the commercial execution engines of <strong>Layers 3 and 4</strong>.
+          </p>
+        </div>
+        <div class="sc-panel blue">
+          <div class="sc-panel-kicker">ARCHITECTURAL DESIGN PRINCIPLE 02</div>
+          <h3 class="sc-sub-h3">Federated Independence with Zero-Latency Entanglement</h3>
+          <p class="sc-p">
+            Each of the 12 domains operates as an independent, specialized gateway tailored to its exact audience—whether a veterinary clinic owner visiting <code>biz-galaxy</code>, an ODM factory joining <code>partnership</code>, an ambitious professional onboarding at <code>challengers</code>, or a venture partner conducting due diligence on <code>ir-pitchdeck</code>. Beneath the surface, all 12 domains share a single constitutional brain, unified UI/UX governance, and real-time Bell-state data entanglement.
+          </p>
+        </div>
+      </div>
+
+      <!-- INLINE SVG #1: MASTER 6-LAYER -> 12-DOMAIN ARCHITECTURAL BLUEPRINT -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 420" class="notranslate" translate="no" role="img" aria-label="Master 6-Layer to 12-Domain Architectural Blueprint of *SC">
+          <defs>
+            <linearGradient id="scBgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#090d16" />
+              <stop offset="55%" stop-color="#0f172a" />
+              <stop offset="100%" stop-color="#064e3b" />
+            </linearGradient>
+            <linearGradient id="scLayerBar" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#10b981" stop-opacity="0.25" />
+              <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.12" />
+            </linearGradient>
+            <marker id="scArrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#4ade80" />
+            </marker>
+            <marker id="scArrowCyan" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" />
+            </marker>
+          </defs>
+
+          <!-- Background Canvas -->
+          <rect x="0" y="0" width="960" height="420" rx="12" fill="url(#scBgGrad1)" />
+
+          <!-- Header Banner inside SVG -->
+          <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">*SC MASTER ENTERPRISE TOPOLOGY • 6 STRATEGIC LAYERS -&gt; 12 QUANTUM-ENTANGLED DOMAINS (t = 0)</text>
+          <line x1="24" y1="36" x2="936" y2="36" stroke="#334155" stroke-width="1" />
+
+          <!-- LAYER 1 ROW (Y=46..96) -->
+          <rect x="24" y="46" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
+          <text x="34" y="66" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 1 • ROOT IDENTITY &amp; LAW</text>
+          <text x="34" y="83" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Philosophy &amp; Quantum Math</text>
+
+          <rect x="252" y="46" width="330" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
+          <text x="266" y="65" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">01 • sc-sistarcompany</text>
+          <text x="266" y="82" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5">Supreme Corporate Flagship • 8 Global Bases • IATA/IADA</text>
+
+          <rect x="600" y="46" width="336" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+          <text x="614" y="65" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">02 • qubit-algorithm</text>
+          <text x="614" y="82" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5">Mathematical Engine • 5 Quantum Laws • Wavefunction Proof</text>
+
+          <!-- LAYER 2 ROW (Y=108..158) -->
+          <rect x="24" y="108" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
+          <text x="34" y="128" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 2 • CORE AI VAULT</text>
+          <text x="34" y="145" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Proprietary AI Engine Room</text>
+
+          <rect x="252" y="108" width="684" height="50" rx="6" fill="#0f2922" stroke="#10b981" stroke-width="1.5" />
+          <text x="266" y="127" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">03 • intelligence-core (Proprietary AI Asset Vault &amp; Engine Room)</text>
+          <text x="266" y="144" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">*SC AI Centers Int'l • Company RAG • Qubit ERP • Overnight Data Factory (10PM-8AM) • Agent Builder • Exo-Brain • SISTAR Studio</text>
+
+          <!-- LAYER 3 ROW (Y=170..220) -->
+          <rect x="24" y="170" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
+          <text x="34" y="190" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 3 • DUAL PLATFORMS</text>
+          <text x="34" y="207" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Twin Monetization Engines</text>
+
+          <rect x="252" y="170" width="330" height="50" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1.2" />
+          <text x="266" y="189" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">04 • scarlet-ai</text>
+          <text x="266" y="206" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">AI Commerce &amp; Trade • Buy4Me • K-SURE BNPL • 70/30 PG</text>
+
+          <rect x="600" y="170" width="336" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+          <text x="614" y="189" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">05 • qubit-biz</text>
+          <text x="614" y="206" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Cosmo Seed™ Showcase • 5 Qubit Engines • 4-Way Offsetting</text>
+
+          <!-- LAYER 4 ROW (Y=232..282) -->
+          <rect x="24" y="232" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
+          <text x="34" y="252" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 4 • ECOSYSTEM ARENAS</text>
+          <text x="34" y="269" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Vertical Stars &amp; Co-Creation</text>
+
+          <rect x="252" y="232" width="330" height="50" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.2" />
+          <text x="266" y="251" fill="#a78bfa" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">06 • biz-galaxy</text>
+          <text x="266" y="268" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Shining Verticals • MedIX • SISPet • SISPharm • Mind Co.</text>
+
+          <rect x="600" y="232" width="336" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
+          <text x="614" y="251" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">07 • biz-hub</text>
+          <text x="614" y="268" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">"Together Gets Stronger" • Auto-Formulator • Rp 1,320 ODM</text>
+
+          <!-- LAYER 5 ROW (Y=294..344) -->
+          <rect x="24" y="294" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
+          <text x="34" y="314" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 5 • PARTICIPANTS</text>
+          <text x="34" y="331" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Family, Partners &amp; VC Capital</text>
+
+          <rect x="252" y="294" width="218" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
+          <text x="264" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">08 • challengers</text>
+          <text x="264" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">SISTAR Family • Vibe Working • S1-S6</text>
+
+          <rect x="484" y="294" width="218" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
+          <text x="496" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">09 • partnership</text>
+          <text x="496" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">B2B Factories, Clinics &amp; Distributors</text>
+
+          <rect x="716" y="294" width="220" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
+          <text x="728" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">10 • ir-pitchdeck</text>
+          <text x="728" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">VC &amp; Institutional Conviction Hub</text>
+
+          <!-- LAYER 6 ROW (Y=356..406) -->
+          <rect x="24" y="356" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
+          <text x="34" y="376" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 6 • OPEN FORGE</text>
+          <text x="34" y="393" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Liquidity &amp; Media Amplification</text>
+
+          <rect x="252" y="356" width="330" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+          <text x="266" y="375" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">11 • biz-directory</text>
+          <text x="266" y="392" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Open B2B Proposals &amp; Global Corporate Directory</text>
+
+          <rect x="600" y="356" width="336" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
+          <text x="614" y="375" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">12 • media</text>
+          <text x="614" y="392" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">SISTAR Studio (10 Daily Assets) • The SIGNAL STAR Post</text>
+
+          <!-- Quantum Entanglement Vertical & Cross Connectors -->
+          <line x1="417" y1="96" x2="417" y2="106" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
+          <line x1="768" y1="96" x2="768" y2="106" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
+          <line x1="417" y1="158" x2="417" y2="168" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
+          <line x1="768" y1="158" x2="768" y2="168" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
+          <line x1="417" y1="220" x2="417" y2="230" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
+          <line x1="768" y1="220" x2="768" y2="230" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
+          <line x1="360" y1="282" x2="360" y2="292" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
+          <line x1="593" y1="282" x2="593" y2="292" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
+          <line x1="826" y1="282" x2="826" y2="292" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
+          <line x1="417" y1="344" x2="417" y2="354" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
+          <line x1="768" y1="344" x2="768" y2="354" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
+        </svg>
+        <figcaption class="sc-svg-caption">
+          Figure 1.1 — Master 6-Layer -&gt; 12-Domain Architectural Blueprint of the Signal Star Universe (*SC), illustrating top-down mathematical governance and continuous quantum entanglement across all 12 web repositories.
+        </figcaption>
+      </figure>
+
+      <h2 class="sc-chapter-h2">Master 6-Layer &amp; 12-Domain Constitutional Matrix</h2>
+      <p class="sc-p">
+        The table below codifies the constitutional role, canonical domain URL, core strategic mandate, and primary quantum entanglement interfaces of each of the 12 domains across our 6 architectural layers:
+      </p>
+
+      <table class="sc-table">
+        <thead>
+          <tr>
+            <th style="width: 14%;">Strategic Layer</th>
+            <th style="width: 18%;">Domain ID &amp; Host</th>
+            <th style="width: 24%;">Constitutional Role</th>
+            <th style="width: 44%;">Core Engines, Signatures &amp; Entanglement Function</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Layer 1</strong><br/>Root Identity &amp; Core Law</td>
+            <td><strong>01 • sc-sistarcompany</strong><br/><code>sistarcompany.com</code></td>
+            <td>Supreme Corporate Flagship &amp; Global Alliances</td>
+            <td>20+ years lived international BD &amp; trade mastery; 8 Global Bases (<code>SCK, SCI, SCV, SG, SCC, SCJ, SCU, IN</code>); Federated Alliances (<code>IATA</code> &amp; <code>IADA</code> — <em>"Together, Against Global AI Giants"</em>); 4 Pillars &amp; 15 Founder Projects spine.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 1</strong><br/>Root Identity &amp; Core Law</td>
+            <td><strong>02 • qubit-algorithm</strong><br/><code>qubitalgorithm.sistarcompany.com</code></td>
+            <td>Mathematical &amp; Theoretical Propulsion Engine</td>
+            <td>Replaces Newtonian linear friction (<code>A -&gt; B -&gt; C</code>) with the world's first <strong>Qubit Algorithm™</strong> (Fluctuation, <code>t = 0</code> Superposition, Bell-State Entanglement, WKB Tunneling, Discrete Quantization) and empirical academic proof.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 2</strong><br/>Core AI Asset Vault</td>
+            <td><strong>03 • intelligence-core</strong><br/><code>intelligence.sistarcompany.com</code></td>
+            <td>Proprietary AI Asset Vault &amp; Engine Room</td>
+            <td>Houses <code>*SC AI Centers Int'l</code>, <code>Company RAG Solution</code>, <code>Qubit ERP</code>, <code>Overnight Data Factory (10 PM - 8 AM)</code>, <code>Agent Builder &amp; Ms. Scarlet</code>, <code>Exo-Brain &amp; [&amp; I] Physical AI</code>, and <code>SISTAR Studio</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 3</strong><br/>Dual Commercial Platforms</td>
+            <td><strong>04 • scarlet-ai</strong><br/><code>scarlet.sistarcompany.com</code></td>
+            <td>AI Commerce &amp; AI Trade Int'l Marketplace Platform</td>
+            <td>Industry- and function-specific AI commerce solving legacy trade bottlenecks via <strong>Volume-Wise Deals</strong>, <strong>Collective Group Buying (<code>Buy4Me</code>)</strong>, <strong>K-SURE BNPL</strong>, <strong>70/30 PG Cashback</strong>, and simultaneous <code>t = 0</code> settlement.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 3</strong><br/>Dual Commercial Platforms</td>
+            <td><strong>05 • qubit-biz</strong><br/><code>qubit.sistarcompany.com</code></td>
+            <td>Cosmo Seed™ Biz Model Showcase &amp; Cross-Project Platform</td>
+            <td>Turns <code>One Spark</code> into structured business projects and cross-project synergy (<code>One Task, Multi Outcomes</code>). Open showcase of <strong>Cosmo Seed™</strong> models (<code>Qubit Factory™</code>, <code>Qubit Commerce™</code>, <code>Qubit Star™</code>, <code>Qubit Link™</code>, <code>Qubit Flow™</code>, <code>c.a.n.</code>, <code>4-Way Offsetting</code>).</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 4</strong><br/>Ecosystem Arenas</td>
+            <td><strong>06 • biz-galaxy</strong><br/><code>biz.sistarcompany.com</code></td>
+            <td>Shining Constellation of Industry Verticals &amp; Players</td>
+            <td>Where <code>Cosmo Seed™</code> models and market players fulfill their roles under the <code>Qubit Algorithm™</code> across active verticals: <code>SISTAR MedIX</code>, <code>SISPet</code>, <code>SISPharm</code>, <code>Aquasis</code>, <code>SisAyurvedic</code>, <code>Mind Company</code>, <code>FlexKids AI</code>, <code>SISMii</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 4</strong><br/>Ecosystem Arenas</td>
+            <td><strong>07 • biz-hub</strong><br/><code>bizhub.sistarcompany.com</code></td>
+            <td>"Together Gets Stronger" Co-Creation Hub</td>
+            <td>Gravitational center where players unite around shared values and common goals: <code>Auto-Formulator for Vet</code>, Joint ODM Manufacturing, <code>Rp 1,320</code> Micro-Sachet Protocol, <code>Space Sharing &amp; Deliver Together</code>, <code>PetFood Bank Re:D</code>, <code>Mint</code> Franchises.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 5</strong><br/>3-Pillar Participants</td>
+            <td><strong>08 • challengers</strong><br/><code>challengers.sistarcompany.com</code></td>
+            <td>International SISTAR Family &amp; Vibe Working Portal</td>
+            <td>Onboards global talent not as employees/freelancers, but as <strong>International SISTAR Family (<code>SISTAR Challengers</code>)</strong> practicing <strong>Vibe Working</strong>, building careers, and sharing profits via <code>S1-S6 Franchise-ship</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 5</strong><br/>3-Pillar Participants</td>
+            <td><strong>09 • partnership</strong><br/><code>partnership.sistarcompany.com</code></td>
+            <td>Global Business Partners Motivation Gateway</td>
+            <td>Demonstrates immediate revenue, ODM, AI Dx, and cross-border trade advantages to motivate manufacturers, distributors, veterinary clinics, and brand owners across global markets.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 5</strong><br/>3-Pillar Participants</td>
+            <td><strong>10 • ir-pitchdeck</strong><br/><code>ir.sistarcompany.com</code></td>
+            <td>VC &amp; Institutional Investment Conviction Hub</td>
+            <td>Presents multi-track investment vehicles (Holding Equity, Project SPVs, Regional JVs) and answers every critical VC due-diligence question (Market, Moat, Dual-Return Unit Economics, Scalability, Exit).</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 6</strong><br/>Open Directory &amp; Media</td>
+            <td><strong>11 • biz-directory</strong><br/><code>directory.sistarcompany.com</code></td>
+            <td>Open B2B Proposal &amp; Corporate Directory</td>
+            <td>Category-by-category business proposals and open corporate listings connecting global enterprises directly into <code>scarlet-ai</code> and <code>qubit-biz</code> execution pipelines.</td>
+          </tr>
+          <tr>
+            <td><strong>Layer 6</strong><br/>Open Directory &amp; Media</td>
+            <td><strong>12 • media</strong><br/><code>media.sistarcompany.com</code></td>
+            <td>Content Forge &amp; Media Activity Archive</td>
+            <td>Archives autonomous content production (<code>SISTAR Studio</code>, <code>Marketing Tool Package by Project</code> — 10 daily media assets) and global journalism (<code>The SIGNAL STAR Post</code>).</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- ============================================================================
+         CHAPTER II. LAYER 1 — ROOT IDENTITY & CORE LAW
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-2">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER II • LAYER 1 — ROOT IDENTITY &amp; CORE LAW</span>
+        <span class="sc-chapter-tag">DOMAINS 01 &amp; 02 • CORPORATE SOVEREIGNTY &amp; QUANTUM MATHEMATICS</span>
+      </div>
+      <h2 class="sc-chapter-h2">Layer 1: Philosophical Identity &amp; Mathematical Law (Domains 01 &amp; 02)</h2>
+      <p class="sc-lead">
+        Every enduring civilization and enterprise architecture begins with an unshakeable constitutional foundation. In the Signal Star Universe, <strong>Layer 1</strong> defines <em>who we are</em> (<code>01 sc-sistarcompany</code>) and <em>the mathematical laws by which our universe operates</em> (<code>02 qubit-algorithm</code>). Together, these two flagship domains provide institutional partners, sovereign trade bodies, and venture capital committees with both empirical operational credibility and rigorous theoretical proof.
+      </p>
+
+      <!-- DOMAIN 01 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 01 • LAYER 1 FLAGSHIP</span>
+          <span class="sc-dossier-domain">sc-sistarcompany (sistarcompany.com) — [Supreme Corporate Flagship]</span>
+        </div>
+        <h3 class="sc-sub-h3">The Supreme Headquarters of Corporate Introduction, 8 Global Bases &amp; Federated Alliances</h3>
+        <p class="sc-p">
+          <code>sc-sistarcompany</code> (<code>sistarcompany.com</code>) serves as the supreme corporate headquarters and institutional front door of the entire 12-domain ecosystem. Unlike theoretical AI startups built in a vacuum, <code>sc-sistarcompany</code> demonstrates how <strong>*SC's Identity &amp; Signatures</strong>—forged from <strong>20+ years of lived overseas residency, hands-on international business development, and cross-border trading mastery</strong>—are fused with autonomous multi-agent AI.
+        </p>
+        <p class="sc-p">
+          To give absolute conviction to global Business Partners and Venture Capitalists, the domain is structured around three foundational pillars: (1) <strong>The *SC Core Identity</strong> (<code>01_sc</code>: Signal Star vision, Founder message, 4 Pillars, SC Architecture, Master Brochure, and the 15 Founder Projects); (2) <strong>Country-by-Country Strategic Partnerships</strong> (<code>02_sistar-intl</code>: localized legal and operational execution across 8 strategic national bases—<code>SCK</code> Korea, <code>SCI</code> Indonesia, <code>SCV</code> Vietnam, <code>SG</code> Singapore, <code>SCC</code> China, <code>SCJ</code> Japan, <code>SCU</code> USA, and <code>IN</code> India); and (3) <strong>Global Federated Alliances</strong> (<code>03_intl-alliance</code>: the International AI Trading Alliance <code>IATA</code> and International AI Development Alliance <code>IADA</code>). Under the banner <em>"Together, Against Global AI Giants — Do International Trading Directly,"</em> <code>sc-sistarcompany</code> proves how regional manufacturers, clinics, and merchants unite into a sovereign global federation.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Primary Audience:</strong><br/>Global Enterprise Counterparties, Sovereign Trade Bodies &amp; Institutional VCs
+          </div>
+          <div>
+            <strong>Physical Footprint:</strong><br/>8 Global Operational Bases (<code>KR -> ID -> VN -> SG -> CN -> JP -> US -> IN</code>)
+          </div>
+          <div>
+            <strong>Alliance Moat:</strong><br/><code>IATA</code> (Direct AI Trade) &amp; <code>IADA</code> (Federated AI Co-Development)
+          </div>
+        </div>
+      </div>
+
+      <!-- DOMAIN 02 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 02 • LAYER 1 MATHEMATICAL ENGINE</span>
+          <span class="sc-dossier-domain">qubit-algorithm (qubitalgorithm.sistarcompany.com) — [Mathematical &amp; Theoretical Engine]</span>
+        </div>
+        <h3 class="sc-sub-h3">Liberating Market Players from Newtonian Linear Friction Through the World's First Qubit Algorithm™</h3>
+        <p class="sc-p">
+          <code>qubit-algorithm</code> (<code>qubitalgorithm.sistarcompany.com</code>) was born from a profound empirical observation across two decades of international commerce: capable manufacturers, innovative creators, veterinary clinics, and regional distributors repeatedly fail to reach their potential not because their products lack merit, but because they are trapped inside <strong>Classical Newtonian Business Rules</strong> (<code>A -> B -> C</code>). Sequential supply chains impose working-capital crunches, speculative inventory deadweight, multi-tier middleman markups, and 60-to-120-day settlement delays.
+        </p>
+        <p class="sc-p">
+          To dismantle this structural bottleneck, *SC invented the world's first <strong>Qubit Algorithm™</strong> and codified its rigorous mathematical proof in our foundational monograph, <em>Optimization of Business Process Wavefunctions</em>. Why is quantum mechanics combined with autonomous AI the ideal practical match for modern commerce? Because in the AI era, autonomous agents process multi-lingual market signals, match cross-border counterparties, and execute smart clearing code concurrently. Replacing linear step-by-step trade with the <strong>5 Quantum Laws</strong>—(1) <em>Quantum Fluctuation</em> (<code>One Spark</code> zero-capital genesis), (2) <em>t = 0 Superposition</em> (simultaneous multi-party profit state), (3) <em>Bell-State Entanglement</em> (<code>One Task, Multi Outcomes</code> cross-project synchronization), (4) <em>WKB Quantum Tunneling</em> (pre-order deposits bypassing capital barriers), and (5) <em>Discrete Quantization &amp; Wave-Particle Duality</em> (collapsing demand waves into deterministic contract particles while canceling middleman noise)—transforms international business from a high-risk linear gamble into a mathematically deterministic engine.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Theoretical Core:</strong><br/>5 Quantum Laws Engineered into Commercial Execution Code
+          </div>
+          <div>
+            <strong>Empirical Anchor:</strong><br/><em>Optimization of Business Process Wavefunctions</em> Academic Monograph
+          </div>
+          <div>
+            <strong>Systemic Impact:</strong><br/>Collapses Working Capital Risk &amp; Settlement Latency to <code>t = 0</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- MATH BOX: HOW LAYER 1 GOVERNS LAYERS 2 THROUGH 6 -->
+      <div class="sc-math-box">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 0.82rem; font-weight: 700; color: #4ade80; letter-spacing: 0.08em; text-transform: uppercase;">
+          CONSTITUTIONAL HAMILTONIAN • HOW LAYER 1 MATHEMATICAL LAWS GOVERN LAYERS 2 -> 6
+        </div>
+        <div class="sc-math-code">
+          H_SC |Psi_Universe&gt; = [ H_Fluctuation(L2) + H_Superposition(L3) + H_Entanglement(L4) + H_Tunneling(L5..L6) ] |Psi_0&gt; = E_Total |Psi_t=0&gt;
+        </div>
+        <p class="sc-p" style="color: #e2e8f0; margin-bottom: 10px;">
+          <strong>1. Layer 1 -> Layer 2 (Vacuum Fluctuation in the AI Vault):</strong> Under <code>H_Fluctuation |0&gt; = E_0 |Psi_spark&gt;</code>, a single founder or partner insight entering <code>intelligence-core</code> triggers the <em>Overnight Data Factory (10 PM - 8 AM)</em> and <em>Company RAG</em> to autonomously synthesize PRDs, ERP schemas, and 10 daily media assets at zero marginal capital cost (<code>V_capital = 0</code>).
+        </p>
+        <p class="sc-p" style="color: #e2e8f0; margin-bottom: 10px;">
+          <strong>2. Layer 1 -> Layer 3 (t = 0 Superposition &amp; WKB Tunneling in Commercial Platforms):</strong> Inside <code>scarlet-ai</code> and <code>qubit-biz</code>, Buyer (<code>B</code>), Manufacturer (<code>M</code>), Logistics (<code>L</code>), and Financier (<code>F</code>) exist in a unified state vector <code>|Phi_Market&gt; = Sum c_i |B_i M_i L_i F_i&gt;</code>. When collective demand (<code>Buy4Me</code> + 50% advance deposit + K-SURE BNPL) reaches threshold energy <code>E_intent</code>, the transaction tunnels through traditional working-capital walls (<code>T -> 1</code>) and settles simultaneously at <code>t = 0</code>.
+        </p>
+        <p class="sc-p" style="color: #e2e8f0; margin-bottom: 0;">
+          <strong>3. Layer 1 -> Layers 4, 5 &amp; 6 (Bell-State Entanglement Across Arenas, Participants &amp; Media):</strong> Governed by <code>|Phi^+&gt;_AB = (|0&gt;_A|0&gt;_B + |1&gt;_A|1&gt;_B) / sqrt(2)</code>, a single veterinary prescription in <code>biz-galaxy</code> simultaneously triggers joint sachet manufacturing in <code>biz-hub</code>, credits S1-S6 franchise commissions in <code>challengers</code>, updates partner ledgers in <code>partnership</code>, proves live unit economics in <code>ir-pitchdeck</code>, indexes B2B SKUs in <code>biz-directory</code>, and publishes market intelligence in <code>media</code>.
+        </p>
+      </div>
+    </article>
+
+    <!-- ============================================================================
+         CHAPTER III. LAYER 2 — CORE AI ASSET VAULT
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-3">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER III • LAYER 2 — CORE AI ASSET VAULT</span>
+        <span class="sc-chapter-tag">DOMAIN 03 • INTELLIGENCE-CORE • THE PROPRIETARY ENGINE ROOM</span>
+      </div>
+      <h2 class="sc-chapter-h2">Layer 2: Core AI Asset Vault — The Proprietary Engine Room (Domain 03)</h2>
+      <p class="sc-lead">
+        If Layer 1 is the constitution and mathematical physics of the Signal Star Universe, <strong>Layer 2 (<code>03 intelligence-core</code>)</strong> is the nuclear reactor and cognitive brain that powers every commercial platform and vertical arena below it. Without <code>intelligence-core</code>, <code>scarlet-ai</code> and <code>qubit-biz</code> would be mere static websites; with <code>intelligence-core</code>, they operate as autonomous, self-optimizing multi-agent organisms.
+      </p>
+
+      <!-- DOMAIN 03 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 03 • LAYER 2 ENGINE ROOM</span>
+          <span class="sc-dossier-domain">intelligence-core (intelligence.sistarcompany.com) — [The Proprietary AI Asset Vault &amp; Engine Room]</span>
+        </div>
+        <h3 class="sc-sub-h3">The Master Vault of Proprietary AI Technologies Powering Scarlet-AI and Qubit-Biz</h3>
+        <p class="sc-p">
+          <code>intelligence-core</code> (<code>intelligence.sistarcompany.com</code>) is the master technological vault cataloging and orchestrating *SC's core artificial intelligence assets, enterprise software engines, and physical AI hardware. Rather than renting generic third-party SaaS tools that leak corporate memory and charge punitive per-seat fees, *SC engineered a sovereign, full-stack cognitive infrastructure designed specifically for cross-border trade, automated enterprise resource planning, and 24/7 commercial execution.
+        </p>
+        <p class="sc-p">
+          Every technology inside <code>intelligence-core</code> serves a dual mandate: first, it achieves <strong>100% internal administrative and ERP cost elimination</strong> across all *SC global bases; second, it is packaged as a high-margin (<strong>75%~85% Gross Margin</strong>) B2B SaaS and licensing suite for external enterprises across our federated alliances.
+        </p>
+
+        <div class="sc-grid-2">
+          <div class="sc-panel emerald">
+            <div class="sc-panel-kicker">COGNITIVE &amp; ENTERPRISE OS ASSETS (01 - 04)</div>
+            <h4 class="sc-sub-h3" style="font-size: 1.06rem;">1. *SC AI Centers International &amp; Company RAG Solution</h4>
+            <p class="sc-p">
+              <strong>*SC AI Centers Int'l</strong> coordinates multi-model orchestration across 8 global bases, while the <strong>Company RAG Solution</strong> (powered by NotebookLM &amp; Dify vector pipelines) ingests 20+ years of HS-code tariffs, BPOM/FDA regulatory filings, clinical veterinary formularies, and B2B contracts into a zero-hallucination corporate memory graph.
+            </p>
+            <h4 class="sc-sub-h3" style="font-size: 1.06rem; margin-top: 14px;">2. Qubit ERP &amp; Overnight Data Factory (10 PM - 8 AM)</h4>
+            <p class="sc-p">
+              <strong>Qubit ERP</strong> replaces bloated legacy ERPs with an AI-native ledger that tracks multi-currency 4-way offsetting, BOM sachet costing, and real-time customs clearance. Every night from <strong>10 PM to 8 AM</strong>, the <strong>Overnight Data Factory</strong> autonomously scrapes global supply-demand shifts, updates pricing matrices, reconciles accounts, and prepares morning executive action briefs.
+            </p>
+          </div>
+
+          <div class="sc-panel blue">
+            <div class="sc-panel-kicker">AGENTIC, PHYSICAL AI &amp; MEDIA ASSETS (05 - 07)</div>
+            <h4 class="sc-sub-h3" style="font-size: 1.06rem;">3. Agent Builder &amp; AI Secretary (SISTAR AB / Ms. Scarlet)</h4>
+            <p class="sc-p">
+              Our no-code/low-code <strong>Agent Builder (SISTAR AB)</strong> spawns specialized domain agents—most notably <strong>Ms. Scarlet</strong>, the 24/7 multilingual conversational trade closer and executive AI secretary capable of negotiating MOQs, issuing pro-forma invoices, and routing K-SURE BNPL credit approvals autonomously.
+            </p>
+            <h4 class="sc-sub-h3" style="font-size: 1.06rem; margin-top: 14px;">4. Exo-Brain &amp; [&amp; I] Physical AI + SISTAR Studio</h4>
+            <p class="sc-p">
+              <strong>Exo-Brain &amp; [&amp; I] Wearable Physical AI</strong> capture real-world executive voice notes and clinical edge data directly into the RAG vault, while <strong>SISTAR Studio</strong> operates as an autonomous generative media pipeline producing 10 localized marketing assets (video, pitch decks, product catalogs, social reels) per project every day.
+            </p>
+          </div>
+        </div>
+
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Internal Efficiency Moat:</strong><br/>100% Admin/ERP Cost Savings via Autonomous Overnight Processing
+          </div>
+          <div>
+            <strong>External B2B SaaS Margin:</strong><br/>75% ~ 85% Gross Margin Licensing across Federated Alliance Members
+          </div>
+          <div>
+            <strong>Downstream Injection:</strong><br/>Direct Real-Time API/Vector Feed into <code>scarlet-ai</code> &amp; <code>qubit-biz</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG #2: HOW INTELLIGENCE-CORE FEEDS SCARLET-AI AND QUBIT-BIZ -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 340" class="notranslate" translate="no" role="img" aria-label="Layer 2 Intelligence-Core feeding real-time RAG vectors, ERP ledgers, and AI agents into Layer 3 Scarlet-AI and Qubit-Biz">
+          <defs>
+            <linearGradient id="scBgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#090d16" />
+              <stop offset="60%" stop-color="#0f172a" />
+              <stop offset="100%" stop-color="#064e3b" />
+            </linearGradient>
+            <marker id="scArrG2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#4ade80" />
+            </marker>
+            <marker id="scArrC2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" />
+            </marker>
+            <marker id="scArrP2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#f472b6" />
+            </marker>
+          </defs>
+
+          <rect x="0" y="0" width="960" height="340" rx="12" fill="url(#scBgGrad2)" />
+
+          <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">LAYER 2 -&gt; LAYER 3 QUANTUM PIPELINE • HOW INTELLIGENCE-CORE POWERS SCARLET-AI &amp; QUBIT-BIZ</text>
+          <line x1="24" y1="36" x2="936" y2="36" stroke="#334155" stroke-width="1" />
+
+          <!-- LEFT: LAYER 2 INTELLIGENCE-CORE VAULT (X=24..410) -->
+          <rect x="24" y="50" width="386" height="270" rx="10" fill="#0f2922" stroke="#10b981" stroke-width="1.5" />
+          <text x="40" y="74" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LAYER 2 • 03 intelligence-core (Engine Room)</text>
+
+          <rect x="40" y="88" width="354" height="44" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+          <text x="52" y="106" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">A. Company RAG &amp; *SC AI Centers Int'l</text>
+          <text x="52" y="122" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">20-Yr Trade/Customs Corpus • Vet Formularies • Multi-Lingual Embeddings</text>
+
+          <rect x="40" y="142" width="354" height="44" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1" />
+          <text x="52" y="160" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">B. Qubit ERP &amp; Overnight Data Factory (10 PM - 8 AM)</text>
+          <text x="52" y="176" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Autonomous Nightly Batch • Real-Time BOM &amp; Ledger • 4-Way Clearing State</text>
+
+          <rect x="40" y="196" width="354" height="44" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1" />
+          <text x="52" y="214" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">C. Agent Builder (SISTAR AB) &amp; Ms. Scarlet</text>
+          <text x="52" y="230" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">24/7 Conversational Closer • Reverse-Auction Bot • c.a.n. Action Dispatcher</text>
+
+          <rect x="40" y="250" width="354" height="54" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1" />
+          <text x="52" y="268" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">D. Exo-Brain [&amp; I] Physical AI &amp; SISTAR Studio</text>
+          <text x="52" y="284" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Wearable Voice/Edge Capture -&gt; 10 Daily Generative Media Assets</text>
+
+          <!-- MIDDLE BUS: REAL-TIME QUANTUM BUS (X=410..540) -->
+          <line x1="394" y1="110" x2="546" y2="110" stroke="#38bdf8" stroke-width="2" marker-end="url(#scArrC2)" />
+          <text x="418" y="103" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="8.5" font-weight="700">RAG Vectors -&gt;</text>
+
+          <line x1="394" y1="164" x2="546" y2="235" stroke="#4ade80" stroke-width="2" marker-end="url(#scArrG2)" />
+          <text x="418" y="156" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="8.5" font-weight="700">ERP Ledgers -&gt;</text>
+
+          <line x1="394" y1="218" x2="546" y2="135" stroke="#f472b6" stroke-width="2" marker-end="url(#scArrP2)" />
+          <text x="418" y="228" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="8.5" font-weight="700">Ms. Scarlet Agents -&gt;</text>
+
+          <line x1="394" y1="277" x2="546" y2="277" stroke="#4ade80" stroke-width="2" marker-end="url(#scArrG2)" />
+          <text x="418" y="270" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="8.5" font-weight="700">Spark &amp; Media -&gt;</text>
+
+          <!-- RIGHT TOP: DOMAIN 04 SCARLET-AI (X=550..936, Y=50..176) -->
+          <rect x="550" y="50" width="386" height="126" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5" />
+          <text x="568" y="73" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LAYER 3A • 04 scarlet-ai (AI Commerce &amp; Trade)</text>
+          <text x="568" y="94" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• Ms. Scarlet 24/7 AI Deal Closer &amp; Automated Customs Matching</text>
+          <text x="568" y="112" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• Volume-Wise Tiered Pricing &amp; Collective Group Buying (Buy4Me)</text>
+          <text x="568" y="130" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• K-SURE Backed BNPL Trade Financing &amp; 70/30 PG Fee Cashback</text>
+          <text x="568" y="148" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">-&gt; Result: Simultaneous (t = 0) Multi-Party Trade Settlement</text>
+
+          <!-- RIGHT BOTTOM: DOMAIN 05 QUBIT-BIZ (X=550..936, Y=194..320) -->
+          <rect x="550" y="194" width="386" height="126" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <text x="568" y="217" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LAYER 3B • 05 qubit-biz (Cosmo Seed™ Platform)</text>
+          <text x="568" y="238" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• One Spark -&gt; Structured Cosmo Seed™ Business Model Templates</text>
+          <text x="568" y="256" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• 5 Engines: Qubit Factory, Commerce, Star, Link &amp; Flow</text>
+          <text x="568" y="274" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• c.a.n. CEO ActionNote &amp; 4-Way Qubit Bank Offsetting Clearinghouse</text>
+          <text x="568" y="292" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">-&gt; Result: One Task, Multi Outcomes Cross-Project Entanglement</text>
+        </svg>
+        <figcaption class="sc-svg-caption">
+          Figure 3.1 — Layer 2 (<code>intelligence-core</code>) to Layer 3 (<code>scarlet-ai</code> &amp; <code>qubit-biz</code>) Cognitive Injection Pipeline: Real-time RAG vectors, nightly ERP ledgers, and autonomous AI agents drive twin commercial execution.
+        </figcaption>
+      </figure>
+    </article>
+
+    <!-- ============================================================================
+         CHAPTER IV. LAYER 3 — DUAL COMMERCIAL PLATFORMS
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-4">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER IV • LAYER 3 — DUAL COMMERCIAL PLATFORMS</span>
+        <span class="sc-chapter-tag">DOMAINS 04 &amp; 05 • SCARLET-AI &amp; QUBIT-BIZ • TWIN ENGINES OF MONETIZATION</span>
+      </div>
+      <h2 class="sc-chapter-h2">Layer 3: Dual Commercial Platforms — The Twin Engines of Monetization (Domains 04 &amp; 05)</h2>
+      <p class="sc-lead">
+        Powered directly by the cognitive engines of Layer 2 and governed by the mathematical laws of Layer 1, <strong>Layer 3</strong> translates artificial intelligence into immediate commercial transaction volume and scalable business model replication. Layer 3 is bifurcated into two specialized, deeply entangled platforms: <strong><code>04 scarlet-ai</code></strong> (the transactional marketplace for AI commerce and international trading) and <strong><code>05 qubit-biz</code></strong> (the generative venture showcase and cross-project clearinghouse for <em>Cosmo Seed™</em> business models).
+      </p>
+
+      <!-- DOMAIN 04 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 04 • LAYER 3 MARKETPLACE NEXUS</span>
+          <span class="sc-dossier-domain">scarlet-ai (scarlet.sistarcompany.com) — [AI Commerce &amp; AI Trade Int'l Marketplace Platform]</span>
+        </div>
+        <h3 class="sc-sub-h3">Solving Historical Commerce Bottlenecks via Volume-Wise Deals, Buy4Me, K-SURE BNPL &amp; t = 0 Settlement</h3>
+        <p class="sc-p">
+          <code>scarlet-ai</code> (<code>scarlet.sistarcompany.com</code>) deploys function-specific and industry-specific AI commerce and international trading platforms powered by <code>intelligence-core</code> and governed by the <code>Qubit Algorithm™</code>. Traditional B2B and B2C marketplaces extract predatory take-rates (15%~35%), trap merchants in price wars, and leave cross-border buyers exposed to credit and customs friction. <code>scarlet-ai</code> re-engineers the marketplace mechanics from the ground up so that every participant's business volume and net profitability expand simultaneously.
+        </p>
+        <div class="sc-grid-2">
+          <div class="sc-panel emerald">
+            <div class="sc-panel-kicker">DEMAND AGGREGATION &amp; CONVERSATIONAL CLOSING</div>
+            <h4 class="sc-sub-h3" style="font-size: 1.05rem;">Volume-Wise Deals &amp; Buy4Me Reverse Auctions</h4>
+            <p class="sc-p">
+              Through <strong>Volume-Wise Deals</strong> and <strong>Collective Group Buying (<code>Buy4Me</code> reverse auctions)</strong>, fragmented orders from hundreds of independent veterinary clinics, pharmacies, or regional retailers are pre-aggregated into a single sovereign master order. Guided 24/7 by <strong>Ms. Scarlet</strong> on <code>SisCart</code>, <code>Nearbuy</code>, and <code>mall.sisTV</code>, buyers post their target price and volume while pre-verified global factories bid downward to win the guaranteed production batch.
+            </p>
+          </div>
+          <div class="sc-panel blue">
+            <div class="sc-panel-kicker">FINANCIAL TUNNELING &amp; FEE DESTRUCTIVE INTERFERENCE</div>
+            <h4 class="sc-sub-h3" style="font-size: 1.05rem;">K-SURE BNPL, 70/30 PG Cashback &amp; t = 0 Settlement</h4>
+            <p class="sc-p">
+              To eliminate capital barriers (<em>WKB Quantum Tunneling</em>), <code>scarlet-ai</code> integrates <strong>K-SURE (Korea Trade Insurance Corporation) backed BNPL financing</strong> alongside a 50% advance deposit protocol, guaranteeing factories immediate production cashflow while granting overseas buyers 60-to-90-day credit terms. Furthermore, our <strong>70/30 PG Fee Cashback</strong> mechanism returns 70% of payment gateway margins directly to ecosystem participants, culminating in simultaneous (<code>t = 0</code>) multi-party profit realization.
+            </p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Core Marketplaces:</strong><br/><code>SisCart</code>, <code>Nearbuy</code>, <code>Buy4Me</code> Reverse Auction &amp; <code>mall.sisTV</code> Live Commerce
+          </div>
+          <div>
+            <strong>Financial Mechanics:</strong><br/>K-SURE BNPL Credit Tunneling + 70/30 PG Fee Split Cashback
+          </div>
+          <div>
+            <strong>Settlement Law:</strong><br/>Simultaneous <code>t = 0</code> Value Realization for Buyer, Factory &amp; Logistics
+          </div>
+        </div>
+      </div>
+
+      <!-- DOMAIN 05 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 05 • LAYER 3 VENTURE &amp; CLEARING ENGINE</span>
+          <span class="sc-dossier-domain">qubit-biz (qubit.sistarcompany.com) — [Cosmo Seed™ Biz Model Showcase &amp; Cross-Project Platform]</span>
+        </div>
+        <h3 class="sc-sub-h3">Where "One Spark" Grows into Cosmo Seed™ Business Models &amp; Cross-Project Entanglement</h3>
+        <p class="sc-p">
+          <code>qubit-biz</code> (<code>qubit.sistarcompany.com</code>) is the architectural launchpad where a single human insight (<code>One Spark</code>) germinates into a standardized, mathematically validated business project and entangles across adjacent projects to achieve <code>One Task, Multi Outcomes</code>. Rather than hoarding business innovation behind closed doors, <code>qubit-biz</code> serves as an <strong>open showcase and adoption platform for Cosmo Seed™ Business Models</strong>—allowing global market players, manufacturers, and entrepreneurs to freely adopt our modular quantum business blueprints into their own enterprises and generate immediate cross-project synergy.
+        </p>
+        <div class="sc-grid-2">
+          <div class="sc-panel purple">
+            <div class="sc-panel-kicker">THE 5 MODULAR COSMO SEED™ ENGINES</div>
+            <h4 class="sc-sub-h3" style="font-size: 1.05rem;">Standardized Quantum Business Blueprints</h4>
+            <p class="sc-p">
+              Every <em>Cosmo Seed™</em> model deployed on <code>qubit-biz</code> combines five plug-and-play operational engines: (1) <strong><code>Qubit Factory™</code></strong> (zero-inventory pre-order ODM &amp; micro-sachet production), (2) <strong><code>Qubit Commerce™</code></strong> (tiered group-buying &amp; subscription locking), (3) <strong><code>Qubit Star™</code></strong> (creator/clinic IP co-ownership &amp; royalty splitting), (4) <strong><code>Qubit Link™</code></strong> (cross-industry B2B bundle entanglement), and (5) <strong><code>Qubit Flow™</code></strong> (automated cross-border customs &amp; fulfillment routing).
+            </p>
+          </div>
+          <div class="sc-panel emerald">
+            <div class="sc-panel-kicker">EXECUTIVE COMMAND &amp; 4-WAY FINANCIAL CLEARING</div>
+            <h4 class="sc-sub-h3" style="font-size: 1.05rem;">c.a.n. CEO ActionNote &amp; 4-Way Qubit Offsetting</h4>
+            <p class="sc-p">
+              Execution across multiple entangled projects is orchestrated via <strong><code>c.a.n. (CEO ActionNote)</code></strong>, which transforms a single voice or text directive from leadership into parallel task trees across 8 countries. Financially, <code>qubit-biz</code> operates the <strong>4-Way Qubit Bank Offsetting Clearinghouse</strong>, netting receivables and payables across Buyer, Supplier, Logistics, and Platform across borders with near-zero FX wire leakage.
+            </p>
+          </div>
+        </div>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Core Philosophy:</strong><br/><code>One Spark, Infinite Galaxifying</code> -&gt; <code>One Task, Multi Outcomes</code>
+          </div>
+          <div>
+            <strong>5 Cosmo Seed™ Engines:</strong><br/><code>Qubit Factory™</code> • <code>Commerce™</code> • <code>Star™</code> • <code>Link™</code> • <code>Flow™</code>
+          </div>
+          <div>
+            <strong>Clearing Infrastructure:</strong><br/><code>c.a.n. ActionNote</code> Dispatch + <code>4-Way Qubit Bank Offsetting</code>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============================================================================
+         CHAPTER V. LAYER 4 — ECOSYSTEM ARENAS
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-5">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER V • LAYER 4 — ECOSYSTEM ARENAS</span>
+        <span class="sc-chapter-tag">DOMAINS 06 &amp; 07 • BIZ-GALAXY &amp; BIZ-HUB • AUTONOMOUS STARS &amp; COLLECTIVE CO-CREATION</span>
+      </div>
+      <h2 class="sc-chapter-h2">Layer 4: Ecosystem Arenas — The Shining Galaxy &amp; The Co-Creation Hub (Domains 06 &amp; 07)</h2>
+      <p class="sc-lead">
+        When the commercial platforms of Layer 3 (<code>scarlet-ai</code> and <code>qubit-biz</code>) are applied to real-world physical industries, they manifest in <strong>Layer 4</strong> as two complementary ecosystem arenas: <strong><code>06 biz-galaxy</code></strong> (where individual vertical brands and market players shine as autonomous stars in an interconnected constellation) and <strong><code>07 biz-hub</code></strong> (the gravitational center where players gather around shared values and common infrastructure because <em>"Together gets stronger"</em>).
+      </p>
+
+      <!-- DOMAIN 06 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 06 • LAYER 4 VERTICAL CONSTELLATION</span>
+          <span class="sc-dossier-domain">biz-galaxy (biz.sistarcompany.com) — [The Shining Constellation of Verticals &amp; Players]</span>
+        </div>
+        <h3 class="sc-sub-h3">Celebrating Every Shining Star Across Veterinary Bio-Health, EdTech, Wellness &amp; Robotics</h3>
+        <p class="sc-p">
+          <code>biz-galaxy</code> (<code>biz.sistarcompany.com</code>) is the living commercial constellation where <code>Cosmo Seed™</code> business models and independent market players fulfill their respective roles under the <code>Qubit Algorithm™</code>. Rather than forcing every brand into a monolithic corporate mold, <code>biz-galaxy</code> showcases real-world businesses and specialized industry players by vertical—offering tangible business inspiration and turnkey actualization pathways while celebrating each participant as a shining star in its own right.
+        </p>
+        <p class="sc-p">
+          Key commercial constellations actively orbiting within <code>biz-galaxy</code> include: <strong>Veterinary &amp; Animal Bio-Health</strong> (<code>SISTAR MedIX</code> AI clinical diagnostics, <code>SISPet</code> premium companion nutrition, <code>SISPharm</code> veterinary pharmaceuticals, and <code>Aquasis</code> smart aquaculture); <strong>Human Health, Beauty &amp; Wellness</strong> (<code>SisAyurvedic</code> standardized phytomedicine and <code>SISMii</code> K-beauty/personal care); and <strong>Cognitive EdTech, DX &amp; Robotics</strong> (<code>Mind Company</code> psychological/aptitude AI, <code>FlexKids AI</code> &amp; <code>SISTAR Edu</code> adaptive learning, <code>SISTAR DX</code>, <code>SisLoa</code>, and <code>SR Robotics</code>).
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Bio-Health Constellation:</strong><br/><code>SISTAR MedIX</code> • <code>SISPet</code> • <code>SISPharm</code> • <code>Aquasis</code> • <code>SisAyurvedic</code>
+          </div>
+          <div>
+            <strong>Cognitive &amp; Tech Stars:</strong><br/><code>Mind Company</code> • <code>FlexKids AI</code> • <code>SISMii</code> • <code>SISTAR DX</code> • <code>SR Robotics</code>
+          </div>
+          <div>
+            <strong>Gross Margin Profile:</strong><br/>45% ~ 65% Physical Vertical GM + High-Velocity Repeat Replenishment
+          </div>
+        </div>
+      </div>
+
+      <!-- DOMAIN 07 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 07 • LAYER 4 CO-CREATION GRAVITY CENTER</span>
+          <span class="sc-dossier-domain">biz-hub (bizhub.sistarcompany.com) — [The "Together" Co-Creation Hub]</span>
+        </div>
+        <h3 class="sc-sub-h3">"Together Gets Stronger" — Solving Shared Industry Bottlenecks Through Collective Infrastructure</h3>
+        <p class="sc-p">
+          While <code>biz-galaxy</code> illuminates individual vertical brands and players, <code>biz-hub</code> (<code>bizhub.sistarcompany.com</code>) operates on the foundational principle that <strong>"Together gets stronger."</strong> It is the gravitational co-creation center where independent clinics, regional factories, logistics operators, and franchise entrepreneurs gather around shared values and common economic goals to solve structural problems that no single small-or-medium player could conquer alone.
+        </p>
+        <p class="sc-p">
+          Flagship co-creation engines inside <code>biz-hub</code> include: (1) <strong><code>Auto-Formulator for Vet</code> &amp; Joint ODM Manufacturing</strong> (enabling independent veterinary clinics to co-develop custom clinical prescriptions and small-batch functional supplements using shared R&amp;D labs and GMP lines); (2) the <strong><code>Rp 1,320</code> Micro-Sachet Repacking Protocol</strong> (unlocking mass emerging-market affordability in Indonesia and Vietnam by converting expensive bulk bottles into daily single-dose sachets at ~62% gross margin); (3) <strong><code>Space Sharing &amp; Deliver Together</code></strong> (pooling cold-chain warehouse hubs and last-mile delivery routes across partner brands to slash logistics overhead by up to 40%); and (4) <strong><code>PetFood Bank Re:D</code> &amp; <code>Mint</code> Franchises</strong> (aligning ESG community impact with standardized micro-franchise retail nodes).
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Shared R&amp;D &amp; ODM:</strong><br/><code>Auto-Formulator for Vet</code> + Joint GMP Manufacturing Pools
+          </div>
+          <div>
+            <strong>Unit Economics Anchor:</strong><br/><code>Rp 1,320</code> (~$0.085) Micro-Sachet Protocol for Mass SEA Penetration
+          </div>
+          <div>
+            <strong>Shared Logistics &amp; ESG:</strong><br/><code>Space Sharing &amp; Deliver Together</code> + <code>PetFood Bank Re:D</code> + <code>Mint</code>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sc-sub-h3">Comparative Mechanics: biz-galaxy (Autonomous Stars) vs. biz-hub (Collective Co-Creation)</h3>
+      <table class="sc-table">
+        <thead>
+          <tr>
+            <th style="width: 20%;">Architectural Dimension</th>
+            <th style="width: 40%;">06 • biz-galaxy (<code>biz.sistarcompany.com</code>)<br/>[Autonomous Vertical Stars]</th>
+            <th style="width: 40%;">07 • biz-hub (<code>bizhub.sistarcompany.com</code>)<br/>[Collective Co-Creation &amp; Shared Infrastructure]</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Core Governing Ethos</strong></td>
+            <td><em>"Every Player a Shining Star"</em> — Autonomous brand identity, specialized vertical excellence, and category leadership.</td>
+            <td><em>"Together Gets Stronger"</em> — Collective problem-solving, pooled purchasing power, and shared physical/AI utilities.</td>
+          </tr>
+          <tr>
+            <td><strong>Primary Operational Focus</strong></td>
+            <td>Showcasing and scaling distinct industry verticals (<code>MedIX</code>, <code>SISPet</code>, <code>SISPharm</code>, <code>Aquasis</code>, <code>Mind Company</code>, <code>FlexKids AI</code>, <code>SISMii</code>).</td>
+            <td>Operating cross-vertical shared engines (<code>Auto-Formulator R1</code>, Joint ODM, <code>Rp 1,320</code> Sachet Repacking, <code>Space Sharing &amp; Deliver Together</code>).</td>
+          </tr>
+          <tr>
+            <td><strong>How Market Players Participate</strong></td>
+            <td>Players launch or grow their own specialized vertical brand or clinic franchise using pre-built <code>Cosmo Seed™</code> templates.</td>
+            <td>Players pool MOQs, co-utilize GMP formulation lines, share warehouse/delivery routes, and participate in <code>PetFood Bank Re:D</code> &amp; <code>Mint</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>Quantum Entanglement Role</strong></td>
+            <td>Generates high-margin vertical demand signals, clinical diagnostic data, and brand equity across 8 countries.</td>
+            <td>Collapses unit manufacturing and fulfillment costs across all <code>biz-galaxy</code> stars via shared scale and destructive interference of waste.</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- ============================================================================
+         CHAPTER VI. LAYER 5 — 3-PILLAR PARTICIPANTS
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-6">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VI • LAYER 5 — 3-PILLAR PARTICIPANTS</span>
+        <span class="sc-chapter-tag">DOMAINS 08, 09 &amp; 10 • CHALLENGERS, PARTNERSHIP &amp; IR-PITCHDECK</span>
+      </div>
+      <h2 class="sc-chapter-h2">Layer 5: 3-Pillar Participants — Family, Partners &amp; Institutional Capital (Domains 08, 09 &amp; 10)</h2>
+      <p class="sc-lead">
+        Even the most sophisticated AI vault and commercial platform cannot scale globally without aligning the incentives of the human beings, operating enterprises, and capital providers who inhabit the ecosystem. <strong>Layer 5</strong> is dedicated to onboarding and motivating the three foundational participant pillars of the Signal Star Universe: <strong><code>08 challengers</code></strong> (our global talent family), <strong><code>09 partnership</code></strong> (our B2B commercial counterparties), and <strong><code>10 ir-pitchdeck</code></strong> (our venture capital and institutional investors).
+      </p>
+
+      <!-- DOMAIN 08 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 08 • LAYER 5 TALENT &amp; FRANCHISE PILLAR</span>
+          <span class="sc-dossier-domain">challengers (challengers.sistarcompany.com) — [International SISTAR Family &amp; Vibe Working Onboarding]</span>
+        </div>
+        <h3 class="sc-sub-h3">Vibe Working &amp; The International SISTAR Family: Beyond Employment to Player Ownership</h3>
+        <p class="sc-p">
+          <code>challengers</code> (<code>challengers.sistarcompany.com</code>) inaugurates a radical new paradigm for human work in the age of autonomous AI: <strong>Vibe Working</strong> (<em>"Human to focus on ideas &amp; insights; Let your AI work"</em>). Traditional corporations treat talent either as salaried cogs burdened by repetitive administrative drudgery or as disposable gig freelancers with zero long-term equity. In stark contrast, <code>challengers</code> invites ambitious global professionals, trade specialists, marketers, and young entrepreneurs across 8 countries to onboard not as mere employees or freelancers, but as <strong>International SISTAR Family (<code>SISTAR Challengers</code>)</strong>.
+        </p>
+        <p class="sc-p">
+          Equipped with their own personal AI agent stack from <code>intelligence-core</code> (<code>Ms. Scarlet</code>, <code>SISTAR AB</code>, <code>SISTAR Studio</code>), every Challenger voluntarily participates as an autonomous market player—sourcing cross-border deals, launching local micro-verticals, progressing through the structured <strong><code>S1-S6 Franchise-ship</code></strong> career and equity ladder, sharing directly in net transaction profits, and experiencing the genuine fulfillment of building a global galaxy together.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Work Philosophy:</strong><br/><strong>Vibe Working</strong> — Humans Lead Strategy &amp; Relationships; AI Executes Admin
+          </div>
+          <div>
+            <strong>Identity &amp; Progression:</strong><br/><code>International SISTAR Family</code> Scaling Through <code>S1 -> S6 Franchise-ship</code>
+          </div>
+          <div>
+            <strong>Economic Alignment:</strong><br/>Zero Fixed-Salary Bloating; Direct Revenue &amp; Equity Profit Sharing
+          </div>
+        </div>
+      </div>
+
+      <!-- DOMAIN 09 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 09 • LAYER 5 COMMERCIAL COUNTERPARTY PILLAR</span>
+          <span class="sc-dossier-domain">partnership (partnership.sistarcompany.com) — [Global Business Partners Motivation Gateway]</span>
+        </div>
+        <h3 class="sc-sub-h3">Motivating Manufacturers, Distributors, Vet Clinics &amp; Brands with Immediate Quantum Advantages</h3>
+        <p class="sc-p">
+          <code>partnership</code> (<code>partnership.sistarcompany.com</code>) serves as the dedicated B2B motivation and onboarding gateway for external operating enterprises—including GMP manufacturers, regional distributors, veterinary hospitals, pharmacies, logistics providers, and consumer brands. Rather than asking partners to take speculative risks, <code>partnership</code> demonstrates concrete, immediate P&amp;L transformation tailored to each counterparty class.
+        </p>
+        <p class="sc-p">
+          For <strong>Manufacturers &amp; ODM Factories</strong>, partnering with *SC unlocks pre-aggregated <code>Buy4Me</code> master orders, 50% advance deposits, and K-SURE BNPL payment guarantees with zero marketing spend. For <strong>Veterinary Clinics &amp; Pharmacies</strong>, it provides turnkey access to <code>SISTAR MedIX</code> AI diagnostics, custom <code>Auto-Formulator</code> prescription compounding, and <code>SISPet/SISPharm</code> private-label revenue streams. For <strong>Regional Distributors</strong> across Korea, Indonesia, Vietnam, and India, it delivers exclusive cross-border product pipelines backed by automated <code>SISTAR Studio</code> localized marketing packages.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Factory Value Prop:</strong><br/>Pre-Aggregated <code>Buy4Me</code> Volume + K-SURE BNPL Zero-Default Settlement
+          </div>
+          <div>
+            <strong>Clinic &amp; Retail Value Prop:</strong><br/>AI Diagnostics (<code>MedIX</code>) + Custom ODM Prescriptions + 70/30 PG Cashback
+          </div>
+          <div>
+            <strong>Cross-Border Reach:</strong><br/>Instant Plug-In to 8 National Bases &amp; <code>IATA/IADA</code> Federated Networks
+          </div>
+        </div>
+      </div>
+
+      <!-- DOMAIN 10 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 10 • LAYER 5 INSTITUTIONAL CAPITAL PILLAR</span>
+          <span class="sc-dossier-domain">ir-pitchdeck (ir.sistarcompany.com) — [VC &amp; Institutional Investment Conviction Hub]</span>
+        </div>
+        <h3 class="sc-sub-h3">Multi-Track Investment Vehicles &amp; Institutional Due-Diligence Conviction</h3>
+        <p class="sc-p">
+          <code>ir-pitchdeck</code> (<code>ir.sistarcompany.com</code>) is engineered specifically for Venture Capitalists, Private Equity committees, Family Offices, and Strategic Corporate Investors. Institutional investors evaluating complex AI and cross-border holding architectures require absolute transparency across five core due-diligence dimensions: (1) <strong>Total Addressable Market (TAM) &amp; Structural Timing</strong>, (2) <strong>Proprietary Technological &amp; Mathematical Moat</strong> (<code>Qubit Algorithm™</code> + <code>intelligence-core</code>), (3) <strong>Dual-Return Unit Economics</strong> (Track I 75%~85% GM B2B SaaS + Track II 45%~65% GM Physical Volume), (4) <strong>Capital-Efficient Scalability</strong> via <code>SISTAR Challengers</code>, and (5) <strong>Multi-Path Liquidity &amp; Exit Horizons</strong>.
+        </p>
+        <p class="sc-p">
+          Furthermore, <code>ir-pitchdeck</code> presents flexible, institutional-grade investment structures—allowing capital partners to allocate into <strong>*SC Supreme Holding Equity</strong>, ring-fenced <strong>Project-Specific SPVs</strong> (across any of the 15 Founder Projects), or <strong>Country-Specific Regional Joint Ventures (JVs)</strong> with verifiable real-time ledger visibility via <code>Qubit ERP</code>.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Investment Vehicles:</strong><br/>Supreme Holding Equity • Ring-Fenced Project SPVs • Country Regional JVs
+          </div>
+          <div>
+            <strong>Dual-Return Engine:</strong><br/>100% Internal ERP/Admin Savings + High-Margin SaaS &amp; Physical Cashflow
+          </div>
+          <div>
+            <strong>Due-Diligence Transparency:</strong><br/>Live <code>Qubit ERP</code> Auditability &amp; Mathematical Wavefunction Validation
+          </div>
+        </div>
+      </div>
+
+      <!-- INLINE SVG #3: TRI-PARTITE PARTICIPANT FLYWHEEL -->
+      <figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 320" class="notranslate" translate="no" role="img" aria-label="Layer 5 Tri-Partite Participant Flywheel showing Challengers, Partnership, and IR-Pitchdeck converging into the *SC Quantum Engine">
+          <defs>
+            <linearGradient id="scBgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#090d16" />
+              <stop offset="55%" stop-color="#0f172a" />
+              <stop offset="100%" stop-color="#064e3b" />
+            </linearGradient>
+            <marker id="scArrG3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#4ade80" />
+            </marker>
+            <marker id="scArrY3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#fbbf24" />
+            </marker>
+            <marker id="scArrC3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#38bdf8" />
+            </marker>
+          </defs>
+
+          <rect x="0" y="0" width="960" height="320" rx="12" fill="url(#scBgGrad3)" />
+
+          <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">LAYER 5 TRI-PARTITE PARTICIPANT FLYWHEEL • HUMAN FAMILY + B2B PARTNERS + INSTITUTIONAL CAPITAL -&gt; *SC ENGINE</text>
+          <line x1="24" y1="36" x2="936" y2="36" stroke="#334155" stroke-width="1" />
+
+          <!-- LEFT COLUMN: 3 PARTICIPANT PILLARS (X=24..340) -->
+          <!-- Pillar 08 -->
+          <rect x="24" y="50" width="316" height="76" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.4" />
+          <text x="38" y="71" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">08 • challengers (SISTAR Family)</text>
+          <text x="38" y="89" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">• Vibe Working ("Human Ideas; Let AI Work")</text>
+          <text x="38" y="106" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">• S1-S6 Franchise-ship &amp; Autonomous Deal Origination</text>
+
+          <!-- Pillar 09 -->
+          <rect x="24" y="138" width="316" height="76" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.4" />
+          <text x="38" y="159" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">09 • partnership (B2B Counterparties)</text>
+          <text x="38" y="177" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">• GMP Factories, Vet Clinics, Pharmacies &amp; Distributors</text>
+          <text x="38" y="194" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">• Pre-Aggregated Buy4Me Demand &amp; Joint ODM Production</text>
+
+          <!-- Pillar 10 -->
+          <rect x="24" y="226" width="316" height="76" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.4" />
+          <text x="38" y="247" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">10 • ir-pitchdeck (VC &amp; Institutional Capital)</text>
+          <text x="38" y="265" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">• Holding Equity, Project SPVs &amp; Country Regional JVs</text>
+          <text x="38" y="282" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">• K-SURE BNPL Liquidity &amp; Dual-Return Conviction</text>
+
+          <!-- CONVERGING ARROWS INTO CENTRAL QUANTUM CORE -->
+          <line x1="340" y1="88" x2="438" y2="140" stroke="#4ade80" stroke-width="2" marker-end="url(#scArrG3)" />
+          <line x1="340" y1="176" x2="438" y2="176" stroke="#fbbf24" stroke-width="2" marker-end="url(#scArrY3)" />
+          <line x1="340" y1="264" x2="438" y2="212" stroke="#38bdf8" stroke-width="2" marker-end="url(#scArrC3)" />
+
+          <!-- CENTER: *SC QUANTUM ENGINE NEXUS (X=444..674, Y=86..266) -->
+          <rect x="444" y="86" width="230" height="180" rx="12" fill="#0f2922" stroke="#10b981" stroke-width="2" />
+          <text x="462" y="114" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">*SC QUANTUM ENGINE</text>
+          <text x="462" y="134" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="600">Layers 1 - 4 Core Synthesis:</text>
+          <text x="462" y="154" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Qubit Algorithm™ (t = 0)</text>
+          <text x="462" y="172" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Intelligence-Core AI Vault</text>
+          <text x="462" y="190" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Scarlet-AI &amp; Qubit-Biz</text>
+          <text x="462" y="208" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Biz-Galaxy &amp; Biz-Hub</text>
+          <rect x="462" y="222" width="194" height="28" rx="5" fill="#064e3b" stroke="#4ade80" stroke-width="1" />
+          <text x="472" y="240" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">One Task -&gt; Multi Outcomes</text>
+
+          <!-- OUTBOUND ARROWS TO COMPOUNDING FLYWHEEL OUTPUTS -->
+          <line x1="674" y1="140" x2="722" y2="100" stroke="#4ade80" stroke-width="2" marker-end="url(#scArrG3)" />
+          <line x1="674" y1="176" x2="722" y2="176" stroke="#fbbf24" stroke-width="2" marker-end="url(#scArrY3)" />
+          <line x1="674" y1="212" x2="722" y2="252" stroke="#38bdf8" stroke-width="2" marker-end="url(#scArrC3)" />
+
+          <!-- RIGHT COLUMN: COMPOUNDING VALUE OUTPUTS (X=728..936) -->
+          <rect x="728" y="58" width="208" height="68" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
+          <text x="740" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">1. Challenger Wealth &amp; Career</text>
+          <text x="740" y="97" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Automated Commission Split &amp;</text>
+          <text x="740" y="111" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">S1-S6 Franchise Equity Growth</text>
+
+          <rect x="728" y="142" width="208" height="68" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
+          <text x="740" y="164" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">2. Partner Margin Expansion</text>
+          <text x="740" y="181" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Zero-Inventory ODM Scale &amp;</text>
+          <text x="740" y="195" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">70/30 PG Cashback Rebates</text>
+
+          <rect x="728" y="226" width="208" height="68" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+          <text x="740" y="248" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">3. Institutional Alpha Return</text>
+          <text x="740" y="265" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">75-85% SaaS GM + 45-65% Trade</text>
+          <text x="740" y="279" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">GM Compounding Multiples</text>
+        </svg>
+        <figcaption class="sc-svg-caption">
+          Figure 6.1 — The Layer 5 Tri-Partite Participant Flywheel: <code>challengers</code> (Talent Family), <code>partnership</code> (B2B Counterparties), and <code>ir-pitchdeck</code> (Institutional Capital) converge into the *SC Quantum Engine to generate simultaneous multi-party returns.
+        </figcaption>
+      </figure>
+    </article>
+
+    <!-- ============================================================================
+         CHAPTER VII. LAYER 6 — OPEN DIRECTORY & MEDIA FORGE
+         ============================================================================ -->
+    <article class="sc-chapter" id="chapter-7">
+      <div class="sc-chapter-meta">
+        <span class="sc-chapter-num">CHAPTER VII • LAYER 6 — OPEN DIRECTORY &amp; MEDIA FORGE</span>
+        <span class="sc-chapter-tag">DOMAINS 11 &amp; 12 • BIZ-DIRECTORY &amp; MEDIA • ECOSYSTEM LIQUIDITY &amp; AMPLIFICATION</span>
+      </div>
+      <h2 class="sc-chapter-h2">Layer 6: Open Directory &amp; Media Forge — Ecosystem Liquidity &amp; Amplification (Domains 11 &amp; 12)</h2>
+      <p class="sc-lead">
+        To ensure that the Signal Star Universe never becomes a closed, static intranet, <strong>Layer 6</strong> serves as our open-membrane interface to the global economy and the global public sphere. Through <strong><code>11 biz-directory</code></strong> (open B2B indexing and deal intake) and <strong><code>12 media</code></strong> (autonomous multi-format content synthesis and international journalism), Layer 6 continuously feeds fresh market liquidity into Layers 3 and 4 while broadcasting *SC's innovations across human and AI search engines worldwide.
+      </p>
+
+      <!-- DOMAIN 11 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 11 • LAYER 6 OPEN B2B LIQUIDITY GATEWAY</span>
+          <span class="sc-dossier-domain">biz-directory (directory.sistarcompany.com) — [Open B2B Proposal &amp; Corporate Directory]</span>
+        </div>
+        <h3 class="sc-sub-h3">Category-by-Category B2B Proposals &amp; Open Corporate Listings</h3>
+        <p class="sc-p">
+          <code>biz-directory</code> (<code>directory.sistarcompany.com</code>) is the open, machine-readable B2B directory and structured proposal clearinghouse of the Signal Star Universe. Organized meticulously category by category across veterinary bio-health, functional nutrition, pharmaceutical raw materials, smart packaging, logistics, and AI software services, <code>biz-directory</code> allows any verified global enterprise to publish its corporate profile, production capabilities, and commercial proposals directly into the *SC ecosystem.
+        </p>
+        <p class="sc-p">
+          Every listing and proposal inside <code>biz-directory</code> is automatically indexed by <code>intelligence-core</code>'s <em>Company RAG</em> and routed into <code>scarlet-ai</code> (for immediate <code>Buy4Me</code> reverse-auction matching and volume-wise procurement) and <code>qubit-biz</code> (for <em>Cosmo Seed™</em> cross-project bundling). This architecture transforms a static yellow-pages directory into an active, self-matching B2B liquidity pool.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Structural Taxonomy:</strong><br/>Category-by-Category B2B Proposals &amp; Verified Corporate Profiles
+          </div>
+          <div>
+            <strong>Platform Routing:</strong><br/>Direct API &amp; Agentic Ingestion into <code>scarlet-ai</code> &amp; <code>qubit-biz</code>
+          </div>
+          <div>
+            <strong>LLM / GEO Advantage:</strong><br/>Schema.org Structured Data Engineered for Global AI Search Discovery
+          </div>
+        </div>
+      </div>
+
+      <!-- DOMAIN 12 DOSSIER -->
+      <div class="sc-dossier-card">
+        <div class="sc-dossier-top">
+          <span class="sc-dossier-id">DOMAIN 12 • LAYER 6 CONTENT FORGE &amp; PRESS ARCHIVE</span>
+          <span class="sc-dossier-domain">media (media.sistarcompany.com) — [Content Forge &amp; Media Archive]</span>
+        </div>
+        <h3 class="sc-sub-h3">SISTAR Studio (10 Daily Media Assets per Project) &amp; The SIGNAL STAR Post</h3>
+        <p class="sc-p">
+          <code>media</code> (<code>media.sistarcompany.com</code>) is the official content forge, multimedia archive, and global press headquarters of *SC. In conventional business, launching a new product or cross-border venture requires months of expensive external agency retainers to produce brochures, explainer videos, clinical whitepapers, and localized social campaigns. Inside the *SC architecture, <code>media</code> showcases the output of <strong><code>SISTAR Studio</code></strong> and Founder Project #15 (<strong><code>Marketing Tool Package by Project</code></strong>), which autonomously generates <strong>10 high-converting daily media assets per project</strong> across 6 languages (<code>EN, KR, ID, VN, CN, JP</code>).
+        </p>
+        <p class="sc-p">
+          Alongside automated commercial media packages, <code>media</code> publishes <strong><code>The SIGNAL STAR Post</code></strong>—our authoritative international trade, AI economics, and bio-health journalism platform—chronicling every milestone across our 8 global bases, educating market players on the <code>Qubit Algorithm™</code>, and amplifying the achievements of every shining star in <code>biz-galaxy</code> and <code>biz-hub</code>.
+        </p>
+        <div class="sc-dossier-metrics">
+          <div>
+            <strong>Autonomous Production:</strong><br/><code>SISTAR Studio</code> + <code>Marketing Tool Package</code> (10 Daily Assets / Project)
+          </div>
+          <div>
+            <strong>Editorial Journalism:</strong><br/><code>The SIGNAL STAR Post</code> Global AI &amp; Trade Publication
+          </div>
+          <div>
+            <strong>Multilingual Reach:</strong><br/>Simultaneous 6-Language Localization (<code>en / kr / id / vn / cn / jp</code>)
+          </div>
+        </div>
+      </div>
+
+      <!-- EXECUTIVE CONCLUDING SYNTHESIS CALLOUT -->
+      <div class="sc-callout">
+        <div class="sc-callout-title">
+          EXECUTIVE ARCHITECTURAL SYNTHESIS • ONE LIVING QUANTUM ORGANISM ("ONE SPARK, INFINITE GALAXIFYING")
+        </div>
+        <p class="sc-p">
+          When viewed in its entirety, the <strong>6-Layer, 12-Domain *SC Enterprise Architecture</strong> is not a collection of twelve separate websites—it is a single, self-reinforcing living organism engineered for the age of autonomous AI commerce and international trading:
+        </p>
+        <p class="sc-p">
+          <strong>Layer 1 (<code>01 sc-sistarcompany</code> &amp; <code>02 qubit-algorithm</code>)</strong> establishes sovereign corporate trust across 8 global bases and encodes the 5 Quantum Laws that abolish linear business friction (<code>A -&gt; B -&gt; C</code>). <strong>Layer 2 (<code>03 intelligence-core</code>)</strong> operates 24/7—especially through the <em>Overnight Data Factory (10 PM - 8 AM)</em>, <em>Company RAG</em>, and <em>Qubit ERP</em>—as the cognitive engine room. <strong>Layer 3 (<code>04 scarlet-ai</code> &amp; <code>05 qubit-biz</code>)</strong> converts that intelligence into immediate marketplace transaction velocity (<em>Buy4Me</em>, <em>K-SURE BNPL</em>, <em>70/30 PG Cashback</em>) and replicable <em>Cosmo Seed™</em> business models (<em>4-Way Offsetting</em>). <strong>Layer 4 (<code>06 biz-galaxy</code> &amp; <code>07 biz-hub</code>)</strong> grounds those models into high-margin industry verticals (<em>MedIX, SISPet, SISPharm, Mind Company</em>) and shared co-creation infrastructure (<em>Auto-Formulator, Rp 1,320 Sachet ODM</em>). <strong>Layer 5 (<code>08 challengers</code>, <code>09 partnership</code> &amp; <code>10 ir-pitchdeck</code>)</strong> unites human talent practicing <em>Vibe Working</em>, global B2B counterparties, and institutional venture capital into a single aligned flywheel. Finally, <strong>Layer 6 (<code>11 biz-directory</code> &amp; <code>12 media</code>)</strong> perpetually expands the galaxy's horizon through open B2B deal intake and autonomous daily media amplification.
+        </p>
+        <p class="sc-p" style="margin-bottom: 0; font-weight: 600; color: #064e3b;">
+          This is the architectural realization of our founding covenant: <em>"One Spark, Infinite Galaxifying — One Task, Multi Outcomes."</em>
+        </p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
