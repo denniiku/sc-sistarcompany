@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
-  <title>*SC | 15 Founder Projects — Engineered with *SC Identity Signatures</title>
+  <title>*SC | 15 Founder Projects (V6) — Master Portfolio &amp; Business Plan</title>
   <meta name="description" content="*SC - FOUNDER PROJECTS: In-Depth Business Plan (01-09). Dual-Return Execution across Track I (AI Infrastructure) and Track II (High-Margin Commercial Verticals)." />
   <script type="application/ld+json">
   {
@@ -163,7 +163,7 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=4.0\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
   <style>
@@ -531,6 +531,139 @@
       }
     }
   </style>
+  <style id="sc-quantum-v6-css">
+    /* === V6 EXECUTIVE QUANTUM VISUAL UPGRADE === */
+    .sc-v6-banner {
+      background: linear-gradient(135deg, #090d16 0%, #0f172a 55%, #064e3b 100%);
+      border-radius: 16px;
+      padding: clamp(28px, 4vw, 44px);
+      color: #ffffff;
+      margin: 24px 0 40px 0;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+      border: 1px solid rgba(74, 222, 128, 0.28);
+      position: relative;
+      overflow: hidden;
+    }
+    .sc-v6-banner-tag {
+      display: inline-block;
+      background: rgba(74, 222, 128, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.4);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+    .sc-v6-banner h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+      font-weight: 700;
+      color: #ffffff !important;
+      margin: 0 0 14px 0 !important;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+    .sc-v6-banner p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      color: #e2e8f0 !important;
+      line-height: 1.75;
+      margin: 0 0 24px 0;
+      max-width: 92%;
+    }
+    .sc-v6-kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    @media (max-width: 900px) {
+      .sc-v6-kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .sc-v6-kpi-box {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .sc-v6-kpi-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #4ade80;
+      line-height: 1.15;
+      margin-bottom: 4px;
+    }
+    .sc-v6-kpi-lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+    .sc-formula-card {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 12px;
+      padding: 22px 26px;
+      border-left: 4px solid #10b981;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+    }
+    .sc-formula-math {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin: 10px 0 12px 0;
+      display: inline-block;
+    }
+    .sc-tier-header {
+      background: linear-gradient(90deg, #0f172a 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 18px 26px;
+      border-radius: 12px;
+      margin: 16px 0 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-left: 6px solid #10b981;
+    }
+    .sc-tier-header.tier-2 { border-left-color: #3b82f6; }
+    .sc-tier-header.tier-3 { border-left-color: #14b8a6; }
+    .sc-tier-header.tier-4 { border-left-color: #a855f7; }
+    .sc-proj-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0f172a;
+      color: #4ade80;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      letter-spacing: 0.05em;
+    }
+    @media print {
+      .sc-v6-banner, .sc-formula-card, .sc-tier-header {
+        background: #f8fafc !important;
+        color: #0f172a !important;
+        border: 1.5px solid #94a3b8 !important;
+        box-shadow: none !important;
+      }
+      .sc-v6-banner h2, .sc-v6-banner p, .sc-v6-kpi-num, .sc-v6-kpi-lbl, .sc-formula-math {
+        color: #0f172a !important;
+      }
+    }
+  </style>
 </head>
 <body class="sc-nav-open">
   <main class="sc-prd-page">
@@ -557,6 +690,29 @@
         <span class="sc-phrase-pill">Foundational Capability Multiplier</span>
       </div>
 
+            <div class="sc-v6-banner">
+        <div class="sc-v6-banner-tag">PHASE-I CAPABILITY MULTIPLIER &bull; 15 ENTANGLED FOUNDER PROJECTS</div>
+        <h2>Projects Engineered with *SC Identity Signatures &bull; Powered by *SC AI Centers International</h2>
+        <p>Why does *SC launch 15 Founder Projects simultaneously? Because under the <strong>Qubit Algorithm&trade;</strong>, these 15 initiatives are not separate overheads—they are <strong>entangled capability nodes</strong>. Tier I builds our autonomous AI &amp; ERP brain; Tier II captures high-margin veterinary &amp; bio-health cashflow; Tier III opens direct cross-border AI trade highways; and Tier IV industrializes daily brand launching and marketing.</p>
+        <div class="sc-v6-kpi-grid">
+          <div class="sc-v6-kpi-box">
+            <div class="sc-v6-kpi-num notranslate">Tier I (01&ndash;06)</div>
+            <div class="sc-v6-kpi-lbl">Enterprise AI Core &amp; Cognitive OS (75&ndash;85% GM SaaS)</div>
+          </div>
+          <div class="sc-v6-kpi-box">
+            <div class="sc-v6-kpi-num notranslate">Tier II (07&ndash;09)</div>
+            <div class="sc-v6-kpi-lbl">Vet Specialties &amp; Bio-Health Anchors (50%+ GM ODM/CDSS)</div>
+          </div>
+          <div class="sc-v6-kpi-box">
+            <div class="sc-v6-kpi-num notranslate">Tier III (10&ndash;13)</div>
+            <div class="sc-v6-kpi-lbl">Direct AI Commerce &amp; Int&rsquo;l Trade Platforms ($t=0$ Clearing)</div>
+          </div>
+          <div class="sc-v6-kpi-box">
+            <div class="sc-v6-kpi-num notranslate">Tier IV (14&ndash;15)</div>
+            <div class="sc-v6-kpi-lbl">Daily 1 VIP Factory &amp; Modular AI Marketing Multipliers</div>
+          </div>
+        </div>
+      </div>
       <p class="sc-lead"><strong>Projects engineered with *SC Identity Signatures. Projects powered by *SC AI Centers International.</strong> These <strong>15 Founder Projects</strong> are not disconnected ventures; they are the foundational building blocks of the <strong>Signal Star Universe</strong>. Selected specifically at the company&rsquo;s inception to <strong>forge our core AI, data, clinical, and cross-border trading capabilities</strong>, the success of each project directly strengthens *SC&rsquo;s operational backbone and accelerates the launch of all subsequent ventures via the <strong>Qubit Algorithm&trade;</strong>.</p>
 
       <div class="sc-svg-frame">
