@@ -189,6 +189,24 @@
       document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
+  <style id="sc-landing-only-flush-left">
+    body main.sc-landing-wrap,
+    body main.sc-landing-wrap * {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+      text-indent: 0 !important;
+      text-align: left !important;
+      border-left: none !important;
+    }
+    body main.sc-landing-wrap {
+      margin: 0 auto !important;
+      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px !important;
+    }
+    body main.sc-landing-wrap ul,
+    body main.sc-landing-wrap ol {
+      list-style-position: inside !important;
+    }
+  </style>
 </head>
 <body class="sc-nav-open">
   <main class="sc-landing-wrap">
