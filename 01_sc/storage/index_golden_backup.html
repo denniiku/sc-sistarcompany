@@ -3,23 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
-  <title>*SC | sistar company - *sc</title>
-  <meta name="description" content="*SC (SISTAR Company): Executive Identity, Triple Control Tower Governance, Qubit Algorithm Propulsion, 12-Domain Semantic Web Matrix, 8 Global Bases, and 2026 Dual-Return Priority Portfolio." />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "*SC - SISTAR Company Overview",
-    "description": "Executive summary of *SC: Where AI-Native Infrastructure Meets Global Commercial Execution.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "SISTAR Company (*SC)",
-      "url": "https://sistarcompany.com"
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+  <title>*SC — SISTAR Company | Signal Star Universe — One Spark, Infinite Galaxifying</title>
+  <meta name="description" content="Signal Star Universe: One Spark, Infinite Galaxifying. One Task, Multi Outcomes — Full-Stack AI Commerce & International AI Trading Spaceship powered by the Qubit Algorithm." />
+  <style>
+    html, body {
+      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
+      margin: 0;
+      padding: 0;
+      color: #1e293b;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
-  }
-  </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}</style>
+    body.sc-nav-open { padding-left: 236px; }
+    body.sc-nav-folded { padding-left: 64px; }
+    @media (max-width: 768px) {
+      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+    }
+
+    .sc-landing-wrap {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: min(1240px, 94%);
+      margin: 0 auto;
+      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px;
+    }
+
+    /* === SCREEN 1: HERO BIG TYPOGRAPHY (SHIFTED UPWARD) === */
+    .sc-hero-block {
+      margin-top: 0;
+      margin-bottom: 26px;
+    }
+    .sc-hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.75rem, 5.2vw, 4.45rem);
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px 0;
+    }
+    .sc-hero-sub {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.18rem, 1.85vw, 1.52rem);
+      font-weight: 500;
+      color: #334155;
+      line-height: 1.48;
+      margin: 0 0 26px 0;
+      padding-left: clamp(8px, 1.8vw, 28px);
+      max-width: 920px;
+    }
+
+    /* === SCREEN 2: CORPORATE IDENTITY STATEMENT === */
+    .sc-identity-divider {
+      border: 0;
+      border-top: 1px solid rgba(30, 41, 59, 0.14);
+      margin: 0 0 22px 0;
+      max-width: 880px;
+    }
+    .sc-identity-intro {
+      max-width: 880px;
+      margin-bottom: 44px;
+    }
+    .sc-identity-intro p {
+      font-size: clamp(1rem, 1.15vw, 1.12rem);
+      color: #334155;
+      line-height: 1.75;
+      margin: 0 0 16px 0;
+      font-weight: 400;
+    }
+
+    /* === SCREEN 3: NATURAL EXECUTIVE GUIDANCE & MANIFESTO === */
+    .sc-manifesto-section {
+      max-width: 980px;
+      border-top: 2px solid rgba(15, 23, 42, 0.22);
+      padding-top: 36px;
+    }
+    .sc-manifesto-kicker {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0f5132;
+      margin: 0 0 10px 0;
+    }
+    .sc-manifesto-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.22;
+      letter-spacing: -0.025em;
+      margin: 0 0 20px 0;
+    }
+    .sc-manifesto-h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.28rem, 1.9vw, 1.58rem);
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      margin: 36px 0 14px 0;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid rgba(15, 23, 42, 0.12);
+    }
+    .sc-p {
+      font-size: 1.02rem;
+      color: #1e293b;
+      line-height: 1.82;
+      margin: 0 0 16px 0;
+    }
+    .sc-question-quote {
+      background: rgba(15, 23, 42, 0.88);
+      color: #f8fafc;
+      border-left: 5px solid #4ade80;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 26px;
+      margin: 22px 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+    .sc-academic-note {
+      background: rgba(255, 255, 255, 0.62);
+      border-left: 4px solid #0f5132;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 24px;
+      margin: 20px 0 26px 0;
+    }
+    .sc-academic-note-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #064e3b;
+      margin: 0 0 8px 0;
+    }
+    .sc-list {
+      margin: 12px 0 22px 0;
+      padding-left: 22px;
+    }
+    .sc-list li {
+      font-size: 1rem;
+      color: #1e293b;
+      line-height: 1.8;
+      margin-bottom: 11px;
+    }
+    .sc-sub-list {
+      margin: 8px 0 12px 0;
+      padding-left: 20px;
+    }
+    .sc-sub-list li {
+      font-size: 0.97rem;
+      margin-bottom: 8px;
+    }
+    a.sc-link {
+      color: #0f5132;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    a.sc-link:hover {
+      color: #1d4ed8;
+    }
+    .sc-ceo-signoff {
+      margin-top: 38px;
+      padding-top: 20px;
+      border-top: 1.5px solid rgba(15, 23, 42, 0.16);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.02em;
+    }
+  </style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -29,229 +187,176 @@
         base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
       }
       document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js\" defer><\/script>");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
-  <style>
-    .sc-l2-page {
-      box-sizing: border-box;
-      width: 100%;
-      max-width: min(1360px, 95%);
-      padding: clamp(40px, 5vh, 72px) clamp(24px, 4.5vw, 76px) 120px;
-      font-family: "Inter", sans-serif;
-      color: #0f172a;
-    }
-    main h1, main h2, main h3, main h4,
-    main p, main .sc-lead, main .sc-p,
-    main .sc-route, main .sc-sec,
-    main .sc-item-line, main .sc-item-green {
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      text-indent: 0 !important;
-      text-align: left !important;
-    }
-    .sc-route {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #475569;
-      letter-spacing: 0.04em;
-      margin: 0 0 14px 0;
-      text-transform: lowercase;
-    }
-    .sc-sec {
-      padding: 40px 0;
-      border-bottom: 1px solid rgba(15, 23, 42, 0.15);
-    }
-    .sc-sec:last-of-type { border-bottom: none; }
-    .sc-h1 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(2.4rem, 4.2vw, 3.4rem);
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: -0.03em;
-      margin: 0 0 28px 0;
-    }
-    .sc-h2 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.55rem, 2.4vw, 2.05rem);
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: -0.02em;
-      margin: 0 0 14px 0;
-    }
-    .sc-h3 {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin: 0 0 8px 0;
-    }
-    .sc-lead {
-      font-size: clamp(1.05rem, 1.25vw, 1.15rem);
-      line-height: 1.74;
-      color: #1e293b;
-      margin: 0 0 20px 0;
-    }
-    .sc-p {
-      font-size: 0.98rem;
-      line-height: 1.75;
-      color: #334155;
-      margin: 0 0 12px 0;
-    }
-    .sc-p:last-child { margin-bottom: 0; }
-    .sc-tag {
-      display: inline-block;
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #0f5132;
-      background: rgba(22, 135, 101, 0.14);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 0 12px 0;
-    }
-    .sc-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; margin-top: 20px; }
-    .sc-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 20px; }
-    .sc-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 20px; }
-    @media (max-width: 960px) {
-      .sc-grid-4 { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 720px) {
-      .sc-grid-2, .sc-grid-3, .sc-grid-4 { grid-template-columns: 1fr; }
-    }
-    .sc-item-line {
-      padding-top: 16px !important;
-      border-top: 2px solid rgba(15, 23, 42, 0.22) !important;
-    }
-    .sc-item-green {
-      padding-top: 16px !important;
-      border-top: 3px solid #168765 !important;
-    }
-    .sc-callout {
-      margin-top: 20px;
-      padding: 14px 20px 14px 18px !important;
-      border-left: 4px solid #168765;
-      background: rgba(255, 255, 255, 0.3);
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 1.02rem;
-      font-weight: 600;
-      color: #0f172a;
-      line-height: 1.6;
-    }
-  </style>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-l2-page">
-    <p class="sc-route">sistar company - *sc</p>
+  <main class="sc-landing-wrap">
 
-    <!-- PART 1: THE 3 CORE IDENTITY PILLARS (FROM SCREENSHOT 2) -->
-    <section class="sc-sec" style="padding-top: 10px;">
-      <h1 class="sc-h1">*SC</h1>
+    <!-- ============================================================================
+         FIRST SCREEN: LARGE HERO TYPOGRAPHY (SHIFTED HIGHER)
+         ============================================================================ -->
+    <section class="sc-hero-block">
+      <h1 class="sc-hero-title">
+        Signal Star<br/>
+        Universe<br/>
+        One Spark, Infinite<br/>
+        Galaxifying.
+      </h1>
+      <p class="sc-hero-sub">
+        One Task, Multi Outcomes — Full-Stack AI Commerce &amp; International AI Trading Spaceship.
+      </p>
+    </section>
 
-      <div style="display:grid; gap:26px;">
-        <div>
-          <h2 class="sc-h3" style="font-size:1.32rem;">▫️ An AI-Driven International Organization</h2>
-          <p class="sc-p" style="font-size:1.03rem;">Powered by our proprietary core business engine—the <strong>qubit-algorithm</strong>, forged from 30 years of hands-on international trading mastery—we pioneer entirely new paradigms in how global business is built and how the world works.</p>
-        </div>
+    <!-- ============================================================================
+         SECOND SCREEN: CORPORATE IDENTITY STATEMENT (PRESERVED EXACTLY)
+         ============================================================================ -->
+    <hr class="sc-identity-divider" />
+    <section class="sc-identity-intro">
+      <p>*sc - sistar company is fully integrating the SISTAR family groups and proudly launching our new corporate identity.</p>
+      <p>Pioneering new ways of working and doing global business, *sc operates as a Full-Stack AI Commerce &amp; International AI Trading enterprise—equipped with our proprietary Qubit Algorithm™, developed by *sc for brand-new AI commerce and global trading.</p>
+    </section>
 
-        <div>
-          <h2 class="sc-h3" style="font-size:1.32rem;">▫️ One Spark, Infinite Galaxying.</h2>
-          <p class="sc-p" style="font-size:1.03rem;">Engineered by the <strong>qubit-algorithm</strong>, our <strong>sc intelligence-core</strong> ignites <strong>scarlet-ai</strong>—the nexus where magic happens. Casting a new spell over AI commerce and automated cross-border trading, it generates <strong>Cosmo Seed</strong> business models: <strong>qubit-biz</strong>, the launchpad where your boldest ideas are realized into reality.</p>
-        </div>
+    <!-- ============================================================================
+         EXECUTIVE INTRODUCTION & MANIFESTO (BELOW SECOND SCREEN)
+         ============================================================================ -->
+    <section class="sc-manifesto-section">
+      <p class="sc-manifesto-kicker">EXECUTIVE INTRODUCTION &amp; ARCHITECTURAL MANIFESTO</p>
+      <h2 class="sc-manifesto-h2">Not Reckless Diversification, But One Quantum Engine — The New Global Business Standard in the AI Era, *SC (SISTAR Company)</h2>
 
-        <div>
-          <h2 class="sc-h3" style="font-size:1.32rem;">▫️ The Signal Star Universe.</h2>
-          <p class="sc-p" style="font-size:1.03rem;">Inspired by quantum mechanics, our <strong>biz-galaxy</strong> architecture shapes the Signal Star Universe—guided by the central <strong>*Signal Star (sc)</strong> and illuminated by the twinkling stars of every global partner connected across our constellation.</p>
-        </div>
+      <p class="sc-p">
+        Welcome to the business ecosystem of <strong>*SC (SISTAR Company — Signal Star Universe)</strong>.
+      </p>
+
+      <p class="sc-p">
+        Whenever domestic and international business leaders or Venture Capital investment committees first encounter our <a class="sc-link" href="./01_sc/07_sc-master-brochure-_ver03/index.html">*SC Master Brochure</a>, our 15 core <a class="sc-link" href="./01_sc/08_sc-founder-projects-_ver02/index.html">Founder Projects</a>, and our 12-domain Business Galaxy, they inevitably ask one sharp, fundamental question:
+      </p>
+
+      <blockquote class="sc-question-quote">
+        "The vision and ideas are extraordinary. But realistically, how can you possibly manage all of these projects at the same time? Isn't this reckless over-diversification?"
+      </blockquote>
+
+      <p class="sc-p">
+        If we were attempting to execute these initiatives using the conventional approach—hiring dozens of new staff for every project, deploying massive upfront capital to build isolated factories and warehouses, and passing documents step-by-step under <strong>Classical Newtonian Linear Business Rules (A -&gt; B -&gt; C)</strong>—that concern would be 100% valid. It would not merely be difficult; it would be guaranteed to fail.
+      </p>
+
+      <p class="sc-p">
+        However, <strong>*SC is not running 15 separate, unrelated businesses.</strong> We have engineered a single mathematical and technological core principle (<strong>Qubit Algorithm™ &amp; AI Intelligence-Core</strong>) designed so that one unified engine manifests simultaneously across multiple industrial coordinates (<strong>One Spark, Infinite Galaxifying</strong>).
+      </p>
+
+      <p class="sc-p">
+        Here are the <strong>four definitive proofs</strong> of why this is not reckless diversification, why it represents the inevitable business standard of the AI era, and why <strong>*SC</strong> uniquely possesses the core competencies to operate this vast ecosystem in reality.
+      </p>
+
+      <!-- PILLAR 1 -->
+      <h3 class="sc-manifesto-h3">1. Paradigm Shift: From Newtonian Sequential Rules to Quantum Simultaneity (Qubit Algorithm™)</h3>
+
+      <p class="sc-p">
+        Conventional trade and business remain trapped in sequential friction and time delay (Delta t &gt; 0): Capital Injection -&gt; Manufacturing -&gt; Customs -&gt; Distribution -&gt; Settlement. Yet the moment autonomous AI is integrated into business architecture, commerce transcends the limits of classical physics and operates according to the core principles of <strong>Quantum Mechanics</strong>.
+      </p>
+
+      <p class="sc-p">
+        Our core <a class="sc-link" href="./01_sc/04_identity-signatures/index.html">Identity &amp; Signatures</a> and proprietary <a class="sc-link" href="https://qubit-algorithm.sistarcompany.com">Qubit Algorithm™</a> transplant the five foundational laws of quantum physics directly into our business engine:
+      </p>
+
+      <ul class="sc-list">
+        <li><strong>Quantum Fluctuation (One Spark, Infinite Galaxifying):</strong> Even from a state without massive initial capital or physical inventory (|0&gt;), a single sharp human insight (One Spark) combined with our AI Data Factory simultaneously differentiates and germinates into dozens of derivative business models (Cosmo Seed™).</li>
+        <li><strong>Quantum Entanglement (One Task, Multi Outcomes):</strong> This is the core answer to "how we manage all of these projects simultaneously." Data generated or a single decision executed in Project A (One Task) instantaneously determines the outcomes of entangled Project B (regulatory &amp; clinical formulation), Project C (global B2B purchase orders), and Project D (10 daily multilingual marketing assets). Redundant labor and wasted data converge to zero (Zero-Wasting).</li>
+        <li><strong>Quantum Superposition &amp; Tunneling (t = 0 Superposition &amp; Tunneling):</strong> By pre-aggregating pre-order demand and purchase intent energy (E_intent), we tunnel through traditional capital, inventory, and regulatory barriers without speculative risk—allowing manufacturers, distributors, financiers, and buyers to realize profit simultaneously (t = 0) upon deal confirmation.</li>
+      </ul>
+
+      <p class="sc-p">
+        In short, placing no artificial ceiling on applicable industry verticals is the greatest strength of this algorithm. Because the underlying governing principle is singular, the effort required to run 1 project is sufficient to simultaneously power 15—and ultimately 100—synergistic projects.
+      </p>
+
+      <div class="sc-academic-note">
+        <p class="sc-academic-note-title">Academic Foundation (Practical Field Solutions First, Mathematical Formalization Second):</p>
+        <p class="sc-p" style="margin-bottom: 0;">
+          This is by no means a contrived marketing buzzword that forces everyday business activities into the academic frame of quantum mechanics. Through more than 20 years of frontline global field experience, we first identified structural problems, agonized over practical solutions, and conducted exhaustive research into the path forward in the rapidly evolving AI era to <strong>derive our real-world business solutions first</strong>. We then discovered that the operating principles of these solutions align precisely with the fundamental laws of quantum mechanics that govern the universe—and united them to academically codify and mathematically quantify our solutions for this era.
+        </p>
+      </div>
+
+      <!-- PILLAR 2 -->
+      <h3 class="sc-manifesto-h3">2. Why *SC Uniquely Succeeds Where Pure IT Startups Cannot — 20 Years of Global Field Mastery x Autonomous AI Engine</h3>
+
+      <p class="sc-p">
+        Silicon Valley AI startups that only know how to write code do not understand customs friction, country-specific non-tariff barriers, working-capital crunches among local distributors, or the real pain points suffered by frontline market players. Conversely, traditional trading companies do not know how to architect autonomous AI systems.
+      </p>
+
+      <p class="sc-p">
+        For over 20 years, we have lived overseas on the ground, leading international trade and global business development (BD) from the front lines. Across our 8 strategic global bases (<a class="sc-link" href="./02_sistar-intl/index.html">SISTAR Int'l</a> — Korea, Indonesia, Vietnam, Singapore, China, Japan, the USA, and India), we witnessed firsthand why capable players with superior products collapse against walls of capital and distribution, and we dedicated years to solving this problem in the AI era.
+      </p>
+
+      <p class="sc-p">
+        The answer born from that synthesis is the heart of *SC: <a class="sc-link" href="https://intelligence-core.sistarcompany.com">Intelligence-Core</a>:
+      </p>
+
+      <ul class="sc-list">
+        <li><strong>Humans Focus Only on Ideas and Insights; AI Executes Operations and Management 24/7 (Vibe Working):</strong> When a single directive is issued via <strong>c.a.n. (CEO ActionNote)</strong>, our corporate knowledge brain (<strong>Company RAG</strong>), autonomous management ledger (<strong>Qubit ERP</strong>), <strong>Overnight Data Factory (10 PM - 8 AM)</strong>, and <strong>SISTAR Studio</strong> automatically complete PRDs, settlements, and 10 daily multilingual marketing packages per project.</li>
+        <li><strong>The 15 <a class="sc-link" href="./01_sc/08_sc-founder-projects-_ver02/index.html">Founder Projects</a> Are Not Scattered Ventures, But a Foundational Capability Multiplier:</strong> Our initial 15 projects are precision-engineered to: (1) fully internalize our proprietary AI/ERP operating system (100% admin cost savings), (2) generate immediate cashflow and proprietary data in high-margin veterinary and bio-health specialties where we hold 20 years of know-how, and (3) scale into global AI trade platforms and a Daily Launching Factory.</li>
+      </ul>
+
+      <!-- PILLAR 3 -->
+      <h3 class="sc-manifesto-h3">3. A New Window of Opportunity to Match Giant Platforms — Global Alliance &amp; A New Standard of Work</h3>
+
+      <p class="sc-p">
+        Today's AI and commerce industries are led by a handful of global Big-Tech platforms backed by astronomical capital, leaving independent SME manufacturers and local players to struggle alone under heavy platform fees and marketing costs.
+      </p>
+
+      <p class="sc-p">
+        However, *SC's perspective is different. Our strategy is not to wage an exhausting war against giant platforms. Rather, <strong>through the convergence of AI and the Qubit Algorithm™, a historic window of opportunity has opened where independent market players—simply by uniting in solidarity (<a class="sc-link" href="./03_intl-alliance/index.html">Int'l Alliance</a>)—can generate global performance on par with, or even surpassing, giant platforms without requiring massive capital.</strong>
+      </p>
+
+      <p class="sc-p">
+        To turn this opportunity into reality for every partner, *SC has completed our <a class="sc-link" href="./01_sc/06_sc-architecture/index.html">6-Layer, 12-Domain Enterprise Architecture (SC Architecture)</a> where every participant generates immediate revenue and synergy from their respective position:
+      </p>
+
+      <ol class="sc-list">
+        <li><strong>Core Brain &amp; Mathematical Law (Layers 1 &amp; 2):</strong> Above our group flagship <a class="sc-link" href="https://sistarcompany.com">sc-sistarcompany</a> and mathematical engine <a class="sc-link" href="https://qubit-algorithm.sistarcompany.com">qubit-algorithm</a>, our AI engine room <a class="sc-link" href="https://intelligence-core.sistarcompany.com">intelligence-core</a> operates 24/7.</li>
+        <li><strong>Dual Commercialization Platforms (Layer 3):</strong> The two grand stages where Intelligence-Core technologies meet the real market.
+          <ul class="sc-sub-list">
+            <li><a class="sc-link" href="https://scarlet-ai.sistarcompany.com">scarlet-ai</a> <strong>(AI Commerce &amp; Trade Int'l):</strong> Function- and industry-specific marketplaces breaking through capital and inventory limits via Volume-Wise Deals, Collective Group Buying (Buy4Me), K-SURE backed BNPL, and 70/30 PG Fee Cashback.</li>
+            <li><a class="sc-link" href="https://qubit-biz.sistarcompany.com">qubit-biz</a> <strong>(Cosmo Seed™ Showcase):</strong> An open showcase platform demonstrating how a single idea (One Spark) grows into a business project and creates cross-project synergy—allowing any partner to immediately transplant these business models into their own enterprise.</li>
+          </ul>
+        </li>
+        <li><strong>Business Galaxy &amp; Co-Creation Hub (Layer 4):</strong>
+          <ul class="sc-sub-list">
+            <li><a class="sc-link" href="https://biz-galaxy.sistarcompany.com">biz-galaxy</a> <strong>(Shining Vertical Stars):</strong> A vast business galaxy where industry players across Veterinary/Bio-Health (MedIX, SISPet, SISPharm), EdTech, and Wellness fulfill their roles, shine as individual stars, and exchange business inspiration.</li>
+            <li><a class="sc-link" href="https://biz-hub.sistarcompany.com">biz-hub</a> <strong>("Together Gets Stronger"):</strong> The gravitational center solving problems no single enterprise can tackle alone (Auto-Formulator for Vet, Indonesia Rp 1,320 micro-sachet joint ODM, logistics Space Sharing) through shared values and infrastructure.</li>
+          </ul>
+        </li>
+        <li><strong>Three Core Participant Pillars &amp; Open Media Forge (Layers 5 &amp; 6):</strong>
+          <ul class="sc-sub-list">
+            <li><a class="sc-link" href="https://challenger.sistarcompany.com">challengers</a> <strong>(International SISTAR Family):</strong> Global talent family participating voluntarily as players through Vibe Working to build careers and share profits—far beyond mere employees or freelancers.</li>
+            <li><a class="sc-link" href="https://partnership.sistarcompany.com">partnership</a> <strong>(Business Partners):</strong> Partnership gateway motivating manufacturers, distributors, veterinary clinics, and brands to immediately expand revenue and global sales channels.</li>
+            <li><a class="sc-link" href="https://ir-pitchdeck.sistarcompany.com">ir-pitchdeck</a> <strong>(Investors &amp; VCs):</strong> Investment conviction hub transparently presenting diverse investment tracks—from holding equity to project SPVs and country JVs—and proven profit models.</li>
+            <li><a class="sc-link" href="https://biz-directory.sistarcompany.com">biz-directory</a> &amp; <a class="sc-link" href="https://media.sistarcompany.com">media</a>: Category-by-category open B2B proposal directory and daily automated media archive (SISTAR Studio &amp; The SIGNAL STAR Post) driving liquidity and amplification across the entire ecosystem.</li>
+          </ul>
+        </li>
+      </ol>
+
+      <!-- PILLAR 4 -->
+      <h3 class="sc-manifesto-h3">4. Join Us Not as a Spectator, But as a Leading Star of the New Business Galaxy</h3>
+
+      <p class="sc-p">
+        Our answer to "how can you possibly do all of this?" is already proven not merely in words, but as a <strong>living, breathing system</strong>. The vast 12-domain architecture, 6-language system, and overnight AI data factory you are looking at right now are the very first empirical proof born from our <strong>Qubit Algorithm™ and Vibe Working paradigm</strong>.
+      </p>
+
+      <ul class="sc-list">
+        <li><strong>To Business Partners:</strong> Stop bearing heavy marketing expenses, inventory risks, and overseas expansion costs alone. Step onto *SC's <a class="sc-link" href="https://scarlet-ai.sistarcompany.com">Scarlet-AI</a> and <a class="sc-link" href="https://biz-hub.sistarcompany.com">Biz-Hub</a>. The moment your outstanding products and capabilities meet our AI engine, you will experience the quantum entanglement synergy of 8 global markets opening simultaneously. (<a class="sc-link" href="https://partnership.sistarcompany.com">Explore Partnership -&gt;</a>)</li>
+        <li><strong>To VCs &amp; Institutional Investors:</strong> Invest not in a single-item startup gamble, but in an <strong>unassailable Quantum Holding Architecture</strong> that eliminates 100% of internal fixed overhead via AI while simultaneously generating high-margin B2B AI solutions (75%~85% margin) and physical global trade cashflows (45%~65% margin). (<a class="sc-link" href="https://ir-pitchdeck.sistarcompany.com">Explore IR Pitchdeck -&gt;</a>)</li>
+      </ul>
+
+      <p class="sc-p" style="font-weight: 600; color: #064e3b; margin-top: 22px;">
+        We cordially invite you to join this thrilling journey—where a single small spark (One Spark) expands into a vast business galaxy (Infinite Galaxifying)—as our most valued partner and family member.
+      </p>
+
+      <div class="sc-ceo-signoff">
+        ceo, dennii ku
       </div>
     </section>
 
-    <!-- PART 2: CONCISE SUMMARY OF SCREENSHOT 1 (EXECUTIVE SUMMARY & WHY *SC, WHY NOW?) -->
-    <section class="sc-sec">
-      <div><span class="sc-tag">EXECUTIVE OVERVIEW &bull; THE GROUNDWORK IS COMPLETE</span></div>
-      <h2 class="sc-h2">Executive Summary: Why *SC, Why Now?</h2>
-      <div class="sc-callout" style="margin-top:0; margin-bottom:22px;">"Where AI-Native Infrastructure Meets Global Commercial Execution. Beyond Linear Trade, Quantum Value Entanglement - Engineered at Velocity, Built for Simultaneous Profit."</div>
-      <p class="sc-lead">*SC (SISTAR Company) is not an early-stage concept seeking capital to build basic infrastructure. Our foundational groundwork—spanning our 12-domain semantic web architecture, 24/7 autonomous AI pipelines, and 8 international operational bases—is fully built and active:</p>
-
-      <div class="sc-grid-3">
-        <div class="sc-item-green">
-          <h3 class="sc-h3">Complete Operational Groundwork</h3>
-          <p class="sc-p">Forged from three decades of hands-on international trading mastery and rebuilt from the ground up as an AI-Native Venture Builder, *SC eliminates the capital-heavy inventory risks and sequential delays of traditional global business.</p>
-        </div>
-        <div class="sc-item-green">
-          <h3 class="sc-h3">Zero-Overhead Agile Footprint</h3>
-          <p class="sc-p">Operating on a cloud-native infrastructure with fixed costs approaching zero, we convert capital directly into deal velocity and commercial output rather than corporate bureaucracy.</p>
-        </div>
-        <div class="sc-item-green">
-          <h3 class="sc-h3">Immediate Trend-to-Revenue Conversion</h3>
-          <p class="sc-p">We rapidly assimilate the latest breakthroughs in Agentic AI, Enterprise RAG, Model Context Protocol (MCP), and Physical AI, deploying them directly into high-margin cross-border trade and B2B/B2C AI commerce.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PART 3: CORPORATE GOVERNANCE & PROPULSION ENGINE -->
-    <section class="sc-sec">
-      <div><span class="sc-tag">CORPORATE GOVERNANCE &amp; PROPULSION</span></div>
-      <h2 class="sc-h2">Triple Control Towers &amp; The Qubit Algorithm&trade; Engine</h2>
-      <p class="sc-lead">Our ecosystem is governed by Triple Control Towers and institutional-grade risk firewalls that protect investor capital while maximizing commercial velocity:</p>
-
-      <div class="sc-grid-3">
-        <div class="sc-item-line">
-          <h3 class="sc-h3">1. *SC Head Quarter (SCK - Seoul)</h3>
-          <p class="sc-p">Strategic holding matrix, core IP and patent origination (targeting 100 patents &amp; 100 brands), clinical R&amp;D formulation, and K-SURE export credit integration.</p>
-        </div>
-        <div class="sc-item-line">
-          <h3 class="sc-h3">2. *SC Command Center (Scarlet AI &amp; Qubit Biz)</h3>
-          <p class="sc-p">Commercial execution engines handling conversational B2B/B2C demand aggregation, reverse-auction group buying, and multi-party trade settlements.</p>
-        </div>
-        <div class="sc-item-line">
-          <h3 class="sc-h3">3. *SC Analysis Center (Intelligence Core)</h3>
-          <p class="sc-p">Autonomous overnight Data Factory (10 PM - 8 AM) and Enterprise RAG system continuously feeding verified market pricing, tariffs, and compliance intelligence.</p>
-        </div>
-      </div>
-
-      <div class="sc-grid-4" style="margin-top:28px;">
-        <div class="sc-item-green">
-          <h3 class="sc-h3">Dual-Track Risk Firewall</h3>
-          <p class="sc-p">Strict legal separation between core holdings/IP (<strong>SC Index</strong>) and high-yield commercial ventures (<strong>Biz Galaxy</strong>), plus daily public NAV auditing.</p>
-        </div>
-        <div class="sc-item-green">
-          <h3 class="sc-h3">PG Webhook Split (0% Default)</h3>
-          <p class="sc-p">Eliminates 60-day payment lags by splitting end-user checkouts at the PG level (70% to *SC debt settlement / 30% to partner margin) in real time.</p>
-        </div>
-        <div class="sc-item-green">
-          <h3 class="sc-h3">COSMO SEED&trade; 5 Engines</h3>
-          <p class="sc-p">Unites Qubit Factory, Commerce, Star, Link, and Flow around the 4-Way Qubit Bank (Time, Space, Idea, Petfood cashless offsetting ledger).</p>
-        </div>
-        <div class="sc-item-green">
-          <h3 class="sc-h3">Qubit Mechanics (t = 0)</h3>
-          <p class="sc-p">Applies Superposition (20x SKU expansion), Entanglement (0.1s cross-node sync), and Tunneling (pre-order capital barrier removal) for simultaneous profit.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PART 4: GLOBAL FOOTPRINT, REVENUE ARCHITECTURE & 2026 PRIORITY PROJECTS -->
-    <section class="sc-sec">
-      <div><span class="sc-tag">GLOBAL EXECUTION &amp; 2026 PRIORITY MATRIX</span></div>
-      <h2 class="sc-h2">8 International Nodes, 11 Revenue Pipelines &amp; 9 Dual-Return Projects</h2>
-      <div class="sc-grid-3">
-        <div class="sc-item-line">
-          <h3 class="sc-h3">8 Entangled Global Bases</h3>
-          <p class="sc-p">Synchronized operations across <strong>SC Korea (SCK)</strong>, <strong>SC Indonesia (SCI - 13+ yrs presence, Rp 1,320 GMP sachet ODM)</strong>, <strong>SC Singapore (SCS)</strong>, <strong>SC USA (SCU)</strong>, <strong>SC Vietnam (SCV)</strong>, <strong>SC India (SCIND)</strong>, <strong>SC China (SCC)</strong>, and <strong>SC Japan (SCJ)</strong>, backed by IATA &amp; IADA governance.</p>
-        </div>
-        <div class="sc-item-line">
-          <h3 class="sc-h3">11 Master Revenue Pipelines &amp; Retailer Alliance</h3>
-          <p class="sc-p">Spans Immediate Cashflow (Pipelines 1&ndash;3: MedIX/Michlo, SISPet, IndoHerbs), High-Velocity Growth (Pipelines 4&ndash;6: Academy, Challengers), Intangible IP (Pipelines 7&ndash;9: 100 Brands/Patents), and Ecosystem JVs (Pipelines 10&ndash;11), amplified by 20 standardized B2B Offer Sheets and the Qubit Retailer Alliance.</p>
-        </div>
-        <div class="sc-item-line">
-          <h3 class="sc-h3">9 Dual-Return Priority Projects (2026)</h3>
-          <p class="sc-p"><strong>Phase I (Internal AI Infrastructure &rarr; B2B SaaS):</strong> 01 Qubit ERP, 02 Company RAG, 03 Agent Builder (Ms. Scarlet), 04 C.A.N. ActionNote, 05 Exo-Brain &amp; [&amp; I].<br/><strong>Phase II (Commercial Verticals):</strong> 06 ODM &amp; Auto-Formulator R1, 07 Mind &amp; FlexKids AI, 08 Vet Specialties, 09 SISTAR Challengers Int'l.</p>
-        </div>
-      </div>
-    </section>
   </main>
 </body>
 </html>
