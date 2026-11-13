@@ -2,51 +2,14 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const API_KEY = process.env.GEMINI_API_KEY || "";
-let CANDIDATE_MODELS = [];
-let CURRENT_MODEL_IDX = 0;
-
 const PUBLIC_DOMAINS = [
   "sc-sistarcompany","qubit-algorithm","intelligence-core","scarlet-ai",
   "qubit-biz","biz-galaxy","biz-hub","challengers",
   "partnership","ir-pitchdeck","biz-directory","media"
 ];
 
-async function initModels() {
-  const listUrl = `https://generativelanguage.googleapis.com/v1beta/models?key=${API_KEY}`;
-  const res = await fetch(listUrl);
-  if (!res.ok) throw new Error(`Failed to list models: HTTP ${res.status}`);
-  const data = await res.json();
-  const available = (data.models || [])
-    .filter(m => (m.supportedGenerationMethods || []).includes("generateContent"))
-    .map(m => m.name.replace("models/", ""))
-    .filter(m => m.includes("flash") && !m.includes("image") && !m.includes("tts") && !m.includes("audio") && !m.includes("thinking"));
-
-  // Prefer stable high-quota models first, then preview models
-  const priority = ["gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-2.5-flash", "gemini-3-flash"];
-  for (const p of priority) {
-    for (const m of available) {
-      if ((m === p || m.startsWith(p)) && !CANDIDATE_MODELS.includes(m)) {
-        CANDIDATE_MODELS.push(m);
-      }
-    }
-  }
-  for (const m of available) {
-    if (!CANDIDATE_MODELS.includes(m)) CANDIDATE_MODELS.push(m);
-  }
-  if (CANDIDATE_MODELS.length === 0) CANDIDATE_MODELS = ["gemini-2.0-flash"];
-}
-
-function getActiveModel() {
-  return CANDIDATE_MODELS[CURRENT_MODEL_IDX % CANDIDATE_MODELS.length];
-}
-
-function rotateModel() {
-  if (CANDIDATE_MODELS.length > 1) {
-    CURRENT_MODEL_IDX = (CURRENT_MODEL_IDX + 1) % CANDIDATE_MODELS.length;
-    console.log(`    [SWITCH MODEL] Switched to -> ${getActiveModel()}`);
-  }
-}
+const TARGET_LANGS = ["ko", "id", "vi", "zh-CN", "ja"];
+const DELIM = "\n ||| \n";
 
 function decodeHtmlEntities(str) {
   if (!str) return "";
@@ -146,11 +109,7 @@ function loadDict(dictPath) {
   const idx = raw.indexOf("{");
   const lastIdx = raw.lastIndexOf("}");
   if (idx === -1 || lastIdx === -1) return {};
-  try {
-    return JSON.parse(raw.substring(idx, lastIdx + 1));
-  } catch (e) {
-    return {};
-  }
+  try { return JSON.parse(raw.substring(idx, lastIdx + 1)); } catch (e) { return {}; }
 }
 
 function saveDict(dictPath, dictObj) {
@@ -158,71 +117,67 @@ function saveDict(dictPath, dictObj) {
   fs.writeFileSync(dictPath, content, "utf8");
 }
 
-const sleep = (ms) => new Promise(res => setTimeout(res, ms));
-
-async function translateBatchWithGemini(batchStrings, attempt = 1) {
-  const model = getActiveModel();
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
-  const systemPrompt = `You are the Chief Institutional Translator for *SC (SISTAR Company).
-Translate the following JSON array of ${batchStrings.length} English strings into 5 languages:
-- "ko": Korean (한국어 — 자연스러운 격조 높은 비즈니스 한국어)
-- "id": Indonesian (Bahasa Indonesia)
-- "vi": Vietnamese (Tiếng Việt)
-- "zh-CN": Simplified Chinese (简体中文)
-- "ja": Japanese (日本語)
-
-RULES:
-1. Translate the full sentence structure into each target language.
-2. Keep brand names/math in English (*SC, SISTAR, Qubit Algorithm™, Cosmo Seed™, One Spark, Vibe Working, K-SURE BNPL, t=0, Rp 1,320).
-3. Return ONLY a valid JSON array of EXACTLY ${batchStrings.length} objects with keys: "ko", "id", "vi", "zh-CN", "ja".`;
-
-  const body = {
-    contents: [{ role: "user", parts: [{ text: systemPrompt + "\n\nINPUT_ARRAY:\n" + JSON.stringify(batchStrings) }] }],
-    generationConfig: {
-      temperature: 0.1,
-      maxOutputTokens: 8192,
-      responseMimeType: "application/json"
-    }
-  };
-
-  const res = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body)
-  });
-
-  if (!res.ok) {
-    const errText = await res.text();
-    if (res.status === 429 || res.status === 503) {
-      rotateModel();
-      if (attempt <= 3) {
-        await sleep(4000 * attempt);
-        return translateBatchWithGemini(batchStrings, attempt + 1);
-      }
-    }
-    throw new Error(`HTTP ${res.status} (${model}): ${errText.substring(0, 90)}`);
+// Fetch with hard 12-second timeout so it NEVER hangs!
+async function fetchWithTimeout(url, options = {}, timeoutMs = 12000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
   }
+}
 
+async function translateSingleText(text, tl) {
+  const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${encodeURIComponent(tl)}&dt=t`;
+  const body = new URLSearchParams({ q: text }).toString();
+  const res = await fetchWithTimeout(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8" },
+    body
+  }, 12000);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
-  const txt = data.candidates?.[0]?.content?.parts?.[0]?.text || "[]";
-  return JSON.parse(txt);
+  if (!Array.isArray(data) || !Array.isArray(data[0])) return text;
+  return data[0].map(seg => seg[0] || "").join("");
+}
+
+// Translate an array of strings into 1 language in a single bulk POST call (with automatic per-item fallback)
+async function translateBulkForLang(strings, tl) {
+  const joined = strings.join(DELIM);
+  try {
+    const bulkOut = await translateSingleText(joined, tl);
+    const parts = bulkOut.split(/\s*\|\|\|\s*/);
+    if (parts.length === strings.length) {
+      return parts.map(p => p.trim());
+    }
+  } catch (e) {}
+  // Fallback to individual parallel calls if bulk split count differed
+  return Promise.all(strings.map(async (s) => {
+    try { return await translateSingleText(s, tl); } catch (e) { return s; }
+  }));
+}
+
+async function translateGroup5Langs(strings) {
+  const langResults = {};
+  await Promise.all(TARGET_LANGS.map(async (lang) => {
+    langResults[lang] = await translateBulkForLang(strings, lang);
+  }));
+  return strings.map((_, idx) => ({
+    ko: langResults["ko"][idx],
+    id: langResults["id"][idx],
+    vi: langResults["vi"][idx],
+    "zh-CN": langResults["zh-CN"][idx],
+    ja: langResults["ja"][idx]
+  }));
 }
 
 async function main() {
   const targetMode = process.argv[2] || "sc_web";
-  const maxBatchesArg = parseInt(process.argv[3] || "9999", 10);
   const isMgnt = targetMode === "mgnt";
   const dictPath = isMgnt
     ? path.join(ROOT, "mgnt", "common_assets", "sc_translations.js")
     : path.join(ROOT, "common_assets", "sc_translations.js");
-
-  if (!API_KEY) {
-    console.log("  [ERROR] GEMINI_API_KEY is not set.");
-    return;
-  }
-
-  await initModels();
-  console.log(`\n=== [AVAILABLE FLASH MODELS]: ${CANDIDATE_MODELS.join(" -> ")} ===`);
 
   const dict = loadDict(dictPath);
   const domainFilter = (!isMgnt && targetMode !== "sc_web") ? [targetMode] : PUBLIC_DOMAINS;
@@ -255,7 +210,7 @@ async function main() {
     let domMissing = 0;
     for (const s of domStrings) {
       const ex = dict[s];
-      if (!ex || !isKoreanProperlyTranslated(s, ex["ko"])) domMissing++;
+      if (!ex || !isKoreanProperlyTranslated(s, ex["ko"]) || !ex["id"] || ex["id"] === s) domMissing++;
     }
     const doneCount = domStrings.size - domMissing;
     const pct = domStrings.size > 0 ? Math.round((doneCount / domStrings.size) * 100) : 100;
@@ -264,65 +219,65 @@ async function main() {
 
   const missing = [];
   for (const s of allStrings) {
-    const existing = dict[s];
-    if (!existing || !isKoreanProperlyTranslated(s, existing["ko"])) {
+    const ex = dict[s];
+    if (!ex || !isKoreanProperlyTranslated(s, ex["ko"]) || !ex["id"] || ex["id"] === s) {
       missing.push(s);
     }
   }
 
   console.log(`\n[SUMMARY] Scanned: ${allStrings.size} | Missing: ${missing.length}\n`);
-  if (missing.length === 0 || maxBatchesArg === 0) return;
-
-  // Smaller batch size (8 blocks) prevents 5-language JSON output truncation!
-  const BATCH_SIZE = 8;
-  const CONCURRENCY = 3;
-  const batches = [];
-  for (let i = 0; i < missing.length; i += BATCH_SIZE) {
-    batches.push(missing.slice(i, i + BATCH_SIZE));
+  if (missing.length === 0) {
+    console.log("  [100% COMPLETE] Every single block across all 12 domains is translated!");
+    return;
   }
 
-  const limit = Math.min(batches.length, maxBatchesArg);
-  for (let i = 0; i < limit; i += CONCURRENCY) {
-    const chunk = batches.slice(i, Math.min(i + CONCURRENCY, limit));
-    const rangeStr = `Batches ${i + 1}..${i + chunk.length}/${batches.length}`;
-    process.stdout.write(`  -> [${getActiveModel()}] ${rangeStr} (${chunk.reduce((a,b)=>a+b.length,0)} blocks)... `);
+  // Group 8 strings per bulk request x 8 concurrent groups = 64 blocks translated every ~1.5 seconds!
+  const GROUP_SIZE = 8;
+  const CONCURRENCY = 8;
+  const groups = [];
+  for (let i = 0; i < missing.length; i += GROUP_SIZE) {
+    groups.push(missing.slice(i, i + GROUP_SIZE));
+  }
 
-    let lastErr = "";
-    const promises = chunk.map(async (batch) => {
+  for (let i = 0; i < groups.length; i += CONCURRENCY) {
+    const chunk = groups.slice(i, i + CONCURRENCY);
+    const totalInRound = chunk.reduce((a, b) => a + b.length, 0);
+    const pctDone = Math.round(((i * GROUP_SIZE) / missing.length) * 100);
+    process.stdout.write(`  -> [${String(pctDone).padStart(2)}%] Round ${Math.floor(i / CONCURRENCY) + 1}/${Math.ceil(groups.length / CONCURRENCY)} (${totalInRound} blocks)... `);
+
+    const settled = await Promise.all(chunk.map(async (grp) => {
       try {
-        const res = await translateBatchWithGemini(batch);
-        if (Array.isArray(res) && res.length === batch.length) {
-          return { batch, res, ok: true };
-        } else {
-          lastErr = `Length mismatch (${Array.isArray(res) ? res.length : 0}/${batch.length})`;
-        }
+        const res = await translateGroup5Langs(grp);
+        return { grp, res };
       } catch (e) {
-        lastErr = e.message;
+        return { grp, res: [] };
       }
-      return { batch, res: null, ok: false };
-    });
+    }));
 
-    const settled = await Promise.all(promises);
     let savedInRound = 0;
     for (const item of settled) {
-      if (item.ok) {
-        for (let j = 0; j < item.batch.length; j++) {
-          if (item.res[j] && item.res[j]["ko"]) {
-            dict[item.batch[j]] = item.res[j];
-            savedInRound++;
+      for (let j = 0; j < item.grp.length; j++) {
+        const enKey = item.grp[j];
+        const newEntry = item.res[j];
+        if (newEntry && newEntry["ko"] && newEntry["ko"] !== enKey) {
+          if (dict[enKey] && isKoreanProperlyTranslated(enKey, dict[enKey]["ko"])) {
+            newEntry["ko"] = dict[enKey]["ko"];
           }
+          dict[enKey] = newEntry;
+          savedInRound++;
         }
       }
     }
-    if (savedInRound > 0) {
+
+    // Save to disk every 3 rounds or at the very end for maximum speed
+    if ((i / CONCURRENCY) % 3 === 0 || (i + CONCURRENCY) >= groups.length) {
       saveDict(dictPath, dict);
-      console.log(`SAVED +${savedInRound} blocks!`);
-    } else {
-      console.log(`0 saved (${lastErr.substring(0, 70)})`);
-      rotateModel();
-      await sleep(3000);
     }
+    console.log(`SAVED +${savedInRound}/${totalInRound}!`);
   }
+
+  saveDict(dictPath, dict);
+  console.log("\n=== [TRANSLATION ENGINE FINISHED] ===");
 }
 
 main();
