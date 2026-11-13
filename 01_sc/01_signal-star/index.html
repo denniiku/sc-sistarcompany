@@ -21,18 +21,20 @@
       body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
     }
 
+    /* Unified left edge across the entire page */
     .sc-landing-wrap {
       box-sizing: border-box;
       width: 100%;
-      max-width: min(1240px, 94%);
+      max-width: min(1180px, 94%);
       margin: 0 auto;
       padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px;
+      text-align: left;
     }
 
-    /* === SCREEN 1: HERO BIG TYPOGRAPHY (SHIFTED UPWARD) === */
+    /* === SCREEN 1: HERO BIG TYPOGRAPHY (FLUSH LEFT) === */
     .sc-hero-block {
-      margin-top: 0;
-      margin-bottom: 26px;
+      margin: 0 0 28px 0;
+      padding: 0;
     }
     .sc-hero-title {
       font-family: 'Space Grotesk', sans-serif;
@@ -42,6 +44,7 @@
       line-height: 1.08;
       letter-spacing: -0.03em;
       margin: 0 0 20px 0;
+      padding: 0;
     }
     .sc-hero-sub {
       font-family: 'Space Grotesk', sans-serif;
@@ -49,113 +52,110 @@
       font-weight: 500;
       color: #334155;
       line-height: 1.48;
-      margin: 0 0 26px 0;
-      padding-left: clamp(8px, 1.8vw, 28px);
-      max-width: 920px;
+      margin: 0;
+      padding: 0; /* Removed left indent so left line matches exactly */
+      max-width: 960px;
     }
 
-    /* === SCREEN 2: CORPORATE IDENTITY STATEMENT === */
+    /* === SCREEN 2: CORPORATE IDENTITY STATEMENT (FLUSH LEFT) === */
     .sc-identity-divider {
       border: 0;
-      border-top: 1px solid rgba(30, 41, 59, 0.14);
-      margin: 0 0 22px 0;
-      max-width: 880px;
+      border-top: 1px solid rgba(30, 41, 59, 0.16);
+      margin: 28px 0 24px 0;
+      width: 100%;
+      max-width: 960px;
     }
     .sc-identity-intro {
-      max-width: 880px;
-      margin-bottom: 44px;
+      max-width: 960px;
+      margin: 0 0 44px 0;
+      padding: 0;
     }
     .sc-identity-intro p {
       font-size: clamp(1rem, 1.15vw, 1.12rem);
       color: #334155;
-      line-height: 1.75;
+      line-height: 1.78;
       margin: 0 0 16px 0;
+      padding: 0;
       font-weight: 400;
     }
 
-    /* === SCREEN 3: NATURAL EXECUTIVE GUIDANCE & MANIFESTO === */
+    /* === SCREEN 3: CEO COMMENTS (NO BOXES, SPOKEN NARRATIVE STYLE) === */
     .sc-manifesto-section {
-      max-width: 980px;
-      border-top: 2px solid rgba(15, 23, 42, 0.22);
+      max-width: 960px;
+      border-top: 1.5px solid rgba(15, 23, 42, 0.2);
       padding-top: 36px;
+      margin: 0;
     }
     .sc-manifesto-kicker {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #0f5132;
-      margin: 0 0 10px 0;
+      margin: 0 0 12px 0;
+      padding: 0;
     }
     .sc-manifesto-h2 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.65rem, 2.6vw, 2.25rem);
+      font-size: clamp(1.6rem, 2.5vw, 2.15rem);
       font-weight: 700;
       color: #0f172a;
-      line-height: 1.22;
+      line-height: 1.26;
       letter-spacing: -0.025em;
-      margin: 0 0 20px 0;
+      margin: 0 0 24px 0;
+      padding: 0;
     }
     .sc-manifesto-h3 {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.28rem, 1.9vw, 1.58rem);
+      font-size: clamp(1.22rem, 1.8vw, 1.48rem);
       font-weight: 700;
       color: #0f172a;
-      line-height: 1.3;
+      line-height: 1.35;
       letter-spacing: -0.015em;
       margin: 36px 0 14px 0;
-      padding-bottom: 8px;
-      border-bottom: 1.5px solid rgba(15, 23, 42, 0.12);
+      padding: 0;
     }
     .sc-p {
       font-size: 1.02rem;
       color: #1e293b;
-      line-height: 1.82;
-      margin: 0 0 16px 0;
+      line-height: 1.85;
+      margin: 0 0 18px 0;
+      padding: 0;
     }
-    .sc-question-quote {
-      background: rgba(15, 23, 42, 0.88);
-      color: #f8fafc;
-      border-left: 5px solid #4ade80;
-      border-radius: 0 12px 12px 0;
-      padding: 20px 26px;
+    .sc-spoken-question {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.14rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.65;
       margin: 22px 0;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.08rem;
-      font-weight: 600;
-      line-height: 1.6;
+      padding: 0;
     }
-    .sc-academic-note {
-      background: rgba(255, 255, 255, 0.62);
-      border-left: 4px solid #0f5132;
-      border-radius: 0 10px 10px 0;
-      padding: 18px 24px;
-      margin: 20px 0 26px 0;
-    }
-    .sc-academic-note-title {
+    .sc-academic-heading {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.98rem;
+      font-size: 1.04rem;
       font-weight: 700;
       color: #064e3b;
-      margin: 0 0 8px 0;
+      margin: 24px 0 8px 0;
+      padding: 0;
     }
     .sc-list {
       margin: 12px 0 22px 0;
-      padding-left: 22px;
+      padding-left: 20px;
     }
     .sc-list li {
-      font-size: 1rem;
+      font-size: 1.01rem;
       color: #1e293b;
-      line-height: 1.8;
-      margin-bottom: 11px;
+      line-height: 1.82;
+      margin-bottom: 12px;
     }
     .sc-sub-list {
       margin: 8px 0 12px 0;
-      padding-left: 20px;
+      padding-left: 18px;
     }
     .sc-sub-list li {
-      font-size: 0.97rem;
+      font-size: 0.98rem;
       margin-bottom: 8px;
     }
     a.sc-link {
@@ -168,11 +168,10 @@
       color: #1d4ed8;
     }
     .sc-ceo-signoff {
-      margin-top: 38px;
-      padding-top: 20px;
-      border-top: 1.5px solid rgba(15, 23, 42, 0.16);
+      margin-top: 28px;
+      padding: 0;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.28rem;
       font-weight: 700;
       color: #0f172a;
       letter-spacing: 0.02em;
@@ -195,7 +194,7 @@
   <main class="sc-landing-wrap">
 
     <!-- ============================================================================
-         FIRST SCREEN: LARGE HERO TYPOGRAPHY (SHIFTED HIGHER)
+         FIRST SCREEN: LARGE HERO TYPOGRAPHY (FLUSH LEFT, SHIFTED HIGHER)
          ============================================================================ -->
     <section class="sc-hero-block">
       <h1 class="sc-hero-title">
@@ -210,7 +209,7 @@
     </section>
 
     <!-- ============================================================================
-         SECOND SCREEN: CORPORATE IDENTITY STATEMENT (PRESERVED EXACTLY)
+         SECOND SCREEN: CORPORATE IDENTITY STATEMENT (FLUSH LEFT)
          ============================================================================ -->
     <hr class="sc-identity-divider" />
     <section class="sc-identity-intro">
@@ -219,34 +218,34 @@
     </section>
 
     <!-- ============================================================================
-         EXECUTIVE INTRODUCTION & MANIFESTO (BELOW SECOND SCREEN)
+         CEO COMMENTS & EXECUTIVE INTRODUCTION (NO BOXES, SPOKEN COMMENTARY)
          ============================================================================ -->
     <section class="sc-manifesto-section">
-      <p class="sc-manifesto-kicker">EXECUTIVE INTRODUCTION &amp; ARCHITECTURAL MANIFESTO</p>
-      <h2 class="sc-manifesto-h2">Not Reckless Diversification, But One Quantum Engine — The New Global Business Standard in the AI Era, *SC (SISTAR Company)</h2>
+      <p class="sc-manifesto-kicker">CEO COMMENTS &amp; EXECUTIVE INTRODUCTION</p>
+      <h2 class="sc-manifesto-h2">"Not Reckless Diversification, But One Quantum Engine — The New Global Business Standard in the AI Era, *SC (SISTAR Company)"</h2>
 
       <p class="sc-p">
-        Welcome to the business ecosystem of <strong>*SC (SISTAR Company — Signal Star Universe)</strong>.
+        "Welcome to the business ecosystem of <strong>*SC (SISTAR Company — Signal Star Universe)</strong>.
       </p>
 
       <p class="sc-p">
-        Whenever domestic and international business leaders or Venture Capital investment committees first encounter our <a class="sc-link" href="./01_sc/07_sc-master-brochure-_ver03/index.html">*SC Master Brochure</a>, our 15 core <a class="sc-link" href="./01_sc/08_sc-founder-projects-_ver02/index.html">Founder Projects</a>, and our 12-domain Business Galaxy, they inevitably ask one sharp, fundamental question:
+        Whenever domestic and international business partner presidents or Venture Capital investment committees first encounter our <a class="sc-link" href="./01_sc/07_sc-master-brochure-_ver03/index.html">*SC Master Brochure</a>, our 15 core <a class="sc-link" href="./01_sc/08_sc-founder-projects-_ver02/index.html">Founder Projects</a>, and our 12-domain Business Galaxy, they inevitably ask me one sharp, fundamental question:
       </p>
 
-      <blockquote class="sc-question-quote">
-        "The vision and ideas are extraordinary. But realistically, how can you possibly manage all of these projects at the same time? Isn't this reckless over-diversification?"
-      </blockquote>
-
-      <p class="sc-p">
-        If we were attempting to execute these initiatives using the conventional approach—hiring dozens of new staff for every project, deploying massive upfront capital to build isolated factories and warehouses, and passing documents step-by-step under <strong>Classical Newtonian Linear Business Rules (A -&gt; B -&gt; C)</strong>—that concern would be 100% valid. It would not merely be difficult; it would be guaranteed to fail.
+      <p class="sc-spoken-question">
+        'The vision and ideas are extraordinary. But realistically, how can you possibly manage all of these projects at the same time? Isn't this reckless over-diversification?'
       </p>
 
       <p class="sc-p">
-        However, <strong>*SC is not running 15 separate, unrelated businesses.</strong> We have engineered a single mathematical and technological core principle (<strong>Qubit Algorithm™ &amp; AI Intelligence-Core</strong>) designed so that one unified engine manifests simultaneously across multiple industrial coordinates (<strong>One Spark, Infinite Galaxifying</strong>).
+        If we were attempting to execute these initiatives using the conventional approach—hiring dozens of new staff for every project, deploying massive upfront capital to build isolated factories and warehouses, and passing documents step-by-step under <strong>Classical Newtonian Linear Business Rules (A -&gt; B -&gt; C)</strong>—your concern would be 100% valid. It would not merely be difficult; it would be guaranteed to fail.
       </p>
 
       <p class="sc-p">
-        Here are the <strong>four definitive proofs</strong> of why this is not reckless diversification, why it represents the inevitable business standard of the AI era, and why <strong>*SC</strong> uniquely possesses the core competencies to operate this vast ecosystem in reality.
+        However, we are not running 15 separate, unrelated businesses. We have built a single mathematical and technological core principle (<strong>Qubit Algorithm™ &amp; AI Intelligence-Core</strong>) designed so that one unified engine manifests simultaneously across multiple industrial coordinates (<strong>One Spark, Infinite Galaxifying</strong>).
+      </p>
+
+      <p class="sc-p">
+        Let me share with you the <strong>four definitive reasons</strong> why this is not reckless diversification, why it represents the inevitable business standard of the AI era, and why <strong>*SC</strong> uniquely possesses the core competencies to operate this vast ecosystem in reality.
       </p>
 
       <!-- PILLAR 1 -->
@@ -262,7 +261,7 @@
 
       <ul class="sc-list">
         <li><strong>Quantum Fluctuation (One Spark, Infinite Galaxifying):</strong> Even from a state without massive initial capital or physical inventory (|0&gt;), a single sharp human insight (One Spark) combined with our AI Data Factory simultaneously differentiates and germinates into dozens of derivative business models (Cosmo Seed™).</li>
-        <li><strong>Quantum Entanglement (One Task, Multi Outcomes):</strong> This is the core answer to "how we manage all of these projects simultaneously." Data generated or a single decision executed in Project A (One Task) instantaneously determines the outcomes of entangled Project B (regulatory &amp; clinical formulation), Project C (global B2B purchase orders), and Project D (10 daily multilingual marketing assets). Redundant labor and wasted data converge to zero (Zero-Wasting).</li>
+        <li><strong>Quantum Entanglement (One Task, Multi Outcomes):</strong> This is the core answer to 'how we manage all of these projects simultaneously.' Data generated or a single decision executed in Project A (One Task) instantaneously determines the outcomes of entangled Project B (regulatory &amp; clinical formulation), Project C (global B2B purchase orders), and Project D (10 daily multilingual marketing assets). Redundant labor and wasted data converge to zero (Zero-Wasting).</li>
         <li><strong>Quantum Superposition &amp; Tunneling (t = 0 Superposition &amp; Tunneling):</strong> By pre-aggregating pre-order demand and purchase intent energy (E_intent), we tunnel through traditional capital, inventory, and regulatory barriers without speculative risk—allowing manufacturers, distributors, financiers, and buyers to realize profit simultaneously (t = 0) upon deal confirmation.</li>
       </ul>
 
@@ -270,12 +269,10 @@
         In short, placing no artificial ceiling on applicable industry verticals is the greatest strength of this algorithm. Because the underlying governing principle is singular, the effort required to run 1 project is sufficient to simultaneously power 15—and ultimately 100—synergistic projects.
       </p>
 
-      <div class="sc-academic-note">
-        <p class="sc-academic-note-title">Academic Foundation (Practical Field Solutions First, Mathematical Formalization Second):</p>
-        <p class="sc-p" style="margin-bottom: 0;">
-          This is by no means a contrived marketing buzzword that forces everyday business activities into the academic frame of quantum mechanics. Through more than 20 years of frontline global field experience, we first identified structural problems, agonized over practical solutions, and conducted exhaustive research into the path forward in the rapidly evolving AI era to <strong>derive our real-world business solutions first</strong>. We then discovered that the operating principles of these solutions align precisely with the fundamental laws of quantum mechanics that govern the universe—and united them to academically codify and mathematically quantify our solutions for this era.
-        </p>
-      </div>
+      <p class="sc-academic-heading">Academic Foundation (Practical Field Solutions First, Mathematical Formalization Second):</p>
+      <p class="sc-p">
+        This is by no means a contrived marketing buzzword that forces everyday business activities into the academic frame of quantum mechanics. Through more than 20 years of frontline global field experience, we first identified structural problems, agonized over practical solutions, and conducted exhaustive research into the path forward in the rapidly evolving AI era to <strong>derive our real-world business solutions first</strong>. We then discovered that the operating principles of these solutions align precisely with the fundamental laws of quantum mechanics that govern the universe—and united them to academically codify and mathematically quantify our solutions for this era.
+      </p>
 
       <!-- PILLAR 2 -->
       <h3 class="sc-manifesto-h3">2. Why *SC Uniquely Succeeds Where Pure IT Startups Cannot — 20 Years of Global Field Mastery x Autonomous AI Engine</h3>
@@ -305,7 +302,7 @@
       </p>
 
       <p class="sc-p">
-        However, *SC's perspective is different. Our strategy is not to wage an exhausting war against giant platforms. Rather, <strong>through the convergence of AI and the Qubit Algorithm™, a historic window of opportunity has opened where independent market players—simply by uniting in solidarity (<a class="sc-link" href="./03_intl-alliance/index.html">Int'l Alliance</a>)—can generate global performance on par with, or even surpassing, giant platforms without requiring massive capital.</strong>
+        However, our perspective is different. Our strategy is not to wage an exhausting war against giant platforms. Rather, <strong>through the convergence of AI and the Qubit Algorithm™, a historic window of opportunity has opened where independent market players—simply by uniting in solidarity (<a class="sc-link" href="./03_intl-alliance/index.html">Int'l Alliance</a>)—can generate global performance on par with, or even surpassing, giant platforms without requiring massive capital.</strong>
       </p>
 
       <p class="sc-p">
@@ -340,7 +337,7 @@
       <h3 class="sc-manifesto-h3">4. Join Us Not as a Spectator, But as a Leading Star of the New Business Galaxy</h3>
 
       <p class="sc-p">
-        Our answer to "how can you possibly do all of this?" is already proven not merely in words, but as a <strong>living, breathing system</strong>. The vast 12-domain architecture, 6-language system, and overnight AI data factory you are looking at right now are the very first empirical proof born from our <strong>Qubit Algorithm™ and Vibe Working paradigm</strong>.
+        Our answer to 'how can you possibly do all of this?' is already proven not merely in words, but as a <strong>living, breathing system</strong>. The vast 12-domain architecture, 6-language system, and overnight AI data factory you are looking at right now are the very first empirical proof born from our <strong>Qubit Algorithm™ and Vibe Working paradigm</strong>.
       </p>
 
       <ul class="sc-list">
@@ -349,7 +346,7 @@
       </ul>
 
       <p class="sc-p" style="font-weight: 600; color: #064e3b; margin-top: 22px;">
-        We cordially invite you to join this thrilling journey—where a single small spark (One Spark) expands into a vast business galaxy (Infinite Galaxifying)—as our most valued partner and family member.
+        We cordially invite you to join this thrilling journey—where a single small spark (One Spark) expands into a vast business galaxy (Infinite Galaxifying)—as our most valued partner and family member."
       </p>
 
       <div class="sc-ceo-signoff">
