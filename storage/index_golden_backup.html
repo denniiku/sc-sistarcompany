@@ -6,177 +6,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
   <title>*SC — SISTAR Company | Signal Star Universe — One Spark, Infinite Galaxifying</title>
   <meta name="description" content="Signal Star Universe: One Spark, Infinite Galaxifying. One Task, Multi Outcomes — Full-Stack AI Commerce & International AI Trading Spaceship powered by the Qubit Algorithm." />
-  <style>
-    html, body {
-      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
-      margin: 0;
-      padding: 0;
-      color: #1e293b;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    body.sc-nav-open { padding-left: 236px; }
-    body.sc-nav-folded { padding-left: 64px; }
-    @media (max-width: 768px) {
-      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
-    }
-
-    /* Unified left edge across the entire page */
-    .sc-landing-wrap {
-      box-sizing: border-box;
-      width: 100%;
-      max-width: min(1180px, 94%);
-      margin: 0 auto;
-      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px;
-      text-align: left;
-    }
-
-    /* === SCREEN 1: HERO BIG TYPOGRAPHY (FLUSH LEFT) === */
-    .sc-hero-block {
-      margin: 0 0 28px 0;
-      padding: 0;
-    }
-    .sc-hero-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.75rem, 5.2vw, 4.45rem);
-      font-weight: 700;
-      color: #1e293b;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin: 0 0 20px 0;
-      padding: 0;
-    }
-    .sc-hero-sub {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.18rem, 1.85vw, 1.52rem);
-      font-weight: 500;
-      color: #334155;
-      line-height: 1.48;
-      margin: 0;
-      padding: 0; /* Removed left indent so left line matches exactly */
-      max-width: 960px;
-    }
-
-    /* === SCREEN 2: CORPORATE IDENTITY STATEMENT (FLUSH LEFT) === */
-    .sc-identity-divider {
-      border: 0;
-      border-top: 1px solid rgba(30, 41, 59, 0.16);
-      margin: 28px 0 24px 0;
-      width: 100%;
-      max-width: 960px;
-    }
-    .sc-identity-intro {
-      max-width: 960px;
-      margin: 0 0 44px 0;
-      padding: 0;
-    }
-    .sc-identity-intro p {
-      font-size: clamp(1rem, 1.15vw, 1.12rem);
-      color: #334155;
-      line-height: 1.78;
-      margin: 0 0 16px 0;
-      padding: 0;
-      font-weight: 400;
-    }
-
-    /* === SCREEN 3: CEO COMMENTS (NO BOXES, SPOKEN NARRATIVE STYLE) === */
-    .sc-manifesto-section {
-      max-width: 960px;
-      border-top: 1.5px solid rgba(15, 23, 42, 0.2);
-      padding-top: 36px;
-      margin: 0;
-    }
-    .sc-manifesto-kicker {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.84rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #0f5132;
-      margin: 0 0 12px 0;
-      padding: 0;
-    }
-    .sc-manifesto-h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.6rem, 2.5vw, 2.15rem);
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.26;
-      letter-spacing: -0.025em;
-      margin: 0 0 24px 0;
-      padding: 0;
-    }
-    .sc-manifesto-h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.22rem, 1.8vw, 1.48rem);
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.35;
-      letter-spacing: -0.015em;
-      margin: 36px 0 14px 0;
-      padding: 0;
-    }
-    .sc-p {
-      font-size: 1.02rem;
-      color: #1e293b;
-      line-height: 1.85;
-      margin: 0 0 18px 0;
-      padding: 0;
-    }
-    .sc-spoken-question {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.14rem;
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.65;
-      margin: 22px 0;
-      padding: 0;
-    }
-    .sc-academic-heading {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.04rem;
-      font-weight: 700;
-      color: #064e3b;
-      margin: 24px 0 8px 0;
-      padding: 0;
-    }
-    .sc-list {
-      margin: 12px 0 22px 0;
-      padding-left: 20px;
-    }
-    .sc-list li {
-      font-size: 1.01rem;
-      color: #1e293b;
-      line-height: 1.82;
-      margin-bottom: 12px;
-    }
-    .sc-sub-list {
-      margin: 8px 0 12px 0;
-      padding-left: 18px;
-    }
-    .sc-sub-list li {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-    a.sc-link {
-      color: #0f5132;
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    a.sc-link:hover {
-      color: #1d4ed8;
-    }
-    .sc-ceo-signoff {
-      margin-top: 28px;
-      padding: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.28rem;
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: 0.02em;
-    }
-  </style>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -189,31 +18,200 @@
       document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
-  <style id="sc-landing-only-flush-left">
-    body main.sc-landing-wrap,
-    body main.sc-landing-wrap * {
+  <style id="sc-root-landing-only-style">
+    html, body {
+      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
+      margin: 0;
+      padding: 0;
+      color: #1e293b;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    main.sc-monograph.sc-root-landing {
+      box-sizing: border-box !important;
+      width: auto !important; overflow-x: hidden !important; word-break: keep-all !important; overflow-wrap: break-word !important;
+      max-width: min(1420px, 96%) !important;
+      margin: 0 !important;
+      padding: clamp(36px, 5vh, 68px) clamp(24px, 4.5vw, 76px) 130px !important;
+      text-align: left !important;
+    }
+    main.sc-monograph.sc-root-landing * {
       margin-left: 0 !important;
       padding-left: 0 !important;
       text-indent: 0 !important;
       text-align: left !important;
       border-left: none !important;
     }
-    body main.sc-landing-wrap {
-      margin: 0 auto !important;
-      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px !important;
-    }
-    body main.sc-landing-wrap ul,
-    body main.sc-landing-wrap ol {
+    main.sc-monograph.sc-root-landing ul,
+    main.sc-monograph.sc-root-landing ol {
       list-style-position: inside !important;
     }
+    .sc-route-bar {
+      font-family: 'JetBrains Mono', monospace !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+      padding-bottom: 14px !important;
+      margin-bottom: 28px !important;
+      border-bottom: 1px solid rgba(30, 41, 59, 0.14) !important;
+    }
+    .sc-hero-title {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(2.75rem, 5.2vw, 4.45rem) !important;
+      font-weight: 700 !important;
+      color: #1e293b !important;
+      line-height: 1.08 !important;
+      letter-spacing: -0.03em !important;
+      margin: 0 0 20px 0 !important;
+    }
+    .sc-hero-sub {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(1.18rem, 1.85vw, 1.52rem) !important;
+      font-weight: 500 !important;
+      color: #334155 !important;
+      line-height: 1.48 !important;
+      margin: 0 0 28px 0 !important;
+      max-width: 960px !important;
+    }
+    .sc-identity-divider {
+      border: 0 !important;
+      border-top: 1px solid rgba(30, 41, 59, 0.16) !important;
+      margin: 28px 0 24px 0 !important;
+      max-width: 960px !important;
+    }
+    .sc-identity-intro {
+      max-width: 960px !important;
+      margin-bottom: 44px !important;
+    }
+    .sc-identity-intro p {
+      font-size: clamp(1rem, 1.15vw, 1.12rem) !important;
+      color: #334155 !important;
+      line-height: 1.78 !important;
+      margin: 0 0 16px 0 !important;
+    }
+    .sc-manifesto-section {
+      max-width: 960px !important;
+      border-top: 1.5px solid rgba(15, 23, 42, 0.2) !important;
+      padding-top: 36px !important;
+    }
+    .sc-manifesto-kicker {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: #0f5132 !important;
+      margin: 0 0 12px 0 !important;
+    }
+    .sc-manifesto-h2 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(1.6rem, 2.5vw, 2.15rem) !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.26 !important;
+      letter-spacing: -0.025em !important;
+      margin: 0 0 24px 0 !important;
+    }
+    .sc-manifesto-h3 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(1.22rem, 1.8vw, 1.48rem) !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.35 !important;
+      margin: 36px 0 14px 0 !important;
+    }
+    .sc-p {
+      font-size: 1.02rem !important;
+      color: #1e293b !important;
+      line-height: 1.85 !important;
+      margin: 0 0 18px 0 !important;
+    }
+    .sc-spoken-question {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.14rem !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.65 !important;
+      margin: 22px 0 !important;
+    }
+    .sc-academic-heading {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.04rem !important;
+      font-weight: 700 !important;
+      color: #064e3b !important;
+      margin: 24px 0 8px 0 !important;
+    }
+    .sc-list { margin: 12px 0 22px 0 !important; }
+    .sc-list li {
+      font-size: 1.01rem !important;
+      color: #1e293b !important;
+      line-height: 1.82 !important;
+      margin-bottom: 12px !important;
+    }
+    .sc-sub-list { margin: 8px 0 12px 0 !important; }
+    .sc-sub-list li {
+      font-size: 0.98rem !important;
+      margin-bottom: 8px !important;
+    }
+    a.sc-link {
+      color: #0f5132 !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+    .sc-ceo-signoff {
+      margin-top: 28px !important;
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.28rem !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+    }
   </style>
+  <script id="sc-smart-root-links">
+    document.addEventListener("DOMContentLoaded", function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var lower = p.toLowerCase();
+      var scWebIdx = lower.indexOf("/sc_web/");
+      var isLocal = (location.protocol === "file:" || location.hostname === "localhost" || location.hostname === "127.0.0.1");
+      var hostToFolder = {
+        "sistarcompany.com": "sc-sistarcompany",
+        "qubit-algorithm.sistarcompany.com": "qubit-algorithm",
+        "intelligence-core.sistarcompany.com": "intelligence-core",
+        "scarlet-ai.sistarcompany.com": "scarlet-ai",
+        "qubit-biz.sistarcompany.com": "qubit-biz",
+        "biz-galaxy.sistarcompany.com": "biz-galaxy",
+        "biz-hub.sistarcompany.com": "biz-hub",
+        "challenger.sistarcompany.com": "challengers",
+        "partnership.sistarcompany.com": "partnership",
+        "ir-pitchdeck.sistarcompany.com": "ir-pitchdeck",
+        "biz-directory.sistarcompany.com": "biz-directory",
+        "media.sistarcompany.com": "media"
+      };
+      document.querySelectorAll("a.sc-link").forEach(function(a) {
+        var href = a.getAttribute("href") || "";
+        if (isLocal && scWebIdx !== -1 && href.indexOf("https://") === 0) {
+          try {
+            var urlObj = new URL(href);
+            var folder = hostToFolder[urlObj.hostname];
+            if (folder) {
+              var localBase = p.substring(0, scWebIdx + 8) + folder;
+              var subPath = (!urlObj.pathname || urlObj.pathname === "/") ? "/index.html" : urlObj.pathname;
+              a.setAttribute("href", localBase + subPath);
+            }
+          } catch (e) {}
+        }
+      });
+    });
+  </script>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-landing-wrap">
+  <main class="sc-monograph sc-root-landing">
 
-    <!-- ============================================================================
-         FIRST SCREEN: LARGE HERO TYPOGRAPHY (FLUSH LEFT, SHIFTED HIGHER)
-         ============================================================================ -->
+    <!-- STANDARD TOP ROUTE BAR -->
+    <div class="sc-route sc-route-bar notranslate" translate="no">
+      sistar company - *sc | signal star universe flagship portal
+    </div>
+
+    <!-- FIRST SCREEN: LARGE HERO TYPOGRAPHY -->
     <section class="sc-hero-block">
       <h1 class="sc-hero-title">
         Signal Star<br/>
@@ -226,18 +224,14 @@
       </p>
     </section>
 
-    <!-- ============================================================================
-         SECOND SCREEN: CORPORATE IDENTITY STATEMENT (FLUSH LEFT)
-         ============================================================================ -->
+    <!-- SECOND SCREEN: CORPORATE IDENTITY STATEMENT -->
     <hr class="sc-identity-divider" />
     <section class="sc-identity-intro">
       <p>*sc - sistar company is fully integrating the SISTAR family groups and proudly launching our new corporate identity.</p>
       <p>Pioneering new ways of working and doing global business, *sc operates as a Full-Stack AI Commerce &amp; International AI Trading enterprise—equipped with our proprietary Qubit Algorithm™, developed by *sc for brand-new AI commerce and global trading.</p>
     </section>
 
-    <!-- ============================================================================
-         CEO COMMENTS & EXECUTIVE INTRODUCTION (NO BOXES, SPOKEN COMMENTARY)
-         ============================================================================ -->
+    <!-- CEO COMMENTS & EXECUTIVE INTRODUCTION -->
     <section class="sc-manifesto-section">
       <p class="sc-manifesto-kicker">CEO COMMENTS &amp; EXECUTIVE INTRODUCTION</p>
       <h2 class="sc-manifesto-h2">"Not Reckless Diversification, But One Quantum Engine — The New Global Business Standard in the AI Era, *SC (SISTAR Company)"</h2>
@@ -266,7 +260,6 @@
         Let me share with you the <strong>four definitive reasons</strong> why this is not reckless diversification, why it represents the inevitable business standard of the AI era, and why <strong>*SC</strong> uniquely possesses the core competencies to operate this vast ecosystem in reality.
       </p>
 
-      <!-- PILLAR 1 -->
       <h3 class="sc-manifesto-h3">1. Paradigm Shift: From Newtonian Sequential Rules to Quantum Simultaneity (Qubit Algorithm™)</h3>
 
       <p class="sc-p">
@@ -292,7 +285,6 @@
         This is by no means a contrived marketing buzzword that forces everyday business activities into the academic frame of quantum mechanics. Through more than 20 years of frontline global field experience, we first identified structural problems, agonized over practical solutions, and conducted exhaustive research into the path forward in the rapidly evolving AI era to <strong>derive our real-world business solutions first</strong>. We then discovered that the operating principles of these solutions align precisely with the fundamental laws of quantum mechanics that govern the universe—and united them to academically codify and mathematically quantify our solutions for this era.
       </p>
 
-      <!-- PILLAR 2 -->
       <h3 class="sc-manifesto-h3">2. Why *SC Uniquely Succeeds Where Pure IT Startups Cannot — 20 Years of Global Field Mastery x Autonomous AI Engine</h3>
 
       <p class="sc-p">
@@ -312,7 +304,6 @@
         <li><strong>The 15 <a class="sc-link" href="./01_sc/08_sc-founder-projects-_ver02/index.html">Founder Projects</a> Are Not Scattered Ventures, But a Foundational Capability Multiplier:</strong> Our initial 15 projects are precision-engineered to: (1) fully internalize our proprietary AI/ERP operating system (100% admin cost savings), (2) generate immediate cashflow and proprietary data in high-margin veterinary and bio-health specialties where we hold 20 years of know-how, and (3) scale into global AI trade platforms and a Daily Launching Factory.</li>
       </ul>
 
-      <!-- PILLAR 3 -->
       <h3 class="sc-manifesto-h3">3. A New Window of Opportunity to Match Giant Platforms — Global Alliance &amp; A New Standard of Work</h3>
 
       <p class="sc-p">
@@ -351,7 +342,6 @@
         </li>
       </ol>
 
-      <!-- PILLAR 4 -->
       <h3 class="sc-manifesto-h3">4. Join Us Not as a Spectator, But as a Leading Star of the New Business Galaxy</h3>
 
       <p class="sc-p">

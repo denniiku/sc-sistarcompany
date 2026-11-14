@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*SC | SISTAR CRM — Autonomous Data Factory, RAG &amp; Multi-Agent Conversion Engine</title>
   <meta name="description" content="*SC - FOUNDER PROJECTS: In-Depth Business Plan (01-09). Dual-Return Execution across Track I (AI Infrastructure) and Track II (High-Margin Commercial Verticals)." />
   <script type="application/ld+json">
@@ -19,7 +19,19 @@
     }
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>@media(max-width:768px){body.sc-nav-open,}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
     .sc-sec {
       padding: 68px 0 !important;
       border-bottom: 1.5px solid rgba(15, 23, 42, 0.14) !important;
@@ -86,13 +98,7 @@
       margin: 18mm 16mm;
     }
     @media print {
-      html, body {
-        background: #ffffff !important;
-        background-image: none !important;
-        color: #0f172a !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      
       #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
         display: none !important;
       }
@@ -153,19 +159,14 @@
         page-break-after: avoid !important;
       }
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
   <style>
     .sc-prd-page {
       box-sizing: border-box;
@@ -669,9 +670,6 @@
   <main class="sc-prd-page">
     <div class="sc-top-bar">
       <p class="sc-route">sistar company - *sc - sistar crm</p>
-      <div class="sc-action-btns">
-        <button class="sc-btn-pdf" onclick="window.print()">Print / Save as PDF</button>
-      </div>
     </div>
 
     <section class="sc-sec">
@@ -738,50 +736,63 @@
         </div>
       </div>
 
-      <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SISTAR CRM 4-Stage Autonomous Pipeline from Nightly Scraping to t=0 Closing">
-          <rect width="960" height="320" rx="12" fill="#0f172a"/>
+      
+  <div class="sc-pipeline-strip" aria-label="SISTAR CRM: From Manual Sales to 24/7 Autonomous Data Feeding execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / CAPTURE</span><p class="sc-p">Partner and customer intent enters the shared relationship record.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / ENRICH</span><p class="sc-p">Company RAG and Qubit ERP resolve context and next actions.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / ENGAGE</span><p class="sc-p">AI agents prepare follow-up while people focus on decisions.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / LEARN</span><p class="sc-p">Deal outcomes and service history improve future routing.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for SISTAR CRM: From Manual Sales to 24/7 Autonomous Data Feeding">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For SISTAR CRM: From Manual Sales to 24/7 Autonomous Data Feeding, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SISTAR CRM 4-Stage Autonomous Pipeline from Nightly Scraping to t=0 Closing">
+  <defs><linearGradient id="sc-audit-01-sc-09-sistar-crm-index-html-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-09-sistar-crm-index-html-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-09-sistar-crm-index-html-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 01 • SISTAR CRM 24/7 AUTONOMOUS DATA-FEEDING &amp; CONVERSION PIPELINE</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="28" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+            <rect x="28" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="135" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">STAGE 01 • 10 PM – 4 AM</text>
             <text x="135" y="104" fill="#ffffff" font-size="11" font-weight="600">Overnight Data Factory</text>
             <text x="135" y="128" fill="#cbd5e1" font-size="9.5">Browse AI • Apify • Crawlers</text>
             <text x="135" y="148" fill="#94a3b8" font-size="9.5">Vet Clinics &amp; B2B Wholesalers</text>
             <text x="135" y="168" fill="#94a3b8" font-size="9.5">SKU Gaps &amp; Price Signals</text>
-            <rect x="44" y="198" width="182" height="34" rx="5" fill="#064e3b"/>
+            <rect x="44" y="198" width="182" height="34" rx="5" fill="#064e3b" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="135" y="219" fill="#4ade80" font-size="10" font-weight="700">Verified Decision-Maker DB</text>
 
-            <rect x="256" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="256" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="363" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">STAGE 02 • 4 AM – 8 AM</text>
             <text x="363" y="104" fill="#ffffff" font-size="11" font-weight="600">Company RAG Enrichment</text>
             <text x="363" y="128" fill="#cbd5e1" font-size="9.5">20+ Yrs Catalogs &amp; Tariffs</text>
             <text x="363" y="148" fill="#94a3b8" font-size="9.5">Volume-Tiered Pricing Matrix</text>
             <text x="363" y="168" fill="#94a3b8" font-size="9.5">Custom B2B ROI Simulation</text>
-            <rect x="272" y="198" width="182" height="34" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="272" y="198" width="182" height="34" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="363" y="219" fill="#38bdf8" font-size="10" font-weight="700">Tailored Proposal JSON</text>
 
-            <rect x="484" y="54" width="214" height="196" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.6"/>
+            <rect x="484" y="54" width="214" height="196" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.6" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="591" y="80" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">STAGE 03 • 24/7 CLOSING</text>
             <text x="591" y="104" fill="#ffffff" font-size="11" font-weight="600">Ms. Scarlet &amp; Agents</text>
             <text x="591" y="128" fill="#a7f3d0" font-size="9.5">WhatsApp • Email • LinkedIn</text>
             <text x="591" y="148" fill="#e2e8f0" font-size="9.5">6-Language Live Negotiation</text>
             <text x="591" y="168" fill="#e2e8f0" font-size="9.5">Buy4Me Group-Buy Aggregation</text>
-            <rect x="500" y="198" width="182" height="34" rx="5" fill="#0f172a" stroke="#34d399"/>
+            <rect x="500" y="198" width="182" height="34" rx="5" fill="#0f172a" stroke="#34d399" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="591" y="219" fill="#fde047" font-size="10" font-weight="700">50% Advance Deposit Lock</text>
 
-            <rect x="712" y="54" width="220" height="196" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+            <rect x="712" y="54" width="220" height="196" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="822" y="80" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">STAGE 04 • t = 0 SYNC</text>
             <text x="822" y="104" fill="#ffffff" font-size="11" font-weight="600">Entangled Fulfillment</text>
             <text x="822" y="128" fill="#cbd5e1" font-size="9.5">FP-01 Qubit ERP Invoicing</text>
             <text x="822" y="148" fill="#cbd5e1" font-size="9.5">FP-04 c.a.n. CEO Alert</text>
             <text x="822" y="168" fill="#cbd5e1" font-size="9.5">FP-09/11 ODM &amp; Import Dispatch</text>
-            <rect x="728" y="198" width="188" height="34" rx="5" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="728" y="198" width="188" height="34" rx="5" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
             <text x="822" y="219" fill="#d8b4fe" font-size="10" font-weight="700">FP-15 Retention Loop</text>
           </g>
-          <rect x="28" y="264" width="904" height="38" rx="6" fill="rgba(16,185,129,0.12)" stroke="#10b981"/>
+          <rect x="28" y="264" width="904" height="38" rx="6" fill="rgba(16,185,129,0.12)" stroke="#10b981" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-shadow)" />
           <text x="480" y="288" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">"THE MARKETING ERA IS OVER; ONLY PRECISION AI DATA FEEDING REMAINS" — NEAR-$0 CAC B2B &amp; D2C CONVERSION</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-09-sistar-crm-index-html-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
     </section>
 
@@ -791,11 +802,12 @@
       <p class="sc-lead">Every lead harvested and closed inside SISTAR CRM compounds across the 15 Founder Projects—turning a single customer acquisition event into multi-vertical lifetime value:</p>
 
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SISTAR CRM Bell-State Entanglement Across 15 Founder Projects">
-          <rect width="960" height="320" rx="12" fill="#090d16"/>
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SISTAR CRM Bell-State Entanglement Across 15 Founder Projects">
+  <defs><linearGradient id="sc-audit-01-sc-09-sistar-crm-index-html-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-09-sistar-crm-index-html-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-09-sistar-crm-index-html-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 02 • SISTAR CRM BELL-STATE ENTANGLEMENT MATRIX (ONE LEAD → FIVE REVENUE STREAMS)</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="34" y="60" width="240" height="224" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8"/>
+            <rect x="34" y="60" width="240" height="224" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="154" y="96" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">SISTAR CRM CORE</text>
             <text x="154" y="122" fill="#ffffff" font-size="11">1 Verified Clinic or</text>
             <text x="154" y="140" fill="#ffffff" font-size="11">B2B Distributor Onboarded</text>
@@ -804,30 +816,31 @@
             <text x="154" y="216" fill="#a7f3d0" font-size="10">Zero Paid-Ad Platform Tax</text>
             <text x="154" y="246" fill="#4ade80" font-size="11" font-weight="700">CAC → Near $0</text>
 
-            <rect x="314" y="60" width="612" height="224" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="314" y="60" width="612" height="224" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="620" y="86" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">5 SIMULTANEOUS DOWNSTREAM REVENUE &amp; DATA OUTCOMES AT t = 0</text>
 
-            <rect x="334" y="102" width="276" height="50" rx="6" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="334" y="102" width="276" height="50" rx="6" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="472" y="123" fill="#4ade80" font-size="10.5" font-weight="700">1. Scarlet Vet CDSS &amp; SaaS (FP-08)</text>
             <text x="472" y="140" fill="#cbd5e1" font-size="9.5">Recurring Clinic Software &amp; Rx Capture</text>
 
-            <rect x="630" y="102" width="276" height="50" rx="6" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="630" y="102" width="276" height="50" rx="6" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="768" y="123" fill="#38bdf8" font-size="10.5" font-weight="700">2. Auto Formulator &amp; Vet ODM (FP-07/09)</text>
             <text x="768" y="140" fill="#cbd5e1" font-size="9.5">Co-Branded Sachet &amp; Hospital Supply</text>
 
-            <rect x="334" y="162" width="276" height="50" rx="6" fill="#0f172a" stroke="#34d399"/>
+            <rect x="334" y="162" width="276" height="50" rx="6" fill="#0f172a" stroke="#34d399" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="472" y="183" fill="#34d399" font-size="10.5" font-weight="700">3. Direct B2B Container Trade (FP-11/13)</text>
             <text x="472" y="200" fill="#cbd5e1" font-size="9.5">K-SURE BNPL &amp; 4-Way Qubit Offsetting</text>
 
-            <rect x="630" y="162" width="276" height="50" rx="6" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="630" y="162" width="276" height="50" rx="6" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="768" y="183" fill="#d8b4fe" font-size="10.5" font-weight="700">4. Daily 1 VIP Storefront Clone (FP-14)</text>
             <text x="768" y="200" fill="#cbd5e1" font-size="9.5">Turnkey Partner Brand Portal &amp; Royalty</text>
 
-            <rect x="334" y="222" width="572" height="44" rx="6" fill="#064e3b" stroke="#fde047"/>
+            <rect x="334" y="222" width="572" height="44" rx="6" fill="#064e3b" stroke="#fde047" filter="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-shadow)" />
             <text x="620" y="242" fill="#fde047" font-size="10.5" font-weight="700">5. Qubit ERP &amp; Company RAG Feedback Loop (FP-01 &amp; FP-02)</text>
             <text x="620" y="258" fill="#e2e8f0" font-size="9.5">Every Transaction Enriches Vector Memory &amp; Increases LTV/CAC Ratio Exponentially</text>
           </g>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-09-sistar-crm-index-html-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
 
       <div class="sc-grid-2">

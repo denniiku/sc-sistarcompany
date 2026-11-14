@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*SC (SISTAR Company) | Institutional Corporate Master Brochure — Quantum AI & International Trade Holding</title>
   <meta name="description" content="Institutional Corporate Master Brochure of *SC (SISTAR Company): Quantum-Inspired AI Venture Studio, Enterprise Cognitive OS, and Cross-Border Commerce Holding Company." />
   <script type="application/ld+json">
@@ -24,19 +24,24 @@
     }
   }
   </script>
-  <style>
-    html, body {
-      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
-      margin: 0;
-      padding: 0;
-      color: #0f172a;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    body.sc-nav-open { padding-left: 236px; }
-    body.sc-nav-folded { padding-left: 64px; }
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>
+    
+    
+    
     @media (max-width: 768px) {
-      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      body.sc-nav-open, 
     }
 
     .sc-monograph {
@@ -224,9 +229,13 @@
     }
     .sc-grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
       margin: 24px 0;
+    }
+    .sc-grid-3 > * {
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
     @media (max-width: 860px) {
       .sc-grid-2, .sc-grid-3 { grid-template-columns: 1fr; }
@@ -402,12 +411,7 @@
       margin: 15mm 14mm;
     }
     @media print {
-      html, body {
-        background: #ffffff !important;
-        color: #0f172a !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      
       #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
         display: none !important;
       }
@@ -441,19 +445,14 @@
         page-break-inside: avoid !important;
       }
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
 </head><body class="sc-nav-open">
   <main class="sc-monograph">
     <div class="sc-top-bar">
@@ -537,7 +536,7 @@
         </div>
       </div>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:22%;">Structural Dimension</th>
@@ -549,7 +548,7 @@
           <tr>
             <td><strong>Transaction Physics</strong></td>
             <td>Sequential chain ($A \rightarrow B \rightarrow C$) with cumulative time lag ($\sum \Delta t_i \gg 0$) and middlemen tollgates.</td>
-            <td><strong>Quantum Superposition ($t = 0$):</strong> Buyer, Manufacturer, Logistics, and Trade Finance settle simultaneously upon intent collapse.</td>
+            <td><span class="sc-pill-emerald"><strong>Quantum Superposition ($t = 0$):</strong> Buyer, Manufacturer, Logistics, and Trade Finance settle simultaneously upon intent collapse.</span></td>
           </tr>
           <tr>
             <td><strong>Capital &amp; Inventory</strong></td>
@@ -572,10 +571,22 @@
             <td><strong>Federated Global Alliance:</strong> Independent makers, clinics, and <em>Sistar Challengers</em> united via shared *SC AI infrastructure.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
-      <figure class="sc-svg-frame">
+      
+  <div class="sc-pipeline-strip" aria-label="*SC (SISTAR Company): The Quantum-Concurrent AI &amp; International Trading Enterprise execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SPARK</span><p class="sc-p">A focused executive insight or verified market signal starts the cycle.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / INTELLIGENCE</span><p class="sc-p">AI Intelligence-Core and Company RAG align the relevant context.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">*SC (SISTAR Company): The Quantum-Concurrent AI &amp; International Trading Enterprise turns shared infrastructure into domain-specific action.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / OUTCOME</span><p class="sc-p">Qubit settlement and operating data inform the next opportunity.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for *SC (SISTAR Company): The Quantum-Concurrent AI &amp; International Trading Enterprise">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For *SC (SISTAR Company): The Quantum-Concurrent AI &amp; International Trading Enterprise, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
         <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Newtonian Linear Value Chain vs *SC Quantum Superposition and Tunneling Architecture">
+  <defs><linearGradient id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="scBgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#0f172a"/>
@@ -589,55 +600,55 @@
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
             </marker>
           </defs>
-          <rect width="960" height="360" rx="12" fill="url(#scBgGrad1)"/>
+          <rect width="960" height="360" rx="12" fill="url(#scBgGrad1)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#94a3b8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 01 • NEWTONIAN LINEARITY (A → B → C) VS. *SC QUANTUM SUPERPOSITION (t = 0) &amp; TUNNELING (T → 1)</text>
           
           <!-- Top Track: Newtonian Linear Chain -->
-          <rect x="28" y="50" width="904" height="120" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(239,68,68,0.4)" stroke-width="1.2"/>
+          <rect x="28" y="50" width="904" height="120" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(239,68,68,0.4)" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
           <text x="46" y="74" fill="#f87171" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">LEGACY NEWTONIAN LINEAR VALUE CHAIN: SEQUENTIAL FRICTION, BROKER TOLLGATES &amp; 90-DAY WORKING CAPITAL TRAP</text>
           
           <g font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
-            <rect x="46" y="88" width="118" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <rect x="46" y="88" width="118" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="105" y="112" fill="#f8fafc">1. Upfront CapEx</text>
             <text x="105" y="130" fill="#fca5a5" font-size="10">Inventory Lock</text>
             
             <line x1="164" y1="119" x2="190" y2="119" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arrowRed1)"/>
             
-            <rect x="194" y="88" width="118" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <rect x="194" y="88" width="118" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="253" y="112" fill="#f8fafc">2. Export Broker</text>
             <text x="253" y="130" fill="#fca5a5" font-size="10">+15% Margin Toll</text>
             
             <line x1="312" y1="119" x2="338" y2="119" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arrowRed1)"/>
             
-            <rect x="342" y="88" width="126" height="62" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="1.5"/>
+            <rect x="342" y="88" width="126" height="62" rx="6" fill="#450a0a" stroke="#ef4444" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="405" y="112" fill="#fecaca">3. Customs &amp; Stock</text>
             <text x="405" y="130" fill="#f87171" font-size="10">V_cap Barrier Wall</text>
             
             <line x1="468" y1="119" x2="494" y2="119" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arrowRed1)"/>
             
-            <rect x="498" y="88" width="122" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <rect x="498" y="88" width="122" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="559" y="112" fill="#f8fafc">4. Wholesalers</text>
             <text x="559" y="130" fill="#fca5a5" font-size="10">+25% Markup Lag</text>
             
             <line x1="620" y1="119" x2="646" y2="119" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arrowRed1)"/>
             
-            <rect x="650" y="88" width="122" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <rect x="650" y="88" width="122" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="711" y="112" fill="#f8fafc">5. Ad &amp; PG Tax</text>
             <text x="711" y="130" fill="#fca5a5" font-size="10">-30% Platform Rent</text>
 
             <line x1="772" y1="119" x2="798" y2="119" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arrowRed1)"/>
 
-            <rect x="802" y="88" width="112" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2"/>
+            <rect x="802" y="88" width="112" height="62" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="858" y="112" fill="#f8fafc">Δt = 90 Days</text>
             <text x="858" y="130" fill="#fca5a5" font-size="10">Delayed Cash</text>
           </g>
 
           <!-- Bottom Track: *SC Quantum Superposition & Tunneling -->
-          <rect x="28" y="186" width="904" height="152" rx="10" fill="rgba(16,185,129,0.08)" stroke="#10b981" stroke-width="1.5"/>
+          <rect x="28" y="186" width="904" height="152" rx="10" fill="rgba(16,185,129,0.08)" stroke="#10b981" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
           <text x="46" y="210" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">*SC QUANTUM ARCHITECTURE: ADVANCE-FUND TUNNELING (T → 1) &amp; SIMULTANEOUS SUPERPOSITION CLEARING (t = 0)</text>
 
           <g font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">
-            <rect x="46" y="226" width="175" height="92" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5"/>
+            <rect x="46" y="226" width="175" height="92" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="133" y="250" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-weight="700">ONE SPARK / E_intent</text>
             <text x="133" y="270" fill="#f8fafc">Pre-Aggregated Demand</text>
             <text x="133" y="288" fill="#a7f3d0" font-size="10">Buy4Me + Vet CDSS + Data</text>
@@ -647,27 +658,28 @@
             <text x="258" y="260" fill="#38bdf8" font-size="10" font-weight="700">Tunneling T→1</text>
             <text x="258" y="290" fill="#94a3b8" font-size="9">Zero Stock Wall</text>
 
-            <rect x="300" y="222" width="350" height="100" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+            <rect x="300" y="222" width="350" height="100" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="475" y="245" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">HILBERT-SPACE SUPERPOSITION MATRIX (t = 0)</text>
             <text x="475" y="264" fill="#e2e8f0" font-size="10">|Φ_Market⟩ = Σ c_i |Buyer ⊗ Maker ⊗ Logistics ⊗ K-SURE Bank⟩</text>
-            <rect x="316" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981"/>
+            <rect x="316" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="353" y="297" fill="#4ade80" font-size="10">Buyer +70%</text>
-            <rect x="398" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981"/>
+            <rect x="398" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="435" y="297" fill="#4ade80" font-size="10">Maker 100%</text>
-            <rect x="480" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981"/>
+            <rect x="480" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="517" y="297" fill="#4ade80" font-size="10">3PL Sync</text>
-            <rect x="562" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981"/>
+            <rect x="562" y="276" width="74" height="34" rx="4" fill="#1e293b" stroke="#10b981" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="599" y="297" fill="#4ade80" font-size="10">BNPL Clear</text>
 
             <line x1="650" y1="272" x2="706" y2="272" stroke="#10b981" stroke-width="2.2" marker-end="url(#arrowGreen1)"/>
 
-            <rect x="712" y="226" width="202" height="92" rx="8" fill="#064e3b" stroke="#4ade80" stroke-width="1.5"/>
+            <rect x="712" y="226" width="202" height="92" rx="8" fill="#064e3b" stroke="#4ade80" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-shadow)" />
             <text x="813" y="250" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-weight="700">INFINITE GALAXIFYING</text>
             <text x="813" y="270" fill="#ffffff">One Task, Multi Outcomes</text>
             <text x="813" y="288" fill="#a7f3d0" font-size="10">Bell-State |Φ+⟩_AB Synergy</text>
             <text x="813" y="305" fill="#fde047" font-size="10">Zero Broker Noise • Instant ROI</text>
           </g>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">Figure 1. Structural comparison between Legacy Newtonian Sequential Trade ($A \rightarrow B \rightarrow C$) and *SC Quantum Superposition ($t=0$) &amp; WKB Tunneling ($T \rightarrow 1$) Execution.</figcaption>
       </figure>
     </article>
@@ -730,7 +742,7 @@
         <p class="sc-p" style="margin-bottom:0;">*SC&rsquo;s leadership has spent more than 20 years residing overseas and building real-world B2B distribution, manufacturing, and clinical partnerships across Southeast and East Asia. We have experienced firsthand every friction point that kills cross-border commerce—currency volatility, distributor default, regulatory bottlenecks, and fragmented inventory. Every algorithm inside *SC was engineered specifically to solve these lived commercial realities.</p>
       </div>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:20%;">Global Node Code</th>
@@ -742,12 +754,12 @@
           <tr>
             <td><strong>[SC.KR] / SCK</strong></td>
             <td><strong>South Korea</strong><br/>R&amp;D, IP &amp; Export Anchor</td>
-            <td>Central AI engineering, veterinary &amp; bio-health R&amp;D, premium OEM/ODM manufacturing alliances (<em>CHD, SungBo, Iskhan, Michlo</em>), and K-SURE export trade finance origination.</td>
+            <td><span class="sc-pill-gold">Central AI engineering, veterinary &amp; bio-health R&amp;D, premium OEM/ODM manufacturing alliances (<em>CHD, SungBo, Iskhan, Michlo</em>), and K-SURE export trade finance origination.</span></td>
           </tr>
           <tr>
             <td><strong>[SC.ID] / SCI</strong></td>
             <td><strong>Indonesia</strong><br/>Primary ASEAN Growth Hub</td>
-            <td>National B2B distribution across 270M+ population, veterinary hospital networks, local bulk-to-sachet repackaging (<code>Rp 1,320</code> Quantum Tunneling SKU), and Shopee/Tokopedia AI commerce.</td>
+            <td><span class="sc-pill-gold">National B2B distribution across 270M+ population, veterinary hospital networks, local bulk-to-sachet repackaging (<code>Rp 1,320</code> Quantum Tunneling SKU), and Shopee/Tokopedia AI commerce.</span></td>
           </tr>
           <tr>
             <td><strong>[SC.VN] / SCV</strong></td>
@@ -765,7 +777,7 @@
             <td>Global SaaS commercialization, institutional capital &amp; fintech clearing (SG/US), and standardized Ayurvedic/botanical raw material procurement (India).</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </article>
 
     <!-- ======================================================================
@@ -807,6 +819,7 @@
 
       <figure class="sc-svg-frame">
         <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="24/7 Unmanned Data Factory and Enterprise RAG Pipeline">
+  <defs><linearGradient id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="scBgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16"/>
@@ -817,71 +830,72 @@
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
             </marker>
           </defs>
-          <rect width="960" height="360" rx="12" fill="url(#scBgGrad2)"/>
+          <rect width="960" height="360" rx="12" fill="url(#scBgGrad2)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 02 • THE 24/7 UNMANNED DATA FACTORY &amp; ENTERPRISE RAG CLOSED-LOOP PIPELINE</text>
 
           <!-- 4 Timeline Stages -->
           <g font-family="Inter, sans-serif" text-anchor="middle">
             <!-- Stage 1 -->
-            <rect x="28" y="56" width="206" height="200" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
-            <rect x="44" y="72" width="174" height="26" rx="5" fill="rgba(16,185,129,0.2)"/>
+            <rect x="28" y="56" width="206" height="200" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
+            <rect x="44" y="72" width="174" height="26" rx="5" fill="rgba(16,185,129,0.2)" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="131" y="89" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">10:00 PM – 04:00 AM</text>
             <text x="131" y="118" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">1. Overnight Scraping</text>
             <text x="131" y="142" fill="#cbd5e1" font-size="11">Browse AI • Apify • OpenClaw</text>
             <text x="131" y="162" fill="#94a3b8" font-size="10">Global B2B Wholesale Prices</text>
             <text x="131" y="180" fill="#94a3b8" font-size="10">Shopee / Tokopedia Rankings</text>
             <text x="131" y="198" fill="#94a3b8" font-size="10">HS-Code Tariff &amp; Vet Data</text>
-            <rect x="48" y="216" width="166" height="24" rx="4" fill="#0f172a" stroke="#334155"/>
+            <rect x="48" y="216" width="166" height="24" rx="4" fill="#0f172a" stroke="#334155" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="131" y="232" fill="#38bdf8" font-size="10" font-weight="600">Raw Market Wave Ψ(x,t)</text>
 
             <line x1="234" y1="156" x2="262" y2="156" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrowCyan2)"/>
 
             <!-- Stage 2 -->
-            <rect x="266" y="56" width="206" height="200" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
-            <rect x="282" y="72" width="174" height="26" rx="5" fill="rgba(56,189,248,0.2)"/>
+            <rect x="266" y="56" width="206" height="200" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
+            <rect x="282" y="72" width="174" height="26" rx="5" fill="rgba(56,189,248,0.2)" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="369" y="89" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">04:00 AM – 08:00 AM</text>
             <text x="369" y="118" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">2. Zero-Entropy RAG</text>
             <text x="369" y="142" fill="#cbd5e1" font-size="11">Dify • AnythingLLM • Gemini</text>
             <text x="369" y="162" fill="#94a3b8" font-size="10">Local Ryzen 9 64GB Ollama</text>
             <text x="369" y="180" fill="#94a3b8" font-size="10">Landed Margin &amp; Duty Calc</text>
             <text x="369" y="198" fill="#94a3b8" font-size="10">20+ Yrs BD Grounding Filter</text>
-            <rect x="286" y="216" width="166" height="24" rx="4" fill="#0f172a" stroke="#334155"/>
+            <rect x="286" y="216" width="166" height="24" rx="4" fill="#0f172a" stroke="#334155" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="369" y="232" fill="#4ade80" font-size="10" font-weight="600">Actionable Master JSON</text>
 
             <line x1="472" y1="156" x2="500" y2="156" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrowCyan2)"/>
 
             <!-- Stage 3 -->
-            <rect x="504" y="56" width="196" height="200" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8"/>
-            <rect x="520" y="72" width="164" height="26" rx="5" fill="rgba(74,222,128,0.2)"/>
+            <rect x="504" y="56" width="196" height="200" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
+            <rect x="520" y="72" width="164" height="26" rx="5" fill="rgba(74,222,128,0.2)" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="602" y="89" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">08:00 AM – 09:00 AM</text>
             <text x="602" y="118" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">3. c.a.n. Spark Brief</text>
             <text x="602" y="142" fill="#a7f3d0" font-size="11">CEO ActionNote App</text>
             <text x="602" y="162" fill="#e2e8f0" font-size="10">30-Min Executive Review</text>
             <text x="602" y="180" fill="#e2e8f0" font-size="10">Voice Spark / 1-Click Sign</text>
             <text x="602" y="198" fill="#e2e8f0" font-size="10">Human Focus on Consciousness</text>
-            <rect x="522" y="216" width="160" height="24" rx="4" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="522" y="216" width="160" height="24" rx="4" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="602" y="232" fill="#fde047" font-size="10" font-weight="700">Vibe Working Trigger</text>
 
             <line x1="700" y1="156" x2="728" y2="156" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#arrowCyan2)"/>
 
             <!-- Stage 4 -->
-            <rect x="732" y="56" width="200" height="200" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
-            <rect x="748" y="72" width="168" height="26" rx="5" fill="rgba(168,85,247,0.2)"/>
+            <rect x="732" y="56" width="200" height="200" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
+            <rect x="748" y="72" width="168" height="26" rx="5" fill="rgba(168,85,247,0.2)" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="832" y="89" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">09:00 AM – 10:00 PM</text>
             <text x="832" y="118" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700">4. Multi-Agent Swarm</text>
             <text x="832" y="142" fill="#cbd5e1" font-size="11">Ms. Scarlet • Qubit ERP</text>
             <text x="832" y="162" fill="#94a3b8" font-size="10">20x Storefront SKU Listings</text>
             <text x="832" y="180" fill="#94a3b8" font-size="10">WhatsApp/B2B Deal Closing</text>
             <text x="832" y="198" fill="#94a3b8" font-size="10">10x Daily Video/Media Assets</text>
-            <rect x="750" y="216" width="164" height="24" rx="4" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="750" y="216" width="164" height="24" rx="4" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
             <text x="832" y="232" fill="#d8b4fe" font-size="10" font-weight="600">t=0 Ledger &amp; CRM Sync</text>
           </g>
 
           <!-- Bottom Telemetry Feedback Loop Bar -->
-          <rect x="28" y="276" width="904" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(74,222,128,0.35)" stroke-width="1.2"/>
+          <rect x="28" y="276" width="904" height="60" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(74,222,128,0.35)" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-shadow)" />
           <text x="480" y="301" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" text-anchor="middle">CONTINUOUS TELEMETRY FEEDBACK LOOP: LIVE B2B CONVERSIONS &amp; VET PRESCRIPTIONS RE-INDEX INTO COMPANY RAG AT 10:00 PM</text>
           <text x="480" y="321" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">Near-$0 Fixed Administrative Overhead • 100% Autonomous Execution • Compounding Domain Intelligence Every 24 Hours</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">Figure 2. *SC AI Centers International 24-Hour Unmanned Data Factory: Overnight Scraping &rarr; Zero-Entropy Vector RAG &rarr; 8 AM c.a.n. Executive Spark &rarr; Daytime Multi-Agent Execution.</figcaption>
       </figure>
     </article>
@@ -897,7 +911,7 @@
       <h2 class="sc-chapter-h2">The Cosmo Seed&trade; 5 Core Engines: Industrialized Venture Replication</h2>
       <p class="sc-lead">Every business model launched by *SC is packaged as a <strong>Cosmo Seed&trade;</strong> and driven by five autonomous operational engines that feed one another in an <strong>Infinite Synergetic Loop</strong>:</p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:24%;">Cosmo Seed&trade; Engine</th>
@@ -924,7 +938,7 @@
           <tr>
             <td><strong>4. Qubit Link&trade;</strong><br/>(Qubit Trade Int&rsquo;l)</td>
             <td>3-Party Simultaneous Cross-Border B2B Trade Clearinghouse</td>
-            <td>Monitors tariff databases and shipping schedules via MCP; a single purchase order simultaneously locks trade contracts, freight forwarding, customs, and trade finance at $t=0$.</td>
+            <td><span class="sc-pill-emerald">Monitors tariff databases and shipping schedules via MCP; a single purchase order simultaneously locks trade contracts, freight forwarding, customs, and trade finance at $t=0$.</span></td>
           </tr>
           <tr>
             <td><strong>5. Qubit Flow&trade;</strong><br/>(Cubit Arbitrage Int&rsquo;l)</td>
@@ -932,10 +946,11 @@
             <td>Continuously scans international B2B wholesale price differentials ($\Delta P_{ij} > C_{\text{friction}}$) across countries and executes risk-free back-to-back arbitrage trades via automated webhooks.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <figure class="sc-svg-frame">
         <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cosmo Seed 5 Core Engines Infinite Synergetic Loop and 6 Orbital Domain Topology">
+  <defs><linearGradient id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="scBgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#0f172a"/>
@@ -943,11 +958,11 @@
               <stop offset="100%" stop-color="#064e3b"/>
             </linearGradient>
           </defs>
-          <rect width="960" height="360" rx="12" fill="url(#scBgGrad3)"/>
+          <rect width="960" height="360" rx="12" fill="url(#scBgGrad3)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 03 • COSMO SEED™ 5 CORE ENGINES SYNERGETIC LOOP &amp; 6 ORBITAL DOMAIN TOPOLOGY</text>
 
           <!-- Left Panel: Cosmo Seed 5 Core Engines Loop -->
-          <rect x="28" y="50" width="440" height="288" rx="10" fill="rgba(255,255,255,0.04)" stroke="#10b981" stroke-width="1.4"/>
+          <rect x="28" y="50" width="440" height="288" rx="10" fill="rgba(255,255,255,0.04)" stroke="#10b981" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
           <text x="248" y="74" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" text-anchor="middle">COSMO SEED™ 5 CORE ENGINES LOOP</text>
           
           <circle cx="248" cy="198" r="88" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="6,4"/>
@@ -956,63 +971,64 @@
           <text x="248" y="209" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" text-anchor="middle">SEED™</text>
 
           <g font-family="Inter, sans-serif" font-size="10" font-weight="600" text-anchor="middle">
-            <rect x="183" y="86" width="130" height="34" rx="6" fill="#0f172a" stroke="#4ade80" stroke-width="1.4"/>
+            <rect x="183" y="86" width="130" height="34" rx="6" fill="#0f172a" stroke="#4ade80" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="248" y="101" fill="#4ade80">1. Qubit Factory™</text>
             <text x="248" y="114" fill="#cbd5e1" font-size="9">24h Cloning &amp; Data</text>
 
-            <rect x="322" y="148" width="130" height="34" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.4"/>
+            <rect x="322" y="148" width="130" height="34" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="387" y="163" fill="#38bdf8">2. Qubit Commerce™</text>
             <text x="387" y="176" fill="#cbd5e1" font-size="9">Scarlet AI &amp; Buy4Me</text>
 
-            <rect x="282" y="268" width="130" height="34" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.4"/>
+            <rect x="282" y="268" width="130" height="34" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="347" y="283" fill="#d8b4fe">3. Qubit Star™</text>
             <text x="347" y="296" fill="#cbd5e1" font-size="9">Challenger Matching</text>
 
-            <rect x="84" y="268" width="130" height="34" rx="6" fill="#0f172a" stroke="#fde047" stroke-width="1.4"/>
+            <rect x="84" y="268" width="130" height="34" rx="6" fill="#0f172a" stroke="#fde047" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="149" y="283" fill="#fde047">4. Qubit Link™</text>
             <text x="149" y="296" fill="#cbd5e1" font-size="9">3-Way B2B Trade (t=0)</text>
 
-            <rect x="44" y="148" width="130" height="34" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.4"/>
+            <rect x="44" y="148" width="130" height="34" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="109" y="163" fill="#34d399">5. Qubit Flow™</text>
             <text x="109" y="176" fill="#cbd5e1" font-size="9">Price-Gap Arbitrage</text>
           </g>
 
           <!-- Right Panel: 6 Orbital Domain Clusters & 12-Domain Topology -->
-          <rect x="488" y="50" width="444" height="288" rx="10" fill="rgba(255,255,255,0.04)" stroke="#38bdf8" stroke-width="1.4"/>
+          <rect x="488" y="50" width="444" height="288" rx="10" fill="rgba(255,255,255,0.04)" stroke="#38bdf8" stroke-width="1.4" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
           <text x="710" y="74" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" text-anchor="middle">6 ORBITAL ENGINES &amp; 12-DOMAIN CONSTELLATION</text>
 
           <g font-family="Inter, sans-serif" text-anchor="left">
-            <rect x="506" y="90" width="196" height="68" rx="6" fill="#0f172a" stroke="#4ade80" stroke-width="1.2"/>
+            <rect x="506" y="90" width="196" height="68" rx="6" fill="#0f172a" stroke="#4ade80" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="518" y="110" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">ORBIT 01 • *SC HQ</text>
             <text x="518" y="128" fill="#f8fafc" font-size="10">sistarcompany.com • partnership</text>
             <text x="518" y="144" fill="#94a3b8" font-size="9.5">ir-pitchdeck • 8 Global Hubs</text>
 
-            <rect x="718" y="90" width="196" height="68" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+            <rect x="718" y="90" width="196" height="68" rx="6" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="730" y="110" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">ORBIT 02 • QUBIT ALGORITHM</text>
             <text x="730" y="128" fill="#f8fafc" font-size="10">qubitalgorithm.sistarcompany</text>
             <text x="730" y="144" fill="#94a3b8" font-size="9.5">Hilbert Space • Bell State • WKB</text>
 
-            <rect x="506" y="170" width="196" height="68" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.2"/>
+            <rect x="506" y="170" width="196" height="68" rx="6" fill="#0f172a" stroke="#a855f7" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="518" y="190" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">ORBIT 03 • INTELLIGENCE CORE</text>
             <text x="518" y="208" fill="#f8fafc" font-size="10">intelligence-core • media</text>
             <text x="518" y="224" fill="#94a3b8" font-size="9.5">*SC AI Centers • Qubit ERP • RAG</text>
 
-            <rect x="718" y="170" width="196" height="68" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.2"/>
+            <rect x="718" y="170" width="196" height="68" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="730" y="190" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">ORBIT 04 • SCARLET AI</text>
             <text x="730" y="208" fill="#f8fafc" font-size="10">scarlet-ai • Vet CDSS • Buy4Me</text>
             <text x="730" y="224" fill="#94a3b8" font-size="9.5">Conversational B2B/D2C Portal</text>
 
-            <rect x="506" y="250" width="196" height="68" rx="6" fill="#0f172a" stroke="#fde047" stroke-width="1.2"/>
+            <rect x="506" y="250" width="196" height="68" rx="6" fill="#0f172a" stroke="#fde047" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="518" y="270" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">ORBIT 05 • QUBIT BIZ</text>
             <text x="518" y="288" fill="#f8fafc" font-size="10">qubit-biz • K-SURE BNPL</text>
             <text x="518" y="304" fill="#94a3b8" font-size="9.5">4-Way Qubit Offsetting • Bank</text>
 
-            <rect x="718" y="250" width="196" height="68" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="1.2"/>
+            <rect x="718" y="250" width="196" height="68" rx="6" fill="#0f172a" stroke="#f472b6" stroke-width="1.2" filter="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-shadow)" />
             <text x="730" y="270" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">ORBIT 06 • BIZ GALAXY &amp; HUB</text>
             <text x="730" y="288" fill="#f8fafc" font-size="10">biz-galaxy • biz-hub • challengers</text>
             <text x="730" y="304" fill="#94a3b8" font-size="9.5">Vet Specialties • Mind • Directory</text>
           </g>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-07-sc-master-brochure-ver03-index-ht-3-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">Figure 3. The Cosmo Seed&trade; 5 Core Operational Engines Infinite Synergetic Loop and the 6 Orbital Domain Engines governing the 12-Domain Universe.</figcaption>
       </figure>
     </article>
@@ -1099,91 +1115,59 @@
       </div>
 
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proprietary Fintech Clearing Topology: K-SURE BNPL, 4-Way Qubit Offsetting Barter Matrix, and 70/30 PG Fee Cashback Loop">
-          <defs>
-            <linearGradient id="scBgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#090d16"/>
-              <stop offset="50%" stop-color="#0f172a"/>
-              <stop offset="100%" stop-color="#064e3b"/>
-            </linearGradient>
-          </defs>
-          <rect width="960" height="360" rx="12" fill="url(#scBgGrad4)"/>
-          <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 04 • PROPRIETARY FINTECH CLEARING TOPOLOGY: K-SURE BNPL + 4-WAY QUBIT OFFSETTING + 70/30 PG LOOP</text>
-
-          <!-- Column 1: K-SURE BNPL Trade Finance -->
-          <rect x="28" y="54" width="286" height="282" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
-          <text x="171" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">1. K-SURE + B2B BNPL CLEARING</text>
-          <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="48" y="96" width="246" height="52" rx="6" fill="#0f172a" stroke="#38bdf8"/>
-            <text x="171" y="118" fill="#ffffff" font-size="11" font-weight="700">Korean / Global OEM Maker</text>
-            <text x="171" y="136" fill="#4ade80" font-size="10">Receives 100% Cash at B/L (t = 0)</text>
-
-            <rect x="48" y="164" width="246" height="62" rx="6" fill="#064e3b" stroke="#4ade80" stroke-width="1.4"/>
-            <text x="171" y="186" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">K-SURE Export Guarantee</text>
-            <text x="171" y="204" fill="#e2e8f0" font-size="10">+ Modalku / Paper.id / KoinWorks</text>
-            <text x="171" y="218" fill="#a7f3d0" font-size="9.5">Zero Balance-Sheet Default Risk to *SC</text>
-
-            <rect x="48" y="242" width="246" height="72" rx="6" fill="#0f172a" stroke="#38bdf8"/>
-            <text x="171" y="264" fill="#ffffff" font-size="11" font-weight="700">ASEAN Distributor / Vet Hospital</text>
-            <text x="171" y="282" fill="#38bdf8" font-size="10">Enjoys 30–60 Day BNPL Credit Terms</text>
-            <text x="171" y="300" fill="#94a3b8" font-size="9.5">*SC Earns 2–4% Clearing &amp; Factoring Spread</text>
-          </g>
-
-          <!-- Column 2: 4-Way Qubit Offsetting Barter Matrix -->
-          <rect x="336" y="54" width="288" height="282" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
-          <text x="480" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">2. 4-WAY QUBIT OFFSETTING MATRIX</text>
-          <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="354" y="98" width="118" height="72" rx="6" fill="#0f172a" stroke="#4ade80"/>
-            <text x="413" y="122" fill="#4ade80" font-size="10.5" font-weight="700">01. Physical Goods</text>
-            <text x="413" y="140" fill="#cbd5e1" font-size="9.5">Raw Materials</text>
-            <text x="413" y="154" fill="#94a3b8" font-size="9">Vet / Pet / K-Beauty</text>
-
-            <rect x="488" y="98" width="118" height="72" rx="6" fill="#0f172a" stroke="#38bdf8"/>
-            <text x="547" y="122" fill="#38bdf8" font-size="10.5" font-weight="700">02. AI SaaS &amp; IT</text>
-            <text x="547" y="140" fill="#cbd5e1" font-size="9.5">Qubit ERP &amp; RAG</text>
-            <text x="547" y="154" fill="#94a3b8" font-size="9">Vet CDSS Licensing</text>
-
-            <circle cx="480" cy="186" r="24" fill="#064e3b" stroke="#fde047" stroke-width="1.8"/>
-            <text x="480" y="183" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">QUBIT</text>
-            <text x="480" y="195" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="9" font-weight="700">LEDGER</text>
-
-            <rect x="354" y="202" width="118" height="72" rx="6" fill="#0f172a" stroke="#a855f7"/>
-            <text x="413" y="226" fill="#d8b4fe" font-size="10.5" font-weight="700">03. Media &amp; IP</text>
-            <text x="413" y="244" fill="#cbd5e1" font-size="9.5">SISTAR Studio Ads</text>
-            <text x="413" y="258" fill="#94a3b8" font-size="9">Brand Cloning Rights</text>
-
-            <rect x="488" y="202" width="118" height="72" rx="6" fill="#0f172a" stroke="#fde047"/>
-            <text x="547" y="226" fill="#fde047" font-size="10.5" font-weight="700">04. Space &amp; 3PL</text>
-            <text x="547" y="244" fill="#cbd5e1" font-size="9.5">Shared Warehouse</text>
-            <text x="547" y="258" fill="#94a3b8" font-size="9">Container Slot Swap</text>
-
-            <rect x="354" y="286" width="252" height="34" rx="5" fill="rgba(16,185,129,0.15)" stroke="#10b981"/>
-            <text x="480" y="307" fill="#a7f3d0" font-size="10" font-weight="600">Zero FX Cash Drain • Multilateral Netting</text>
-          </g>
-
-          <!-- Column 3: 70/30 PG Fee Cashback Loop -->
-          <rect x="646" y="54" width="286" height="282" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
-          <text x="789" y="80" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700" text-anchor="middle">3. 70/30 PG FEE CASHBACK LOOP</text>
-          <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="666" y="96" width="246" height="52" rx="6" fill="#450a0a" stroke="#ef4444"/>
-            <text x="789" y="118" fill="#fecaca" font-size="11" font-weight="700">Legacy PG &amp; Platform Toll</text>
-            <text x="789" y="136" fill="#f87171" font-size="10">3.5% – 5.0% Lost Per Transaction</text>
-
-            <rect x="666" y="164" width="246" height="54" rx="6" fill="#0f172a" stroke="#4ade80" stroke-width="1.4"/>
-            <text x="789" y="186" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">Destructive Wave Interference</text>
-            <text x="789" y="204" fill="#cbd5e1" font-size="10">Closed-Loop Qubit Credit Settlement</text>
-
-            <rect x="666" y="232" width="118" height="84" rx="6" fill="#064e3b" stroke="#4ade80" stroke-width="1.5"/>
-            <text x="725" y="260" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">70%</text>
-            <text x="725" y="280" fill="#ffffff" font-size="10" font-weight="600">Instant Buyer</text>
-            <text x="725" y="296" fill="#a7f3d0" font-size="9.5">Cashback Rebate</text>
-
-            <rect x="794" y="232" width="118" height="84" rx="6" fill="#0f172a" stroke="#d8b4fe" stroke-width="1.5"/>
-            <text x="853" y="260" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">30%</text>
-            <text x="853" y="280" fill="#ffffff" font-size="10" font-weight="600">*SC Platform</text>
-            <text x="853" y="296" fill="#cbd5e1" font-size="9.5">Net Fee Margin</text>
-          </g>
-        </svg>
+        <div class="sc-svg-preserved-copy" role="group" aria-label="Proprietary Fintech Clearing Topology: K-SURE BNPL, 4-Way Qubit Offsetting Barter Matrix, and 70/30 PG Fee Cashback Loop">
+  <p class="sc-svg-caption"><strong>ARCHITECTURAL DIAGRAM 04 • PROPRIETARY FINTECH CLEARING TOPOLOGY: K-SURE BNPL + 4-WAY QUBIT OFFSETTING + 70/30 PG LOOP</strong></p>
+  <div class="sc-bento-grid">
+    <article class="sc-bento-card">
+      <h3 class="sc-sub-h4">1. K-SURE + B2B BNPL CLEARING</h3>
+      <ul class="sc-list">
+        <li>Korean / Global OEM Maker</li>
+        <li>Receives 100% Cash at B/L (t = 0)</li>
+        <li>K-SURE Export Guarantee</li>
+        <li>+ Modalku / Paper.id / KoinWorks</li>
+        <li>Zero Balance-Sheet Default Risk to *SC</li>
+        <li>ASEAN Distributor / Vet Hospital</li>
+        <li>Enjoys 30–60 Day BNPL Credit Terms</li>
+        <li>*SC Earns 2–4% Clearing &amp; Factoring Spread</li>
+      </ul>
+    </article>
+    <article class="sc-bento-card">
+      <h3 class="sc-sub-h4">2. 4-WAY QUBIT OFFSETTING MATRIX</h3>
+      <ul class="sc-list">
+        <li>01. Physical Goods</li>
+        <li>Raw Materials</li>
+        <li>Vet / Pet / K-Beauty</li>
+        <li>02. AI SaaS &amp; IT</li>
+        <li>Qubit ERP &amp; RAG</li>
+        <li>Vet CDSS Licensing</li>
+        <li>QUBIT</li>
+        <li>LEDGER</li>
+        <li>03. Media &amp; IP</li>
+        <li>SISTAR Studio Ads</li>
+        <li>Brand Cloning Rights</li>
+        <li>04. Space &amp; 3PL</li>
+        <li>Shared Warehouse</li>
+        <li>Container Slot Swap</li>
+        <li>Zero FX Cash Drain • Multilateral Netting</li>
+      </ul>
+    </article>
+    <article class="sc-bento-card">
+      <h3 class="sc-sub-h4">3. 70/30 PG FEE CASHBACK LOOP</h3>
+      <ul class="sc-list">
+        <li>Legacy PG &amp; Platform Toll</li>
+        <li>3.5% – 5.0% Lost Per Transaction</li>
+        <li>Destructive Wave Interference</li>
+        <li>Closed-Loop Qubit Credit Settlement</li>
+        <li>70%</li>
+        <li>Instant Buyer</li>
+        <li>Cashback Rebate</li>
+        <li>30%</li>
+        <li>*SC Platform</li>
+        <li>Net Fee Margin</li>
+      </ul>
+    </article>
+  </div>
+</div>
         <figcaption class="sc-svg-caption">Figure 4. *SC Proprietary Fintech Clearing Topology: State-Backed K-SURE BNPL Settlement, 4-Way Multilateral Qubit Offsetting Barter Matrix, and 70%/30% PG Fee Cashback Loop.</figcaption>
       </figure>
     </article>
@@ -1225,7 +1209,7 @@
       <h2 class="sc-chapter-h2">The 15 Founder Projects: Engineered to Forge *SC&rsquo;s Core Capabilities</h2>
       <p class="sc-lead"><em>Note: A comprehensive technical and commercial deep-dive into each project is provided in our standalone companion volume, <strong><a href="../08_sc-founder-projects-_ver02/index.html" style="color:#0f5132;">Annex: *SC 15 Founder Projects Dossier</a></strong>.</em> Below is the architectural summary of how these 15 Phase-I initiatives interlock to build *SC&rsquo;s permanent operational muscle:</p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:18%;">Architectural Tier</th>
@@ -1247,7 +1231,7 @@
           <tr>
             <td><strong>Tier III: Direct AI Commerce &amp; Int&rsquo;l Trade</strong><br/>(Projects 10&ndash;13)</td>
             <td><strong>10.</strong> Int&rsquo;l Sistar Challenger Networks<br/><strong>11.</strong> Import &amp; Distribute: AI Trade Int&rsquo;l<br/><strong>12.</strong> AI Commerce International Platform<br/><strong>13.</strong> AI Trade International Platform</td>
-            <td><strong>Builds the Global Cross-Border Highway:</strong> Unites human Challengers and autonomous trading engines to execute direct B2B/D2C cross-border trade, collective group buying, and $t=0$ 3-way clearing without middlemen.</td>
+            <td><span class="sc-pill-emerald"><strong>Builds the Global Cross-Border Highway:</strong> Unites human Challengers and autonomous trading engines to execute direct B2B/D2C cross-border trade, collective group buying, and $t=0$ 3-way clearing without middlemen.</span></td>
           </tr>
           <tr>
             <td><strong>Tier IV: Hyper-Growth GTM Multipliers</strong><br/>(Projects 14&ndash;15)</td>
@@ -1255,7 +1239,7 @@
             <td><strong>Builds the Infinite Galaxifying Accelerator:</strong> Industrializes venture replication by auto-cloning validated Cosmo Seed models into one turnkey VIP partner brand daily, paired with automated 10-asset/day AI media funnels.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </article>
 
     <!-- ======================================================================
@@ -1286,7 +1270,7 @@
       <h3 class="sc-sub-h3" style="margin-top:32px;">VC Investment Committee Summary &amp; Unit Economics Matrix</h3>
       <p class="sc-p">The following institutional matrix synthesizes the core unit economics, capital-efficiency benchmarks, and structural moats evaluated by Venture Capital General Partners and Institutional Investment Committees:</p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:22%;">IC Evaluation Pillar</th>
@@ -1297,7 +1281,7 @@
         <tbody>
           <tr>
             <td><strong>Capital Efficiency &amp; Fixed Overhead</strong></td>
-            <td><strong>Near-$0 Fixed G&amp;A</strong><br/>10x Output-per-Dollar</td>
+            <td><span class="sc-pill-gold"><strong>Near-$0 Fixed G&amp;A</strong><br/>10x Output-per-Dollar</span></td>
             <td><strong>24/7 Unmanned Data Factory + Vibe Working:</strong> Overnight scraping (10 PM&ndash;4 AM), local Ryzen 9 Ollama RAG structuring, and <em>Qubit ERP</em> eliminate bloated administrative, inside-sales, and overseas branch payroll.</td>
           </tr>
           <tr>
@@ -1308,11 +1292,11 @@
           <tr>
             <td><strong>Track II: Vet Bio-Health &amp; Direct Trade Margin</strong></td>
             <td><strong>45% &ndash; 65% Gross Margin</strong><br/>Advance-Funded ODM &amp; B2B</td>
-            <td><strong>Quantum Tunneling ($T \to 1$) &amp; Point-of-Prescription Lock-In:</strong> <em>Scarlet Vet CDSS</em> captures hospital prescriptions at $t=0$, while 50% advance deposits and <code>Rp 1,320</code> micro-sachets eliminate dead-stock risk.</td>
+            <td><span class="sc-pill-emerald"><strong>Quantum Tunneling ($T \to 1$) &amp; Point-of-Prescription Lock-In:</strong> <em>Scarlet Vet CDSS</em> captures hospital prescriptions at $t=0$, while 50% advance deposits and <code>Rp 1,320</code> micro-sachets eliminate dead-stock risk.</span></td>
           </tr>
           <tr>
             <td><strong>Working Capital &amp; Default Risk</strong></td>
-            <td><strong>$\Delta t = 0$ Settlement</strong><br/>0% Balance-Sheet Credit Risk</td>
+            <td><span class="sc-pill-emerald"><strong>$\Delta t = 0$ Settlement</strong><br/>0% Balance-Sheet Credit Risk</span></td>
             <td><strong>K-SURE Export Guarantee + 4-Way Qubit Offsetting:</strong> Suppliers receive 100% cash at Bill of Lading via state-backed guarantees and regional BNPL partners, while multilateral bartering preserves cash reserves.</td>
           </tr>
           <tr>
@@ -1321,13 +1305,21 @@
             <td><strong>Irreplaceable Physical-Digital Convergence:</strong> Two decades of lived overseas regulatory, customs, and national B2B distribution execution encoded into air-gapped enterprise RAG brains that pure-software competitors cannot replicate.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
       <div class="sc-callout" style="margin-top:28px;">
         <div class="sc-callout-title">Proceed to Companion Volume: In-Depth Technical &amp; Commercial Dossier of the 15 Founder Projects</div>
         <p class="sc-p" style="margin-bottom:0;">For granular architectural specifications, market dislocation analysis, quantum entanglement triggers, and monetization models for each of our 15 Phase-I initiatives, please review the companion dossier: <strong><a href="../08_sc-founder-projects-_ver02/index.html" style="color:#0f5132;">*SC Founder Projects (01&ndash;15) Investment Dossier &rarr;</a></strong></p>
       </div>
     </article>
-  </main>
+  
+<section class="sc-bento-card sc-source-fidelity">
+  <h2>Original source details preserved</h2>
+  <p class="sc-p"><strong>Domain:</strong> <code>qubitalgorithm.sistarcompany.com</code>.<br/>Publishes our mathematical physics whitepapers, Hilbert-space superposition models, Bell-state entanglement triggers, and WKB tunneling proofs.</p>
+  <p class="sc-p"><strong>Domains:</strong> <code>intelligence.sistarcompany.com</code>, <code>media</code>.<br/>Operates *SC AI Centers Int&rsquo;l, Qubit ERP, Company RAG, the Overnight Data Factory, <em>The SISTAR Post</em>, and <em>SISTAR Studio</em>.</p>
+  <p class="sc-p"><strong>Domain:</strong> <code>scarlet.sistarcompany.com</code>.<br/>Drives conversational B2B/D2C commerce, <em>Ms. Scarlet</em> 24/7 closing, <em>Buy4Me</em> group buying, <em>sisCart NearBuy</em>, and vertical portals (<code>petclinic.</code>, <code>ayurvedic.</code>).</p>
+  <p class="sc-p"><strong>Domain:</strong> <code>qubit.sistarcompany.com</code>.<br/>Commands B2B container volume deals, K-SURE BNPL trade financing, 4-Way <em>Qubit Offsetting</em> bartering, and <em>Qubit Bank</em> (Time/Space/Idea/Petfood).</p>
+</section>
+</main>
 </body>
 </html>

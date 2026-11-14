@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*SC (SISTAR Company) | 15 Founder Projects — Companion Technical & Commercial Investment Dossier</title>
   <meta name="description" content="Standalone Companion Investment Dossier detailing the 15 Entangled Founder Projects of *SC (SISTAR Company), engineered with *SC Identity Signatures and powered by *SC AI Centers International." />
   <script type="application/ld+json">
@@ -24,19 +24,24 @@
     }
   }
   </script>
-  <style>
-    html, body {
-      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
-      margin: 0;
-      padding: 0;
-      color: #0f172a;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    body.sc-nav-open { padding-left: 236px; }
-    body.sc-nav-folded { padding-left: 64px; }
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>
+    
+    
+    
     @media (max-width: 768px) {
-      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      body.sc-nav-open, 
     }
 
     .sc-monograph {
@@ -410,12 +415,7 @@
       margin: 15mm 14mm;
     }
     @media print {
-      html, body {
-        background: #ffffff !important;
-        color: #0f172a !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      
       #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
         display: none !important;
       }
@@ -457,19 +457,14 @@
         page-break-inside: avoid !important;
       }
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
 </head><body class="sc-nav-open">
   <main class="sc-monograph">
     <div class="sc-top-bar">
@@ -515,7 +510,7 @@
         </div>
       </div>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:8%;">Code</th>
@@ -528,7 +523,7 @@
           <tr><td><strong>FP-01</strong></td><td><strong>Qubit ERP</strong></td><td>Tier I &bull; <code>intelligence-core</code></td><td>Autonomous cross-border finance, tax &amp; shared SCM backbone + B2B SaaS licensing.</td></tr>
           <tr><td><strong>FP-02</strong></td><td><strong>Company RAG Solution</strong></td><td>Tier I &bull; <code>intelligence-core</code></td><td>Zero-entropy vector knowledge base encoding 20+ years of trade &amp; clinical data.</td></tr>
           <tr><td><strong>FP-03</strong></td><td><strong>Agent Builder &amp; AI Secretary</strong></td><td>Tier I &bull; <code>scarlet-ai</code></td><td>No-code digital workforce factory &amp; 24/7 multilingual B2B closer (<em>Ms. Scarlet</em>).</td></tr>
-          <tr><td><strong>FP-04</strong></td><td><strong>c.a.n. &mdash; CEO ActionNote</strong></td><td>Tier I &bull; <code>qubit-biz</code></td><td>Executive intent-to-action command center exploding voice sparks into live tasks.</td></tr>
+          <tr><td><strong>FP-04</strong></td><td><strong>c.a.n. &mdash; CEO ActionNote</strong></td><td>Tier I &bull; <code>qubit-biz</code></td><td><span class="sc-pill-emerald">Executive intent-to-action command center exploding voice sparks into live tasks.</span></td></tr>
           <tr><td><strong>FP-05</strong></td><td><strong>Exo-Brain &amp; Wearable Physical AI</strong></td><td>Tier I &bull; <code>intelligence-core</code></td><td>Edge-AI wearable telemetry (<code>[&amp; I]</code>) &amp; externalized personal/enterprise memory.</td></tr>
           <tr><td><strong>FP-06</strong></td><td><strong>Mind Company</strong></td><td>Tier I &bull; <code>biz-galaxy</code></td><td>Human-AI cognitive resilience (<em>Mind Navi / NFQ</em>) &amp; AI talent academy (<em>FlexKids</em>).</td></tr>
           <tr><td><strong>FP-07</strong></td><td><strong>Auto Formulator for Vet</strong></td><td>Tier II &bull; <code>biz-hub</code></td><td>Algorithmic veterinary nutrition/supplement formulation &amp; micro-sachet ODM engine.</td></tr>
@@ -537,11 +532,11 @@
           <tr><td><strong>FP-10</strong></td><td><strong>Int&rsquo;l Sistar Challenger Networks</strong></td><td>Tier III &bull; <code>challengers</code></td><td>Federated global alliance of performance-based local market executors (&ldquo;Astronauts&rdquo;).</td></tr>
           <tr><td><strong>FP-11</strong></td><td><strong>Import &amp; Distribute: AI Trade Int&rsquo;l</strong></td><td>Tier III &bull; <code>qubit-biz</code></td><td>AI-predicted cross-border sourcing, customs clearance &amp; national B2B distribution.</td></tr>
           <tr><td><strong>FP-12</strong></td><td><strong>AI Commerce International Platform</strong></td><td>Tier III &bull; <code>scarlet-ai</code></td><td>Conversational D2C/B2B shopping &amp; <em>Buy4Me</em> demand-aggregated reverse auctions.</td></tr>
-          <tr><td><strong>FP-13</strong></td><td><strong>AI Trade International Platform</strong></td><td>Tier III &bull; <code>qubit-biz</code></td><td>Direct B2B cross-border trading exchange with $t=0$ clearing &amp; <em>Qubit Offsetting</em>.</td></tr>
+          <tr><td><strong>FP-13</strong></td><td><strong>AI Trade International Platform</strong></td><td>Tier III &bull; <code>qubit-biz</code></td><td><span class="sc-pill-emerald">Direct B2B cross-border trading exchange with $t=0$ clearing &amp; <em>Qubit Offsetting</em>.</span></td></tr>
           <tr><td><strong>FP-14</strong></td><td><strong>Daily 1 VIP Launching Factory</strong></td><td>Tier IV &bull; <code>qubit-algorithm</code></td><td>24/7 automated venture-cloning assembly line deploying one VIP brand or portal daily.</td></tr>
           <tr><td><strong>FP-15</strong></td><td><strong>Marketing Tool Package by Project</strong></td><td>Tier IV &bull; <code>media / intelligence</code></td><td>Modular full-funnel AI growth &amp; automated short-form media suite per project.</td></tr>
         </tbody>
-      </table>
+      </table></div>
     </article>
 
     <!-- ======================================================================
@@ -554,8 +549,20 @@
       </div>
       <h2 class="sc-chapter-h2">Autonomous Enterprise Backbone: ERP, Corporate Memory &amp; Digital Workforce</h2>
 
-      <figure class="sc-svg-frame">
+      
+  <div class="sc-pipeline-strip" aria-label="*SC Founder Projects (01–15): Technical &amp; Commercial Portfolio Dossier execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SPARK</span><p class="sc-p">A focused executive insight or verified market signal starts the cycle.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / INTELLIGENCE</span><p class="sc-p">AI Intelligence-Core and Company RAG align the relevant context.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">*SC Founder Projects (01–15): Technical &amp; Commercial Portfolio Dossier turns shared infrastructure into domain-specific action.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / OUTCOME</span><p class="sc-p">Qubit settlement and operating data inform the next opportunity.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for *SC Founder Projects (01–15): Technical &amp; Commercial Portfolio Dossier">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For *SC Founder Projects (01–15): Technical &amp; Commercial Portfolio Dossier, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
         <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tier I Entanglement Blueprint: Enterprise AI Core and Cognitive OS (FP-01 to FP-06)">
+  <defs><linearGradient id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="fpTier1Bg" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16"/>
@@ -566,12 +573,12 @@
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#4ade80"/>
             </marker>
           </defs>
-          <rect width="960" height="360" rx="12" fill="url(#fpTier1Bg)"/>
+          <rect width="960" height="360" rx="12" fill="url(#fpTier1Bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">TIER I ENTANGLEMENT BLUEPRINT (FP-01 TO FP-06) • ENTERPRISE AI CORE &amp; COGNITIVE OS: |Φ+⟩_AB = 1/√2(|0⟩_A|0⟩_B + |1⟩_A|1⟩_B)</text>
 
           <g font-family="Inter, sans-serif" text-anchor="middle">
             <!-- Top Row: FP-04, FP-05, FP-06 -->
-            <rect x="36" y="54" width="268" height="106" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+            <rect x="36" y="54" width="268" height="106" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
             <text x="170" y="76" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-04 • c.a.n. CEO ActionNote</text>
             <text x="170" y="96" fill="#ffffff" font-size="11">30-Sec Voice Spark → Master JSON</text>
             <text x="170" y="114" fill="#94a3b8" font-size="10">Explodes Executive Intent into Tasks</text>
@@ -579,7 +586,7 @@
 
             <line x1="304" y1="107" x2="342" y2="107" stroke="#4ade80" stroke-width="2" marker-end="url(#fpArr1)"/>
 
-            <rect x="346" y="54" width="268" height="106" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="346" y="54" width="268" height="106" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
             <text x="480" y="76" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-05 • Exo-Brain &amp; [&amp; I] Wearable</text>
             <text x="480" y="96" fill="#ffffff" font-size="11">Ambient Audio/Visual Edge Telemetry</text>
             <text x="480" y="114" fill="#94a3b8" font-size="10">Captures Field, Factory &amp; Vet Context</text>
@@ -587,7 +594,7 @@
 
             <line x1="614" y1="107" x2="652" y2="107" stroke="#4ade80" stroke-width="2" marker-end="url(#fpArr1)"/>
 
-            <rect x="656" y="54" width="268" height="106" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+            <rect x="656" y="54" width="268" height="106" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
             <text x="790" y="76" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-06 • Mind Company (NFQ)</text>
             <text x="790" y="96" fill="#ffffff" font-size="11">Mind Navi • FlexKids • SISTAR Academy</text>
             <text x="790" y="114" fill="#94a3b8" font-size="10">Certifies AI-Native Challengers</text>
@@ -599,7 +606,7 @@
             <line x1="790" y1="160" x2="790" y2="196" stroke="#4ade80" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#fpArr1)"/>
 
             <!-- Bottom Row: FP-02, FP-03, FP-01 -->
-            <rect x="36" y="200" width="268" height="106" rx="8" fill="#064e3b" stroke="#4ade80" stroke-width="1.8"/>
+            <rect x="36" y="200" width="268" height="106" rx="8" fill="#064e3b" stroke="#4ade80" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
             <text x="170" y="222" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-02 • Company RAG Solution</text>
             <text x="170" y="242" fill="#ffffff" font-size="11">Zero-Entropy Corporate Vector Brain</text>
             <text x="170" y="260" fill="#a7f3d0" font-size="10">20+ Yrs Trade, Tariff &amp; Vet Data</text>
@@ -607,7 +614,7 @@
 
             <line x1="304" y1="253" x2="342" y2="253" stroke="#4ade80" stroke-width="2" marker-end="url(#fpArr1)"/>
 
-            <rect x="346" y="200" width="268" height="106" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.8"/>
+            <rect x="346" y="200" width="268" height="106" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
             <text x="480" y="222" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-03 • Agent Builder &amp; Ms. Scarlet</text>
             <text x="480" y="242" fill="#ffffff" font-size="11">24/7 Multilingual B2B/D2C Closer</text>
             <text x="480" y="260" fill="#a7f3d0" font-size="10">MCP Servers • WhatsApp / Telegram</text>
@@ -615,16 +622,17 @@
 
             <line x1="614" y1="253" x2="652" y2="253" stroke="#4ade80" stroke-width="2" marker-end="url(#fpArr1)"/>
 
-            <rect x="656" y="200" width="268" height="106" rx="8" fill="#064e3b" stroke="#fde047" stroke-width="1.8"/>
+            <rect x="656" y="200" width="268" height="106" rx="8" fill="#064e3b" stroke="#fde047" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
             <text x="790" y="222" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-01 • Qubit ERP &amp; Shared SCM</text>
             <text x="790" y="242" fill="#ffffff" font-size="11">t=0 Tax, Customs &amp; Trial Balance</text>
             <text x="790" y="260" fill="#a7f3d0" font-size="10">Video Opname • Space Sharing 3PL</text>
             <text x="790" y="278" fill="#4ade80" font-size="10" font-weight="600">80–85% GM • Near-$0 Fixed Admin</text>
           </g>
 
-          <rect x="36" y="316" width="888" height="30" rx="6" fill="rgba(255,255,255,0.06)"/>
+          <rect x="36" y="316" width="888" height="30" rx="6" fill="rgba(255,255,255,0.06)" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-shadow)" />
           <text x="480" y="335" fill="#e2e8f0" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="600" text-anchor="middle">TIER I SYNERGY OUTPUT: ZERO-ENTROPY AI BRAIN + NEAR-$0 INTERNAL G&amp;A OVERHEAD → POWERS ALL TIER II, III &amp; IV PROJECTS</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">Blueprint I. Tier I Bell-State Entanglement (Projects 01&ndash;06): How executive sparks (`c.a.n.`) and edge telemetry (`Exo-Brain`) flow through `Company RAG` and `Ms. Scarlet` into `Qubit ERP` at $t=0$.</figcaption>
       </figure>
 
@@ -790,6 +798,7 @@
 
       <figure class="sc-svg-frame">
         <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tier II Entanglement Blueprint: Veterinary Bio-Health Deep-Tech (FP-07 to FP-09)">
+  <defs><linearGradient id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="fpTier2Bg" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16"/>
@@ -800,53 +809,54 @@
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
             </marker>
           </defs>
-          <rect width="960" height="360" rx="12" fill="url(#fpTier2Bg)"/>
+          <rect width="960" height="360" rx="12" fill="url(#fpTier2Bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">TIER II ENTANGLEMENT BLUEPRINT (FP-07 TO FP-09) • POINT-OF-PRESCRIPTION CLINICAL MOAT &amp; QUANTUM TUNNELING ODM</text>
 
           <g font-family="Inter, sans-serif" text-anchor="middle">
             <!-- Node 1: FP-08 -->
-            <rect x="34" y="60" width="272" height="190" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8"/>
-            <rect x="52" y="76" width="236" height="28" rx="5" fill="rgba(56,189,248,0.2)"/>
+            <rect x="34" y="60" width="272" height="190" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
+            <rect x="52" y="76" width="236" height="28" rx="5" fill="rgba(56,189,248,0.2)" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
             <text x="170" y="95" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-08 • Vet Special AI Prescription</text>
             <text x="170" y="122" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">Scarlet Vet CDSS in Clinics</text>
             <text x="170" y="144" fill="#cbd5e1" font-size="10.5">POCT Diagnostic &amp; Rx Interpretation</text>
             <text x="170" y="164" fill="#94a3b8" font-size="10">Captures Real-Time Disease Incidence</text>
             <text x="170" y="184" fill="#94a3b8" font-size="10">Locks In Point-of-Prescription Trust</text>
-            <rect x="52" y="204" width="236" height="30" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="52" y="204" width="236" height="30" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
             <text x="170" y="223" fill="#4ade80" font-size="10.5" font-weight="700">60–75% GM • Zero-CAC B2B2C Lock</text>
 
             <line x1="306" y1="155" x2="340" y2="155" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#fpArr2)"/>
 
             <!-- Node 2: FP-07 -->
-            <rect x="344" y="60" width="272" height="190" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8"/>
-            <rect x="362" y="76" width="236" height="28" rx="5" fill="rgba(74,222,128,0.2)"/>
+            <rect x="344" y="60" width="272" height="190" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
+            <rect x="362" y="76" width="236" height="28" rx="5" fill="rgba(74,222,128,0.2)" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
             <text x="480" y="95" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-07 • Auto Formulator for Vet</text>
             <text x="480" y="122" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">AI BOM + Micro-Sachet Engine</text>
             <text x="480" y="144" fill="#a7f3d0" font-size="10.5">AAFCO / FEDIAF Algorithmic Recipe</text>
             <text x="480" y="164" fill="#e2e8f0" font-size="10">90% R&amp;D Cost &amp; Time Compression</text>
             <text x="480" y="184" fill="#fde047" font-size="10" font-weight="600">Rp 1,320 Quantum Tunneling Sachet</text>
-            <rect x="362" y="204" width="236" height="30" rx="5" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="362" y="204" width="236" height="30" rx="5" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
             <text x="480" y="223" fill="#4ade80" font-size="10.5" font-weight="700">50–65% GM • Regulatory Tunneling</text>
 
             <line x1="616" y1="155" x2="650" y2="155" stroke="#38bdf8" stroke-width="2.2" marker-end="url(#fpArr2)"/>
 
             <!-- Node 3: FP-09 -->
-            <rect x="654" y="60" width="272" height="190" rx="10" fill="#1e293b" stroke="#fde047" stroke-width="1.8"/>
-            <rect x="672" y="76" width="236" height="28" rx="5" fill="rgba(253,224,71,0.18)"/>
+            <rect x="654" y="60" width="272" height="190" rx="10" fill="#1e293b" stroke="#fde047" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
+            <rect x="672" y="76" width="236" height="28" rx="5" fill="rgba(253,224,71,0.18)" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
             <text x="790" y="95" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">FP-09 • Vet Clinic R&amp;D &amp; Mfg.</text>
             <text x="790" y="122" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">MedIX • SISPharm • SISPet • Dx</text>
             <text x="790" y="144" fill="#cbd5e1" font-size="10.5">CHD • SungBo • Iskhan • Michlo OEM</text>
             <text x="790" y="164" fill="#94a3b8" font-size="10">50% Advance Deposit Pre-Sold Runs</text>
             <text x="790" y="184" fill="#94a3b8" font-size="10">Hospital Co-Branded Private Label</text>
-            <rect x="672" y="204" width="236" height="30" rx="5" fill="#0f172a" stroke="#fde047"/>
+            <rect x="672" y="204" width="236" height="30" rx="5" fill="#0f172a" stroke="#fde047" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
             <text x="790" y="223" fill="#fde047" font-size="10.5" font-weight="700">45–65% GM • Immediate Cash Cow</text>
           </g>
 
           <!-- Bottom Entanglement Bar -->
-          <rect x="34" y="270" width="892" height="66" rx="8" fill="rgba(255,255,255,0.06)" stroke="#38bdf8" stroke-width="1.2"/>
+          <rect x="34" y="270" width="892" height="66" rx="8" fill="rgba(255,255,255,0.06)" stroke="#38bdf8" stroke-width="1.2" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-shadow)" />
           <text x="480" y="296" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" text-anchor="middle">NON-LOCAL CLINICAL ENTANGLEMENT: 1 VET PRESCRIPTION (FP-08) → AUTO-FORMULATES BOM (FP-07) → TRIGGERS B2B REFILL (FP-09 &amp; FP-12)</text>
           <text x="480" y="318" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">Zero Dead-Stock Risk via Pre-Aggregated Hospital Demand ($E_{\text{intent}}$) • Recurring B2B2C Commission Shared with Prescribing Clinics</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">Blueprint II. Tier II Bell-State Entanglement (Projects 07&ndash;09): Clinical prescriptions in `Scarlet Vet CDSS` instantaneously drive `Auto Formulator` micro-sachet recipes and zero-inventory `Vet Clinic OEM/ODM` production.</figcaption>
       </figure>
 
@@ -932,6 +942,7 @@
 
       <figure class="sc-svg-frame">
         <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tier III Entanglement Blueprint: Direct AI Commerce and International Trade Platforms (FP-10 to FP-13)">
+  <defs><linearGradient id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="fpTier3Bg" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16"/>
@@ -942,65 +953,66 @@
               <path d="M 0 1 L 10 5 L 0 9 z" fill="#34d399"/>
             </marker>
           </defs>
-          <rect width="960" height="360" rx="12" fill="url(#fpTier3Bg)"/>
+          <rect width="960" height="360" rx="12" fill="url(#fpTier3Bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">TIER III ENTANGLEMENT BLUEPRINT (FP-10 TO FP-13) • DIRECT CROSS-BORDER AI COMMERCE &amp; t=0 CLEARING HIGHWAY</text>
 
           <g font-family="Inter, sans-serif" text-anchor="middle">
             <!-- FP-10 -->
-            <rect x="28" y="58" width="206" height="196" rx="10" fill="#1e293b" stroke="#4ade80" stroke-width="1.6"/>
+            <rect x="28" y="58" width="206" height="196" rx="10" fill="#1e293b" stroke="#4ade80" stroke-width="1.6" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="131" y="84" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">FP-10 • Sistar Challengers</text>
             <text x="131" y="106" fill="#ffffff" font-size="11" font-weight="600">Global "Astronauts" Network</text>
             <text x="131" y="128" fill="#cbd5e1" font-size="10">S1–S6 Local Franchise-ship</text>
             <text x="131" y="148" fill="#94a3b8" font-size="9.5">Zero Fixed Overseas Payroll</text>
             <text x="131" y="168" fill="#94a3b8" font-size="9.5">Gathers Field Demand Signals</text>
-            <rect x="44" y="196" width="174" height="42" rx="5" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="44" y="196" width="174" height="42" rx="5" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="131" y="214" fill="#4ade80" font-size="10" font-weight="700">70%+ Royalty Margin</text>
             <text x="131" y="229" fill="#cbd5e1" font-size="9">$0 Fixed HR Expansion</text>
 
             <line x1="234" y1="156" x2="262" y2="156" stroke="#34d399" stroke-width="2.2" marker-end="url(#fpArr3)"/>
 
             <!-- FP-11 -->
-            <rect x="266" y="58" width="206" height="196" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6"/>
+            <rect x="266" y="58" width="206" height="196" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="369" y="84" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">FP-11 • Import &amp; Distribute</text>
             <text x="369" y="106" fill="#ffffff" font-size="11" font-weight="600">AI Trade Int'l Corridors</text>
             <text x="369" y="128" fill="#cbd5e1" font-size="10">20+ Yrs Customs &amp; Licenses</text>
             <text x="369" y="148" fill="#94a3b8" font-size="9.5">BPOM / Kementan / FDA Ready</text>
             <text x="369" y="168" fill="#94a3b8" font-size="9.5">Pre-Sold Container Wholesale</text>
-            <rect x="282" y="196" width="174" height="42" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="282" y="196" width="174" height="42" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="369" y="214" fill="#38bdf8" font-size="10" font-weight="700">30–50% Wholesale GM</text>
             <text x="369" y="229" fill="#cbd5e1" font-size="9">Zero Dead-Stock Risk</text>
 
             <line x1="472" y1="156" x2="500" y2="156" stroke="#34d399" stroke-width="2.2" marker-end="url(#fpArr3)"/>
 
             <!-- FP-12 -->
-            <rect x="504" y="58" width="206" height="196" rx="10" fill="#064e3b" stroke="#34d399" stroke-width="1.8"/>
+            <rect x="504" y="58" width="206" height="196" rx="10" fill="#064e3b" stroke="#34d399" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="607" y="84" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">FP-12 • AI Commerce Int'l</text>
             <text x="607" y="106" fill="#ffffff" font-size="11" font-weight="600">Scarlet.ai &amp; Buy4Me Group</text>
             <text x="607" y="128" fill="#a7f3d0" font-size="10">Integrates Demand Waves Ψ</text>
             <text x="607" y="148" fill="#e2e8f0" font-size="9.5">sisCart NearBuy • mall.sisTV</text>
             <text x="607" y="168" fill="#fde047" font-size="9.5" font-weight="600">70% Saved PG Fee Cashback</text>
-            <rect x="520" y="196" width="174" height="42" rx="5" fill="#0f172a" stroke="#34d399"/>
+            <rect x="520" y="196" width="174" height="42" rx="5" fill="#0f172a" stroke="#34d399" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="607" y="214" fill="#4ade80" font-size="10" font-weight="700">65–80% Platform GM</text>
             <text x="607" y="229" fill="#cbd5e1" font-size="9">Zero Ad-Tax Gateway</text>
 
             <line x1="710" y1="156" x2="738" y2="156" stroke="#34d399" stroke-width="2.2" marker-end="url(#fpArr3)"/>
 
             <!-- FP-13 -->
-            <rect x="742" y="58" width="190" height="196" rx="10" fill="#1e293b" stroke="#fde047" stroke-width="1.8"/>
+            <rect x="742" y="58" width="190" height="196" rx="10" fill="#1e293b" stroke="#fde047" stroke-width="1.8" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="837" y="84" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">FP-13 • AI Trade Int'l</text>
             <text x="837" y="106" fill="#ffffff" font-size="11" font-weight="600">Qubit Link™ &amp; Flow™</text>
             <text x="837" y="128" fill="#cbd5e1" font-size="10">3-Way B2B Clearing (t=0)</text>
             <text x="837" y="148" fill="#94a3b8" font-size="9.5">K-SURE BNPL Trade Finance</text>
             <text x="837" y="168" fill="#94a3b8" font-size="9.5">4-Way Qubit Offsetting</text>
-            <rect x="756" y="196" width="162" height="42" rx="5" fill="#0f172a" stroke="#fde047"/>
+            <rect x="756" y="196" width="162" height="42" rx="5" fill="#0f172a" stroke="#fde047" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
             <text x="837" y="214" fill="#fde047" font-size="10" font-weight="700">70%+ Fintech GM</text>
             <text x="837" y="229" fill="#cbd5e1" font-size="9">Cashless Barter</text>
           </g>
 
-          <rect x="28" y="272" width="904" height="64" rx="8" fill="rgba(255,255,255,0.06)" stroke="#34d399" stroke-width="1.2"/>
+          <rect x="28" y="272" width="904" height="64" rx="8" fill="rgba(255,255,255,0.06)" stroke="#34d399" stroke-width="1.2" filter="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-shadow)" />
           <text x="480" y="297" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" text-anchor="middle">FEDERATED TRADE FLYWHEEL: CHALLENGERS (FP-10) AGGREGATE LOCAL ORDERS → SCARLET.AI (FP-12) → CLEARED AT t=0 VIA QUBIT TRADE (FP-13)</text>
           <text x="480" y="319" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">"Together, Against Global AI Giants" — Disintermediating Middlemen &amp; Platform Ad Taxes Across 8 Global Hubs</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-08-sc-founder-projects-ver02-index-h-3-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">Blueprint III. Tier III Bell-State Entanglement (Projects 10&ndash;13): Federated `Sistar Challengers` and `Import &amp; Distribute` corridors feed `Scarlet.ai` demand aggregation and `AI Trade Int'l` $t=0$ clearing.</figcaption>
       </figure>
 
@@ -1108,63 +1120,46 @@
       <h2 class="sc-chapter-h2">Industrializing &ldquo;One Spark, Infinite Galaxifying&rdquo;: Daily Venture Cloning &amp; Programmatic GTM</h2>
 
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tier IV Entanglement Blueprint: Daily 1 VIP Launching Factory and Marketing Tool Package (FP-14 to FP-15)">
-          <defs>
-            <linearGradient id="fpTier4Bg" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#090d16"/>
-              <stop offset="55%" stop-color="#1e1b4b"/>
-              <stop offset="100%" stop-color="#064e3b"/>
-            </linearGradient>
-            <marker id="fpArr4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1 L 10 5 L 0 9 z" fill="#d8b4fe"/>
-            </marker>
-          </defs>
-          <rect width="960" height="360" rx="12" fill="url(#fpTier4Bg)"/>
-          <text x="32" y="34" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">TIER IV ENTANGLEMENT BLUEPRINT (FP-14 TO FP-15) • 24/7 VENTURE CLONING FACTORY &amp; PROGRAMMATIC GTM MULTIPLIER</text>
-
-          <g font-family="Inter, sans-serif" text-anchor="middle">
-            <!-- Input: Validated Cosmo Seed -->
-            <rect x="28" y="60" width="240" height="190" rx="10" fill="#1e293b" stroke="#4ade80" stroke-width="1.6"/>
-            <text x="148" y="88" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">INPUT: TIERS I – III</text>
-            <text x="148" y="112" fill="#ffffff" font-size="11.5" font-weight="600">Validated Cosmo Seed™</text>
-            <text x="148" y="136" fill="#cbd5e1" font-size="10">Pre-Wired Qubit ERP (FP-01)</text>
-            <text x="148" y="156" fill="#cbd5e1" font-size="10">Air-Gapped Vector RAG (FP-02)</text>
-            <text x="148" y="176" fill="#cbd5e1" font-size="10">Ms. Scarlet AI Closer (FP-03)</text>
-            <text x="148" y="196" fill="#cbd5e1" font-size="10">Vet / Trade Supply Spine</text>
-            <rect x="46" y="210" width="204" height="26" rx="4" fill="#0f172a" stroke="#4ade80"/>
-            <text x="148" y="227" fill="#4ade80" font-size="10" font-weight="700">Ĥ_fluctuation |0⟩ → |Ψ_spark⟩</text>
-
-            <line x1="268" y1="155" x2="306" y2="155" stroke="#d8b4fe" stroke-width="2.4" marker-end="url(#fpArr4)"/>
-
-            <!-- FP-14 -->
-            <rect x="310" y="60" width="300" height="190" rx="10" fill="#0f172a" stroke="#a855f7" stroke-width="2"/>
-            <rect x="328" y="74" width="264" height="26" rx="5" fill="rgba(168,85,247,0.22)"/>
-            <text x="460" y="91" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">FP-14 • DAILY 1 VIP LAUNCHING FACTORY</text>
-            <text x="460" y="118" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">24-Hour Auto-Reskinning Assembly</text>
-            <text x="460" y="140" fill="#cbd5e1" font-size="10.5">Firebase Multi-Site + Subdomain Routing</text>
-            <text x="460" y="160" fill="#cbd5e1" font-size="10.5">6-Language Static AI Dictionary (EN/KR/ID/VN/CN/JP)</text>
-            <text x="460" y="180" fill="#fde047" font-size="10.5" font-weight="600">100 Brands • 100 Platforms • 100 App-Flips</text>
-            <rect x="328" y="202" width="264" height="32" rx="5" fill="#1e1b4b" stroke="#a855f7"/>
-            <text x="460" y="222" fill="#d8b4fe" font-size="10.5" font-weight="700">85%+ GM • VIP Launch Fee + Royalty Carry</text>
-
-            <line x1="610" y1="155" x2="648" y2="155" stroke="#d8b4fe" stroke-width="2.4" marker-end="url(#fpArr4)"/>
-
-            <!-- FP-15 -->
-            <rect x="652" y="60" width="280" height="190" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.8"/>
-            <rect x="670" y="74" width="244" height="26" rx="5" fill="rgba(74,222,128,0.2)"/>
-            <text x="792" y="91" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">FP-15 • MARKETING TOOL PACKAGE</text>
-            <text x="792" y="118" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">SISTAR Studio + Closed-Loop CRM</text>
-            <text x="792" y="140" fill="#a7f3d0" font-size="10.5">10x Daily Short-Form Videos (Veo/TTS)</text>
-            <text x="792" y="160" fill="#e2e8f0" font-size="10.5">Qubit Star Influencer Matching</text>
-            <text x="792" y="180" fill="#fde047" font-size="10.5" font-weight="600">Near-$0 CAC Organic Viral Funnel</text>
-            <rect x="670" y="202" width="244" height="32" rx="5" fill="#0f172a" stroke="#4ade80"/>
-            <text x="792" y="222" fill="#4ade80" font-size="10.5" font-weight="700">75–85% GM • Agency-in-a-Box SaaS</text>
-          </g>
-
-          <rect x="28" y="270" width="904" height="66" rx="8" fill="rgba(255,255,255,0.06)" stroke="#a855f7" stroke-width="1.2"/>
-          <text x="480" y="296" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700" text-anchor="middle">EXPONENTIAL GALAXIFYING VELOCITY: 1 NEW TURNKEY VIP PARTNER VENTURE DEPLOYED EVERY 24 HOURS WITH BUILT-IN AI MEDIA</text>
-          <text x="480" y="318" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">Zero Incremental Engineering Headcount • Perpetual Equity Carry &amp; Revenue Share Across Every Cloned Node</text>
-        </svg>
+        <div class="sc-svg-preserved-copy" role="group" aria-label="Tier IV Entanglement Blueprint: Daily 1 VIP Launching Factory and Marketing Tool Package (FP-14 to FP-15)">
+  <p class="sc-svg-caption"><strong>TIER IV ENTANGLEMENT BLUEPRINT (FP-14 TO FP-15) • 24/7 VENTURE CLONING FACTORY &amp; PROGRAMMATIC GTM MULTIPLIER</strong></p>
+  <div class="sc-bento-grid">
+    <article class="sc-bento-card">
+      <h3 class="sc-sub-h4">INPUT: TIERS I – III</h3>
+      <ul class="sc-list">
+        <li>Validated Cosmo Seed™</li>
+        <li>Pre-Wired Qubit ERP (FP-01)</li>
+        <li>Air-Gapped Vector RAG (FP-02)</li>
+        <li>Ms. Scarlet AI Closer (FP-03)</li>
+        <li>Vet / Trade Supply Spine</li>
+        <li>Ĥ_fluctuation |0⟩ → |Ψ_spark⟩</li>
+      </ul>
+    </article>
+    <article class="sc-bento-card">
+      <h3 class="sc-sub-h4">FP-14 • DAILY 1 VIP LAUNCHING FACTORY</h3>
+      <ul class="sc-list">
+        <li>24-Hour Auto-Reskinning Assembly</li>
+        <li>Firebase Multi-Site + Subdomain Routing</li>
+        <li>6-Language Static AI Dictionary (EN/KR/ID/VN/CN/JP)</li>
+        <li>100 Brands • 100 Platforms • 100 App-Flips</li>
+        <li>85%+ GM • VIP Launch Fee + Royalty Carry</li>
+      </ul>
+    </article>
+    <article class="sc-bento-card">
+      <h3 class="sc-sub-h4">FP-15 • MARKETING TOOL PACKAGE</h3>
+      <ul class="sc-list">
+        <li>SISTAR Studio + Closed-Loop CRM</li>
+        <li>10x Daily Short-Form Videos (Veo/TTS)</li>
+        <li>Qubit Star Influencer Matching</li>
+        <li>Near-$0 CAC Organic Viral Funnel</li>
+        <li>75–85% GM • Agency-in-a-Box SaaS</li>
+      </ul>
+    </article>
+  </div>
+  <div class="sc-callout">
+    <p class="sc-p">EXPONENTIAL GALAXIFYING VELOCITY: 1 NEW TURNKEY VIP PARTNER VENTURE DEPLOYED EVERY 24 HOURS WITH BUILT-IN AI MEDIA</p>
+    <p class="sc-p">Zero Incremental Engineering Headcount • Perpetual Equity Carry &amp; Revenue Share Across Every Cloned Node</p>
+  </div>
+</div>
         <figcaption class="sc-svg-caption">Blueprint IV. Tier IV Bell-State Entanglement (Projects 14&ndash;15): `Daily 1 VIP Launching Factory` auto-clones validated Cosmo Seed ventures in 24 hours while `Marketing Tool Package` injects programmatic 10-asset/day growth funnels.</figcaption>
       </figure>
 
@@ -1222,7 +1217,7 @@
       <h3 class="sc-sub-h3" style="margin-top:36px;">Master VC Portfolio Financial &amp; Synergy Matrix (FP-01 Through FP-15)</h3>
       <p class="sc-p">The following institutional Investment Committee matrix compares all fifteen entangled Founder Projects across foundational capability built, primary monetization streams, target gross margins, Bell-state entanglement triggers, and long-term scalability moats:</p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:16%;">Project Node</th>
@@ -1239,7 +1234,7 @@
             <td>Autonomous cross-border tax, accounting &amp; shared 3PL ledger</td>
             <td>Tiered B2B SaaS + Space-Sharing SCM spread</td>
             <td><strong>80&ndash;85%</strong></td>
-            <td>Auto-settles orders from FP-12 &amp; FP-13 at $t=0$</td>
+            <td><span class="sc-pill-emerald">Auto-settles orders from FP-12 &amp; FP-13 at $t=0$</span></td>
             <td>Multi-country VAT &amp; Video Opname AI</td>
           </tr>
           <tr>
@@ -1288,7 +1283,7 @@
             <td>B2B sachet/bulk ODM + formulation royalties</td>
             <td><strong>50&ndash;65%</strong></td>
             <td>Converts FP-08 clinical trends into FP-09 BOMs</td>
-            <td><code>Rp 1,320</code> Quantum Tunneling price architecture</td>
+            <td><span class="sc-pill-gold"><code>Rp 1,320</code> Quantum Tunneling price architecture</span></td>
           </tr>
           <tr>
             <td><strong>FP-08 &bull; Vet AI Prescription</strong></td>
@@ -1316,7 +1311,7 @@
           </tr>
           <tr>
             <td><strong>FP-11 &bull; Import &amp; Distribute</strong></td>
-            <td>Active customs clearance, BPOM/FDA permits &amp; B2B wholesale</td>
+            <td><span class="sc-pill-emerald">Active customs clearance, BPOM/FDA permits &amp; B2B wholesale</span></td>
             <td>Pre-sold container wholesale spreads + agency retainers</td>
             <td><strong>30&ndash;50%</strong></td>
             <td>Clears and routes physical goods for FP-09 &amp; FP-13</td>
@@ -1335,7 +1330,7 @@
             <td>3-way simultaneous B2B trade clearing &amp; cashless barter</td>
             <td>B2B clearing fee + BNPL factoring spread + arbitrage</td>
             <td><strong>70%+</strong></td>
-            <td>K-SURE BNPL &amp; 4-Way Qubit Offsetting at $t=0$</td>
+            <td><span class="sc-pill-emerald">K-SURE BNPL &amp; 4-Way Qubit Offsetting at $t=0$</span></td>
             <td>State-backed credit integration + multilateral ledger</td>
           </tr>
           <tr>
@@ -1355,7 +1350,7 @@
             <td>Near-$0 CAC organic short-form video engine</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </article>
   </main>
 </body>

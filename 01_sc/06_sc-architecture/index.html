@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*SC | SC Architecture — The 6-Layer, 12-Domain Quantum Enterprise Topology</title>
   <meta name="description" content="Official Enterprise Architecture Monograph of *SC (SISTAR Company): The 6-Layer, 12-Domain Quantum Enterprise Topology connecting Root Identity & Qubit Algorithm to Core AI Vaults, Dual Commercial Platforms, Ecosystem Arenas, Global Participants, and Open Media Forges." />
   <script type="application/ld+json">
@@ -28,19 +28,24 @@
     }
   }
   </script>
-  <style>
-    html, body {
-      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
-      margin: 0;
-      padding: 0;
-      color: #0f172a;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    body.sc-nav-open { padding-left: 236px; }
-    body.sc-nav-folded { padding-left: 64px; }
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>
+    
+    
+    
     @media (max-width: 768px) {
-      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
+      body.sc-nav-open, 
     }
 
     .sc-monograph {
@@ -414,12 +419,7 @@
       margin: 15mm 14mm;
     }
     @media print {
-      html, body {
-        background: #ffffff !important;
-        color: #0f172a !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      
       #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
         display: none !important;
       }
@@ -461,28 +461,19 @@
         page-break-inside: avoid !important;
       }
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
 </head>
 <body class="sc-nav-open">
   <main class="sc-monograph">
     <div class="sc-top-bar">
       <p class="sc-route">sistar company - *sc - sc architecture</p>
-      <div class="sc-action-btns">
-        <a class="sc-btn-pdf emerald" href="../07_sc-master-brochure-_ver03/index.html">Open Master Brochure -></a>
-        <button class="sc-btn-pdf" onclick="window.print()">Print / Export Architectural Monograph PDF</button>
-      </div>
     </div>
 
     <!-- ============================================================================
@@ -541,8 +532,20 @@
       </div>
 
       <!-- INLINE SVG #1: MASTER 6-LAYER -> 12-DOMAIN ARCHITECTURAL BLUEPRINT -->
-      <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 420" class="notranslate" translate="no" role="img" aria-label="Master 6-Layer to 12-Domain Architectural Blueprint of *SC">
+      
+  <div class="sc-pipeline-strip" aria-label="*SC Enterprise Architecture: The 6-Layer, 12-Domain Quantum Galaxy execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SPARK</span><p class="sc-p">A focused executive insight or verified market signal starts the cycle.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / INTELLIGENCE</span><p class="sc-p">AI Intelligence-Core and Company RAG align the relevant context.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">*SC Enterprise Architecture: The 6-Layer, 12-Domain Quantum Galaxy turns shared infrastructure into domain-specific action.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / OUTCOME</span><p class="sc-p">Qubit settlement and operating data inform the next opportunity.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for *SC Enterprise Architecture: The 6-Layer, 12-Domain Quantum Galaxy">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For *SC Enterprise Architecture: The 6-Layer, 12-Domain Quantum Galaxy, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="Master 6-Layer to 12-Domain Architectural Blueprint of *SC">
+  <defs><linearGradient id="sc-audit-01-sc-06-sc-architecture-index-html-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-06-sc-architecture-index-html-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-06-sc-architecture-index-html-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="scBgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16" />
@@ -562,89 +565,89 @@
           </defs>
 
           <!-- Background Canvas -->
-          <rect x="0" y="0" width="960" height="420" rx="12" fill="url(#scBgGrad1)" />
+          <rect x="0" y="0" width="960" height="420" rx="12" fill="url(#scBgGrad1)" /><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g><g transform="scale(1 0.857142857)">
 
           <!-- Header Banner inside SVG -->
-          <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">*SC MASTER ENTERPRISE TOPOLOGY • 6 STRATEGIC LAYERS -&gt; 12 QUANTUM-ENTANGLED DOMAINS (t = 0)</text>
+          <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700" letter-spacing="1.5">*SC MASTER ENTERPRISE TOPOLOGY • 6 STRATEGIC LAYERS -&gt; 12 QUANTUM-ENTANGLED DOMAINS (t = 0)</text>
           <line x1="24" y1="36" x2="936" y2="36" stroke="#334155" stroke-width="1" />
 
           <!-- LAYER 1 ROW (Y=46..96) -->
-          <rect x="24" y="46" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
-          <text x="34" y="66" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 1 • ROOT IDENTITY &amp; LAW</text>
-          <text x="34" y="83" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Philosophy &amp; Quantum Math</text>
+          <rect x="24" y="46" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="34" y="66" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">LAYER 1 • ROOT IDENTITY &amp; LAW</text>
+          <text x="34" y="83" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Philosophy &amp; Quantum Math</text>
 
-          <rect x="252" y="46" width="330" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
-          <text x="266" y="65" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">01 • sc-sistarcompany</text>
-          <text x="266" y="82" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5">Supreme Corporate Flagship • 8 Global Bases • IATA/IADA</text>
+          <rect x="252" y="46" width="330" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="266" y="65" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">01 • sc-sistarcompany</text>
+          <text x="266" y="82" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11.08">Supreme Corporate Flagship • 8 Global Bases • IATA/IADA</text>
 
-          <rect x="600" y="46" width="336" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
-          <text x="614" y="65" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">02 • qubit-algorithm</text>
-          <text x="614" y="82" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5">Mathematical Engine • 5 Quantum Laws • Wavefunction Proof</text>
+          <rect x="600" y="46" width="336" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="614" y="65" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">02 • qubit-algorithm</text>
+          <text x="614" y="82" fill="#94a3b8" font-family="Inter, sans-serif" font-size="11.08">Mathematical Engine • 5 Quantum Laws • Wavefunction Proof</text>
 
           <!-- LAYER 2 ROW (Y=108..158) -->
-          <rect x="24" y="108" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
-          <text x="34" y="128" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 2 • CORE AI VAULT</text>
-          <text x="34" y="145" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Proprietary AI Engine Room</text>
+          <rect x="24" y="108" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="34" y="128" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">LAYER 2 • CORE AI VAULT</text>
+          <text x="34" y="145" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Proprietary AI Engine Room</text>
 
-          <rect x="252" y="108" width="684" height="50" rx="6" fill="#0f2922" stroke="#10b981" stroke-width="1.5" />
-          <text x="266" y="127" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">03 • intelligence-core (Proprietary AI Asset Vault &amp; Engine Room)</text>
-          <text x="266" y="144" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">*SC AI Centers Int'l • Company RAG • Qubit ERP • Overnight Data Factory (10PM-8AM) • Agent Builder • Exo-Brain • SISTAR Studio</text>
+          <rect x="252" y="108" width="684" height="50" rx="6" fill="#0f2922" stroke="#10b981" stroke-width="1.5"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="266" y="127" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="13.42" font-weight="700">03 • intelligence-core (Proprietary AI Asset Vault &amp; Engine Room)</text>
+          <text x="266" y="144" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="11.08">*SC AI Centers Int'l • Company RAG • Qubit ERP • Overnight Data Factory (10PM-8AM) • Agent Builder • Exo-Brain • SISTAR Studio</text>
 
           <!-- LAYER 3 ROW (Y=170..220) -->
-          <rect x="24" y="170" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
-          <text x="34" y="190" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 3 • DUAL PLATFORMS</text>
-          <text x="34" y="207" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Twin Monetization Engines</text>
+          <rect x="24" y="170" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="34" y="190" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">LAYER 3 • DUAL PLATFORMS</text>
+          <text x="34" y="207" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Twin Monetization Engines</text>
 
-          <rect x="252" y="170" width="330" height="50" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1.2" />
-          <text x="266" y="189" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">04 • scarlet-ai</text>
-          <text x="266" y="206" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">AI Commerce &amp; Trade • Buy4Me • K-SURE BNPL • 70/30 PG</text>
+          <rect x="252" y="170" width="330" height="50" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="266" y="189" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">04 • scarlet-ai</text>
+          <text x="266" y="206" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">AI Commerce &amp; Trade • Buy4Me • K-SURE BNPL • 70/30 PG</text>
 
-          <rect x="600" y="170" width="336" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
-          <text x="614" y="189" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">05 • qubit-biz</text>
-          <text x="614" y="206" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Cosmo Seed™ Showcase • 5 Qubit Engines • 4-Way Offsetting</text>
+          <rect x="600" y="170" width="336" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="614" y="189" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">05 • qubit-biz</text>
+          <text x="614" y="206" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Cosmo Seed™ Showcase • 5 Qubit Engines • 4-Way Offsetting</text>
 
           <!-- LAYER 4 ROW (Y=232..282) -->
-          <rect x="24" y="232" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
-          <text x="34" y="252" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 4 • ECOSYSTEM ARENAS</text>
-          <text x="34" y="269" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Vertical Stars &amp; Co-Creation</text>
+          <rect x="24" y="232" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="34" y="252" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">LAYER 4 • ECOSYSTEM ARENAS</text>
+          <text x="34" y="269" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Vertical Stars &amp; Co-Creation</text>
 
-          <rect x="252" y="232" width="330" height="50" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.2" />
-          <text x="266" y="251" fill="#a78bfa" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">06 • biz-galaxy</text>
-          <text x="266" y="268" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Shining Verticals • MedIX • SISPet • SISPharm • Mind Co.</text>
+          <rect x="252" y="232" width="330" height="50" rx="6" fill="#1e293b" stroke="#a78bfa" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="266" y="251" fill="#a78bfa" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">06 • biz-galaxy</text>
+          <text x="266" y="268" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Shining Verticals • MedIX • SISPet • SISPharm • Mind Co.</text>
 
-          <rect x="600" y="232" width="336" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
-          <text x="614" y="251" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">07 • biz-hub</text>
-          <text x="614" y="268" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">"Together Gets Stronger" • Auto-Formulator • Rp 1,320 ODM</text>
+          <rect x="600" y="232" width="336" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="614" y="251" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">07 • biz-hub</text>
+          <text x="614" y="268" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">"Together Gets Stronger" • Auto-Formulator • Rp 1,320 ODM</text>
 
           <!-- LAYER 5 ROW (Y=294..344) -->
-          <rect x="24" y="294" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
-          <text x="34" y="314" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 5 • PARTICIPANTS</text>
-          <text x="34" y="331" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Family, Partners &amp; VC Capital</text>
+          <rect x="24" y="294" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="34" y="314" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">LAYER 5 • PARTICIPANTS</text>
+          <text x="34" y="331" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Family, Partners &amp; VC Capital</text>
 
-          <rect x="252" y="294" width="218" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
-          <text x="264" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">08 • challengers</text>
-          <text x="264" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">SISTAR Family • Vibe Working • S1-S6</text>
+          <rect x="252" y="294" width="218" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="264" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">08 • challengers</text>
+          <text x="264" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10.50">SISTAR Family • Vibe Working • S1-S6</text>
 
-          <rect x="484" y="294" width="218" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
-          <text x="496" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">09 • partnership</text>
-          <text x="496" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">B2B Factories, Clinics &amp; Distributors</text>
+          <rect x="484" y="294" width="218" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="496" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">09 • partnership</text>
+          <text x="496" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10.50">B2B Factories, Clinics &amp; Distributors</text>
 
-          <rect x="716" y="294" width="220" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
-          <text x="728" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">10 • ir-pitchdeck</text>
-          <text x="728" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">VC &amp; Institutional Conviction Hub</text>
+          <rect x="716" y="294" width="220" height="50" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="728" y="313" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">10 • ir-pitchdeck</text>
+          <text x="728" y="330" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="10.50">VC &amp; Institutional Conviction Hub</text>
 
           <!-- LAYER 6 ROW (Y=356..406) -->
-          <rect x="24" y="356" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2" />
-          <text x="34" y="376" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">LAYER 6 • OPEN FORGE</text>
-          <text x="34" y="393" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Liquidity &amp; Media Amplification</text>
+          <rect x="24" y="356" width="210" height="50" rx="6" fill="url(#scLayerBar)" stroke="#10b981" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="34" y="376" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.25" font-weight="700">LAYER 6 • OPEN FORGE</text>
+          <text x="34" y="393" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Liquidity &amp; Media Amplification</text>
 
-          <rect x="252" y="356" width="330" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
-          <text x="266" y="375" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">11 • biz-directory</text>
-          <text x="266" y="392" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">Open B2B Proposals &amp; Global Corporate Directory</text>
+          <rect x="252" y="356" width="330" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="266" y="375" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">11 • biz-directory</text>
+          <text x="266" y="392" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">Open B2B Proposals &amp; Global Corporate Directory</text>
 
-          <rect x="600" y="356" width="336" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
-          <text x="614" y="375" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">12 • media</text>
-          <text x="614" y="392" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">SISTAR Studio (10 Daily Assets) • The SIGNAL STAR Post</text>
+          <rect x="600" y="356" width="336" height="50" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-shadow)" />
+          <text x="614" y="375" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.83" font-weight="700">12 • media</text>
+          <text x="614" y="392" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="11.08">SISTAR Studio (10 Daily Assets) • The SIGNAL STAR Post</text>
 
           <!-- Quantum Entanglement Vertical & Cross Connectors -->
           <line x1="417" y1="96" x2="417" y2="106" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
@@ -658,7 +661,8 @@
           <line x1="826" y1="282" x2="826" y2="292" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
           <line x1="417" y1="344" x2="417" y2="354" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#scArrowCyan)" />
           <line x1="768" y1="344" x2="768" y2="354" stroke="#4ade80" stroke-width="1.5" marker-end="url(#scArrowGreen)" />
-        </svg>
+       </g> <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-06-sc-architecture-index-html-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">
           Figure 1.1 — Master 6-Layer -&gt; 12-Domain Architectural Blueprint of the Signal Star Universe (*SC), illustrating top-down mathematical governance and continuous quantum entanglement across all 12 web repositories.
         </figcaption>
@@ -669,7 +673,7 @@
         The table below codifies the constitutional role, canonical domain URL, core strategic mandate, and primary quantum entanglement interfaces of each of the 12 domains across our 6 architectural layers:
       </p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width: 14%;">Strategic Layer</th>
@@ -689,7 +693,7 @@
             <td><strong>Layer 1</strong><br/>Root Identity &amp; Core Law</td>
             <td><strong>02 • qubit-algorithm</strong><br/><code>qubit-algorithm.sistarcompany.com</code></td>
             <td>Mathematical &amp; Theoretical Propulsion Engine</td>
-            <td>Replaces Newtonian linear friction (<code>A -&gt; B -&gt; C</code>) with the world's first <strong>Qubit Algorithm™</strong> (Fluctuation, <code>t = 0</code> Superposition, Bell-State Entanglement, WKB Tunneling, Discrete Quantization) and empirical academic proof.</td>
+            <td><span class="sc-pill-emerald">Replaces Newtonian linear friction (<code>A -&gt; B -&gt; C</code>) with the world's first <strong>Qubit Algorithm™</strong> (Fluctuation, <code>t = 0</code> Superposition, Bell-State Entanglement, WKB Tunneling, Discrete Quantization) and empirical academic proof.</span></td>
           </tr>
           <tr>
             <td><strong>Layer 2</strong><br/>Core AI Asset Vault</td>
@@ -701,7 +705,7 @@
             <td><strong>Layer 3</strong><br/>Dual Commercial Platforms</td>
             <td><strong>04 • scarlet-ai</strong><br/><code>scarlet-ai.sistarcompany.com</code></td>
             <td>AI Commerce &amp; AI Trade Int'l Marketplace Platform</td>
-            <td>Industry- and function-specific AI commerce solving legacy trade bottlenecks via <strong>Volume-Wise Deals</strong>, <strong>Collective Group Buying (<code>Buy4Me</code>)</strong>, <strong>K-SURE BNPL</strong>, <strong>70/30 PG Cashback</strong>, and simultaneous <code>t = 0</code> settlement.</td>
+            <td><span class="sc-pill-emerald">Industry- and function-specific AI commerce solving legacy trade bottlenecks via <strong>Volume-Wise Deals</strong>, <strong>Collective Group Buying (<code>Buy4Me</code>)</strong>, <strong>K-SURE BNPL</strong>, <strong>70/30 PG Cashback</strong>, and simultaneous <code>t = 0</code> settlement.</span></td>
           </tr>
           <tr>
             <td><strong>Layer 3</strong><br/>Dual Commercial Platforms</td>
@@ -713,13 +717,13 @@
             <td><strong>Layer 4</strong><br/>Ecosystem Arenas</td>
             <td><strong>06 • biz-galaxy</strong><br/><code>biz-galaxy.sistarcompany.com</code></td>
             <td>Shining Constellation of Industry Verticals &amp; Players</td>
-            <td>Where <code>Cosmo Seed™</code> models and market players fulfill their roles under the <code>Qubit Algorithm™</code> across active verticals: <code>SISTAR MedIX</code>, <code>SISPet</code>, <code>SISPharm</code>, <code>Aquasis</code>, <code>SisAyurvedic</code>, <code>Mind Company</code>, <code>FlexKids AI</code>, <code>SISMii</code>.</td>
+            <td><span class="sc-pill-emerald">Where <code>Cosmo Seed™</code> models and market players fulfill their roles under the <code>Qubit Algorithm™</code> across active verticals: <code>SISTAR MedIX</code>, <code>SISPet</code>, <code>SISPharm</code>, <code>Aquasis</code>, <code>SisAyurvedic</code>, <code>Mind Company</code>, <code>FlexKids AI</code>, <code>SISMii</code>.</span></td>
           </tr>
           <tr>
             <td><strong>Layer 4</strong><br/>Ecosystem Arenas</td>
             <td><strong>07 • biz-hub</strong><br/><code>biz-hub.sistarcompany.com</code></td>
             <td>"Together Gets Stronger" Co-Creation Hub</td>
-            <td>Gravitational center where players unite around shared values and common goals: <code>Auto-Formulator for Vet</code>, Joint ODM Manufacturing, <code>Rp 1,320</code> Micro-Sachet Protocol, <code>Space Sharing &amp; Deliver Together</code>, <code>PetFood Bank Re:D</code>, <code>Mint</code> Franchises.</td>
+            <td><span class="sc-pill-gold">Gravitational center where players unite around shared values and common goals: <code>Auto-Formulator for Vet</code>, Joint ODM Manufacturing, <code>Rp 1,320</code> Micro-Sachet Protocol, <code>Space Sharing &amp; Deliver Together</code>, <code>PetFood Bank Re:D</code>, <code>Mint</code> Franchises.</span></td>
           </tr>
           <tr>
             <td><strong>Layer 5</strong><br/>3-Pillar Participants</td>
@@ -752,7 +756,7 @@
             <td>Archives autonomous content production (<code>SISTAR Studio</code>, <code>Marketing Tool Package by Project</code> — 10 daily media assets) and global journalism (<code>The SIGNAL STAR Post</code>).</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </article>
 
     <!-- ============================================================================
@@ -908,7 +912,8 @@
 
       <!-- INLINE SVG #2: HOW INTELLIGENCE-CORE FEEDS SCARLET-AI AND QUBIT-BIZ -->
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 340" class="notranslate" translate="no" role="img" aria-label="Layer 2 Intelligence-Core feeding real-time RAG vectors, ERP ledgers, and AI agents into Layer 3 Scarlet-AI and Qubit-Biz">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="Layer 2 Intelligence-Core feeding real-time RAG vectors, ERP ledgers, and AI agents into Layer 3 Scarlet-AI and Qubit-Biz">
+  <defs><linearGradient id="sc-audit-01-sc-06-sc-architecture-index-html-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-06-sc-architecture-index-html-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-06-sc-architecture-index-html-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="scBgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16" />
@@ -926,28 +931,28 @@
             </marker>
           </defs>
 
-          <rect x="0" y="0" width="960" height="340" rx="12" fill="url(#scBgGrad2)" />
+          <rect x="0" y="0" width="960" height="340" rx="12" fill="url(#scBgGrad2)" /><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
 
           <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">LAYER 2 -&gt; LAYER 3 QUANTUM PIPELINE • HOW INTELLIGENCE-CORE POWERS SCARLET-AI &amp; QUBIT-BIZ</text>
           <line x1="24" y1="36" x2="936" y2="36" stroke="#334155" stroke-width="1" />
 
           <!-- LEFT: LAYER 2 INTELLIGENCE-CORE VAULT (X=24..410) -->
-          <rect x="24" y="50" width="386" height="270" rx="10" fill="#0f2922" stroke="#10b981" stroke-width="1.5" />
+          <rect x="24" y="50" width="386" height="270" rx="10" fill="#0f2922" stroke="#10b981" stroke-width="1.5"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="40" y="74" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LAYER 2 • 03 intelligence-core (Engine Room)</text>
 
-          <rect x="40" y="88" width="354" height="44" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1" />
+          <rect x="40" y="88" width="354" height="44" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="52" y="106" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">A. Company RAG &amp; *SC AI Centers Int'l</text>
           <text x="52" y="122" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">20-Yr Trade/Customs Corpus • Vet Formularies • Multi-Lingual Embeddings</text>
 
-          <rect x="40" y="142" width="354" height="44" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1" />
+          <rect x="40" y="142" width="354" height="44" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="52" y="160" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">B. Qubit ERP &amp; Overnight Data Factory (10 PM - 8 AM)</text>
           <text x="52" y="176" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Autonomous Nightly Batch • Real-Time BOM &amp; Ledger • 4-Way Clearing State</text>
 
-          <rect x="40" y="196" width="354" height="44" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1" />
+          <rect x="40" y="196" width="354" height="44" rx="6" fill="#1e293b" stroke="#f472b6" stroke-width="1"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="52" y="214" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">C. Agent Builder (SISTAR AB) &amp; Ms. Scarlet</text>
           <text x="52" y="230" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">24/7 Conversational Closer • Reverse-Auction Bot • c.a.n. Action Dispatcher</text>
 
-          <rect x="40" y="250" width="354" height="54" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1" />
+          <rect x="40" y="250" width="354" height="54" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="52" y="268" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">D. Exo-Brain [&amp; I] Physical AI &amp; SISTAR Studio</text>
           <text x="52" y="284" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Wearable Voice/Edge Capture -&gt; 10 Daily Generative Media Assets</text>
 
@@ -965,7 +970,7 @@
           <text x="418" y="270" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="8.5" font-weight="700">Spark &amp; Media -&gt;</text>
 
           <!-- RIGHT TOP: DOMAIN 04 SCARLET-AI (X=550..936, Y=50..176) -->
-          <rect x="550" y="50" width="386" height="126" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5" />
+          <rect x="550" y="50" width="386" height="126" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="568" y="73" fill="#f472b6" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LAYER 3A • 04 scarlet-ai (AI Commerce &amp; Trade)</text>
           <text x="568" y="94" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• Ms. Scarlet 24/7 AI Deal Closer &amp; Automated Customs Matching</text>
           <text x="568" y="112" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• Volume-Wise Tiered Pricing &amp; Collective Group Buying (Buy4Me)</text>
@@ -973,13 +978,14 @@
           <text x="568" y="148" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">-&gt; Result: Simultaneous (t = 0) Multi-Party Trade Settlement</text>
 
           <!-- RIGHT BOTTOM: DOMAIN 05 QUBIT-BIZ (X=550..936, Y=194..320) -->
-          <rect x="550" y="194" width="386" height="126" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+          <rect x="550" y="194" width="386" height="126" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-shadow)" />
           <text x="568" y="217" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">LAYER 3B • 05 qubit-biz (Cosmo Seed™ Platform)</text>
           <text x="568" y="238" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• One Spark -&gt; Structured Cosmo Seed™ Business Model Templates</text>
           <text x="568" y="256" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• 5 Engines: Qubit Factory, Commerce, Star, Link &amp; Flow</text>
           <text x="568" y="274" fill="#ffffff" font-family="Inter, sans-serif" font-size="9.5">• c.a.n. CEO ActionNote &amp; 4-Way Qubit Bank Offsetting Clearinghouse</text>
           <text x="568" y="292" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">-&gt; Result: One Task, Multi Outcomes Cross-Project Entanglement</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-06-sc-architecture-index-html-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">
           Figure 3.1 — Layer 2 (<code>intelligence-core</code>) to Layer 3 (<code>scarlet-ai</code> &amp; <code>qubit-biz</code>) Cognitive Injection Pipeline: Real-time RAG vectors, nightly ERP ledgers, and autonomous AI agents drive twin commercial execution.
         </figcaption>
@@ -1144,7 +1150,7 @@
       </div>
 
       <h3 class="sc-sub-h3">Comparative Mechanics: biz-galaxy (Autonomous Stars) vs. biz-hub (Collective Co-Creation)</h3>
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width: 20%;">Architectural Dimension</th>
@@ -1161,7 +1167,7 @@
           <tr>
             <td><strong>Primary Operational Focus</strong></td>
             <td>Showcasing and scaling distinct industry verticals (<code>MedIX</code>, <code>SISPet</code>, <code>SISPharm</code>, <code>Aquasis</code>, <code>Mind Company</code>, <code>FlexKids AI</code>, <code>SISMii</code>).</td>
-            <td>Operating cross-vertical shared engines (<code>Auto-Formulator R1</code>, Joint ODM, <code>Rp 1,320</code> Sachet Repacking, <code>Space Sharing &amp; Deliver Together</code>).</td>
+            <td><span class="sc-pill-gold">Operating cross-vertical shared engines (<code>Auto-Formulator R1</code>, Joint ODM, <code>Rp 1,320</code> Sachet Repacking, <code>Space Sharing &amp; Deliver Together</code>).</span></td>
           </tr>
           <tr>
             <td><strong>How Market Players Participate</strong></td>
@@ -1174,7 +1180,7 @@
             <td>Collapses unit manufacturing and fulfillment costs across all <code>biz-galaxy</code> stars via shared scale and destructive interference of waste.</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </article>
 
     <!-- ============================================================================
@@ -1270,7 +1276,8 @@
 
       <!-- INLINE SVG #3: TRI-PARTITE PARTICIPANT FLYWHEEL -->
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" role="img" aria-label="Layer 5 Tri-Partite Participant Flywheel showing Challengers, Partnership, and IR-Pitchdeck converging into the *SC Quantum Engine">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="Layer 5 Tri-Partite Participant Flywheel showing Challengers, Partnership, and IR-Pitchdeck converging into the *SC Quantum Engine">
+  <defs><linearGradient id="sc-audit-01-sc-06-sc-architecture-index-html-3-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-06-sc-architecture-index-html-3-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-06-sc-architecture-index-html-3-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
           <defs>
             <linearGradient id="scBgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stop-color="#090d16" />
@@ -1288,26 +1295,26 @@
             </marker>
           </defs>
 
-          <rect x="0" y="0" width="960" height="320" rx="12" fill="url(#scBgGrad3)" />
+          <rect x="0" y="0" width="960" height="320" rx="12" fill="url(#scBgGrad3)" /><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
 
           <text x="24" y="28" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.4">LAYER 5 TRI-PARTITE PARTICIPANT FLYWHEEL • HUMAN FAMILY + B2B PARTNERS + INSTITUTIONAL CAPITAL -&gt; *SC ENGINE</text>
           <line x1="24" y1="36" x2="936" y2="36" stroke="#334155" stroke-width="1" />
 
           <!-- LEFT COLUMN: 3 PARTICIPANT PILLARS (X=24..340) -->
           <!-- Pillar 08 -->
-          <rect x="24" y="50" width="316" height="76" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.4" />
+          <rect x="24" y="50" width="316" height="76" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.4"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="38" y="71" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">08 • challengers (SISTAR Family)</text>
           <text x="38" y="89" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">• Vibe Working ("Human Ideas; Let AI Work")</text>
           <text x="38" y="106" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">• S1-S6 Franchise-ship &amp; Autonomous Deal Origination</text>
 
           <!-- Pillar 09 -->
-          <rect x="24" y="138" width="316" height="76" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.4" />
+          <rect x="24" y="138" width="316" height="76" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.4"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="38" y="159" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">09 • partnership (B2B Counterparties)</text>
           <text x="38" y="177" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">• GMP Factories, Vet Clinics, Pharmacies &amp; Distributors</text>
           <text x="38" y="194" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">• Pre-Aggregated Buy4Me Demand &amp; Joint ODM Production</text>
 
           <!-- Pillar 10 -->
-          <rect x="24" y="226" width="316" height="76" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.4" />
+          <rect x="24" y="226" width="316" height="76" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.4"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="38" y="247" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700">10 • ir-pitchdeck (VC &amp; Institutional Capital)</text>
           <text x="38" y="265" fill="#e2e8f0" font-family="Inter, sans-serif" font-size="9.5">• Holding Equity, Project SPVs &amp; Country Regional JVs</text>
           <text x="38" y="282" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9">• K-SURE BNPL Liquidity &amp; Dual-Return Conviction</text>
@@ -1318,14 +1325,14 @@
           <line x1="340" y1="264" x2="438" y2="212" stroke="#38bdf8" stroke-width="2" marker-end="url(#scArrC3)" />
 
           <!-- CENTER: *SC QUANTUM ENGINE NEXUS (X=444..674, Y=86..266) -->
-          <rect x="444" y="86" width="230" height="180" rx="12" fill="#0f2922" stroke="#10b981" stroke-width="2" />
+          <rect x="444" y="86" width="230" height="180" rx="12" fill="#0f2922" stroke="#10b981" stroke-width="2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="462" y="114" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">*SC QUANTUM ENGINE</text>
           <text x="462" y="134" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="10" font-weight="600">Layers 1 - 4 Core Synthesis:</text>
           <text x="462" y="154" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Qubit Algorithm™ (t = 0)</text>
           <text x="462" y="172" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Intelligence-Core AI Vault</text>
           <text x="462" y="190" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Scarlet-AI &amp; Qubit-Biz</text>
           <text x="462" y="208" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9.5">• Biz-Galaxy &amp; Biz-Hub</text>
-          <rect x="462" y="222" width="194" height="28" rx="5" fill="#064e3b" stroke="#4ade80" stroke-width="1" />
+          <rect x="462" y="222" width="194" height="28" rx="5" fill="#064e3b" stroke="#4ade80" stroke-width="1"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="472" y="240" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="9.5" font-weight="700">One Task -&gt; Multi Outcomes</text>
 
           <!-- OUTBOUND ARROWS TO COMPOUNDING FLYWHEEL OUTPUTS -->
@@ -1334,21 +1341,22 @@
           <line x1="674" y1="212" x2="722" y2="252" stroke="#38bdf8" stroke-width="2" marker-end="url(#scArrC3)" />
 
           <!-- RIGHT COLUMN: COMPOUNDING VALUE OUTPUTS (X=728..936) -->
-          <rect x="728" y="58" width="208" height="68" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.2" />
+          <rect x="728" y="58" width="208" height="68" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="740" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">1. Challenger Wealth &amp; Career</text>
           <text x="740" y="97" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Automated Commission Split &amp;</text>
           <text x="740" y="111" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">S1-S6 Franchise Equity Growth</text>
 
-          <rect x="728" y="142" width="208" height="68" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2" />
+          <rect x="728" y="142" width="208" height="68" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="740" y="164" fill="#fbbf24" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">2. Partner Margin Expansion</text>
           <text x="740" y="181" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">Zero-Inventory ODM Scale &amp;</text>
           <text x="740" y="195" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">70/30 PG Cashback Rebates</text>
 
-          <rect x="728" y="226" width="208" height="68" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+          <rect x="728" y="226" width="208" height="68" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"  filter="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-shadow)" />
           <text x="740" y="248" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="10.5" font-weight="700">3. Institutional Alpha Return</text>
           <text x="740" y="265" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">75-85% SaaS GM + 45-65% Trade</text>
           <text x="740" y="279" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="9">GM Compounding Multiples</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-06-sc-architecture-index-html-3-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
         <figcaption class="sc-svg-caption">
           Figure 6.1 — The Layer 5 Tri-Partite Participant Flywheel: <code>challengers</code> (Talent Family), <code>partnership</code> (B2B Counterparties), and <code>ir-pitchdeck</code> (Institutional Capital) converge into the *SC Quantum Engine to generate simultaneous multi-party returns.
         </figcaption>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*SC | Identity &amp; Signatures (V6) — Quantum AI Commerce &amp; International Trading</title>
   <meta name="description" content="*SC - FOUNDER PROJECTS: In-Depth Business Plan (01-09). Dual-Return Execution across Track I (AI Infrastructure) and Track II (High-Margin Commercial Verticals)." />
   <script type="application/ld+json">
@@ -19,7 +19,19 @@
     }
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>@media(max-width:768px){body.sc-nav-open,}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
     .sc-sec {
       padding: 68px 0 !important;
       border-bottom: 1.5px solid rgba(15, 23, 42, 0.14) !important;
@@ -86,13 +98,7 @@
       margin: 18mm 16mm;
     }
     @media print {
-      html, body {
-        background: #ffffff !important;
-        background-image: none !important;
-        color: #0f172a !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      
       #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
         display: none !important;
       }
@@ -153,19 +159,14 @@
         page-break-after: avoid !important;
       }
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
   <style>
     .sc-prd-page {
       box-sizing: border-box;
@@ -669,9 +670,6 @@
   <main class="sc-prd-page">
     <div class="sc-top-bar">
       <p class="sc-route">sistar company - *sc - identity signatures</p>
-      <div class="sc-action-btns">
-        <button class="sc-btn-pdf" onclick="window.print()">Print / Save as PDF</button>
-      </div>
     </div>
 
     <section class="sc-sec">
@@ -744,50 +742,63 @@
         </div>
       </div>
 
-      <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Qubit Algorithm Four Quantum Laws Applied to Business Architecture">
-          <rect width="960" height="320" rx="12" fill="#0f172a"/>
+      
+  <div class="sc-pipeline-strip" aria-label="*SC Identity &amp; Signatures: One Spark, Infinite Galaxifying execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SPARK</span><p class="sc-p">A focused executive insight or verified market signal starts the cycle.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / INTELLIGENCE</span><p class="sc-p">AI Intelligence-Core and Company RAG align the relevant context.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">*SC Identity &amp; Signatures: One Spark, Infinite Galaxifying turns shared infrastructure into domain-specific action.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / OUTCOME</span><p class="sc-p">Qubit settlement and operating data inform the next opportunity.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for *SC Identity &amp; Signatures: One Spark, Infinite Galaxifying">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For *SC Identity &amp; Signatures: One Spark, Infinite Galaxifying, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Qubit Algorithm Four Quantum Laws Applied to Business Architecture">
+  <defs><linearGradient id="sc-audit-01-sc-04-identity-signatures-index-html-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-04-identity-signatures-index-html-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-04-identity-signatures-index-html-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 01 • THE 4 QUANTUM LAWS OF THE QUBIT ALGORITHM™ IN COMMERCIAL EXECUTION</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="28" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+            <rect x="28" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="135" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">1. FLUCTUATION</text>
             <text x="135" y="102" fill="#38bdf8" font-size="10.5" font-weight="700">Ĥ|0⟩ = E_0|Ψ_spark⟩</text>
             <text x="135" y="126" fill="#ffffff" font-size="10.5">Vacuum Genesis (K = 0)</text>
             <text x="135" y="146" fill="#cbd5e1" font-size="9.5">1 CEO Spark Spawns</text>
             <text x="135" y="164" fill="#cbd5e1" font-size="9.5">Infinite Cosmo Seeds™</text>
-            <rect x="44" y="196" width="182" height="34" rx="5" fill="#064e3b"/>
+            <rect x="44" y="196" width="182" height="34" rx="5" fill="#064e3b" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="135" y="217" fill="#4ade80" font-size="10" font-weight="700">One Spark, Infinite Galaxifying</text>
 
-            <rect x="256" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="256" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="363" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">2. SUPERPOSITION</text>
             <text x="363" y="102" fill="#4ade80" font-size="10.5" font-weight="700">|Φ_Market⟩ (t = 0)</text>
             <text x="363" y="126" fill="#ffffff" font-size="10.5">4-Party State Vector</text>
             <text x="363" y="146" fill="#cbd5e1" font-size="9.5">Buyer ⊗ Maker ⊗ 3PL ⊗ Bank</text>
             <text x="363" y="164" fill="#cbd5e1" font-size="9.5">Zero Settlement Lag</text>
-            <rect x="272" y="196" width="182" height="34" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="272" y="196" width="182" height="34" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="363" y="217" fill="#38bdf8" font-size="10" font-weight="700">Simultaneous Profit at t = 0</text>
 
-            <rect x="484" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+            <rect x="484" y="54" width="214" height="196" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="591" y="80" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">3. ENTANGLEMENT</text>
             <text x="591" y="102" fill="#fde047" font-size="10.5" font-weight="700">|Φ+⟩_AB Bell State</text>
             <text x="591" y="126" fill="#ffffff" font-size="10.5">Non-Local Project Sync</text>
             <text x="591" y="146" fill="#cbd5e1" font-size="9.5">Vet Rx (A) → Customs (B)</text>
             <text x="591" y="164" fill="#cbd5e1" font-size="9.5">→ Sachet ODM (C) → Ads (D)</text>
-            <rect x="500" y="196" width="182" height="34" rx="5" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="500" y="196" width="182" height="34" rx="5" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="591" y="217" fill="#d8b4fe" font-size="10" font-weight="700">One Task, Multi Outcomes</text>
 
-            <rect x="712" y="54" width="220" height="196" rx="8" fill="#1e293b" stroke="#fde047" stroke-width="1.5"/>
+            <rect x="712" y="54" width="220" height="196" rx="8" fill="#1e293b" stroke="#fde047" stroke-width="1.5" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="822" y="80" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">4. WKB TUNNELING</text>
             <text x="822" y="102" fill="#4ade80" font-size="10.5" font-weight="700">T ≈ exp(-2∫...) → 1</text>
             <text x="822" y="126" fill="#ffffff" font-size="10.5">Advance-Fund E_intent</text>
             <text x="822" y="146" fill="#cbd5e1" font-size="9.5">Nullifies V_cap Stock Wall</text>
             <text x="822" y="164" fill="#cbd5e1" font-size="9.5">Cancels Broker Fee Noise</text>
-            <rect x="728" y="196" width="188" height="34" rx="5" fill="#0f172a" stroke="#fde047"/>
+            <rect x="728" y="196" width="188" height="34" rx="5" fill="#0f172a" stroke="#fde047" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
             <text x="822" y="217" fill="#fde047" font-size="10" font-weight="700">Zero-Inventory Market Entry</text>
           </g>
-          <rect x="28" y="264" width="904" height="38" rx="6" fill="rgba(16,185,129,0.12)" stroke="#10b981"/>
+          <rect x="28" y="264" width="904" height="38" rx="6" fill="rgba(16,185,129,0.12)" stroke="#10b981" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-shadow)" />
           <text x="480" y="288" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">UNIVERSAL OPERATING PRINCIPLE: REFUSING TO LIMIT INDUSTRY BOUNDARIES MAXIMIZES CROSS-PROJECT ENTANGLEMENT SYNERGY</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-04-identity-signatures-index-html-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
     </section>
 
@@ -796,7 +807,7 @@
       <h2 class="sc-h2">2. Federated AI Alliance: Together, Against Global AI Giants</h2>
       <p class="sc-lead">While global tech giants weaponize massive capital to monopolize the AI economy, *SC combines <strong>20+ years of international field mastery</strong> with <strong>*SC AI Centers International</strong> to empower regional manufacturers, clinics, and entrepreneurs to compete and win together:</p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:28%;">*SC Identity Signature</th>
@@ -833,10 +844,10 @@
           <tr>
             <td><strong>06. Do Biz &amp; Int&rsquo;l Trading Directly</strong></td>
             <td>Disintermediating middlemen, platform ad taxes, and multi-week settlement lags.</td>
-            <td>Direct factory-to-buyer AI negotiation, K-SURE BNPL trade financing, and 70% PG fee cashback architecture.</td>
+            <td><span class="sc-pill-emerald">Direct factory-to-buyer AI negotiation, K-SURE BNPL trade financing, and 70% PG fee cashback architecture.</span></td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
 
     <section class="sc-sec">
@@ -871,39 +882,41 @@
       </div>
 
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="11 Core Signatures and 15 Entangled Founder Projects Flywheel">
-          <rect width="960" height="320" rx="12" fill="#090d16"/>
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="11 Core Signatures and 15 Entangled Founder Projects Flywheel">
+  <defs><linearGradient id="sc-audit-01-sc-04-identity-signatures-index-html-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-04-identity-signatures-index-html-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-04-identity-signatures-index-html-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 02 • FEDERATED ALLIANCE ("ANTS VS. AI GIANTS") &amp; 4-TIER CAPABILITY FLYWHEEL</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="32" y="56" width="430" height="236" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.6"/>
+            <rect x="32" y="56" width="430" height="236" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.6" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="247" y="84" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">THE 11 SIGNATURES: NEW WAYS IN WORKING &amp; TRADE</text>
             <text x="247" y="110" fill="#ffffff" font-size="11">• 20+ Years Lived Int'l BD × *SC AI Centers Int'l</text>
             <text x="247" y="132" fill="#a7f3d0" font-size="10.5">• Human Focus on Insights; Let AI Work for Commerce</text>
             <text x="247" y="154" fill="#a7f3d0" font-size="10.5">• Do Biz Directly / Do International Trading Directly</text>
             <text x="247" y="176" fill="#a7f3d0" font-size="10.5">• Together, Against Global AI Giants (IATA &amp; IADA)</text>
-            <rect x="56" y="198" width="382" height="72" rx="6" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="56" y="198" width="382" height="72" rx="6" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="247" y="224" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">VIBE WORKING + ZERO-INVENTORY DIRECT TRADE</text>
             <text x="247" y="246" fill="#e2e8f0" font-size="10">30-Min Daily CEO Spark → 24/7 Multi-Agent Execution</text>
 
-            <rect x="498" y="56" width="430" height="236" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6"/>
+            <rect x="498" y="56" width="430" height="236" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="713" y="84" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">4-TIER ENTANGLED FOUNDER PROJECTS (01–15)</text>
-            <rect x="520" y="98" width="386" height="40" rx="5" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="520" y="98" width="386" height="40" rx="5" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="713" y="116" fill="#4ade80" font-size="10.5" font-weight="700">Tier I (01–06): Cognitive OS &amp; AI Core (75–85% GM)</text>
             <text x="713" y="130" fill="#cbd5e1" font-size="9.5">Qubit ERP • Company RAG • Ms. Scarlet • c.a.n. • Exo-Brain • Mind</text>
 
-            <rect x="520" y="144" width="386" height="40" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="520" y="144" width="386" height="40" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="713" y="162" fill="#38bdf8" font-size="10.5" font-weight="700">Tier II (07–09): Vet Bio-Health Anchors (45–65% GM)</text>
             <text x="713" y="176" fill="#cbd5e1" font-size="9.5">Auto Formulator • Vet AI Prescription CDSS • Vet Clinic R&amp;D/Mfg.</text>
 
-            <rect x="520" y="190" width="386" height="40" rx="5" fill="#0f172a" stroke="#34d399"/>
+            <rect x="520" y="190" width="386" height="40" rx="5" fill="#0f172a" stroke="#34d399" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="713" y="208" fill="#34d399" font-size="10.5" font-weight="700">Tier III (10–13): Direct AI Trade &amp; Challengers</text>
             <text x="713" y="222" fill="#cbd5e1" font-size="9.5">Challengers • Import &amp; Distribute • Scarlet.ai • AI Trade Int'l</text>
 
-            <rect x="520" y="236" width="386" height="40" rx="5" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="520" y="236" width="386" height="40" rx="5" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-shadow)" />
             <text x="713" y="254" fill="#d8b4fe" font-size="10.5" font-weight="700">Tier IV (14–15): Infinite Galaxifying Multipliers</text>
             <text x="713" y="268" fill="#cbd5e1" font-size="9.5">Daily 1 VIP Launching Factory • Marketing Tool Package by Project</text>
           </g>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-04-identity-signatures-index-html-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
 
       <div class="sc-callout">

@@ -3,180 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
   <title>*SC — SISTAR Company | Signal Star Universe — One Spark, Infinite Galaxifying</title>
   <meta name="description" content="Signal Star Universe: One Spark, Infinite Galaxifying. One Task, Multi Outcomes — Full-Stack AI Commerce & International AI Trading Spaceship powered by the Qubit Algorithm." />
-  <style>
-    html, body {
-      background: linear-gradient(to right, #f0acf7, #acf7f0, #f7f0ac);
-      margin: 0;
-      padding: 0;
-      color: #1e293b;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    body.sc-nav-open { padding-left: 236px; }
-    body.sc-nav-folded { padding-left: 64px; }
-    @media (max-width: 768px) {
-      body.sc-nav-open, body.sc-nav-folded { padding-left: 0 !important; }
-    }
-
-    /* Unified left edge across the entire page */
-    .sc-landing-wrap {
-      box-sizing: border-box;
-      width: 100%;
-      max-width: min(1180px, 94%);
-      margin: 0 auto;
-      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px;
-      text-align: left;
-    }
-
-    /* === SCREEN 1: HERO BIG TYPOGRAPHY (FLUSH LEFT) === */
-    .sc-hero-block {
-      margin: 0 0 28px 0;
-      padding: 0;
-    }
-    .sc-hero-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.75rem, 5.2vw, 4.45rem);
-      font-weight: 700;
-      color: #1e293b;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      margin: 0 0 20px 0;
-      padding: 0;
-    }
-    .sc-hero-sub {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.18rem, 1.85vw, 1.52rem);
-      font-weight: 500;
-      color: #334155;
-      line-height: 1.48;
-      margin: 0;
-      padding: 0; /* Removed left indent so left line matches exactly */
-      max-width: 960px;
-    }
-
-    /* === SCREEN 2: CORPORATE IDENTITY STATEMENT (FLUSH LEFT) === */
-    .sc-identity-divider {
-      border: 0;
-      border-top: 1px solid rgba(30, 41, 59, 0.16);
-      margin: 28px 0 24px 0;
-      width: 100%;
-      max-width: 960px;
-    }
-    .sc-identity-intro {
-      max-width: 960px;
-      margin: 0 0 44px 0;
-      padding: 0;
-    }
-    .sc-identity-intro p {
-      font-size: clamp(1rem, 1.15vw, 1.12rem);
-      color: #334155;
-      line-height: 1.78;
-      margin: 0 0 16px 0;
-      padding: 0;
-      font-weight: 400;
-    }
-
-    /* === SCREEN 3: CEO COMMENTS (NO BOXES, SPOKEN NARRATIVE STYLE) === */
-    .sc-manifesto-section {
-      max-width: 960px;
-      border-top: 1.5px solid rgba(15, 23, 42, 0.2);
-      padding-top: 36px;
-      margin: 0;
-    }
-    .sc-manifesto-kicker {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.84rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #0f5132;
-      margin: 0 0 12px 0;
-      padding: 0;
-    }
-    .sc-manifesto-h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.6rem, 2.5vw, 2.15rem);
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.26;
-      letter-spacing: -0.025em;
-      margin: 0 0 24px 0;
-      padding: 0;
-    }
-    .sc-manifesto-h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.22rem, 1.8vw, 1.48rem);
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.35;
-      letter-spacing: -0.015em;
-      margin: 36px 0 14px 0;
-      padding: 0;
-    }
-    .sc-p {
-      font-size: 1.02rem;
-      color: #1e293b;
-      line-height: 1.85;
-      margin: 0 0 18px 0;
-      padding: 0;
-    }
-    .sc-spoken-question {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.14rem;
-      font-weight: 700;
-      color: #0f172a;
-      line-height: 1.65;
-      margin: 22px 0;
-      padding: 0;
-    }
-    .sc-academic-heading {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.04rem;
-      font-weight: 700;
-      color: #064e3b;
-      margin: 24px 0 8px 0;
-      padding: 0;
-    }
-    .sc-list {
-      margin: 12px 0 22px 0;
-      padding-left: 20px;
-    }
-    .sc-list li {
-      font-size: 1.01rem;
-      color: #1e293b;
-      line-height: 1.82;
-      margin-bottom: 12px;
-    }
-    .sc-sub-list {
-      margin: 8px 0 12px 0;
-      padding-left: 18px;
-    }
-    .sc-sub-list li {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
-    }
-    a.sc-link {
-      color: #0f5132;
-      font-weight: 700;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    a.sc-link:hover {
-      color: #1d4ed8;
-    }
-    .sc-ceo-signoff {
-      margin-top: 28px;
-      padding: 0;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.28rem;
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: 0.02em;
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "*SC - SISTAR COMPANY",
+    "alternateName": ["SISTAR Company", "Signal Star Universe"],
+    "url": "https://sistarcompany.com",
+    "description": "Signal Star Universe: One Spark, Infinite Galaxifying. One Task, Multi Outcomes — Full-Stack AI Commerce and International AI Trading powered by the Qubit Algorithm."
+  }
+  </script>
   <script>
     (function() {
       var p = location.pathname.replace(/\\/g, "/");
@@ -189,31 +28,191 @@
       document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
     })();
   </script>
-  <style id="sc-landing-only-flush-left">
-    body main.sc-landing-wrap,
-    body main.sc-landing-wrap * {
-      margin-left: 0 !important;
-      padding-left: 0 !important;
-      text-indent: 0 !important;
+  <style id="sc-root-landing-only-style">
+    
+    main.sc-monograph.sc-root-landing {
+      overflow-x: hidden !important;
+      word-break: keep-all !important;
+      overflow-wrap: break-word !important;
       text-align: left !important;
-      border-left: none !important;
     }
-    body main.sc-landing-wrap {
-      margin: 0 auto !important;
-      padding: clamp(20px, 3vh, 36px) clamp(24px, 5vw, 72px) 120px !important;
-    }
-    body main.sc-landing-wrap ul,
-    body main.sc-landing-wrap ol {
+    main.sc-monograph.sc-root-landing ul,
+    main.sc-monograph.sc-root-landing ol {
       list-style-position: inside !important;
     }
+    .sc-route-bar {
+      font-family: 'JetBrains Mono', monospace !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      color: #334155 !important;
+      padding-bottom: 14px !important;
+      margin-bottom: 28px !important;
+      border-bottom: 1px solid rgba(30, 41, 59, 0.14) !important;
+    }
+    .sc-hero-title {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(2.75rem, 5.2vw, 4.45rem) !important;
+      font-weight: 700 !important;
+      color: #1e293b !important;
+      line-height: 1.08 !important;
+      letter-spacing: -0.03em !important;
+      margin: 0 0 20px 0 !important;
+    }
+    .sc-hero-sub {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(1.18rem, 1.85vw, 1.52rem) !important;
+      font-weight: 500 !important;
+      color: #334155 !important;
+      line-height: 1.48 !important;
+      margin: 0 0 28px 0 !important;
+      max-width: 960px !important;
+    }
+    .sc-identity-divider {
+      border: 0 !important;
+      border-top: 1px solid rgba(30, 41, 59, 0.16) !important;
+      margin: 28px 0 24px 0 !important;
+      max-width: 960px !important;
+    }
+    .sc-identity-intro {
+      max-width: 960px !important;
+      margin-bottom: 44px !important;
+    }
+    .sc-identity-intro p {
+      font-size: clamp(1rem, 1.15vw, 1.12rem) !important;
+      color: #334155 !important;
+      line-height: 1.78 !important;
+      margin: 0 0 16px 0 !important;
+    }
+    .sc-manifesto-section {
+      max-width: 960px !important;
+      border-top: 1.5px solid rgba(15, 23, 42, 0.2) !important;
+      padding-top: 36px !important;
+    }
+    .sc-manifesto-kicker {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 0.84rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      color: #0f5132 !important;
+      margin: 0 0 12px 0 !important;
+    }
+    .sc-manifesto-h2 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(1.6rem, 2.5vw, 2.15rem) !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.26 !important;
+      letter-spacing: -0.025em !important;
+      margin: 0 0 24px 0 !important;
+    }
+    .sc-manifesto-h3 {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: clamp(1.22rem, 1.8vw, 1.48rem) !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.35 !important;
+      margin: 36px 0 14px 0 !important;
+    }
+    .sc-p {
+      font-size: 1.02rem !important;
+      color: #1e293b !important;
+      line-height: 1.85 !important;
+      margin: 0 0 18px 0 !important;
+    }
+    .sc-spoken-question {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.14rem !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+      line-height: 1.65 !important;
+      margin: 22px 0 !important;
+    }
+    .sc-academic-heading {
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.04rem !important;
+      font-weight: 700 !important;
+      color: #064e3b !important;
+      margin: 24px 0 8px 0 !important;
+    }
+    .sc-list { margin: 12px 0 22px 0 !important; }
+    .sc-list li {
+      font-size: 1.01rem !important;
+      color: #1e293b !important;
+      line-height: 1.82 !important;
+      margin-bottom: 12px !important;
+    }
+    .sc-sub-list { margin: 8px 0 12px 0 !important; }
+    .sc-sub-list li {
+      font-size: 0.98rem !important;
+      margin-bottom: 8px !important;
+    }
+    a.sc-link {
+      color: #0f5132 !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px !important;
+    }
+    .sc-ceo-signoff {
+      margin-top: 28px !important;
+      font-family: 'Space Grotesk', sans-serif !important;
+      font-size: 1.28rem !important;
+      font-weight: 700 !important;
+      color: #0f172a !important;
+    }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
+  <script id="sc-smart-root-links">
+    document.addEventListener("DOMContentLoaded", function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var lower = p.toLowerCase();
+      var scWebIdx = lower.indexOf("/sc_web/");
+      var isLocal = (location.protocol === "file:" || location.hostname === "localhost" || location.hostname === "127.0.0.1");
+      var hostToFolder = {
+        "sistarcompany.com": "sc-sistarcompany",
+        "qubit-algorithm.sistarcompany.com": "qubit-algorithm",
+        "intelligence-core.sistarcompany.com": "intelligence-core",
+        "scarlet-ai.sistarcompany.com": "scarlet-ai",
+        "qubit-biz.sistarcompany.com": "qubit-biz",
+        "biz-galaxy.sistarcompany.com": "biz-galaxy",
+        "biz-hub.sistarcompany.com": "biz-hub",
+        "challenger.sistarcompany.com": "challengers",
+        "partnership.sistarcompany.com": "partnership",
+        "ir-pitchdeck.sistarcompany.com": "ir-pitchdeck",
+        "biz-directory.sistarcompany.com": "biz-directory",
+        "media.sistarcompany.com": "media"
+      };
+      document.querySelectorAll("a.sc-link").forEach(function(a) {
+        var href = a.getAttribute("href") || "";
+        if (isLocal && scWebIdx !== -1 && href.indexOf("https://") === 0) {
+          try {
+            var urlObj = new URL(href);
+            var folder = hostToFolder[urlObj.hostname];
+            if (folder) {
+              var localBase = p.substring(0, scWebIdx + 8) + folder;
+              var subPath = (!urlObj.pathname || urlObj.pathname === "/") ? "/index.html" : urlObj.pathname;
+              a.setAttribute("href", localBase + subPath);
+            }
+          } catch (e) {}
+        }
+      });
+    });
+  </script>
 </head>
 <body class="sc-nav-open">
-  <main class="sc-landing-wrap">
+  <main class="sc-monograph sc-root-landing">
 
-    <!-- ============================================================================
-         FIRST SCREEN: LARGE HERO TYPOGRAPHY (FLUSH LEFT, SHIFTED HIGHER)
-         ============================================================================ -->
+    <!-- STANDARD TOP ROUTE BAR -->
+    <div class="sc-route sc-route-bar notranslate" translate="no">
+      sistar company - *sc | signal star universe flagship portal
+    </div>
+
+    <!-- FIRST SCREEN: LARGE HERO TYPOGRAPHY -->
     <section class="sc-hero-block">
       <h1 class="sc-hero-title">
         Signal Star<br/>
@@ -226,18 +225,127 @@
       </p>
     </section>
 
-    <!-- ============================================================================
-         SECOND SCREEN: CORPORATE IDENTITY STATEMENT (FLUSH LEFT)
-         ============================================================================ -->
+    <!-- SECOND SCREEN: CORPORATE IDENTITY STATEMENT -->
     <hr class="sc-identity-divider" />
     <section class="sc-identity-intro">
       <p>*sc - sistar company is fully integrating the SISTAR family groups and proudly launching our new corporate identity.</p>
       <p>Pioneering new ways of working and doing global business, *sc operates as a Full-Stack AI Commerce &amp; International AI Trading enterprise—equipped with our proprietary Qubit Algorithm™, developed by *sc for brand-new AI commerce and global trading.</p>
     </section>
 
-    <!-- ============================================================================
-         CEO COMMENTS & EXECUTIVE INTRODUCTION (NO BOXES, SPOKEN COMMENTARY)
-         ============================================================================ -->
+    
+  <div class="sc-pipeline-strip" aria-label="Signal Star Universe One Spark, Infinite Galaxifying execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SPARK</span><p class="sc-p">A focused executive insight or verified market signal starts the cycle.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / INTELLIGENCE</span><p class="sc-p">AI Intelligence-Core and Company RAG align the relevant context.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">Signal Star Universe One Spark, Infinite Galaxifying turns shared infrastructure into domain-specific action.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / OUTCOME</span><p class="sc-p">Qubit settlement and operating data inform the next opportunity.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for Signal Star Universe One Spark, Infinite Galaxifying">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For Signal Star Universe One Spark, Infinite Galaxifying, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
+      <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="Signal Star triple control towers connect one strategic spark to AI execution and global outcomes">
+  <defs><linearGradient id="sc-audit-index-html-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-index-html-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-index-html-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+        <defs>
+          <linearGradient id="rootSignalGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0f172a"/>
+            <stop offset="1" stop-color="#0f5132"/>
+          </linearGradient>
+          <filter id="rootSignalShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#020617" flood-opacity=".28"/>
+          </filter>
+          <pattern id="rootSignalGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M24 0H0V24" fill="none" stroke="#94a3b8" stroke-opacity=".14" stroke-width=".7"/>
+          </pattern>
+          <marker id="rootSignalArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0 1L9 5L0 9Z" fill="#34d399"/>
+          </marker>
+        </defs>
+        <rect width="960" height="360" rx="14" fill="url(#rootSignalGradient)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
+        <rect width="960" height="360" rx="14" fill="url(#rootSignalGrid)" filter="url(#sc-audit-index-html-1-shadow)" />
+        <text x="32" y="34" fill="#a7f3d0" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" letter-spacing="1.2">SIGNAL STAR COMMAND -> ONE SPARK, MULTI-COORDINATE EXECUTION</text>
+        <g filter="url(#rootSignalShadow)">
+          <rect x="34" y="74" width="260" height="174" rx="12" fill="#0f5132" stroke="#34d399" stroke-width="1.5" filter="url(#sc-audit-index-html-1-shadow)" />
+          <text x="54" y="106" fill="#6ee7b7" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">01 / STRATEGIC NORTH STAR</text>
+          <text x="54" y="138" fill="#f8fafc" font-family="Inter, sans-serif" font-size="13">SISTAR Company (*SC)</text>
+          <text x="54" y="163" fill="#d1fae5" font-family="Inter, sans-serif" font-size="12">Identity, governance, 8 global bases</text>
+          <text x="54" y="188" fill="#d1fae5" font-family="Inter, sans-serif" font-size="12">IATA + IADA federated alliances</text>
+          <text x="54" y="222" fill="#fde68a" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">One Spark -> Infinite Galaxifying</text>
+
+          <rect x="350" y="74" width="260" height="174" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-index-html-1-shadow)" />
+          <text x="370" y="106" fill="#7dd3fc" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">02 / QUANTUM AI CORE</text>
+          <text x="370" y="138" fill="#f8fafc" font-family="Inter, sans-serif" font-size="13">Qubit Algorithm™ + Intelligence-Core</text>
+          <text x="370" y="163" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">Company RAG + Qubit ERP</text>
+          <text x="370" y="188" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">Autonomous agents + Data Factory</text>
+          <text x="370" y="222" fill="#7dd3fc" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">Entanglement -> Coordinated action</text>
+
+          <rect x="666" y="74" width="260" height="174" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" filter="url(#sc-audit-index-html-1-shadow)" />
+          <text x="686" y="106" fill="#fcd34d" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">03 / MARKET OUTCOMES</text>
+          <text x="686" y="138" fill="#f8fafc" font-family="Inter, sans-serif" font-size="13">12 connected public domains</text>
+          <text x="686" y="163" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">15 Founder Projects -> shared capability</text>
+          <text x="686" y="188" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="12">Partners, operators, investors</text>
+          <text x="686" y="222" fill="#fcd34d" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">t = 0 -> Multi-party value realization</text>
+        </g>
+        <path d="M294 160H342M610 160H658" fill="none" stroke="#34d399" stroke-width="2.4" marker-end="url(#rootSignalArrow)"/>
+        <path d="M884 268C760 326 200 326 76 268" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#rootSignalArrow)"/>
+        <rect x="338" y="276" width="284" height="36" rx="18" fill="#0f172a" stroke="#34d399" stroke-opacity=".7" filter="url(#sc-audit-index-html-1-shadow)" />
+        <text x="480" y="299" text-anchor="middle" fill="#a7f3d0" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">24/7 FEEDBACK -> RAG -> NEXT EXECUTION</text>
+        <rect x="744" y="24" width="180" height="28" rx="14" fill="#064e3b" stroke="#34d399" filter="url(#sc-audit-index-html-1-shadow)" />
+        <text x="834" y="42" text-anchor="middle" fill="#d1fae5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">8 BASES / 12 DOMAINS</text>
+      <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-index-html-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
+      <figcaption>Signal Star governance links one strategic spark to shared AI execution and federated global outcomes.</figcaption>
+    </figure>
+
+    <figure class="sc-svg-frame">
+      <svg viewBox="0 0 960 360" class="notranslate" translate="no" role="img" aria-label="The six-layer Signal Star Universe links twelve domain roles from root law to media and directory">
+  <defs><linearGradient id="sc-audit-index-html-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-index-html-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-index-html-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+        <defs>
+          <linearGradient id="rootLayersGradient" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#0f172a"/>
+            <stop offset=".55" stop-color="#1e293b"/>
+            <stop offset="1" stop-color="#0f5132"/>
+          </linearGradient>
+          <filter id="rootLayersShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#020617" flood-opacity=".24"/>
+          </filter>
+          <pattern id="rootLayersGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+            <path d="M24 0H0V24" fill="none" stroke="#94a3b8" stroke-opacity=".12" stroke-width=".7"/>
+          </pattern>
+          <marker id="rootLayersArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0 1L9 5L0 9Z" fill="#34d399"/>
+          </marker>
+        </defs>
+        <rect width="960" height="360" rx="14" fill="url(#rootLayersGradient)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
+        <rect width="960" height="360" rx="14" fill="url(#rootLayersGrid)" filter="url(#sc-audit-index-html-2-shadow)" />
+        <text x="30" y="30" fill="#a7f3d0" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="700" letter-spacing="1.1">SIX-LAYER / TWELVE-DOMAIN SIGNAL STAR TOPOLOGY</text>
+        <g filter="url(#rootLayersShadow)" font-family="Inter, sans-serif">
+          <g fill="#1e293b" stroke="#34d399" stroke-opacity=".72">
+            <rect x="30" y="48" width="900" height="42" rx="8" filter="url(#sc-audit-index-html-2-shadow)" />
+            <rect x="30" y="96" width="900" height="42" rx="8" filter="url(#sc-audit-index-html-2-shadow)" />
+            <rect x="30" y="144" width="900" height="42" rx="8" filter="url(#sc-audit-index-html-2-shadow)" />
+            <rect x="30" y="192" width="900" height="42" rx="8" filter="url(#sc-audit-index-html-2-shadow)" />
+            <rect x="30" y="240" width="900" height="42" rx="8" filter="url(#sc-audit-index-html-2-shadow)" />
+            <rect x="30" y="288" width="900" height="42" rx="8" filter="url(#sc-audit-index-html-2-shadow)" />
+          </g>
+          <g font-size="12">
+            <text x="48" y="74" fill="#6ee7b7" font-weight="700">LAYER 1 / ROOT IDENTITY &amp; LAW</text><text x="330" y="74" fill="#f8fafc">sc-sistarcompany  +  qubit-algorithm</text>
+            <text x="48" y="122" fill="#7dd3fc" font-weight="700">LAYER 2 / AI ASSET VAULT</text><text x="330" y="122" fill="#f8fafc">intelligence-core</text>
+            <text x="48" y="170" fill="#f9a8d4" font-weight="700">LAYER 3 / COMMERCIAL PLATFORMS</text><text x="330" y="170" fill="#f8fafc">scarlet-ai  +  qubit-biz</text>
+            <text x="48" y="218" fill="#fcd34d" font-weight="700">LAYER 4 / ECOSYSTEM ARENAS</text><text x="330" y="218" fill="#f8fafc">biz-galaxy  +  biz-hub</text>
+            <text x="48" y="266" fill="#c4b5fd" font-weight="700">LAYER 5 / PARTICIPANTS</text><text x="330" y="266" fill="#f8fafc">challengers  +  partnership  +  ir-pitchdeck</text>
+            <text x="48" y="314" fill="#93c5fd" font-weight="700">LAYER 6 / OPEN DIRECTORY &amp; MEDIA</text><text x="330" y="314" fill="#f8fafc">biz-directory  +  media</text>
+          </g>
+        </g>
+        <path d="M916 318C944 318 944 60 916 60" fill="none" stroke="#34d399" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#rootLayersArrow)"/>
+        <rect x="748" y="12" width="182" height="26" rx="13" fill="#064e3b" stroke="#34d399" filter="url(#sc-audit-index-html-2-shadow)" />
+        <text x="839" y="29" text-anchor="middle" fill="#d1fae5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="700">1 SPARK -> 12 DOMAINS</text>
+      <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-index-html-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
+      <figcaption>The domain topology separates distinct operating roles while sharing one constitutional and AI engine.</figcaption>
+    </figure>
+
+    <!-- CEO COMMENTS & EXECUTIVE INTRODUCTION -->
     <section class="sc-manifesto-section">
       <p class="sc-manifesto-kicker">CEO COMMENTS &amp; EXECUTIVE INTRODUCTION</p>
       <h2 class="sc-manifesto-h2">"Not Reckless Diversification, But One Quantum Engine — The New Global Business Standard in the AI Era, *SC (SISTAR Company)"</h2>
@@ -254,6 +362,8 @@
         'The vision and ideas are extraordinary. But realistically, how can you possibly manage all of these projects at the same time? Isn't this reckless over-diversification?'
       </p>
 
+      <div class="sc-callout"><span class="sc-pill-emerald">EXECUTIVE QUESTION -> OPERATING ANSWER</span></div>
+
       <p class="sc-p">
         If we were attempting to execute these initiatives using the conventional approach—hiring dozens of new staff for every project, deploying massive upfront capital to build isolated factories and warehouses, and passing documents step-by-step under <strong>Classical Newtonian Linear Business Rules (A -&gt; B -&gt; C)</strong>—your concern would be 100% valid. It would not merely be difficult; it would be guaranteed to fail.
       </p>
@@ -266,7 +376,6 @@
         Let me share with you the <strong>four definitive reasons</strong> why this is not reckless diversification, why it represents the inevitable business standard of the AI era, and why <strong>*SC</strong> uniquely possesses the core competencies to operate this vast ecosystem in reality.
       </p>
 
-      <!-- PILLAR 1 -->
       <h3 class="sc-manifesto-h3">1. Paradigm Shift: From Newtonian Sequential Rules to Quantum Simultaneity (Qubit Algorithm™)</h3>
 
       <p class="sc-p">
@@ -292,7 +401,6 @@
         This is by no means a contrived marketing buzzword that forces everyday business activities into the academic frame of quantum mechanics. Through more than 20 years of frontline global field experience, we first identified structural problems, agonized over practical solutions, and conducted exhaustive research into the path forward in the rapidly evolving AI era to <strong>derive our real-world business solutions first</strong>. We then discovered that the operating principles of these solutions align precisely with the fundamental laws of quantum mechanics that govern the universe—and united them to academically codify and mathematically quantify our solutions for this era.
       </p>
 
-      <!-- PILLAR 2 -->
       <h3 class="sc-manifesto-h3">2. Why *SC Uniquely Succeeds Where Pure IT Startups Cannot — 20 Years of Global Field Mastery x Autonomous AI Engine</h3>
 
       <p class="sc-p">
@@ -312,7 +420,6 @@
         <li><strong>The 15 <a class="sc-link" href="./01_sc/08_sc-founder-projects-_ver02/index.html">Founder Projects</a> Are Not Scattered Ventures, But a Foundational Capability Multiplier:</strong> Our initial 15 projects are precision-engineered to: (1) fully internalize our proprietary AI/ERP operating system (100% admin cost savings), (2) generate immediate cashflow and proprietary data in high-margin veterinary and bio-health specialties where we hold 20 years of know-how, and (3) scale into global AI trade platforms and a Daily Launching Factory.</li>
       </ul>
 
-      <!-- PILLAR 3 -->
       <h3 class="sc-manifesto-h3">3. A New Window of Opportunity to Match Giant Platforms — Global Alliance &amp; A New Standard of Work</h3>
 
       <p class="sc-p">
@@ -351,7 +458,6 @@
         </li>
       </ol>
 
-      <!-- PILLAR 4 -->
       <h3 class="sc-manifesto-h3">4. Join Us Not as a Spectator, But as a Leading Star of the New Business Galaxy</h3>
 
       <p class="sc-p">

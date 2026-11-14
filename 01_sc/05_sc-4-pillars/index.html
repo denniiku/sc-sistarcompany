@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*SC | SC 4 Pillars — Quantum Paradigm, Int&rsquo;l AI Mastery, Federated Alliance &amp; 15 Founder Projects</title>
   <meta name="description" content="*SC - FOUNDER PROJECTS: In-Depth Business Plan (01-09). Dual-Return Execution across Track I (AI Infrastructure) and Track II (High-Margin Commercial Verticals)." />
   <script type="application/ld+json">
@@ -19,7 +19,19 @@
     }
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}body.sc-nav-folded{padding-left:64px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>@media(max-width:768px){body.sc-nav-open,}    /* === SPACIOUS 2-COLUMN EDITORIAL & PURE WHITE PDF OVERRIDE === */
     .sc-sec {
       padding: 68px 0 !important;
       border-bottom: 1.5px solid rgba(15, 23, 42, 0.14) !important;
@@ -86,13 +98,7 @@
       margin: 18mm 16mm;
     }
     @media print {
-      html, body {
-        background: #ffffff !important;
-        background-image: none !important;
-        color: #0f172a !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      
       #sc-left-nav, .sc-action-btns, .sc-nav-toggle, .sc-top-bar {
         display: none !important;
       }
@@ -153,19 +159,14 @@
         page-break-after: avoid !important;
       }
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
   <style>
     .sc-prd-page {
       box-sizing: border-box;
@@ -669,9 +670,6 @@
   <main class="sc-prd-page">
     <div class="sc-top-bar">
       <p class="sc-route">sistar company - *sc - sc 4 pillars</p>
-      <div class="sc-action-btns">
-        <button class="sc-btn-pdf" onclick="window.print()">Print / Save as PDF</button>
-      </div>
     </div>
 
     <!-- HERO & EXECUTIVE OVERVIEW -->
@@ -720,7 +718,7 @@
 
       <p class="sc-lead">Traditional business models built on classical <strong>Newtonian Linear Physics</strong> ($A \rightarrow B \rightarrow C$: Capital Input &rarr; Manufacturing &rarr; Customs &rarr; Wholesale &rarr; Consumer) are trapped in sequential friction, time delays ($\Delta t > 0$), and heavy inventory/capital walls. <strong>*SC transplants the five fundamental laws of Quantum Mechanics directly into our AI business architecture (Qubit Algorithm&trade;):</strong></p>
 
-      <table class="sc-table">
+      <div class="sc-table-wrap"><table class="sc-table">
         <thead>
           <tr>
             <th style="width:26%;">Core Principle of Quantum Physics</th>
@@ -735,7 +733,7 @@
             <td>Even in a vacuum state without massive upfront capital or physical inventory ($|0\rangle$), a single human insight or market intent (<strong>One Spark</strong>) initiates a quantum fluctuation—autonomously branching into dozens of derivative business models via the <strong>Cosmo Seed&trade;</strong> framework.</td>
           </tr>
           <tr>
-            <td><strong>2. Quantum Superposition</strong><br/><span class="notranslate" style="font-family:monospace; font-size:0.9rem; color:#0f5132;">|&Phi;_Market&rangle; (t = 0)</span></td>
+            <td><span class="sc-pill-emerald"><strong>2. Quantum Superposition</strong><br/><span class="notranslate" style="font-family:monospace; font-size:0.9rem; color:#0f5132;">|&Phi;_Market&rangle; (t = 0)</span></span></td>
             <td><strong>Simultaneous Multi-Player Profit ($t=0$)</strong><br/>(Zero-Latency Value Realization)</td>
             <td>Locks the interests of Buyer, Seller, Manufacturer, Logistics, and Financial Institution (Bank) into a single superposed state vector. At the exact moment a transaction is confirmed, every participant realizes profit simultaneously without settlement lag ($t=0$).</td>
           </tr>
@@ -752,41 +750,54 @@
           <tr>
             <td><strong>5. Wave-Particle Duality &amp; Destructive Interference</strong></td>
             <td><strong>Frictionless Direct Trade</strong><br/>(Eliminating Broker Markups &amp; Fee Noise)</td>
-            <td>Unobserved market demand waves collapse into concrete transaction particles the instant our AI measures a verified deal signal. Non-quantum classical noise—brokerage fees, payment delays, and bureaucratic red tape—is canceled out via destructive wave interference.</td>
+            <td><span class="sc-pill-emerald">Unobserved market demand waves collapse into concrete transaction particles the instant our AI measures a verified deal signal. Non-quantum classical noise—brokerage fees, payment delays, and bureaucratic red tape—is canceled out via destructive wave interference.</span></td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
 
-      <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pillar I and Pillar II: Quantum Physics Laws and 20+ Years International Mastery">
-          <rect width="960" height="320" rx="12" fill="#0f172a"/>
+      
+  <div class="sc-pipeline-strip" aria-label="*SC 4 Pillars: The Quantum &amp; International AI Architecture execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SPARK</span><p class="sc-p">A focused executive insight or verified market signal starts the cycle.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / INTELLIGENCE</span><p class="sc-p">AI Intelligence-Core and Company RAG align the relevant context.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">*SC 4 Pillars: The Quantum &amp; International AI Architecture turns shared infrastructure into domain-specific action.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / OUTCOME</span><p class="sc-p">Qubit settlement and operating data inform the next opportunity.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for *SC 4 Pillars: The Quantum &amp; International AI Architecture">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For *SC 4 Pillars: The Quantum &amp; International AI Architecture, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pillar I and Pillar II: Quantum Physics Laws and 20+ Years International Mastery">
+  <defs><linearGradient id="sc-audit-01-sc-05-sc-4-pillars-index-html-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-05-sc-4-pillars-index-html-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 01 • PILLAR I (QUANTUM MECHANICS) × PILLAR II (20+ YRS INT'L MASTERY &amp; AI CENTERS)</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="30" y="54" width="434" height="238" rx="10" fill="#1e293b" stroke="#4ade80" stroke-width="1.6"/>
+            <rect x="30" y="54" width="434" height="238" rx="10" fill="#1e293b" stroke="#4ade80" stroke-width="1.6" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="247" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">PILLAR I • 5 LAWS OF QUBIT ALGORITHM™</text>
-            <rect x="50" y="94" width="394" height="32" rx="5" fill="#0f172a" stroke="#10b981"/>
+            <rect x="50" y="94" width="394" height="32" rx="5" fill="#0f172a" stroke="#10b981" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="247" y="114" fill="#ffffff" font-size="10.5">1. Quantum Fluctuation: Ĥ|0⟩ = E_0|Ψ_spark⟩ (Zero-CapEx Genesis)</text>
-            <rect x="50" y="132" width="394" height="32" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="50" y="132" width="394" height="32" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="247" y="152" fill="#ffffff" font-size="10.5">2. Superposition: |Φ_Market⟩ Simultaneous Profit at t = 0</text>
-            <rect x="50" y="170" width="394" height="32" rx="5" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="50" y="170" width="394" height="32" rx="5" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="247" y="190" fill="#ffffff" font-size="10.5">3. Entanglement: |Φ+⟩_AB One Task, Multi Outcomes (Δt → 0)</text>
-            <rect x="50" y="208" width="394" height="32" rx="5" fill="#0f172a" stroke="#fde047"/>
+            <rect x="50" y="208" width="394" height="32" rx="5" fill="#0f172a" stroke="#fde047" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="247" y="228" fill="#ffffff" font-size="10.5">4. WKB Tunneling: T → 1 Advance Demand Bypasses Stock Wall</text>
-            <rect x="50" y="246" width="394" height="32" rx="5" fill="#0f172a" stroke="#34d399"/>
+            <rect x="50" y="246" width="394" height="32" rx="5" fill="#0f172a" stroke="#34d399" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="247" y="266" fill="#ffffff" font-size="10.5">5. Destructive Interference: Cancels Broker &amp; PG Fee Noise</text>
 
-            <rect x="496" y="54" width="434" height="238" rx="10" fill="#064e3b" stroke="#38bdf8" stroke-width="1.6"/>
+            <rect x="496" y="54" width="434" height="238" rx="10" fill="#064e3b" stroke="#38bdf8" stroke-width="1.6" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="713" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">PILLAR II • 20+ YRS OVERSEAS BD × AI CENTERS</text>
             <text x="713" y="108" fill="#ffffff" font-size="11" font-weight="600">Why Pure Software Startups Cannot Replicate *SC:</text>
             <text x="713" y="132" fill="#a7f3d0" font-size="10.5">• Active Import Permits (BPOM / Kementan / FDA)</text>
             <text x="713" y="154" fill="#a7f3d0" font-size="10.5">• Direct Korean Bio/Vet OEM Alliances (CHD, SungBo, Iskhan)</text>
             <text x="713" y="176" fill="#a7f3d0" font-size="10.5">• K-SURE Export Guarantee &amp; Regional B2B BNPL Lines</text>
             <text x="713" y="198" fill="#a7f3d0" font-size="10.5">• 8 Global Bases (KR, ID, VN, JP, CN, US, SG, IN)</text>
-            <rect x="520" y="216" width="386" height="58" rx="6" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="520" y="216" width="386" height="58" rx="6" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-shadow)" />
             <text x="713" y="240" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">ENCODED INTO *SC AI CENTERS INT'L</text>
             <text x="713" y="258" fill="#e2e8f0" font-size="10">24/7 Data Factory + Zero-Entropy Vector RAG + Multi-Agent Execution</text>
           </g>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
     </section>
 
@@ -877,11 +888,12 @@
       </div>
 
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pillar III and Pillar IV: Federated Alliance and 15 Entangled Founder Projects">
-          <rect width="960" height="320" rx="12" fill="#090d16"/>
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pillar III and Pillar IV: Federated Alliance and 15 Entangled Founder Projects">
+  <defs><linearGradient id="sc-audit-01-sc-05-sc-4-pillars-index-html-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-01-sc-05-sc-4-pillars-index-html-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-01-sc-05-sc-4-pillars-index-html-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 02 • PILLAR III (FEDERATED ALLIANCE) × PILLAR IV (15 ENTANGLED FOUNDER PROJECTS)</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="30" y="56" width="210" height="190" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+            <rect x="30" y="56" width="210" height="190" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-shadow)" />
             <text x="135" y="82" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">TIER 1 (FP 01–06)</text>
             <text x="135" y="104" fill="#ffffff" font-size="10.5" font-weight="600">Quantum Cognitive OS</text>
             <text x="135" y="126" fill="#cbd5e1" font-size="9.5">Qubit ERP • Company RAG</text>
@@ -889,7 +901,7 @@
             <text x="135" y="166" fill="#cbd5e1" font-size="9.5">Exo-Brain • Mind Co.</text>
             <text x="135" y="216" fill="#4ade80" font-size="10.5" font-weight="700">75–85% SaaS GM</text>
 
-            <rect x="258" y="56" width="210" height="190" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="258" y="56" width="210" height="190" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-shadow)" />
             <text x="363" y="82" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">TIER 2 (FP 07–09)</text>
             <text x="363" y="104" fill="#ffffff" font-size="10.5" font-weight="600">Vet Bio-Health Anchor</text>
             <text x="363" y="126" fill="#cbd5e1" font-size="9.5">Auto Formulator (Rp 1,320)</text>
@@ -897,7 +909,7 @@
             <text x="363" y="166" fill="#cbd5e1" font-size="9.5">Vet Clinic R&amp;D &amp; Mfg.</text>
             <text x="363" y="216" fill="#38bdf8" font-size="10.5" font-weight="700">45–65% Clinical GM</text>
 
-            <rect x="486" y="56" width="210" height="190" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.6"/>
+            <rect x="486" y="56" width="210" height="190" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1.6" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-shadow)" />
             <text x="591" y="82" fill="#34d399" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">TIER 3 (FP 10–13)</text>
             <text x="591" y="104" fill="#ffffff" font-size="10.5" font-weight="600">Federated Direct Trade</text>
             <text x="591" y="126" fill="#a7f3d0" font-size="9.5">Sistar Challengers Int'l</text>
@@ -905,7 +917,7 @@
             <text x="591" y="166" fill="#a7f3d0" font-size="9.5">Scarlet.ai • AI Trade (t=0)</text>
             <text x="591" y="216" fill="#fde047" font-size="10.5" font-weight="700">$0 Fixed HR Expansion</text>
 
-            <rect x="714" y="56" width="216" height="190" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.6"/>
+            <rect x="714" y="56" width="216" height="190" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.6" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-shadow)" />
             <text x="822" y="82" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700">TIER 4 (FP 14–15)</text>
             <text x="822" y="104" fill="#ffffff" font-size="10.5" font-weight="600">Galaxifying Multiplier</text>
             <text x="822" y="126" fill="#cbd5e1" font-size="9.5">Daily 1 VIP Factory</text>
@@ -913,9 +925,10 @@
             <text x="822" y="166" fill="#cbd5e1" font-size="9.5">10x Daily Video/Media</text>
             <text x="822" y="216" fill="#d8b4fe" font-size="10.5" font-weight="700">85%+ Cloning GM</text>
           </g>
-          <rect x="30" y="262" width="900" height="40" rx="6" fill="rgba(255,255,255,0.06)" stroke="#34d399"/>
+          <rect x="30" y="262" width="900" height="40" rx="6" fill="rgba(255,255,255,0.06)" stroke="#34d399" filter="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-shadow)" />
           <text x="480" y="286" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">PARTNER &amp; IR THESIS: 4 INTERLOCKED PILLARS DELIVERING UNFAIR MOAT + NON-DILUTIVE CASHFLOW + EXPONENTIAL SCALE</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-01-sc-05-sc-4-pillars-index-html-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
 
       <div class="sc-callout">

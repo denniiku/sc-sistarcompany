@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=block" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <title>*sc | pt sistar indonesia — sistar company - sistar intl - pt sistar indonesia</title>
   <meta name="description" content="PT. SISTAR Indonesia & Global SISTAR Bases: A connected ecosystem of complementary businesses across biopharmaceuticals, digital marketplaces, pet care, rapid delivery, and creative media." />
   <script type="application/ld+json">
@@ -19,7 +19,19 @@
     "description": "A connected ecosystem of complementary businesses delivering healthier, happier, and better lifestyles across Indonesia, Korea, America, and global markets — spanning Sistar Biopharm, Sispharm, SisCart, BiOnDi, Petcentric, S-Quick, Studio Butter, Iruka, and Sistar Pet World."
   }
   </script>
-  <style>html,body{background:linear-gradient(to right,#f0acf7,#acf7f0,#f7f0ac);margin:0;padding:0;}body.sc-nav-open{padding-left:236px;}@media(max-width:768px){body.sc-nav-open,body.sc-nav-folded{padding-left:0!important;}}  img[src=""] { display: none !important; }`r`n      .sc-split-stretch {
+    <script>
+    (function() {
+      var p = location.pathname.replace(/\\/g, "/");
+      var base = "/common_assets/";
+      if (location.protocol === "file:") {
+        var i = p.toLowerCase().indexOf("/sc_web/");
+        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
+      }
+      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
+      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
+    })();
+  </script>
+<style>@media(max-width:768px){body.sc-nav-open,}  img[src=""] { display: none !important; }`r`n      .sc-split-stretch {
       display: grid;
       grid-template-columns: 1.18fr 0.82fr;
       gap: clamp(32px, 4.5vw, 60px);
@@ -131,19 +143,14 @@
       padding-left: 1.25rem !important;
       text-indent: 0 !important;
     }
+  
+    .sc-monograph, .sc-chapter { background: transparent !important; border: none !important; box-shadow: none !important; backdrop-filter: none !important; padding-left: 0 !important; padding-right: 0 !important; }
+  
+    .sc-kpi-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .sc-kpi-cell, .sc-exec-hero > * { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 640px) { .sc-kpi-strip { grid-template-columns: 1fr; } }
   </style>
-  <script>
-    (function() {
-      var p = location.pathname.replace(/\\/g, "/");
-      var base = "/common_assets/";
-      if (location.protocol === "file:") {
-        var i = p.toLowerCase().indexOf("/sc_web/");
-        base = i !== -1 ? "file://" + p.substring(0, i + 8) + "common_assets/" : "./common_assets/";
-      }
-      document.write("<link rel=\"stylesheet\" href=\"" + base + "common_new.css?v=2.2\">");
-      document.write("<script src=\"" + base + "nav_new.js?v=2.2\" defer><\/script><script src=\"" + base + "sc_translator.js?v=5.0\" defer><\/script>");
-    })();
-  </script>
+  
   <style>
     .sc-monograph, .sc-indo-page {
       box-sizing: border-box;
@@ -608,9 +615,6 @@
   <main class="sc-monograph sc-indo-page">
     <div class="sc-top-bar">
       <p class="sc-route" style="margin:0;">sistar company - sistar intl - pt sistar indonesia</p>
-      <div class="sc-action-btns">
-        <button class="sc-btn-pdf" onclick="window.print()">Print / Save as PDF</button>
-      </div>
     </div>
 
     <!-- SLIDE 1: HERO (Globe Network Left + PT. SISTAR Indonesia Right) -->
@@ -917,41 +921,54 @@
       </div>
       <div class="sc-callout">Our integrated approach to e-commerce delivers seamless shopping experiences and gives businesses powerful tools to reach targeted customer segments across multiple platforms at once.</div>
 
-      <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PT SISTAR Indonesia 9 Operating Divisions and 6 Marketplace Ecosystem">
-          <rect width="960" height="320" rx="12" fill="#0f172a"/>
+      
+  <div class="sc-pipeline-strip" aria-label="PT. SISTAR Indonesia execution pipeline">
+    <div class="sc-pipeline-step"><span class="sc-step-num">01 / SIGNAL</span><p class="sc-p">Local demand and regulatory signals enter the Regional hub.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">02 / CONTEXT</span><p class="sc-p">Company RAG aligns market, clinical, and trade intelligence.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">03 / EXECUTION</span><p class="sc-p">Regional ODM, distribution, or service partners deliver locally.</p></div>
+    <div class="sc-pipeline-step"><span class="sc-step-num">04 / RETURN</span><p class="sc-p">Qubit settlement and operating data feed the next forecast.</p></div>
+  </div>
+  <div class="sc-compare-grid" aria-label="Legacy and *SC approach for PT. SISTAR Indonesia">
+    <div class="sc-compare-legacy"><h3>Legacy workflow</h3><p class="sc-p">Sequential sourcing, fragmented data, and settlement delays make every new market or project carry duplicated friction.</p></div>
+    <div class="sc-compare-quantum"><h3>*SC coordinated execution</h3><p class="sc-p">For PT. SISTAR Indonesia, the Qubit Algorithm&trade; and AI Intelligence-Core align demand, domain execution, and multi-party value realization through shared infrastructure.</p></div>
+  </div>
+<figure class="sc-svg-frame">
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PT SISTAR Indonesia 9 Operating Divisions and 6 Marketplace Ecosystem">
+  <defs><linearGradient id="sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 01 • PT. SISTAR INDONESIA ([SC.ID]) 9 DIVISIONS &amp; 6 UNIFIED MARKETPLACE PLATFORMS</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="28" y="54" width="290" height="186" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5"/>
+            <rect x="28" y="54" width="290" height="186" rx="8" fill="#1e293b" stroke="#4ade80" stroke-width="1.5" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
             <text x="173" y="80" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">1. BIOPHARMA &amp; ONE HEALTH</text>
             <text x="173" y="106" fill="#ffffff" font-size="11" font-weight="600">Sistar Biopharm • Sispharm.id</text>
             <text x="173" y="128" fill="#cbd5e1" font-size="10">Vaccines &amp; Rapid POCT Diagnostics</text>
             <text x="173" y="148" fill="#cbd5e1" font-size="10">Companion Animal &amp; Livestock Rx</text>
             <text x="173" y="168" fill="#cbd5e1" font-size="10">BPOM / Kementan Localization</text>
-            <rect x="48" y="186" width="250" height="36" rx="5" fill="#064e3b"/>
+            <rect x="48" y="186" width="250" height="36" rx="5" fill="#064e3b" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
             <text x="173" y="209" fill="#4ade80" font-size="10.5" font-weight="700">Entangled with Vet CDSS (FP-08/09)</text>
 
-            <rect x="335" y="54" width="290" height="186" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+            <rect x="335" y="54" width="290" height="186" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
             <text x="480" y="80" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">2. PET ECOSYSTEM &amp; APPS</text>
             <text x="480" y="106" fill="#ffffff" font-size="11" font-weight="600">Petcentric • Iruka • Pet World</text>
             <text x="480" y="128" fill="#cbd5e1" font-size="10">Petcentric Pro &amp; FarmCentric</text>
             <text x="480" y="148" fill="#cbd5e1" font-size="10">Iruka Grooming Academy • ipsa.id</text>
             <text x="480" y="168" fill="#cbd5e1" font-size="10">Iskhan.id Nutrition &amp; Pet Travel</text>
-            <rect x="355" y="186" width="250" height="36" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="355" y="186" width="250" height="36" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
             <text x="480" y="209" fill="#38bdf8" font-size="10.5" font-weight="700">Rp 1,320 Micro-Sachet ODM (FP-07)</text>
 
-            <rect x="642" y="54" width="290" height="186" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+            <rect x="642" y="54" width="290" height="186" rx="8" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
             <text x="787" y="80" fill="#d8b4fe" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">3. DIGITAL, MEDIA &amp; 3PL</text>
             <text x="787" y="106" fill="#ffffff" font-size="11" font-weight="600">BiOnDi • Studio Butter • S-Quick</text>
             <text x="787" y="128" fill="#cbd5e1" font-size="10">sisPet.id • sisMii.id • sisMall.id</text>
             <text x="787" y="148" fill="#cbd5e1" font-size="10">sisMarket.id • ebizmarket.com</text>
             <text x="787" y="168" fill="#cbd5e1" font-size="10">Same-Day Cold-Chain Delivery</text>
-            <rect x="662" y="186" width="250" height="36" rx="5" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="662" y="186" width="250" height="36" rx="5" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
             <text x="787" y="209" fill="#d8b4fe" font-size="10.5" font-weight="700">Powered by Scarlet.ai &amp; Qubit ERP</text>
           </g>
-          <rect x="28" y="256" width="904" height="44" rx="6" fill="rgba(16,185,129,0.12)" stroke="#10b981"/>
+          <rect x="28" y="256" width="904" height="44" rx="6" fill="rgba(16,185,129,0.12)" stroke="#10b981" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-shadow)" />
           <text x="480" y="283" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="11.5" font-weight="700" text-anchor="middle">SHARED INFRASTRUCTURE: 6 SPECIALIZED MARKETPLACES OPERATING ON 1 LOGISTICS, COLD-CHAIN &amp; AI BACKBONE</text>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-1-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
     </section>
 
@@ -1264,39 +1281,41 @@
       </div>
 
       <figure class="sc-svg-frame">
-        <svg viewBox="0 0 960 320" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PT SISTAR Indonesia Nationwide Distribution Network and Global Partner Onboarding">
-          <rect width="960" height="320" rx="12" fill="#090d16"/>
+        <svg viewBox="0 0 960 360" class="notranslate" translate="no" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PT SISTAR Indonesia Nationwide Distribution Network and Global Partner Onboarding">
+  <defs><linearGradient id="sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0f172a"/><stop offset="100%" stop-color="#1e293b"/></linearGradient><filter id="sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#020617" flood-opacity="0.28"/></filter><marker id="sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#168765"/></marker></defs>
+          <rect width="960" height="320" rx="12" fill="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-bg)"/><g aria-hidden="true" fill="none" stroke="#94a3b8" stroke-width="0.6" stroke-opacity="0.12"><path d="M80 48V338 M200 48V338 M320 48V338 M440 48V338 M560 48V338 M680 48V338 M800 48V338 M920 48V338 M24 100H936 M24 160H936 M24 220H936 M24 280H936"/></g>
           <text x="32" y="34" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">ARCHITECTURAL DIAGRAM 02 • NATIONWIDE LOGISTICS METRICS &amp; CROSS-BORDER PARTNER ONBOARDING PIPELINE</text>
           <g font-family="Inter, sans-serif" text-anchor="middle">
-            <rect x="30" y="56" width="430" height="236" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6"/>
+            <rect x="30" y="56" width="430" height="236" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.6" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="245" y="84" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">PHYSICAL LOGISTICS &amp; COLD-CHAIN ENGINE</text>
-            <rect x="52" y="102" width="184" height="74" rx="6" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="52" y="102" width="184" height="74" rx="6" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="144" y="130" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">5 Hubs</text>
             <text x="144" y="150" fill="#cbd5e1" font-size="10">Major Distribution</text>
             <text x="144" y="164" fill="#94a3b8" font-size="9.5">Centers Nationwide</text>
 
-            <rect x="254" y="102" width="184" height="74" rx="6" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="254" y="102" width="184" height="74" rx="6" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="346" y="130" fill="#38bdf8" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">24hr / 98%</text>
             <text x="346" y="150" fill="#cbd5e1" font-size="10">Order Processing &amp;</text>
             <text x="346" y="164" fill="#94a3b8" font-size="9.5">In-Stock Availability</text>
 
-            <rect x="52" y="190" width="386" height="80" rx="6" fill="#064e3b" stroke="#4ade80"/>
+            <rect x="52" y="190" width="386" height="80" rx="6" fill="#064e3b" stroke="#4ade80" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="245" y="216" fill="#fde047" font-family="Space Grotesk, sans-serif" font-size="12" font-weight="700">S-QUICK SAME-DAY COLD-CHAIN FULFILLMENT</text>
             <text x="245" y="238" fill="#ffffff" font-size="10.5">GPS Real-Time Tracking • Temperature-Controlled Fleet</text>
             <text x="245" y="256" fill="#a7f3d0" font-size="10">Protects Vaccines, Biopharma &amp; Therapeutic Pet Nutrition</text>
 
-            <rect x="498" y="56" width="432" height="236" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.6"/>
+            <rect x="498" y="56" width="432" height="236" rx="10" fill="#064e3b" stroke="#4ade80" stroke-width="1.6" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="714" y="84" fill="#4ade80" font-family="Space Grotesk, sans-serif" font-size="12.5" font-weight="700">4 PARTNER &amp; INVESTOR VALUE PATHWAYS</text>
-            <rect x="520" y="100" width="388" height="38" rx="5" fill="#0f172a" stroke="#4ade80"/>
+            <rect x="520" y="100" width="388" height="38" rx="5" fill="#0f172a" stroke="#4ade80" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="714" y="123" fill="#ffffff" font-size="10.5">1. Authorized Retail &amp; Vet Hospital Co-Branding (45–65% GM)</text>
-            <rect x="520" y="146" width="388" height="38" rx="5" fill="#0f172a" stroke="#38bdf8"/>
+            <rect x="520" y="146" width="388" height="38" rx="5" fill="#0f172a" stroke="#38bdf8" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="714" y="169" fill="#ffffff" font-size="10.5">2. 6-Marketplace Vendor &amp; Petcentric Pro SaaS Integration</text>
-            <rect x="520" y="192" width="388" height="38" rx="5" fill="#0f172a" stroke="#fde047"/>
+            <rect x="520" y="192" width="388" height="38" rx="5" fill="#0f172a" stroke="#fde047" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="714" y="215" fill="#ffffff" font-size="10.5">3. Regional B2B Wholesale &amp; Livestock (Sispharm.id) Dealership</text>
-            <rect x="520" y="238" width="388" height="38" rx="5" fill="#0f172a" stroke="#a855f7"/>
+            <rect x="520" y="238" width="388" height="38" rx="5" fill="#0f172a" stroke="#a855f7" filter="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-shadow)" />
             <text x="714" y="261" fill="#ffffff" font-size="10.5">4. ODM Co-Manufacturing, Sistar Fair &amp; Groomer Certification</text>
           </g>
-        </svg>
+        <path d="M24 350 C250 342 710 342 936 350" fill="none" stroke="#168765" stroke-width="1.2" stroke-dasharray="6,4" marker-end="url(#sc-audit-02-sistar-intl-09-pt-sistar-indonesia-inde-2-arrow)" opacity="0.75" aria-label="Feedback loop"/>
+</svg>
       </figure>
     </section>
   </main>
